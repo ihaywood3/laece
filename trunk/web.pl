@@ -1,14 +1,30 @@
+%   web interface module
+%   Copyright (C) 2007 Ian Haywood
+%
+%   This program is free software: you can redistribute it and/or modify
+%   it under the terms of the GNU General Public License as published by
+%   the Free Software Foundation, either version 3 of the License, or
+%   (at your option) any later version.
+%
+%   This program is distributed in the hope that it will be useful,
+%   but WITHOUT ANY WARRANTY; without even the implied warranty of
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%   GNU General Public License for more details.
+%
+%   You should have received a copy of the GNU General Public License
+%   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 :- use_module(library('http/http_session')).
 :- use_module(library('http/http_error')).
 :- use_module(library('http/http_client')).
 :- use_module(library('http/html_write.pl')).
 
-:- multifile patient_command/3, patient_reply/3, completion/7, mainpage/5, warning/4.
-:- discontiguous patient_command/3, patient_reply/3, completion/7, mainpage/5, warning/4.
+:- multifile reply/2, completion/7, page_avail/3.
+:- discontiguous reply/2, completion/7, page_avail/3.
 
 :- consult('db.pl').
-:- consult('meds.pl').
+:- consult('notes.pl').
+:- consult('diagnosis.pl').
 
 log(Level,Message,Params):-
         get_time(Stamp),
@@ -19,8 +35,9 @@ log(Level,Message,Params):-
 
 server_thread(Port):-
         use_module(library('http/thread_httpd')),
+	use_module(library('http/http_error.pl')), % print stacktraces on error
         reload_demographics,
-        reload_contacts,
+        %reload_contacts,
         http_server(reply,[port(Port)]),
         asserta(debug(_,_)),
         http_current_worker(Port,Thread),
@@ -32,15 +49,19 @@ server_xpce:-
         reload_demographics,
         %reload_contacts,
         guitracer,
+	emacs('/home/ian/laece/web.pl'),
         http_server(reply,[port(8080)]).
 
 reply(Request) :-
         memberchk(path(Path), Request),
         parse_path(Path,PathList),
+        once(get_params(Request,Request2)),
+        once(get_prolog(Request2,Request3)),
         log(notice,'path ~w',[PathList]),
-        catch(reply(Request,PathList),error(X),log(error,'exception ~w',[X])).
+        catch(reply(Request3,PathList),error(X),log(error,'exception ~w',[X])).
 
-reply(Request, []) :- !,reply(Request,['patient','nopatient','main']).
+reply(Request, [laece|Path]):- reply(Request,Path).
+reply(Request, []) :- !,reply(Request,[patient,nopatient,nopatient]).
 
 reply(_, ['file',Filename]):-!,
     mimetype(Suffix,Mimetype),
@@ -50,98 +71,131 @@ reply(_, ['file',Filename]):-!,
 
 reply(_,['reload','demographics']):-reload_demographics.
 
-reply(Request,['patient',N|Rest]):-
+reply(Request,[patient,N|Rest]):-
     % authenticate here
     (integer(N) -> atom_number(N2,N);N2=N),
-    load_patient(N2),
-    ignore((get_params(Request,Params),patient_process(N2,Params,Reply))),
-    patient_reply(N2,Rest,Reply).
+    (N\=nopatient -> load_patient(N2);true),
+    reply([patient=N2|Request],Rest).
 
-get_params(Request,Params):-
+  
+reply(Request,[nopatient]):-
+  reply_page(Request,'Welcome',[p('Welcome to Laece. Above this text is the command bar, which is used to control
+  laece. To load a patient type part of the
+  firstname and part of surname, e.g. "jo smi" for John Smith, a list of possible patients will appear, select one with the arrow
+  keys to load that patient.')],[]).
+
+
+get_params(Request,Request2):-
     memberchk(method(get),Request),
-    memberchk(search(Params),Request).
+    memberchk(search(Params),Request),
+    append(Request,Params,Request2).
 
-get_params(Request,Params):-
+get_params(Request,Request2):-
     memberchk(method(post),Request),
-    http_read_data(Request,Params,[]).
-
-patient_process(N,Params,Reply):-
-    memberchk(cmdline_data=Cmd,Params),
-    catch(term_to_atom(TCmd,Cmd),error(syntax_error(_),_),fail),
-    patient_command(N,TCmd,Reply),!.
-
-
-patient_process(N,Params,Reply):-
-    memberchk(widget=W,Params),memberchk(compl_text=S,Params),
-    downcase_atom(S,S2),
-    parse_command(S2,L),
-    findall(completion(Term,Text,Html,Path),completion(N,L,W,Term,Text,Html,Path),Reply).
+    http_read_data(Request,Params,[]),
+    append(Request,Params,Request2).
     
+get_params(Request,Request). % fallback option.
 
-patient_command(_,noop,_).
+get_prolog(Request2,Request3):- % add prolog variables to params list in request.
+    memberchk(prolog=P,Request2),
+    catch(term_to_atom(TCmd,P),error(syntax_error(_),_),fail),
+    append(TCmd,Request2,Request3).
 
-patient_reply(_N,['completions'],Reply):-!,
+get_prolog(X,X). % fallback option
+
+reply(Request,[completions]):-
+    memberchk(widget=W,Request),memberchk(compl_text=S,Request),memberchk(patient=N,Request),
+    parse_command(S,L),
+    findall(completion(Params,Text,Html,Path),completion(N,L,W,Params,Text,Html,Path),Reply),
     format('Content-Type: text/plain~n~n'),
     print_completion(Reply).
 
+% general routine for recording new terms
+reply(Request,[add|Rest]):-
+  memberchk(add=Term,Request),
+  memberchk(patient=N,Request),
+  assert_patient(N,Term),
+  reply(Request,Rest).
+  
+% general routine for printable items
+reply(Request,[printqueue|Rest]):-
+  memberchk(add=Term,Request),
+  memberchk(patient=N,Request),
+  assert_patient(N,Term),
+  memberchk(toprint=_Print,Request),
+  % add to print queue here
+  reply(Request,Rest).
+  
 
-patient_reply(N,['main'],Reply):-!,
-    ignore(Reply=''), % set reply to empty string if it's still unbound
-    findall(mp(Priority,Width,L),phrase(mainpage(N,Priority,Width),L,[]),B),
-    sort(B,B2), % using standard order of terms, i.e. by Priority
-    patient_page(N,'Main',[p([class=result],Reply),\main_div(B2)]).
-
-main_div([mp(_,Width,L)|T])-->
-    html([div([style='width: '+Width+'ex;',class='main_page'],[\L])]),main_div(T).
-main_div([])-->[].
-
-mainpage(N,10,40)-->{N\=nopatient},warnings(N).
-
-mainpage(nopatient,10,100)-->
-  html('Welcome to laece. Above this text is the command bar, which is used to control laece. To load a patient type part of the
-  firstname and part of surname, e.g. "jo smi" for John Smith, a list of possible patients will appear, select one with the arrow
-  keys to load that patient.').
-
+% as yet unused warnings mechanism
 warnings(N)-->
     {
         findall(wa(Level,L),phrase(warning(N,Level),L,[]),B),
-        B\=[],sort(B,B2)
+        B\=[],!,sort(B,B2)
     },
     html([h2('Warnings')]),
     warn_p(B2).
+warnings(_)-->[].
 warn_p([wa(Level,L)|T])-->
-    html([p([class="warning"+Level],[\L])]),warn_p(T).
+    html([p([class=warning+Level],\L)]),warn_p(T).
 warn_p([])-->[].
 
-patient_page(N,Title,MainPart):-
-    patient_name(N,T),
+
+reply_page(Request,Title,MainPart,CurrentPage):-
+    memberchk(patient=N,Request),
+    once((memberchk(flash=Flash,Request);Flash='')),
+    patient_name(N,PatientName),
+    (	
+             N==nopatient
+         ->
+	     SectionList=[]
+         ; 
+	     findall(page(Page,PageName),page_avail(N,Page,PageName),SectionList)
+    ),
     reply_html_page(
     [
-        title([T,': ',Title]),
-        script([type='text/javascript',src='/file/Base.js'],[]),
-        script([type='text/javascript',src='/file/Async.js'],[]),
-        script([type='text/javascript',src='/file/Iter.js'],[]),
-        script([type='text/javascript',src='/file/DOM.js'],[]),
-        script([type='text/javascript',src='/file/Style.js'],[]),
-        script([type='text/javascript',src='/file/Signal.js'],[]),
-        script([type='text/javascript',src='/file/midas.js'],[]),
-        script([type='text/javascript',src='/file/main.js'],[]),
-        link([rel=stylesheet,type='text/css',href='/file/main.css',media=all],[]),
-        link([rel=stylesheet,type='text/css',href='/file/print.css',media=print],[])
+        title([PatientName,' : ',Title]),
+        script([type='text/javascript',src='/laece/file/Base.js'],[]),
+        script([type='text/javascript',src='/laece/file/Async.js'],[]),
+        script([type='text/javascript',src='/laece/file/Iter.js'],[]),
+        script([type='text/javascript',src='/laece/file/DOM.js'],[]),
+        script([type='text/javascript',src='/laece/file/Style.js'],[]),
+        script([type='text/javascript',src='/laece/file/Signal.js'],[]),
+        script([type='text/javascript',src='/laece/file/midas.js'],[]),
+        script([type='text/javascript',src='/laece/file/main.js'],[]),
+        link([rel=stylesheet,type='text/css',href='/laece/file/main.css',media=all],[]),
+        link([rel=stylesheet,type='text/css',href='/laece/file/print.css',media=print],[])
     ],[
-        form([action='/patient/'+N+'/main',method='post',name='cmdline_form',id='cmdline_form'],
+	div([id=header],[
+        form([action='/laece/newnote',method='post',name='cmdline_form',id='cmdline_form'],
             [
                 input([name=cmdline,id=cmd,size=100,class=autocomplete,autocomplete=off],[]),
-                input([name=pat_id,type=hidden,value=N],[])
+                input([name=patient,type=hidden,value=N],[])
             ]
-        ),hr([])|MainPart
+        ),
+	    p([],ul([id=cmdline_list,class=hidden],[]))
+
+      ]),
+	div([id=content],[p([id=sectionlist],\print_sectionlist(N,CurrentPage,SectionList)),p([id=flash],Flash)|MainPart])
     ]).
 
-print_completion([completion(Data,Text,Html,Path)|Reply]):-
+reply_page(Request,Title,MainPart):-
+	reply_page(Request,Title,MainPart,nopage).
+
+print_sectionlist(N,CurrentPage,[H|L])-->print_sectionitem(N,CurrentPage,H),print_sectionlist2(N,CurrentPage,L).
+print_sectionlist(_,_,[])-->[].
+print_sectionlist2(_,_,[])-->[].
+print_sectionlist2(N,CurrentPage,[H|L])-->[' | '],print_sectionitem(N,CurrentPage,H),print_sectionlist2(N,CurrentPage,L).
+
+print_sectionitem(_,CurrentPage,page(CurrentPage,PageName))-->[PageName].
+print_sectionitem(N,CurrentPage,page(OtherPage,PageName))-->{CurrentPage\=OtherPage},html([a(href='/laece/patient/'+N+'/'+OtherPage,PageName)]).
+
+print_completion([completion(Params,Text,Html,Path)|Reply]):-
     str_prepare(Text,SText),
     str_prepare(Html,SHtml),
     str_prepare(Path,SPath),
-    format('~w|~s|~s|~s~n',[Data,SText,SHtml,SPath]),print_completion(Reply).
+    format('~q|~s|~s|~s~n',[Params,SText,SHtml,SPath]),print_completion(Reply).
 print_completion([]).
 
 str_prepare(T-L,S):-format(string(S),T,L).
@@ -168,7 +222,7 @@ parse_path([],[],S2,I):-S2\=[],name(A,S2),I=[A].
 % parse_command(+Cmd,-Tokens)
 % splits a command into tokens
 
-parse_command(A,L):-name(A,I),parse_command(I,S,S,L).
+parse_command(A,L):-downcase_atom(A,A2),name(A2,I),parse_command(I,S,S,L).
 parse_command([W|T],[],[],I):-whitespace(W),parse_command(T,S3,S3,I).
 parse_command([W|T],[],S2,I):-whitespace(W),S2\=[],name(A,S2),I=[A|X],parse_command(T,S3,S3,X).
 parse_command([C|T],[],[],I):- \+whitespace(C),parse_command(T,X,[C|X],I).
@@ -178,9 +232,23 @@ parse_command([C2|T],[],[C1|S2],I):- \+code_match(C1,C2), \+whitespace(C1),
 parse_command([],[],[],[]).
 parse_command([],[],S2,I):-S2\=[],name(A,S2),I=[A].
 
+pc2(A,L):-downcase_atom(A,A2),name(A2,I),phrase(pc2(L),I,[]).
+
+pc2([H|T])-->word(H),pc2(T).
+%pc2([H|T])-->punct(H),pc2(T).
+%pc2([H|T])-->digit(H),pc2(L).
+pc2(T)-->[X],{memberchk(X," \t\r\n")},pc2(T).
+%pc2([])-->[].
+word(H)-->wordcodes(L),{name(H,L)}.
+
+wordcodes([H|L])-->[H],{memberchk(H,"abcdefghijklmnopqrstuvwxyz_")},wordcodes(L).
+wordcodes([])-->[].
+
+punct(H)-->[X],{memberchk(X,"+-,/;'[]\\=`~{}|:<>?!@#$%^&*()\).%"),name(H,[X])}.
+
 whitespace(X):-memberchk(X," \t\r\n").
 code_typ(X,number):-memberchk(X,"0123456789.").
-code_typ(X,alpha):-memberchk(X,"abcdefghijklmnopqrstvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ").
+code_typ(X,alpha):-memberchk(X,"abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ").
 code_typ(X,punct):-memberchk(X,"+-,/;'[]\\=`~{}|:<>?!@#$%^&*()\"").%"
 code_match(X,Y):-code_typ(X,T),code_typ(Y,T).
 
@@ -189,8 +257,10 @@ code_match(X,Y):-code_typ(X,T),code_typ(Y,T).
 % capitalise the first letter of each word of the list
 
 
-capital_words([X|Rest],[Y|Out]):-
+capital_words([X|Rest],[Y|Out]):-X\=32,
     code_type(X,to_lower(Y)),capital_words2(Rest,Out). % capitalise the first letter
+capital_words([X|Rest],Out):-X=32,
+    capital_words2([X|Rest],Out). 
 
 capital_words2([X|R1],[X|R2]):-X\=32,
     capital_words2(R1,R2).
@@ -204,9 +274,60 @@ capital_words2([32,X|R1],[32,Y|R2]):-
     code_type(X,to_lower(Y)),capital_words2(R1,R2).
 capital_words2([],[]).
 
+
+% write a term suitable for being part of a URL
+url_term(U,T):-
+   var(U),
+   with_output_to(codes(C),writeq(T)),
+   url_esc(C,C2),
+   name(U,C2).
+
+url_term(U,T):-
+   var(T),
+   name(U,C2),
+   url_esc(C,C2),
+   name(T2,C),
+   term_to_atom(T,T2).
+
+join(List,[Sep],Final):-
+  join1(List,Sep,FinalL),name(Final,FinalL).
+  
+join1([H|T],Sep,L):-
+  name(H,L1),
+  append(L1,[Sep|L3],L),
+  join1(T,Sep,L3).
+  
+join1([H],_,L):-
+  name(H,L).
+
+%% html_forall(+Template,:Goal,+Else,+Separator).
+%	
+% takes a HTML snipplet as a template and expands it for all solutions of Goal.
+% Uses Else if no solutions.
+% Puts Separator between each template if more than one solution
+
+html_forall(Template,Goal,Else,Separator)-->
+	{findall(Template,Goal,Bag)},
+	html_forall1(Bag,Else,Separator).
+
+html_forall1([],Else,_)-->html(Else).
+html_forall1([H|T],_,Sep)-->html(H),html_forall2(T,Sep).
+html_forall2([],_)-->[].
+html_forall2([H|T],Sep)-->html(Sep),html(H),html_forall2(T,Sep).
+
+html_forall(Template,Goal,Else)-->html_forall(Template,Goal,Else,[]).
+html_forall(Template,Goal)-->html_forall(Template,Goal,[],[]).
+
 % the MIDAS rich editing component
 midas-->
     html([div([id=edit_area_div],[])]).
+
+% a very useful constructs
+
+if(X,Y)-->{ functor(X,'.',_);call(X) }, html(Y).
+if(X,_Y)-->{ not(call(X));X=[] }, [].
+if(X,Y,_Z)--> { call(X)}, html(Y).
+if(X,_Y,Z)--> { not(call(X))}, html(Z).
 
 % FIXME: replace with an actual authentication mechanism
 user(ian).
