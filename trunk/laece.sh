@@ -27,7 +27,7 @@ case "$1" in
         xpce -s $SCRIPT -p resources=$RESOURCES -p db=$DB -g server_xpce.
   ;;
   *)
-        echo "Usage: laece.sh {start|stop|restart|force-reload}"
+        echo "Usage: laece.sh {start|stop|restart|force-reload|debug}"
         exit 1
   ;;
 esac

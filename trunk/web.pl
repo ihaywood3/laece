@@ -4,15 +4,16 @@
 :- use_module(library('http/http_client')).
 :- use_module(library('http/html_write.pl')).
 
-:- multifile patient_command/3, patient_reply/3, completion/7.
-:- discontiguous patient_command/3, patient_reply/3, completion/7.
+:- multifile patient_command/3, patient_reply/3, completion/7, mainpage/5, warning/4.
+:- discontiguous patient_command/3, patient_reply/3, completion/7, mainpage/5, warning/4.
 
 :- consult('db.pl').
+:- consult('meds.pl').
 
 log(Level,Message,Params):-
         get_time(Stamp),
         format_time(user_error,'%c',Stamp),
-        format(user_error,' [~w] ',Level),
+        format(user_error,' [~a] ',Level),
         format(user_error,Message,Params),
         nl(user_error).
 
@@ -20,7 +21,7 @@ server_thread(Port):-
         use_module(library('http/thread_httpd')),
         reload_demographics,
         reload_contacts,
-	http_server(reply,[port(Port)]),
+        http_server(reply,[port(Port)]),
         asserta(debug(_,_)),
         http_current_worker(Port,Thread),
         thread_join(Thread,_).
@@ -51,9 +52,10 @@ reply(_,['reload','demographics']):-reload_demographics.
 
 reply(Request,['patient',N|Rest]):-
     % authenticate here
-    load_patient(N),
-    ignore((get_params(Request,Params),patient_process(N,Params,Reply))),
-    patient_reply(N,Rest,Reply).
+    (integer(N) -> atom_number(N2,N);N2=N),
+    load_patient(N2),
+    ignore((get_params(Request,Params),patient_process(N2,Params,Reply))),
+    patient_reply(N2,Rest,Reply).
 
 get_params(Request,Params):-
     memberchk(method(get),Request),
@@ -85,8 +87,31 @@ patient_reply(_N,['completions'],Reply):-!,
 
 patient_reply(N,['main'],Reply):-!,
     ignore(Reply=''), % set reply to empty string if it's still unbound
-    patient_page(N,'Main',[p([class=result],Reply),p('Main page'),form([],[\midas])]).
+    findall(mp(Priority,Width,L),phrase(mainpage(N,Priority,Width),L,[]),B),
+    sort(B,B2), % using standard order of terms, i.e. by Priority
+    patient_page(N,'Main',[p([class=result],Reply),\main_div(B2)]).
 
+main_div([mp(_,Width,L)|T])-->
+    html([div([style='width: '+Width+'ex;',class='main_page'],[\L])]),main_div(T).
+main_div([])-->[].
+
+mainpage(N,10,40)-->{N\=nopatient},warnings(N).
+
+mainpage(nopatient,10,100)-->
+  html('Welcome to laece. Above this text is the command bar, which is used to control laece. To load a patient type part of the
+  firstname and part of surname, e.g. "jo smi" for John Smith, a list of possible patients will appear, select one with the arrow
+  keys to load that patient.').
+
+warnings(N)-->
+    {
+        findall(wa(Level,L),phrase(warning(N,Level),L,[]),B),
+        B\=[],sort(B,B2)
+    },
+    html([h2('Warnings')]),
+    warn_p(B2).
+warn_p([wa(Level,L)|T])-->
+    html([p([class="warning"+Level],[\L])]),warn_p(T).
+warn_p([])-->[].
 
 patient_page(N,Title,MainPart):-
     patient_name(N,T),
@@ -111,11 +136,6 @@ patient_page(N,Title,MainPart):-
             ]
         ),hr([])|MainPart
     ]).
-
-patient_name(nopatient,'No patient loaded').
-patient_name(N,T):-integer(N),
-    demo(N,Firstname,Lastname,_Dob),
-    format(atom(T),'~a ~a (~a)',[Firstname,Lastname,N]).
 
 print_completion([completion(Data,Text,Html,Path)|Reply]):-
     str_prepare(Text,SText),
@@ -164,6 +184,29 @@ code_typ(X,alpha):-memberchk(X,"abcdefghijklmnopqrstvwxyz_ABCDEFGHIJKLMNOPQRSTUV
 code_typ(X,punct):-memberchk(X,"+-,/;'[]\\=`~{}|:<>?!@#$%^&*()\"").%"
 code_match(X,Y):-code_typ(X,T),code_typ(Y,T).
 
+
+% capital_words(+In,+Out)
+% capitalise the first letter of each word of the list
+
+
+capital_words([X|Rest],[Y|Out]):-
+    code_type(X,to_lower(Y)),capital_words2(Rest,Out). % capitalise the first letter
+
+capital_words2([X|R1],[X|R2]):-X\=32,
+    capital_words2(R1,R2).
+capital_words2([32,109,97,99,X|R1],[32,77,97,99,Y|R2]):-X\=32,!, % mac -> Mac
+    code_type(X,to_lower(Y)),capital_words2(R1,R2).
+capital_words2([32,109,99,X|R1],[32,77,99,Y|R2]):-X\=32,!, % mc -> Mc
+    code_type(X,to_lower(Y)),capital_words2(R1,R2).
+capital_words2([32,111,39,X|R1],[32,79,39,Y|R2]):-X\=32,!, % o' -> O'
+    code_type(X,to_lower(Y)),capital_words2(R1,R2).
+capital_words2([32,X|R1],[32,Y|R2]):-
+    code_type(X,to_lower(Y)),capital_words2(R1,R2).
+capital_words2([],[]).
+
+% the MIDAS rich editing component
 midas-->
     html([div([id=edit_area_div],[])]).
 
+% FIXME: replace with an actual authentication mechanism
+user(ian).

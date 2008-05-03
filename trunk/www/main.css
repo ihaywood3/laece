@@ -41,47 +41,7 @@ span.compl_stem
     font-size: small;
 }
 
-#leftcontent 
+div.main_page
 {
-    position: absolute;
-    left:1%;
-    width:10%;
-    top:1px;
-    background:#fff;
-}
-
-#centreleftcontent 
-{
-    position: absolute;
-    left:11%;
-    width:38%;
-    top:1px;
-    background:#fff;
-}
-
-#centrerightcontent 
-{
-    position: absolute;
-    left:50%;
-    width:30%;
-    top:1px;
-    background:#fff;
-}
-
-#rightcontent 
-{
-    position: absolute;
-    left:80%;
-    width:19%;
-    top:1px;
-    background:#fff;
-}
-
-#centrecontent 
-{
-    position: absolute;
-    left: 11%;
-    width:68%;
-    top:1px;
-    background:#fff;
+    position: float;
 }
