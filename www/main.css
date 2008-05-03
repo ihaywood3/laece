@@ -1,0 +1,87 @@
+
+.invisible 
+{ 
+    display: none; 
+}
+.error 
+{ 
+    color:red; 
+    font-weight: bold; 
+}
+
+div.compl_list li 
+{ 
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+div.compl_list ul 
+{
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+button 
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+p.result 
+{ 
+color:green; 
+}
+
+span.compl_stem 
+{
+    color: gray;
+    font-size: small;
+}
+
+#leftcontent 
+{
+    position: absolute;
+    left:1%;
+    width:10%;
+    top:1px;
+    background:#fff;
+}
+
+#centreleftcontent 
+{
+    position: absolute;
+    left:11%;
+    width:38%;
+    top:1px;
+    background:#fff;
+}
+
+#centrerightcontent 
+{
+    position: absolute;
+    left:50%;
+    width:30%;
+    top:1px;
+    background:#fff;
+}
+
+#rightcontent 
+{
+    position: absolute;
+    left:80%;
+    width:19%;
+    top:1px;
+    background:#fff;
+}
+
+#centrecontent 
+{
+    position: absolute;
+    left: 11%;
+    width:68%;
+    top:1px;
+    background:#fff;
+}

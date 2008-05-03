@@ -2,14 +2,12 @@
 :- use_module(library('http/http_session')).
 :- use_module(library('http/http_error')).
 :- use_module(library('http/http_client')).
+:- use_module(library('http/html_write.pl')).
 
-%:- consult('db.pl').
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+:- multifile patient_command/3, patient_reply/3, completion/7.
+:- discontiguous patient_command/3, patient_reply/3, completion/7.
 
-	?- server.
-
-Now direct your browser to http://localhost:3000/
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+:- consult('db.pl').
 
 log(Level,Message,Params):-
         get_time(Stamp),
@@ -20,71 +18,121 @@ log(Level,Message,Params):-
 
 server_thread(Port):-
         use_module(library('http/thread_httpd')),
+        reload_demographics,
+        reload_contacts,
 	http_server(reply,[port(Port)]),
         asserta(debug(_,_)),
         http_current_worker(Port,Thread),
         thread_join(Thread,_).
-        
-server_xpce(Port):-
+
+server_xpce:-
         use_module(library('http/xpce_httpd')),
         asserta(':-'(debug(Message,Params),log(debug,Message,Params))),
+        reload_demographics,
+        %reload_contacts,
         guitracer,
-        http_server(reply,[port(Port)]).
+        http_server(reply,[port(8080)]).
 
 reply(Request) :-
-	memberchk(path(Path), Request),
+        memberchk(path(Path), Request),
         parse_path(Path,PathList),
         log(notice,'path ~w',[PathList]),
-	catch(reply(Request,PathList),error(X),log(error,'exception ~w',[X])).
+        catch(reply(Request,PathList),error(X),log(error,'exception ~w',[X])).
 
-reply(Request, []) :- !,reply(Request,['nopatient','main']).
+reply(Request, []) :- !,reply(Request,['patient','nopatient','main']).
+
 reply(_, ['file',Filename]):-!,
     mimetype(Suffix,Mimetype),
     sub_atom(Filename,_,_,0,Suffix),
     absolute_file_name(resources(Filename),AbsFname),
     throw(http_reply(file(Mimetype,AbsFname))).
-    
+
+reply(_,['reload','demographics']):-reload_demographics.
+
 reply(Request,['patient',N|Rest]):-
     % authenticate here
     load_patient(N),
     ignore((get_params(Request,Params),patient_process(N,Params,Reply))),
     patient_reply(N,Rest,Reply).
-    
-reply(_Request,['nopatient'|Rest]):-
-    patient_reply(nopatient,Rest,_Reply).
 
 get_params(Request,Params):-
     memberchk(method(get),Request),
     memberchk(search(Params),Request).
-    
+
 get_params(Request,Params):-
     memberchk(method(post),Request),
     http_read_data(Request,Params,[]).
-    
-patient_process(N,Params,Reply):-
-    memberchk(cmd=Cmd,Params),
-    atom_to_term(Cmd,TCmd,_),
-    patient_command(N,TCmd,Reply).
 
 patient_process(N,Params,Reply):-
-    memberchk(search=S,Params),
+    memberchk(cmdline_data=Cmd,Params),
+    catch(term_to_atom(TCmd,Cmd),error(syntax_error(_),_),fail),
+    patient_command(N,TCmd,Reply),!.
+
+
+patient_process(N,Params,Reply):-
+    memberchk(widget=W,Params),memberchk(compl_text=S,Params),
     parse_command(S,L),
-    findall(search_command(N,L,Term,Text),search_result(Term,Text),Reply).
+    findall(completion(Term,Text,Html,Path),completion(N,L,W,Term,Text,Html,Path),Reply).
     
 
-patient_reply(_,['search'],Reply):-!,
+patient_command(_,noop,_).
+
+patient_reply(_N,['completions'],Reply):-!,
     format('Content-Type: text/plain~n~n'),
-    search_results(Reply).
-    
-    
-search_results(X):-var(X).
-search_results([]).
-search_results([search_result(Term,Text)|T]):-format('~w|~a~n',[Term,Text]),search_results(T).
+    print_completion(Reply).
+
+
+patient_reply(N,['main'],Reply):-!,
+    ignore(Reply=''), % set reply to empty string if it's still unbound
+    patient_page(N,'Main',[p([class=result],Reply),p('Main page'),form([],[\midas])]).
+
+
+patient_page(N,Title,MainPart):-
+    patient_name(N,T),
+    reply_html_page(
+    [
+        title([T,': ',Title]),
+        script([type='text/javascript',src='/file/Base.js'],[]),
+        script([type='text/javascript',src='/file/Async.js'],[]),
+        script([type='text/javascript',src='/file/Iter.js'],[]),
+        script([type='text/javascript',src='/file/DOM.js'],[]),
+        script([type='text/javascript',src='/file/Style.js'],[]),
+        script([type='text/javascript',src='/file/Signal.js'],[]),
+        script([type='text/javascript',src='/file/midas.js'],[]),
+        script([type='text/javascript',src='/file/main.js'],[]),
+        link([rel=stylesheet,type='text/css',href='/file/main.css',media=all],[]),
+        link([rel=stylesheet,type='text/css',href='/file/print.css',media=print],[])
+    ],[
+        form([action='/patient/'+N+'/main',method='post',name='cmdline_form',id='cmdline_form'],
+            [
+                input([name=cmdline,id=cmd,size=100,class=autocomplete,autocomplete=off],[]),
+                input([name=pat_id,type=hidden,value=N],[])
+            ]
+        ),hr([])|MainPart
+    ]).
+
+patient_name(nopatient,'No patient loaded').
+patient_name(N,T):-integer(N),
+    demo(N,Firstname,Lastname,_Dob),
+    format(atom(T),'~a ~a (~a)',[Firstname,Lastname,N]).
+
+print_completion([completion(Data,Text,Html,Path)|Reply]):-
+    str_prepare(Text,SText),
+    str_prepare(Html,SHtml),
+    str_prepare(Path,SPath),
+    format('~w|~s|~s|~s~n',[Data,SText,SHtml,SPath]),print_completion(Reply).
+print_completion([]).
+
+str_prepare(T-L,S):-format(string(S),T,L).
+str_prepare(S,S):-string(S).
+str_prepare(A,S):-atom(A),string_to_atom(S,A).
+str_prepare(A+B,S):-str_prepare(A,A1),str_prepare(B,B1),string_concat(A1,B1,S).
 
 mimetype('.css','text/css').
 mimetype('.js','text/javascript').
 mimetype('.html','text/html').
 mimetype('.pl','text/plain').
+mimetype('.png','image/png').
 
 % parse_path(+Path,-Output)
 % splits the path into chunks based on /
@@ -111,9 +159,10 @@ parse_command([],[],S2,I):-S2\=[],name(A,S2),I=[A].
 
 whitespace(X):-memberchk(X," \t\r\n").
 code_typ(X,number):-memberchk(X,"0123456789.").
-code_typ(X,alpha):-memberchk(X,"abcdefghijklmnopqrstvwxyz_ABCDEFGHJKLMNOPQRSTUVWXYZ").
+code_typ(X,alpha):-memberchk(X,"abcdefghijklmnopqrstvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ").
 code_typ(X,punct):-memberchk(X,"+-,/;'[]\\=`~{}|:<>?!@#$%^&*()\"").%"
 code_match(X,Y):-code_typ(X,T),code_typ(Y,T).
 
-
+midas-->
+    html([div([id=edit_area_div],[])]).
 
