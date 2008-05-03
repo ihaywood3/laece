@@ -1,6 +1,20 @@
-% database module
+%   database module
+%   Copyright (C) 2007 Ian Haywood
+%
+%   This program is free software: you can redistribute it and/or modify
+%   it under the terms of the GNU General Public License as published by
+%   the Free Software Foundation, either version 3 of the License, or
+%   (at your option) any later version.
+%
+%   This program is distributed in the hope that it will be useful,
+%   but WITHOUT ANY WARRANTY; without even the implied warranty of
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%   GNU General Public License for more details.
+%
+%   You should have received a copy of the GNU General Public License
+%   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-:- initialization mutex_create(db_general).
+:- initialization catch(mutex_create(db_general),error(permission_error(mutex, create, db_general), context(mutex_create/1, _)),true).
 
 reload_demographics:-
     with_mutex(db_general,consult(db('demo.qlf'))).
@@ -22,9 +36,9 @@ patient_name(N,T):-
     capital_words(Lastname2,Lastname3),
     format(atom(T),'~s ~s (~a)',[Firstname3,Lastname3,N]).
 
-completion(_OldPatient,[SFirstname,SLastname],cmdline,noop,'open ~s ~s'-[Firstname3,Lastname3],
+completion(_OldPatient,[SFirstname,SLastname],cmdline,[],submit_now,
     '<span class="compl_stem">Open patient</span> ~s ~s'-[Firstname3,Lastname3],
-    '/patient/~a/main'-[NewPatient]):-
+    '/laece/patient/~a/diagnoses'-[NewPatient]):-
         demo(NewPatient,Firstname,Lastname,_Dob),
         sub_atom(Firstname,0,_,_,SFirstname),
         sub_atom(Lastname,0,_,_,SLastname),
@@ -40,10 +54,9 @@ completion(OldPatient,[SLastname,',',SFirstname],cmdline,noop,Text,Html,Path):-
 load_contacts:-
     with_mutex(db_general,load_contacts_mutex).
     
-:- dynamic person/8.
+:- dynamic contact/2.
 
 load_contacts_mutex :- 
-  retractall(person(_Id,_Name,_Address,_Suburb,_Phone,_Fax,_Email,_Specialty)),
   absolute_file_name(db('contacts.pl'),File),
   open(File, read, Stream), 
   read(Stream, T0), 
@@ -51,30 +64,26 @@ load_contacts_mutex :-
   close(Stream).
 
 load_contacts(end_of_file, _) :- !. 
-load_contacts(person(Id,Name,Address,Suburb,Phone,Fax,Email,Specialty),Stream) :- !, 
-  assert(person(Id,Name,Address,Suburb,Phone,Fax,Email,Specialty)), 
-  read(Stream, T2), 
+load_contacts(contact(Date,Contact),Stream) :- !, 
+  assert(contact(Date,Contact)), 
+  read_safe(Stream, T2), 
   load_contacts(T2, Stream). 
 load_contacts(Term, Stream) :- 
   format(user_error, 'Bad term: ~p~n', [Term]), 
   read(Stream, T2), 
   load_contacts(T2, Stream).
     
-% save_contacts
-% hilariously slow dumping of changed data to text file.
-% However underlying data unlikely to ever be big enough that anyone would care
-save_contacts:-
-    with_mutex(db_general,save_contacts_mutex).
-save_contacts_mutex:-
+% save_contact(+Contact).
+
+save_contact(Contact):-
+    with_mutex(db_general,save_contact_mutex(Contact)).
+save_contact_mutex(Contact):-
     absolute_file_name(db('contacts.pl'),Fname),
-    open(Fname,write,F),
-    writeall(F,person(_Id,_Name,_Address,_Suburb,_Phone,_Fax,_Email)),
+    open(Fname,append,F),
+    get_time(Now),
+    format(F,'contact(~f,~q).~n',[Now,Contact]),
     close(F).
     
-    
-writeall(F,Term):-call(Term),write_canonical(F,Term),fail.
-writeall(_F,_Term).
-
 load_patient(nopatient).
 
 load_patient(N):-
@@ -148,8 +157,7 @@ process_term(_Now,Filename,_N,_Fileno,read_error(Error,_Pos),OldPos):-OldPos\=no
     
 % a handy read function that doesn't throw exceptions
 read_safe(Fileno,Term):-
-    stream_property(Fileno,position(Pos)),
-    catch(read_term(Fileno,Term,[]),X,Term=read_error(X,Pos)).
+    catch(read_term(Fileno,Term,[]),X,(stream_property(Fileno,position(Pos)),Term=read_error(X,Pos))).
 
 % save patient data
 assert_patient(N,Data):-
@@ -158,6 +166,6 @@ assert_patient(N,Data):-
 
 assert_patient_mutex(N,Now,User,Data):-
     pat_loaded(N,_,Fileno),
-    format(Fileno,'p(~f,~w,~w).~n',[Now,User,Data]),
+    format(Fileno,'p(~f,~q,~q).~n',[Now,User,Data]),
     flush_output(Fileno),
     asserta(p(N,Now,User,Data)).

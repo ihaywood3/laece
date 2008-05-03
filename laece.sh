@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 SWIPL=/usr/local/bin/pl
 PORT=8080
 LOGFILE=/home/ian/laece.log
@@ -7,6 +7,7 @@ SCRIPT=/home/ian/laece/web.pl
 TMPDIR=/tmp
 RESOURCES=/home/ian/laece/www
 DB=/home/ian/laece/db
+SRC=/home/ian/laece
 
 case "$1" in
   start)
@@ -24,7 +25,7 @@ case "$1" in
   ;;
   debug)
         cd $TMPDIR
-        xpce -s $SCRIPT -p resources=$RESOURCES -p db=$DB -g server_xpce.
+        xpce -s $SCRIPT -p resources=$RESOURCES -p db=$DB -p src=$SRC -g server_xpce.
   ;;
   *)
         echo "Usage: laece.sh {start|stop|restart|force-reload|debug}"
