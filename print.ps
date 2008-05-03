@@ -1,0 +1,206 @@
+%!PS
+%%Title: Form printing
+%%Creator: Ian Haywood
+%%EndComments
+%%Prolog
+
+/fontname {/fn exch def computefont} def
+/fontsize {/fs exch def computefont} def
+/boldon {/isbold true def computefont} def
+/boldoff {/isbold false def computefont} def
+/italicon {/isitalic true def computefont} def
+/italicoff {/isitalic false def computefont} def
+
+/computefont 
+  {
+    fn /times eq
+    {
+      isbold isitalic not and {/Times-Bold} if
+      isbold isitalic and {/Times-BoldItalic} if
+      isbold not isitalic and {/Times-Italic} if
+      isbold not isitalic not and {/Times-Roman} if
+    } if
+    fn /courier eq
+    {
+      isbold isitalic not and {/Courier-Bold} if
+      isbold isitalic and {/Courier-BoldOblique} if
+      isbold not isitalic and {/Courier-Oblique} if
+      isbold not isitalic not and {/Courier} if
+    } if
+    fn /helvetica eq
+    {
+      isbold isitalic not and {/Helvetica-Bold} if
+      isbold isitalic and {/Helvetica-BoldOblique} if
+      isbold not isitalic and {/Helvetica-Oblique} if
+      isbold not isitalic not and {/Helvetica} if
+    }
+    if
+    fn /avantgarde eq
+    {
+      isbold isitalic not and {/AvantGarde-Demi} if
+      isbold isitalic and {/AvantGarde-DemiOblique} if
+      isbold not isitalic and {/AvantGarde-BookOblique} if
+      isbold not isitalic not and {/AvantGarde-Oblique} if
+    }
+    if
+    fn /bookman eq
+    {
+      isbold isitalic not and {/Bookman-Demi} if
+      isbold isitalic and {/Bookman-DemiItalic} if
+      isbold not isitalic and {/Bookman-LightItalic} if
+      isbold not isitalic not and {/Bookman-Light} if
+    }
+    fn /schoolbook eq
+    {
+      isbold isitalic not and {/NewCenturySchlbk-Bold} if
+      isbold isitalic and {/NewCenturySchlbk-BoldItalic} if
+      isbold not isitalic and {/NewCenturySchlbk-Italic} if
+      isbold not isitalic not and {/NewCenturySchlbk-Roman} if
+    }
+    fn /palatino eq
+    {
+      isbold isitalic not and {/Palatino-Bold} if
+      isbold isitalic and {/Palatino-BoldItalic} if
+      isbold not isitalic and {/Palatino-Italic} if
+      isbold not isitalic not and {/Palatino-Roman} if
+    }
+    if
+    findfont fs scalefont setfont
+    /th fs 1.2 mul def 
+  } 
+def
+
+
+/setleftmargin {/lm exch def} def
+/setrightmargin {/rm exch def} def
+/setbox {3 -1 roll dup /lm exch def add /rm exch def lm exch moveto} def
+/setheader {/hdr exch def} def
+/setfooter {/ftr exch def} def
+
+/setpage
+ {
+    /ftr exch def
+    /hdr exch def
+    /rm exch def
+    /lm exch def
+    lm hdr moveto
+  }
+def
+
+/newline
+  {
+    currentpoint exch pop
+    th sub 
+    dup ftr le 
+    tabletop 0 eq and % not in "table mode"
+    {
+      pop
+      showpage
+      setuppage
+      /pagenumber pagenumber 1 add def
+      hdr
+    } if
+    lm exch moveto
+  }
+def
+
+/tablebegin 
+  {
+    /old_lm lm def /old_rm rm def  % save left and right margins
+    /tabletop currentpoint exch pop def % save current y position
+    lm tabletop moveto
+    /tabledraw tabletop def
+  }
+def
+
+/cell 
+  {
+    /rm lm add def % set right margin based on width
+    exec % run cell contents
+    /lm rm def % set new left margin to old right margin 
+    currentpoint
+    th sub
+    tabledraw le {/tabledraw exch def} if % set draw if exceeded previous record
+    pop
+    lm tabletop moveto
+  } 
+def
+
+/tableline
+  {
+    /lm old_lm def
+    tabledraw th 2 mul sub ftr le % have dropped near to footer?
+    {
+      showpage
+      setuppage
+      /pagenumber pagenumber 1 add def
+      /tabledraw hdr def
+    } if
+    /tabletop tabledraw def
+    lm tabletop moveto
+  }
+def
+
+/tableend
+ {
+    /lm old_lm def
+    /rm old_rm def
+    /tabletop 0 def
+  }
+def
+
+/sw 
+  { 
+    {
+      ( ) search % search for the next space and the word
+      exch % stack now holds rest-( )-flag-word
+      dup stringwidth pop % get word width
+      currentpoint pop % get current x position
+      add
+      rm
+      ge % would we go over the right margin? 
+      {
+        newline
+      }
+      if
+      show % print word
+      {
+        show % print space left on stack
+      }
+      {
+        exit % initial search flag false - so stop
+      }
+      ifelse
+    } loop
+  } 
+def
+
+/setuppage {} def
+
+/pagesetup
+  {
+    /setuppage exch def
+    setuppage
+  }
+def
+
+/tabletop 0 def
+/pagenumber 1 def
+/isbold false def
+/isitalic false def
+/fs 12 def
+
+%%EndProlog
+
+72 400 600 72 setpage
+/palatino fontname
+(this is a long piece of text ) sw italicon (that ) sw boldon (hopefully) sw boldoff newline (shows some text) sw
+
+
+showpage
+
+%72 400 600 72 setpage
+%/palatino fontname
+%(this is some more text on the next page with brackets) sw
+
+%showpage
