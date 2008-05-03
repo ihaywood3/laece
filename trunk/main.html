@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Test page</title>
+        <script language="javascript" src="/file/template.js"/>
+        <script language="javascript" src="/file/main.js"/>
+    </head>
+    <body onLoad="init ()">
+        <input name="cmd" id="cmd" size="100"/>
+        <div id="compl_list"></div>
+        <p/>
+        <hr/>
+        <div id="maintext">Some main text</div>
+        <div id="warnings"/>
+<textarea id="completions" style="display: none;">
+{for x in completions}
+    ${x_index} : <a onlink="command('${x.cmd}'); return false;">${x.text}</a>&nbsp;
+{/for}</textarea>
+<textarea id="example" style="display: none;">
+This is an example jst file
+
+</textarea>
+</body></html>
