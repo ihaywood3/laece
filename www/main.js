@@ -206,9 +206,9 @@ function OnAutoKeyDown (event)
             if (ac.form[ac.name+"_data"].value != ac.completions[ac.selected].data)
             {
                 ac.value = ac.completions[ac.selected].string;
-                if (ac.completions[ac.selected].path.length>0)
+                if (ac.completions[ac.selected].path.length>3)
                 {
-                    ac.form.action=ac.completions[ac.selected].path;
+                   ac.form.action=ac.completions[ac.selected].path;
                 }
                 ac.form[ac.name+"_data"].value = ac.completions[ac.selected].data;
                 ac.completions = [];

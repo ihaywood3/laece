@@ -1,0 +1,10 @@
+
+form
+{ 
+    display: none; 
+}
+
+a[href^="http://"]:after 
+{
+        content: " (" attr(href) ") ";
+}
