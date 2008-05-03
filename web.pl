@@ -71,7 +71,8 @@ patient_process(N,Params,Reply):-
 
 patient_process(N,Params,Reply):-
     memberchk(widget=W,Params),memberchk(compl_text=S,Params),
-    parse_command(S,L),
+    downcase_atom(S,S2),
+    parse_command(S2,L),
     findall(completion(Term,Text,Html,Path),completion(N,L,W,Term,Text,Html,Path),Reply).
     
 
