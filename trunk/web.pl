@@ -206,22 +206,20 @@ str_prepare(A+B,S):-str_prepare(A,A1),str_prepare(B,B1),string_concat(A1,B1,S).
 mimetype('.css','text/css').
 mimetype('.js','text/javascript').
 mimetype('.html','text/html').
-word(A,c)-->chars(S),{S\=[],name(A,S)}.
-word(A,d)-->digits(S),{S\=[],name(A,S)}.
-word(A,p)-->[S],{is_punct(S),name(A,[S])}.
-word(_,w)-->whitespaces.
 mimetype('.pl','text/plain').
 mimetype('.png','image/png').
 
 % parse_path(+Path,-Output)
 % splits the path into chunks based on /
 
-parse_path(A,L):-name(A,I),parse_path(I,S,S,L).
-parse_path([47|T],[],[],I):-parse_path(T,S3,S3,I).
-parse_path([47|T],[],S2,I):-S2\=[],name(A,S2),I=[A|X],parse_path(T,S3,S3,X).
-parse_path([C|T],S1,S2,I):-C\=47,S1=[C|X],parse_path(T,X,S2,I).
-parse_path([],[],[],[]).
-parse_path([],[],S2,I):-S2\=[],name(A,S2),I=[A].
+parse_path(A,L):-name(A,I),phrase(path(L),I).
+path(X)-->[0'/],path(X).
+path([H])-->path_element(H).
+path([H|T])-->path_element(H),[0'/],path(T).
+path([])-->[].
+path_element(X)-->path_chars(S),{S\=[],name(X,S)}.
+path_chars([X|Y])-->[X],{X\=0'/},path_chars(Y).
+path_chars([])-->[].
 
 % parse_command(+Cmd,-Tokens)
 % splits a command into tokens
@@ -330,6 +328,11 @@ if(X,_Y,Z)--> { not(call(X))}, html(Z).
 
 % FIXME: replace with an actual authentication mechanism
 user(ian).
+
+
+
+
+
 
 
 
