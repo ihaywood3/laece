@@ -206,6 +206,10 @@ str_prepare(A+B,S):-str_prepare(A,A1),str_prepare(B,B1),string_concat(A1,B1,S).
 mimetype('.css','text/css').
 mimetype('.js','text/javascript').
 mimetype('.html','text/html').
+word(A,c)-->chars(S),{S\=[],name(A,S)}.
+word(A,d)-->digits(S),{S\=[],name(A,S)}.
+word(A,p)-->[S],{is_punct(S),name(A,[S])}.
+word(_,w)-->whitespaces.
 mimetype('.pl','text/plain').
 mimetype('.png','image/png').
 
@@ -222,35 +226,30 @@ parse_path([],[],S2,I):-S2\=[],name(A,S2),I=[A].
 % parse_command(+Cmd,-Tokens)
 % splits a command into tokens
 
-parse_command(A,L):-downcase_atom(A,A2),name(A2,I),parse_command(I,S,S,L).
-parse_command([W|T],[],[],I):-whitespace(W),parse_command(T,S3,S3,I).
-parse_command([W|T],[],S2,I):-whitespace(W),S2\=[],name(A,S2),I=[A|X],parse_command(T,S3,S3,X).
-parse_command([C|T],[],[],I):- \+whitespace(C),parse_command(T,X,[C|X],I).
-parse_command([C2|T],X,[C1|S2],I):-code_match(C1,C2),X=[C2|X2],parse_command(T,X2,[C1|S2],I).
-parse_command([C2|T],[],[C1|S2],I):- \+code_match(C1,C2), \+whitespace(C1),
-    name(A,[C1|S2]),I=[A|X2],parse_command(T,X,[C2|X],X2).
-parse_command([],[],[],[]).
-parse_command([],[],S2,I):-S2\=[],name(A,S2),I=[A].
-
-pc2(A,L):-downcase_atom(A,A2),name(A2,I),phrase(pc2(L),I,[]).
-
-pc2([H|T])-->word(H),pc2(T).
-%pc2([H|T])-->punct(H),pc2(T).
-%pc2([H|T])-->digit(H),pc2(L).
-pc2(T)-->[X],{memberchk(X," \t\r\n")},pc2(T).
-%pc2([])-->[].
-word(H)-->wordcodes(L),{name(H,L)}.
-
-wordcodes([H|L])-->[H],{memberchk(H,"abcdefghijklmnopqrstuvwxyz_")},wordcodes(L).
-wordcodes([])-->[].
-
-punct(H)-->[X],{memberchk(X,"+-,/;'[]\\=`~{}|:<>?!@#$%^&*()\).%"),name(H,[X])}.
-
-whitespace(X):-memberchk(X," \t\r\n").
-code_typ(X,number):-memberchk(X,"0123456789.").
-code_typ(X,alpha):-memberchk(X,"abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ").
-code_typ(X,punct):-memberchk(X,"+-,/;'[]\\=`~{}|:<>?!@#$%^&*()\"").%"
-code_match(X,Y):-code_typ(X,T),code_typ(Y,T).
+parse_command(A,L):-downcase_atom(A,A2),name(A2,I),phrase(words(b,L),I).
+words(_,[])-->[].
+words(Type,[A|B])-->word(A,Type2),{Type\=Type2,Type2\=w},words(Type2,B).
+words(p,[A|B])-->word(A,p),words(p,B).
+words(Type,X)-->word(_,w),{Type\=w},words(w,X).
+word(A,c)-->chars(S),{S\=[],name(A,S)}.
+word(A,d)-->digits(S),{S\=[],name(A,S)}.
+word(A,p)-->[S],{is_punct(S),name(A,[S])}.
+word(_,w)-->whitespaces.
+chars([X|Y])-->char(X),chars(Y).
+chars([])-->[].
+digits([X|Y])-->digit(X),digits(Y).
+digits([])-->[].
+char(X)-->[X],{is_char(X)}.
+digit(X)-->[X],{is_digit(X)}.
+whitespaces-->is_whitespace.
+whitespaces-->is_whitespace,whitespaces.
+is_char(X) :- X >= 0'a, X =< 0'z, !.
+is_char(X) :- X >= 0'A, X =< 0'Z, !.
+is_char(0'_).
+is_digit(X) :- X >= 0'0, X =< 0'9, !.
+is_punct(X) :- memberchk(X,"`~!@#$%^&*()-=+[]\;',./{}|:\"<>?").
+is_whitespace-->" ".
+is_whitespace-->[9]. % tab
 
 
 % capital_words(+In,+Out)
@@ -331,3 +330,6 @@ if(X,_Y,Z)--> { not(call(X))}, html(Z).
 
 % FIXME: replace with an actual authentication mechanism
 user(ian).
+
+
+
