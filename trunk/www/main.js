@@ -1,5 +1,5 @@
 /*  This is the main JavaScript module for laece
-*   Copyright (C) 2007 Ian Haywood
+*   Copyright (C) 2007,2008 Ian Haywood
 *
 *   This program is free software: you can redistribute it and/or modify
 *   it under the terms of the GNU General Public License as published by
@@ -23,12 +23,12 @@ function OnGlobalKeyDown(event)
     switch (key)
     {
         case "KEY_F2":
-                if (document.forms.length > 1)
-        {
+          if (document.forms.length > 1)
+          {
             event.stop ();
             if (OnSecondFormSubmit(event))
-            document.forms[1].submit ();
-        }
+              document.forms[1].submit ();
+          }
         break;
     }
 }
@@ -122,7 +122,7 @@ function OnInterval ()
                 // ok we have some interesting text to search on
                 ac.last_search = ac.new_text;
                 ac.search_running = true;
-                var xhr = MochiKit.Async.doSimpleXMLHttpRequest("/patient/"+pat_id+"/completions", {"compl_text": ac.new_text,"widget":ac.name});
+                var xhr = MochiKit.Async.doSimpleXMLHttpRequest("/laece/"+pat_id+"/completions", {"compl_text": ac.new_text,"widget":ac.name});
                 xhr.addCallback(recieveResult, ac);
                 xhr.addErrback(recieveError, ac);
             }
@@ -201,21 +201,26 @@ function OnAutoKeyDown (event)
         break;
     case "KEY_ENTER":
     case "KEY_TAB":
+        var pat_id = ac.form.elements["pat_id"].value;
         if (ac.selected>-1)
         {
-            if (ac.form[ac.name+"_data"].value != ac.completions[ac.selected].data)
+            if (ac.completions[ac.selected].string=="submit_now")
             {
-                ac.value = ac.completions[ac.selected].string;
                 if (ac.completions[ac.selected].path.length>3)
                 {
-                   ac.form.action=ac.completions[ac.selected].path;
+                   ac.form.action="/laece/"+pat_id+"/"+
+                      ac.completions[ac.selected].path;
                 }
-                ac.form[ac.name+"_data"].value = ac.completions[ac.selected].data;
-                ac.completions = [];
-                ac.selected = -1;
-                comp_node = ac.name+"_list";
-                swapDOM(comp_node,DIV({id:comp_node}));
-                event.stop ();
+                ac.form["prolog"].value = ac.completions[ac.selected].data;
+            }
+            else
+            {
+              ac.value = ac.completions[ac.selected].string;
+              ac.completions = [];
+              ac.selected = -1;
+              comp_node = ac.name+"_list";
+              swapDOM(comp_node,DIV({id:comp_node}));
+              event.stop ();
             }
         }
         /*else if (ac.name == "cmdline") // in principle this shouldn't be required.

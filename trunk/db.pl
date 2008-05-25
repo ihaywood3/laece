@@ -1,5 +1,5 @@
 %   database module
-%   Copyright (C) 2007 Ian Haywood
+%   Copyright (C) 2007,2008 Ian Haywood
 %
 %   This program is free software: you can redistribute it and/or modify
 %   it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
 :- initialization catch(mutex_create(db_general),error(permission_error(mutex, create, db_general), context(mutex_create/1, _)),true).
 
 reload_demographics:-
-    with_mutex(db_general,consult(db('demo.qlf'))).
+    with_mutex(db_general,consult(db('demo.pl'))).
 
 % convience functions
 
@@ -38,7 +38,7 @@ patient_name(N,T):-
 
 completion(_OldPatient,[SFirstname,SLastname],cmdline,[],submit_now,
     '<span class="compl_stem">Open patient</span> ~s ~s'-[Firstname3,Lastname3],
-    '/laece/patient/~a/diagnoses'-[NewPatient]):-
+    '/laece/~a/diagnoses'-[NewPatient]):-
         demo(NewPatient,Firstname,Lastname,_Dob),
         sub_atom(Firstname,0,_,_,SFirstname),
         sub_atom(Lastname,0,_,_,SLastname),
