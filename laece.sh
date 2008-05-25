@@ -1,13 +1,13 @@
 #!/bin/bash
 SWIPL=/usr/local/bin/pl
 PORT=8080
-LOGFILE=/home/ian/laece.log
-PIDFILE=/home/ian/laece.pid
-SCRIPT=/home/ian/laece/web.pl
+LOGFILE=$HOME/laece.log
+PIDFILE=$HOME/laece.pid
+SCRIPT=$HOME/laece/web.pl
 TMPDIR=/tmp
-RESOURCES=/home/ian/laece/www
-DB=/home/ian/laece/db
-SRC=/home/ian/laece
+RESOURCES=$HOME/laece/www
+DB=$HOME/laece/db
+SRC=$HOME/laece
 
 case "$1" in
   start)

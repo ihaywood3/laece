@@ -1,5 +1,5 @@
 %   web interface module
-%   Copyright (C) 2007 Ian Haywood
+%   Copyright (C) 2007,2008 Ian Haywood
 %
 %   This program is free software: you can redistribute it and/or modify
 %   it under the terms of the GNU General Public License as published by
@@ -60,8 +60,8 @@ reply(Request) :-
         log(notice,'path ~w',[PathList]),
         catch(reply(Request3,PathList),error(X),log(error,'exception ~w',[X])).
 
-reply(Request, [laece|Path]):- reply(Request,Path).
-reply(Request, []) :- !,reply(Request,[patient,nopatient,nopatient]).
+reply(Request, []) :- not(memberchk(patient=_,Request)),
+		   !,reply(Request,[laece,nopatient,welcome]).
 
 reply(_, ['file',Filename]):-!,
     mimetype(Suffix,Mimetype),
@@ -71,18 +71,22 @@ reply(_, ['file',Filename]):-!,
 
 reply(_,['reload','demographics']):-reload_demographics.
 
-reply(Request,[patient,N|Rest]):-
+reply(Request,[laece,N|Rest]):-
     % authenticate here
     (integer(N) -> atom_number(N2,N);N2=N),
     (N\=nopatient -> load_patient(N2);true),
-    reply([patient=N2|Request],Rest).
+    R2=[patient=N2|Request],
+    ignore(add_data(R2)),
+    ignore(print_data(R2)),
+    reply(R2,Rest).
 
   
-reply(Request,[nopatient]):-
-  reply_page(Request,'Welcome',[p('Welcome to Laece. Above this text is the command bar, which is used to control
-  laece. To load a patient type part of the
-  firstname and part of surname, e.g. "jo smi" for John Smith, a list of possible patients will appear, select one with the arrow
-  keys to load that patient.')],[]).
+reply(Request,[welcome]):-
+  reply_page(Request,'Welcome',[p(
+      'Welcome to Laece. Above this text is the command bar, which is used to control
+       laece. To load a patient type part of the firstname and part of surname, e.g. "jo smi" for 
+       John Smith, a list of possible patients will appear, select one with the arrow
+       keys to load that patient.')],[]).
 
 
 get_params(Request,Request2):-
@@ -112,20 +116,21 @@ reply(Request,[completions]):-
     print_completion(Reply).
 
 % general routine for recording new terms
-reply(Request,[add|Rest]):-
+add_data(Request):-
   memberchk(add=Term,Request),
   memberchk(patient=N,Request),
-  assert_patient(N,Term),
-  reply(Request,Rest).
+  N\=nopatient,
+  assert_patient(N,Term).
   
 % general routine for printable items
-reply(Request,[printqueue|Rest]):-
+print_data(Request):-
   memberchk(add=Term,Request),
   memberchk(patient=N,Request),
+  N\=nopatient,
   assert_patient(N,Term),
   memberchk(toprint=_Print,Request),
   % add to print queue here
-  reply(Request,Rest).
+  true.
   
 
 % as yet unused warnings mechanism
@@ -168,10 +173,11 @@ reply_page(Request,Title,MainPart,CurrentPage):-
         link([rel=stylesheet,type='text/css',href='/laece/file/print.css',media=print],[])
     ],[
 	div([id=header],[
-        form([action='/laece/newnote',method='post',name='cmdline_form',id='cmdline_form'],
+        form([action='/laece/'+N+'/newnote',method='post',name='cmdline_form',id='cmdline_form'],
             [
                 input([name=cmdline,id=cmd,size=100,class=autocomplete,autocomplete=off],[]),
-                input([name=patient,type=hidden,value=N],[])
+	  input([name=prolog,type=hidden,value=''],[]),
+	  input([name=pat_id,type=hidden,value=N],[])
             ]
         ),
 	    p([],ul([id=cmdline_list,class=hidden],[]))
