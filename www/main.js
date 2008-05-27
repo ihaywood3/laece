@@ -208,7 +208,10 @@ function OnAutoKeyDown (event)
             {
                 if (ac.completions[ac.selected].path.length>3)
                 {
-                   ac.form.action="/laece/"+pat_id+"/"+
+                  if(ac.completions[ac.selected].path[0]=="/")
+                    ac.form.action=ac.completions[ac.selected].path;
+                  else
+                    ac.form.action="/laece/"+pat_id+"/"+
                       ac.completions[ac.selected].path;
                 }
                 ac.form["prolog"].value = ac.completions[ac.selected].data;
@@ -246,4 +249,17 @@ function LineUnselect(ac)
     {
         setStyle(ac.completions[ac.selected].li,{'background-color':'white'});
     }
+}
+
+function show_form(div_id)
+{
+    removeElementClass(div_id,"invisible");
+    swapDOM("btn_"+div_id,A({id:"btn_"+div_id,href:"javascript:hide_form('"+div_id+"')"},"Hide")); 
+}
+
+function hide_form(div_id)
+{
+    addElementClass(div_id,"invisible");
+    swapDOM("btn_"+div_id,A({id:"btn_"+div_id,href:"javascript:show_form('"+div_id+"')"},"Show")); 
+
 }

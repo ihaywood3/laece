@@ -45,3 +45,24 @@ div.main_page
 {
     position: float;
 }
+
+tr.row_blue
+{
+    background-color: #eef6ff;
+}
+
+tr.row_white
+{
+    background-color: white;
+}
+
+td.notesday
+{
+    color: gray;
+    font-size: small;
+}
+
+table#notestable
+{
+     border-collapse: collapse;
+}

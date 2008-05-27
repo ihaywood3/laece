@@ -19,8 +19,9 @@
 :- use_module(library('http/http_client')).
 :- use_module(library('http/html_write.pl')).
 
-:- multifile reply/2, completion/7, page_avail/3.
-:- discontiguous reply/2, completion/7, page_avail/3.
+:- multifile reply/2, completion/7, page_avail/3,command/2, command/3.
+:- discontiguous reply/2, completion/7, page_avail/3, command/2, command/3.
+:- dynamic help/3.
 
 :- consult('db.pl').
 :- consult('notes.pl').
@@ -47,9 +48,10 @@ server_xpce:-
         use_module(library('http/xpce_httpd')),
         asserta(':-'(debug(Message,Params),log(debug,Message,Params))),
         reload_demographics,
+        load_help,
         %reload_contacts,
         guitracer,
-	emacs('/home/ian/laece/web.pl'),
+        absolute_file_name(src('web.pl'),A),emacs(A),
         http_server(reply,[port(8080)]).
 
 reply(Request) :-
@@ -124,10 +126,8 @@ add_data(Request):-
   
 % general routine for printable items
 print_data(Request):-
-  memberchk(add=Term,Request),
   memberchk(patient=N,Request),
   N\=nopatient,
-  assert_patient(N,Term),
   memberchk(toprint=_Print,Request),
   % add to print queue here
   true.
@@ -161,18 +161,11 @@ reply_page(Request,Title,MainPart,CurrentPage):-
     reply_html_page(
     [
         title([PatientName,' : ',Title]),
-        script([type='text/javascript',src='/laece/file/Base.js'],[]),
-        script([type='text/javascript',src='/laece/file/Async.js'],[]),
-        script([type='text/javascript',src='/laece/file/Iter.js'],[]),
-        script([type='text/javascript',src='/laece/file/DOM.js'],[]),
-        script([type='text/javascript',src='/laece/file/Style.js'],[]),
-        script([type='text/javascript',src='/laece/file/Signal.js'],[]),
-        script([type='text/javascript',src='/laece/file/midas.js'],[]),
-        script([type='text/javascript',src='/laece/file/main.js'],[]),
-        link([rel=stylesheet,type='text/css',href='/laece/file/main.css',media=all],[]),
-        link([rel=stylesheet,type='text/css',href='/laece/file/print.css',media=print],[])
+         \scripts(['Base','Async','Iter','DOM','Style','Signal',midas,main]),
+        link([rel=stylesheet,type='text/css',href='/laece/nopatient/file/main.css',media=all],[]),
+        link([rel=stylesheet,type='text/css',href='/laece/nopatient/file/print.css',media=print],[])
     ],[
-	div([id=header],[
+        div([id=header],[
         form([action='/laece/'+N+'/newnote',method='post',name='cmdline_form',id='cmdline_form'],
             [
                 input([name=cmdline,id=cmd,size=100,class=autocomplete,autocomplete=off],[]),
@@ -195,7 +188,7 @@ print_sectionlist2(_,_,[])-->[].
 print_sectionlist2(N,CurrentPage,[H|L])-->[' | '],print_sectionitem(N,CurrentPage,H),print_sectionlist2(N,CurrentPage,L).
 
 print_sectionitem(_,CurrentPage,page(CurrentPage,PageName))-->[PageName].
-print_sectionitem(N,CurrentPage,page(OtherPage,PageName))-->{CurrentPage\=OtherPage},html([a(href='/laece/patient/'+N+'/'+OtherPage,PageName)]).
+print_sectionitem(N,CurrentPage,page(OtherPage,PageName))-->{CurrentPage\=OtherPage},html([a(href='/laece/'+N+'/'+OtherPage,PageName)]).
 
 print_completion([completion(Params,Text,Html,Path)|Reply]):-
     str_prepare(Text,SText),
@@ -214,6 +207,14 @@ mimetype('.js','text/javascript').
 mimetype('.html','text/html').
 mimetype('.pl','text/plain').
 mimetype('.png','image/png').
+
+scripts([H|T])-->
+  html(script([type='text/javascript',src='/laece/nopatient/file/'+H+'.js'],[])),
+  scripts(T).
+
+scripts([])-->[].
+
+
 
 % parse_path(+Path,-Output)
 % splits the path into chunks based on /
@@ -334,6 +335,73 @@ if(X,_Y,Z)--> { not(call(X))}, html(Z).
 
 % FIXME: replace with an actual authentication mechanism
 user(ian).
+
+% logic for basic commands
+completion(_N,[Cmd],cmdline,noop,submit_now,Html,Path):-
+	command(Name,Html,Path),
+	sub_atom(Name,0,_,_,Cmd).
+
+completion(_N,[Cmd],cmdline,noop,Name,Html,''):-
+	command(Name,Html),
+	sub_atom(Name,0,_,After,Cmd),
+	After>0.
+
+command(warranty,'warranty - lack of warranty','help/warranty').
+command(licence,'licence - display GNU licence','help/licence').
+command(help,'help <i>[topic]</i> - show help page, can add specific topic','help/main').
+
+% help system
+
+completion(_N,[help,T],cmdline,noop,submit_now,'<span class="compl_stem">Help</span> '+Topic+' - '+Html,'help/'+Topic):-
+	help(Topic,Html,_Content),
+	sub_atom(Topic,0,_,_,T).
+
+reply(R,[help,Topic]):-
+	help(Topic,_,Content),
+	reply_page(R,'Help : ~a'-Topic,\[Content],help).
+
+load_help:-
+	absolute_file_name(resources('help/*.html'),Pattern),
+	expand_file_name(Pattern,Files),
+	load_help_files(Files).
+
+load_help_files([File|T]):-
+	open(File,read,F),
+	get_code(F,Code),
+	read_line(F,Code,Line),atom_codes(Html,Line),
+	get_code(F,Code2),
+	read_rest(F,Code2,Rest),atom_codes(Content,Rest),
+	file_base_name(File,BaseFile),
+	file_name_extension(Topic,html,BaseFile),
+	asserta(help(Topic,Html,Content)),
+	close(F),
+	load_help_files(T).
+load_help_files([]).
+
+read_line(_,10,[]).
+read_line(_,13,[]).
+read_line(_,-1,[]).
+read_line(F,Code,[Code|T]):-
+	not(memberchk(Code,[10,13,-1])),
+	get_code(F,Code2),
+	read_line(F,Code2,T).
+
+read_rest(_,-1,[]).
+read_rest(F,Code,[Code|T]):-
+	Code\= -1,
+	get_code(F,Code2),
+	read_rest(F,Code2,T).
+
+
+
+
+
+
+
+
+
+
+
 
 
 
