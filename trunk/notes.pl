@@ -57,18 +57,22 @@ print_notes_decide(L,date(Y,M,D),CurrentDay,NotesSoFar)-->
 	    CurrentDay = date(Y2,M2,D2),
 	    format_time(string(DateS),'%A, %e %B %Y',date(Y2,M2,D2,0,0,0,0,-,-))
 	},
-	html(h2([],'~s'-DateS)),
-	print_day_notes(NotesSorted),
+	html([h2([],'~s'-DateS),table([id=notestable],\print_day_notes(NotesSorted,white))]),
 	print_notes(L,date(Y,M,D),[]).
 
-print_day_notes([p(When,User,What)|T])-->
-	{format_time(string(TimeS),'%r',When)},
-	html([
-	      div([class=notesheader],['~s'-TimeS,br([],[]),User]),
-	      div([class=notestext],\html_display(What)),br([],[])
-	     ]),
-	print_day_notes(T).
-print_day_notes([])-->[].
+print_day_notes([p(When,User,What)|T],Colour)-->
+	{format_time(string(TimeS),'%r',When),
+	swap_colour(Colour,Colour2)},
+	html(tr([class='row_'+Colour],[
+	      td([class=notesday],['~s'-TimeS,br([],[]),User]),
+	      td([],\html_display(What))
+	     ])),
+	print_day_notes(T,Colour2).
+print_day_notes([],_)-->[].
+
+swap_colour(blue,white).
+swap_colour(white,blue).
+
 html_display(consult(Text))--> html([Text]).
 
 reply(Request,[newnote]):-
@@ -79,7 +83,9 @@ reply(Request,[newnote]):-
 
 
 notes_view(notes,'All Notes',p(_,_,_),true).
-notes_view(today,'Today',p(When,_,_),(get_time(Now),Ago is Now-When,Ago < 86400.0,log(notice,'ago: ~a',[Ago]))).
+notes_view(today,'Today',p(When,_,_),(get_time(Now),Ago is Now-When,Ago < 86400.0)).
+
+
 
 
 

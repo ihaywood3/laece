@@ -16,6 +16,8 @@
 
 :- initialization catch(mutex_create(db_general),error(permission_error(mutex, create, db_general), context(mutex_create/1, _)),true).
 
+:- dynamic p/4.
+
 reload_demographics:-
     with_mutex(db_general,consult(db('demo.pl'))).
 

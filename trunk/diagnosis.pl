@@ -19,7 +19,8 @@
 :- use_module(library(url)).
 
 completion(N,[DiseaseName|Remainder],cmdline,[add=diagnosis(Code,UserDisease),flash=Flash],submit_now,
-   '<span class="compl_stem">Diagnosis</span> ~a'-[IcdName],'/laece/patient/~a/add/diagnoses'-[N]):-
+   '<span class="compl_stem">Diagnosis</span> ~a'-[IcdName],diagnoses):-
+    N\=nopatient,
     atom_length(DiseaseName,L),L>3,
     icd10(Code,IcdName),sub_atom(IcdName,_,_,_,DiseaseName),
     not(diagnosis(N,_,_,Code,_)),
@@ -51,14 +52,13 @@ print_diagnoses_list(N,[diagnosis(When,User,Code,UserDisease)|T])-->
 			     span([class=list_title],[UserDisease,' (',Code,')']),
 			     ' Diagnosed by ',User,' on ',WhenS,' ',
 			     a([href='javascript:show_form(\'dx'+Code+'\');',id='btn_dx'+Code],'Change'), ' ',
-			     a([href='/laece/patient/'+N+'/add/diagnoses?prolog=%5Badd%3Ddediagnosis%28%27'+Code+'%27%2C'+UserDisease3+'%29%5D&flash=Diagnosis%20deleted'],'Delete')
+			     a([href='/laece/'+N+'/diagnoses?prolog=%5Badd%3Ddediagnosis%28%27'+Code+'%27%2C'+UserDisease3+'%29%5D&flash=Diagnosis%20deleted'],'Delete')
 			    ]
 	      ),
-	      div([class=hidden,id=dx+Code],
+	      div([class=invisible,id=dx+Code],
 		[
-		 form([action='/laece/change_diagnosis',method=post],
+		 form([action='/laece/'+N+'/change_diagnosis',method=post],
 		      [
-		       input([name=patient,type=hidden,value=N],[]),
 		       input([name=code,type=hidden,value=Code],[]),
 		       input([name=newdescription,type=text,size=20,value=UserDisease],[]),
 		       input([type=submit,value='Submit'])
