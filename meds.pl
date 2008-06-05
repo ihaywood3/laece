@@ -16,163 +16,124 @@
 
 :- use_module(library(sgml)).
 
-% file of drug(GenericName,[form(FormDescription,Unit,[dose(Dose,PBSItemCode)])]).
+% file of drug(Name,Dose,Form,StandardDose,PBSCodes).
 :- consult('medlist.pl').
 % file of
 % pbs(GenericName,PBSForm,ItemNo,MaxQuantity,MaxRepeats,[Availability]).
-:- consult('pbs_data.pl').
+% :- consult('pbs_data.pl').
 
 
-completion(P,Query,cmdline,newscript(GenericName,Name,Form,Dose),submit_now,
-   '<span class="compl_stem">Script</span> ~a ~a ~a</em>'-[PName,Form,SDose],'/patient/~a/editdrug'-[P]):-
-    drug(GenericName,Form,Dose,_Instr,_PBSCodes,Brands),
-    (Name=GenericName;member(Name,Brands)),
-    once((Name=[SName|_];SName=Name)),
-    drug_query(Query,SName,Form,Dose),
-    print_dose(Dose,SDose),
-    print_drug(Name,PName).
+completion(P,Query,cmdline,[script=Script],submit_now,
+   '<span class="compl_stem">Script</span> ~a ~a ~a ~s ~a ~a + ~a (~s)'-[Name,Form,Dose,InstrL,Comment,Qty,Rpt,PBSName],
+    editdrug):-
+	drug_query(P,Query,Script,PBSName),
+	Script=script(Name,Form,Dose,Instr,Qty,Rpt,_PBSCode,_AuthCode,Comment),
+	instr_to_latin(Instr,InstrL).
 
-drug_query([SDrug],Name,_,_):-
-	sub_atom(Name,0,_,_,SDrug).
-
-drug_query([SDrug,SForm],Name,Form,_):-
-	sub_atom(Name,0,_,_,SDrug),
-	sub_atom(Form,_,_,_,SForm).
-
-drug_query([SDrug,SDose],Name,_,Dose):-
-	sub_atom(Name,0,_,_,SDrug),	
-	integer(SDose),
-	once((
-	   (Dose=[H|_],arg(1,H,SDose));
-	   arg(1,Dose,SDose)
-	)).
-
-
-
-drug_query([SDrug,SForm,SDose],Name,Form,Dose):-
-	sub_atom(Name,0,_,_,SDrug),
-	sub_atom(Form,_,_,_,SForm),
-	integer(SDose),
-	once((
-	   (Dose=[H|_],arg(1,H,SDose));
-	   arg(1,Dose,SDose)
-	)).
-
-print_dose(Dose,SDose):- functor(Dose,Unit,_),Unit\='.',arg(1,Dose,N),concat_atom([N,Unit],SDose).
-
-print_dose(Dose,SDose):- is_list(Dose),maplist(print_dose,Dose,DL),concat_atom(DL,-,SDose).
-
-print_drug(Drug,Drug):-atom(Drug).
-
-print_drug(Drug,DrugS):- is_list(Drug),concat_atom(Drug,'-',DrugS).
-
-generic(N,G):-
-	drug(G,_F,_D,_I,_PBS,Brands),member(N,Brands).
-generic(G,G).
-
-patient_process(_P,Params,script(Name,Form,Dose,Instr2,Modes)):-
-	memberchk(cmdline=Cmd,Params),
-	termchk(cmdline_data=newscript(GenericName,Name,Form,Dose),Params),
-	parse_command(Cmd,PCmd),
-       	ignore(script_extra(PCmd,Instr,Qty,Rpt)),
-	drug(GenericName,Form,Dose,DInstr,PBSCodes,_Brands),
-	ignore(DInstr=[m(1)]),
-	ignore(DInstr=Instr), % use default instructions if unbound
-	%Instr=[H|T],
-	%once((compute_dose(P,H,H2);H=H2)),
-	Instr2=Instr,
-	findall(mode(Qty,Rpt,Mode,PBSCode),get_modes(PBSCodes,Qty,Rpt,Mode,PBSCode),ModesU),
-	sort(ModesU,Modes1),
-	make_private(ModesU,Private), % private script always an option
-	reverse([Private|Modes1],Modes). % always the last option
-	
-
-get_modes(PBSCodes,Qty,Rpt,Mode,PBSCode):-
-	(member(PBSCode,PBSCodes);(atom(PBSCodes),PBSCode=PBSCodes)),
-	(
-	         pbs(_,_,PBSCode,MaxQuantity,MaxRepeats,Chapter,PBSAvailablities,_),
-	         memberchk(Chapter,['GE','SB','CI','PQ','R1','PL','CS','CT','HS','MF','GH','MD','IF','SY']),
-		 ignore(Rpt=MaxRepeats),Rpt=<MaxRepeats,
-	         ignore(MaxQuantity=Qty),Qty=<MaxQuantity,
-	         member(Mode,PBSAvailablities)   
+drug_query(P,Query,script(Name,Form,Dose,Instr2,Qty,Rpt,PBSCode,AuthCode,Comment),PBSName):-
+	findall(D1,query_name(Query,D1),Bag1),
+	findall(D2,query_dose(Bag1,Query,D2),Bag2),
+	findall(D3,query_form(Bag2,Query,D3),Bag3),
+	drug_remainder(Bag1,Bag2,Bag3,Query,FinalBag,Remainder),
+	parse_instr(Remainder,Instr,Remainder2),
+	parse_qty_rpt(Remainder2,Qty,Rpt,Remainder3),
+	concat_atom(Remainder3,' ',Comment),
+	length(FinalBag,BagLen),
+	member(drug(Name,Dose,Form,DefaultInstr,PBS),FinalBag),
+	(   BagLen>1 ->
+	         once(find_pbs_items(P,PBS,Qty,Rpt,PBSCode,AuthCode,PBSName))
+	;   
+	          find_pbs_items(P,PBS,Qty,Rpt,PBSCode,AuthCode,PBSName)
+	),
+	(   Instr==null  ->
+	        Instr2=DefaultInstr
+	;   
+	        Instr2=Instr
 	).
-	
-make_private([],mode(0,0,auth(unrestricted,'',''),'PX')).
-make_private([mode(Qty,Rpt,_,_)|_],mode(Qty,Rpt,auth(unrestricted,'',''),'PX')).
 
-script_extra([_Name,_Form,N1|Rest],Instr,Qty,Rpt):-
-	number(N1),
-	parse_instr(Rest,Instr,Qty,Rpt).
+query_name([NameStem|_],drug(Name,Dose,Form,DefaultInstr,PBS)):-
+	drug(GName,Dose,Form,DefaultInstr,PBS),
+	(   Name=GName;brand(GName,Name)),
+	sub_atom(Name,0,_,_,NameStem).
 
-script_extra([_Name,N1,N2|Rest],Instr,Qty,Rpt):-
-	not(number(N1)),
-	not(number(N2)),
-	parse_instr([N1,N2|Rest],Instr,Qty,Rpt).
+query_dose(Bag,[_NameStem,DoseStem|_],drug(Name,Dose,Form,Defaultinstr,PBS)):-
+	member(drug(Name,Dose,Form,Defaultinstr,PBS),Bag),
+	sub_atom(Dose,0,_,_,DoseStem).
+
+query_form(Bag,[_NameStem,_DoseStem,FormStem|_],drug(Name,Dose,Form,Defaultinstr,PBS)):-
+	member(drug(Name,Dose,Form,Defaultinstr,PBS),Bag),
+	sub_atom(Form,0,_,_,FormStem).
+
+%%   drug_remainder(+Bag1,+Bag2,+Bag3,+Query,-BagFinal,-Remainder).
+% determine the remainder (the terminal component of the drug-phrase which does
+% not play a role in selecting the drug)
+
+% just the drug-name
+drug_remainder([H|T],[],[],[_NameStem|Remainder],[H|T],Remainder).
+% the name and the dose selectors
+drug_remainder([_|_],[H|T],[],[_NameStem,_DoseStem|Remainder],[H|T],Remainder).
+% all three
+drug_remainder([_|_],[_|_],[H|T],[_,_,_|Remainder],[H|T],Remainder).
+
+%%	parse_instr(+Query,-Instr,-Rest).
+% parse the remainder (supra vide) for understandable instructions,
+% returning a compound encapsulating them
+parse_instr([X,mane,Y,nocte|Rest],mn(X,Y),Rest):-
+	number(X),number(Y),!.
+
+parse_instr([X,m,Y,n|Rest],nm(X,Y),Rest):-
+	number(X),number(Y),!.
+
+parse_instr([X,mane,',',Y,nocte|Rest],nm(X,Y),Rest):-
+	number(X),number(Y),!.
+
+parse_instr([X,mane,Y,midi|Rest],mm(X,Y),Rest):-
+	number(X),number(Y),!.
+
+parse_instr([X,mane,',',Y,midi|Rest],mm(X,Y),Rest):-
+	number(X),number(Y).
+
+parse_instr([A,'/',B,'/',C,'/',D|Rest],german(A,B,C,D),Rest):-
+	number(A),number(B),number(C),number(D),!.
+
+parse_instr([q,N,h|Rest],qxh(N,1),Rest):-
+	integer(N),!.
+
+parse_instr([X,Drops,q,N,h|Rest],qxh(N,X),Rest):-
+	integer(N),integer(X),drops(Drops),!.
+
+parse_instr([X,Drops,'.',q,N,h|Rest],qxh(N,X),Rest):-
+	integer(N),integer(X),drops(Drops),!.
 
 
-script_extra([_Name,_Form,N1|Rest],Instr,Qty,Rpt):-
-	not(number(N1)),
-	parse_instr([N1|Rest],Instr,Qty,Rpt).
+parse_instr([X,q,N,h|Rest],qxh(N,X),Rest):-
+	integer(N),integer(X),!.
 
-script_extra([_Name,_Form,Dose,_Unit|Rest],Instr,Qty,Rpt):-
-	number(Dose),
-	parse_instr(Rest,Instr,Qty,Rpt).
+parse_instr([X,Y,'-',weekly|Rest],weekly(Y,X),Rest):-
+	integer(X),integer(Y),!.
 
-parse_instr([Freq|Rest],[Instr1|Instr2],Qty,Rpt):-
-	freq(Freq,1,Instr1),
-	parse_rest(Rest,Instr2,Qty,Rpt).
 
-parse_instr([X,Freq|Rest],[Instr1|Instr2],Qty,Rpt):-
+parse_instr([Freq|Rest],Instr,Rest):-
+	freq(Freq,1,Instr),!.
+
+parse_instr([X,Freq|Rest],Instr,Rest):-
 	number(X),
-	freq(Freq,X,Instr1),
-	parse_rest(Rest,Instr2,Qty,Rpt).
- 
+	freq(Freq,X,Instr),!.
 
-parse_instr([X,mane,Y,nocte|Rest],[m(X,Y)|Instr2],Qty,Rpt):-
-	number(X),number(Y),
-	parse_rest(Rest,Instr2,Qty,Rpt).
+% empty list
+parse_instr([],null,[]):-!.
 
-parse_instr([X,m,Y,n|Rest],[nm(X,Y)|Instr2],Qty,Rpt):-
-	number(X),number(Y),
-	parse_rest(Rest,Instr2,Qty,Rpt).
+% fallback if tokens unparseable
+parse_instr(Rest,as_directed,Rest).
 
-parse_instr([X,mane,',',Y,nocte|Rest],[nm(X,Y)|Instr2],Qty,Rpt):-
-	number(X),number(Y),
-	parse_rest(Rest,Instr2,Qty,Rpt).
+% words for 'drops'
+drops(drops).
+drops(drop).
+drops(gutt).
+drops(guttae).
 
-parse_instr([X,mane,Y,midi|Rest],[mm(X,Y)|Instr2],Qty,Rpt):-
-	number(X),number(Y),
-	parse_rest(Rest,Instr2,Qty,Rpt).
-
-parse_instr([X,mane,',',Y,midi|Rest],[mm(X,Y)|Instr2],Qty,Rpt):-
-	number(X),number(Y),
-	parse_rest(Rest,Instr2,Qty,Rpt).
-
-parse_instr([A,'/',B,'/',C,'/',D|Rest],[german(A,B,C,D)|Instr2],Qty,Rpt):-
-	number(A),number(B),number(C),number(D),
-	parse_rest(Rest,Instr2,Qty,Rpt).
-
-parse_instr([q,N,h|Rest],[qxh(N,1)|Instr2],Qty,Rpt):-
-	integer(N),
-	parse_rest(Rest,Instr2,Qty,Rpt).
-
-parse_instr([X,drops,q,N,h|Rest],[qxh(N,X)|Instr2],Qty,Rpt):-
-	integer(N),integer(X),
-	parse_rest(Rest,Instr2,Qty,Rpt).
-
-
-parse_instr([X,gutt,q,N,h|Rest],[qxh(N,X)|Instr2],Qty,Rpt):-
-	integer(N),integer(X),
-	parse_rest(Rest,Instr2,Qty,Rpt).
-
-
-parse_instr([X,gutt,'.',q,N,h|Rest],[qxh(N,X)|Instr2],Qty,Rpt):-
-	integer(N),integer(X),
-	parse_rest(Rest,Instr2,Qty,Rpt).
-
-parse_instr([X,Y,'-',weekly|Rest],[weekly(Y,X)|Instr2],Qty,Rpt):-
-	integer(X),integer(Y),
-	parse_rest(Rest,Instr2,Qty,Rpt).
+%% freq(+Token,+Number,-Instr).
+% facts matching simple drug frequency tokens to instructions
 
 freq(mane,X,m(X)).
 freq(nocte,X,n(X)).
@@ -189,13 +150,26 @@ freq(weekly,X,weekly(1,X)).
 freq(fortnightly,X,weekly(2,X)).
 freq(monthly,X,weekly(4,X)).
 
+%%   parse_qty_rpt(+Query,-Qty,-Rpt,-Rest).
+% Parse the query string and extract specification of drug quantity and repeats
+% If unsuccesful Qty and Rpt stay unbound
+% Rest s unparsed tokens
 
-parse_rest([],[],_,_).
+parse_qty_rpt([Qty,'+',Rpt|Rest],Qty,Rpt,Rest):-
+	integer(Qty),integer(Rpt),!.
 
-parse_rest(Rest,Rest5,Qty,Rpt):-
-	reverse(Rest,Rest2),
-	parse_qty(Rest2,Qty,Rpt,Rest3), % look for quantity and repeats at the end of the string
-	reverse(Rest3,Rest5). % put the rest back in the right order
+parse_qty_rpt([Qty,x,Rpt|Rest],Qty,Rpt,Rest):-
+	integer(Qty),integer(Rpt),!.
+
+parse_qty_rpt([Qty|Rest],Qty,_Rpt,Rest):-
+	integer(Qty),!.
+
+parse_qty_rpt([','|Query],Qty,Rpt,Rest):-
+	parse_qty_rpt(Query,Qty,Rpt,Rest),nonvar(Qty).
+
+% fallback option
+parse_qty_rpt(Rest,_,_,Rest).
+
 
 latin_english(prn,'as required').
 latin_english(os,'left eye'). % Oculus Sinster
@@ -208,10 +182,12 @@ latin_english(pa,'with water'). % per aqua
 latin_english(pl,'with milk'). % per lacte
 latin_english(pp,'after meals'). % post prandium
 
-instr_to_latin([H|T],Latin):-
-	instr_to_latin(H,F,L),
-	format(atom(X),F,L),
-	concat_atom([X|T],' ',Latin).
+%%   instr_to_Latin(+Instruction,-Latin).
+% take to parsed instruction and return Latin description
+
+instr_to_latin(I,S):-
+	instr_to_latin(I,F,L),
+	format(string(S),F,L).
 
 instr_to_latin(bd(X),'~d bd',[X]).
 instr_to_latin(tds(X),'~d tds',[X]).
@@ -225,13 +201,11 @@ instr_to_latin(midi(X),'~d midi',[X]).
 instr_to_latin(vesper(X),'~d vesper',[X]).
 instr_to_latin(qxh(X,Y),'~d q~dh',[Y,X]).
 instr_to_latin(german(A,B,C,D),'~d/~d/~d/~d',[A,B,C,D]).
+instr_to_latin(as_directed,'as directed',[]).
 
-
-instr_to_english([H|T],English):-
-	instr_to_english(H,F,L),
-	maplist(latin_english,T,T2),
-	format(atom(X),F,L),
-	concat_atom([X|T2],' ',English).
+instr_to_english(I,S):-
+	instr_to_english(I,F,L),
+	format(string(S),F,L).
 
 instr_to_english(bd(X),'~d TWICE a day',[X]).
 instr_to_english(tds(X),'~d THREE times a day',[X]).
@@ -244,21 +218,61 @@ instr_to_english(n(X),'~d in the EVENING',[X]).
 instr_to_english(midi(X),'~d at MIDDAY',[X]).
 instr_to_english(vesper(X),'~d in the AFTERNOON',[X]).
 instr_to_english(qxh(X,Y),'~d EVERY ~d HOURS',[Y,X]).
-instr_to_english(german(A,B,C,D),'~d at BRWAKFAST, ~d at LUNCH, ~d at DINNER, ~d at BEDTIME',[A,B,C,D]).
+instr_to_english(german(A,B,C,D),'~d at BREAKFAST, ~d at LUNCH, ~d at DINNER, ~d at BEDTIME',[A,B,C,D]).
+instr_to_english(as_directed,'as directed').
+
+%%	find_pbs_items(+Patient,+PBSId,?Qty,?Rpt,-PBSMode).
+% PBS searching
+
+find_pbs_items(P,PBS,Qty,Rpt,Code,AuthCode,Name):- 
+	pbs(Code,Chapter,PBS,PBSQty,PBSRpt,Mode),
+	ignore(Qty=PBSQty),ignore(PBSRpt=Rpt),
+	Qty=<PBSQty,Rpt=<PBSRpt, 
+	chapter(P,Chapter,ChapterName1,ChapterName2,Link),
+	pbs_name(Code,ChapterName1,ChapterName2,Link,Mode,L,S,AuthCode),
+	format(string(Name),L,S).
+% offer option of private script
+find_pbs_items(_P,PBS,Qty,Rpt,private,null,'Private'):-
+	once(pbs(_Code,Chapter,PBS,PBSQty,PBSRpt,_Mode)),
+	Chapter\='PI', % private-only don't need a private option
+	ignore(Qty=PBSQty),ignore(Rpt=PBSRpt).
+
+pbs_name(_Code,ChapterName1,ChapterName2,no,unrestricted,'~a ~a',[ChapterName1,ChapterName2],null).
+pbs_name(Code,ChapterName1,ChapterName2,yes,unrestricted,'<a href="/laece/nopatient/druginfo/~a">~a ~a</a>',[Code,ChapterName1,ChapterName2],null).
+pbs_name(Code,ChapterName1,_,_,authority(TextNo),'<a href="/laece/nopatient/druginfo/~a">~a Auth:~a</a>',[Code,ChapterName1,BriefText],null):-
+	brief_pbs_text(TextNo,BriefText).
+pbs_name(Code,ChapterName1,_,_,restricted(TextNo),'<a href="/laece/nopatient/druginfo/~a">~a Restrict:~a</a>',[Code,ChapterName1,BriefText],null):-
+	brief_pbs_text(TextNo,BriefText).
+pbs_name(Code,ChapterName1,_,_,streamlined(TextNo,AuthCode),'<a href="/laece/nopatient/druginfo/~a">~a Auth:~a</a>',[Code,ChapterName1,BriefText],AuthCode):-
+	brief_pbs_text(TextNo,BriefText).
 
 
 
-parse_qty([Rpt,'x',Qty|Rest],Qty,Rpt,Rest):-
-	integer(Rpt),integer(Qty).
+%% chapter(+P,+Chapter,-ChapterName1,-ChapterName2,-Link).
+% Information about PBS cahpters. Fails if patient not eligilbe for this chapter
+% Link should be 'yes' if unrestricted items should also be linked to PBS info in
+% the result list
 
-parse_qty([Rpt,'+',Qty|Rest],Qty,Rpt,Rest):-
-	integer(Rpt),integer(Qty).
-
-parse_qty([Qty|Rest],Qty,_,Rest):-
-	integer(Qty).
-
-parse_qty(Rest,_,_,Rest).
-
+chapter(P,'R1','RPBS','',no):-
+      p(P,_,_,veteran).
+chapter(P,'PL','PBS','Pall. Care',yes):-
+	diagnosis(P,_,_,DCode,_),
+	palliative(DCode).	
+chapter(_,'GE','PBS','',no). % GEneral items
+chapter(_,'SB','PBS','Special benefit',yes).
+chapter(P,'CI','PBS','Ileostomy/Colostomy',yes):-
+	diagnosis(P,_,_,DCode,_),
+	(  ileostomy(DCode);colostomy(DCode)).
+chapter(P,'PQ','PBS','Para/Quadraplegia',yes):-
+	diagnosis(P,_,_,DCode,_),
+	(    paraplegia(DCode);quadriplegia(DCode)).
+chapter(_,X,'Sect. 100','',yes):-
+	memberchk(X,['CS','CT','HS','MF','GH','IF','SY']).
+               % FIXME: should be divided up in separate section 100 chapters where this makes sense
+chapter(_,'MF','PBS','Opiate Depend.',yes).
+chapter(_,'PI','Private script ','',no).
+% Of course there is no such PBS chapter, this is to allow entries for drugs 
+% with no true PBS entry.
 
 
 % drug editing screen
@@ -305,16 +319,6 @@ pbs_title(auth(unrestricted,_,_),[]).
 pbs_title(auth(contact,_,_),[strong('Authority')]).
 pbs_title(auth(restricted,_,_),['Restricted']).
 pbs_title(auth(streamlined,_,_),['Streamlined Authority']).
-
-chapter('GE','PBS ').
-chapter('SB','PBS (Special benefit) ').
-chapter('CI','PBS (Ileostomy/Colostomy) ').
-chapter('PQ','PBS (Paraplegia/Quadraplegia) ').
-chapter('R1','Repatriation PBS ').
-chapter('PL','PBS (Palliative) ').
-chapter(X,'PBS (Section 100) '):-memberchk(X,['CS','CT','HS','MF','GH','IF','SY']).
-chapter('MF','PBS (Opiate Dependence) ').
-chapter('PI','Private script ').
 
 patient_process(N,Params,Reply):-
 	memberchk(instructions=Instr1,Params),
