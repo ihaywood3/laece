@@ -205,6 +205,23 @@ instr_to_latin(qxh(X,Y),'~d q~dh',[Y,X]).
 instr_to_latin(german(A,B,C,D),'~d/~d/~d/~d',[A,B,C,D]).
 instr_to_latin(as_directed,'as directed',[]).
 
+perday(bd(X),N):-
+	N is X*2.
+perday(tds(X),N):-
+	N is X*3.
+perday(qid(X),N):-
+	N is X*4.
+perday(mn(X,Y),N):-
+	N is X+Y.
+perday(mm(X,Y),N):-
+	N is X+Y.
+perday(german(A,B,C,D),N):-
+	N is A+B+C+D.
+perday(mane(X),X).
+perday(midi(X),X).
+perday(nocte(X),X).
+perday(vesper(X),X).
+
 instr_to_english(I,S):-
 	instr_to_english(I,F,L),
 	format(string(S),F,L).
@@ -298,6 +315,70 @@ brief_pbs_text(_,Text,Text).
 
 % drug editing screen
 
+reply(Request,[editdrug]):-
+	memberchk(patient=N,Request),
+	N\=nopatient,
+	memberchk(script=Script,Request),
+	Script=script(_Name,_Form,_Dose,_Instr,_Qty,_Rpt,_PBSCode,AuthCode,_Comment),
+	AuthCode\=required, % no Authority contact required
+	do_script(N,Script).
+
+reply(Request,[editdrug]):-
+	memberchk(patient=N,Request),
+	N\=nopatient,
+	memberchk(script=script(Name,Form,Dose,Instr,Qty,Rpt,PBSCode,AuthCode,Comment),Request),
+	AuthCode==required,
+	memberchk(authcode=AuthCode2,Request),
+              memberchk(new_qty=Qty2,Request),
+	memberchk(new_rpt=Rpt2,Request),
+	(   AuthCode2=='' -> error_page(Request,authority_form,'Authority code required');true),
+	(   Qty2=='' -> 
+	           Qty3=Qty
+	     ;
+	           catch(atom_number(Qty2,Qty3),error(syntax_error(illegal_number),_),
+			 error_page(Request,authority_form,'Quantity must be number'))
+	),
+	(   Rpt2=='' -> 
+	           Rpt3=Rpt
+	     ;
+	           catch(atom_number(Rpt2,Rpt3),error(syntax_error(illegal_number),_),
+			 error_page(Request,authority_form,'Quantity must be number'))
+	),
+	do_script(N,script(Name,Form,Dose,Instr,Qty3,Rpt3,PBSCode,AuthCode2,Comment)).
+
+reply(Request,[editdrug]):-
+	memberchk(patient=N,Request),
+	N\=nopatient,
+	memberchk(script=script(_Name,_Form,_Dose,_Instr,_Qty,_Rpt,_PBSCode,AuthCode,_Comment),Request),
+	AuthCode==required,
+	not(memberchk(authcode=_,Request)),
+	authority_form(Request).
+
+% display a web form requesting an authority
+authority_form(Request):-
+	memberchk(patient=N,Request),
+	memberchk(script=Script,Request),
+	Script=script(Name,Form,Dose,Instr,Qty,Rpt,PBSCode,_AuthCode,_Comment),
+	once((perday(Instr,PerDay);PerDay='--')),
+	format(atom(Prolog),'~q',[[prolog=Script]]),
+	findall(Text,pbs(PBSCode,_Chapter,_PBS,_PBSQty,_PBSRpt,authority(_No,Text)),Texts),
+	reply_page(Request,'Authority required',[
+	    h2('Authority required'),
+	    p([b('Drug:'),Name,' ',Form,' ',Dose]),
+	    p([b('Amount per day:'),PerDay]),
+	    h3('Authority Text'),					 
+	    \print_auth(1,Text),
+	    form([action='/laece/'+N+'/editdrug',enctype='application/x-www-form-urlencoded',method='POST'],
+	           [
+		    input([type=hidden,name=prolog,value=Prolog],[]),
+		    p([b('Authority code:'),input([type=text,name=authcode],[])]),
+		    p([b('Quantity:'),input([type=text,name=new_qty,value=Qty],[])]),
+		    p([b('Quantity:'),input([type=text,name=new_qty,value=Rpt],[])])
+		   ])],authority).
+
+print_auth(N,[H|T])-->
+	html(p([N,'. ',\[H]])),{N2 is N+1},print_auth(N2,T).
+print_auth(_,[])-->[].
 
 patient_reply(N,[editdrug],script(Name,Form,Dose,Instr,Modes)):-N\=nopatient,
     print_drug(Name,NameS),
