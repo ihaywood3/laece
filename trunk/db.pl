@@ -28,6 +28,11 @@ demo(N,Firstname,Lastname,Dob):-
     
 demo(N,Firstname,Lastname,Dob,Address,Postcode,Telephone):-
     demo(N,Firstname,Lastname,Dob,Address,Postcode,Telephone,_Medicare,_DVA,_CRN).
+
+veteran(N):-
+	demo(N,_Firstname,_Lastname,_Dob,_Address,_Postcode,_Telephone,_Medicare,DVA,_CRN),
+	DVA\=none.	
+	
     
 patient_name(nopatient,'No patient loaded'):-!.
 patient_name(N,T):-

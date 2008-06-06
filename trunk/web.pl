@@ -60,7 +60,7 @@ reply(Request) :-
         once(get_params(Request,Request2)),
         once(get_prolog(Request2,Request3)),
         log(notice,'path ~w',[PathList]),
-        catch(reply(Request3,PathList),error(X),log(error,'exception ~w',[X])).
+        catch(reply(Request3,PathList),error(X),log(error,'exception ~q',[X])).
 
 reply(Request, []) :- not(memberchk(patient=_,Request)),
 		   !,reply(Request,[laece,nopatient,welcome]).
@@ -393,8 +393,43 @@ read_rest(F,Code,[Code|T]):-
 	read_rest(F,Code2,T).
 
 
+% error system
 
+%%	error_page(+Request,:Page,+Message).
+% display a page by calling the predicate Page, setting the 
+% flash to Message, then raise an exception to break further
+% processing
+error_page(Request,Page,Message):-
+	delete(Request,flash=_,Request2),
+	call(Page,[flash=Message|Request2]),
+	throw(error(web(Message))).
 
+verify_form(Request,[field(VarName,VarOut,Checks)|T],Page):-
+	(memberchk(VarName=VarIn,Request)->true;VarIn=''),
+	check_var2(Request,VarIn,VarOut,Checks,Page,VarName),
+	verify_form(Request,T,Page).
+verify_form(_,[],_).
+
+check_var2(_,V,V,[],_,_).
+check_var2(R,VIn,VOut,[H|T],P,M):-
+	check_var2(R,VIn,V2,H,P,M),
+	check_var2(R,V2,VOut,T,P,M).
+check_var2(_R,'',VOut,default(VOut),_P,_M).
+check_var2(R,'',_,required,P,M):-
+	error_page(R,P,[M,' is required']).
+check_var2(_R,VIn,VIn,required,_,_):-
+	VIn \= ''.
+check_var2(R,VIn,VOut,number,P,M):-
+	atom(VIn),
+	catch(atom_number(VIn,VOut),error(_,_),error_page(R,P,[M,': must be a number'])).
+check_var2(_R,VIn,VIn,number,_P,_M):-
+	number(VIn).
+check_var2(R,VIn,VOut,integer,P,M):-
+	check_var2(R,VIn,VOut,number,P,M),
+	(integer(VOut)->true;error_page(R,P,[M,': must be an integer'])).
+check_var2(R,VIn,VOut,natural,P,M):-
+	check_var2(R,VIn,VOut,integer,P,M),
+	(VOut>=0 ->true;error_page(R,P,[M,': must be above zero'])).
 
 
 
