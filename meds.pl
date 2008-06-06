@@ -17,7 +17,9 @@
 :- use_module(library(sgml)).
 
 % file of drug(Name,Dose,Form,StandardDose,PBSCodes).
-:- consult('medlist.pl').
+:- consult(src('medlist.pl')).
+% file of PBS Authority summaries
+:- consult(src('brief_pbs_texts.pl')).
 % file of
 % pbs(GenericName,PBSForm,ItemNo,MaxQuantity,MaxRepeats,[Availability]).
 % :- consult('pbs_data.pl').
@@ -231,20 +233,29 @@ find_pbs_items(P,PBS,Qty,Rpt,Code,AuthCode,Name):-
 	chapter(P,Chapter,ChapterName1,ChapterName2,Link),
 	pbs_name(Code,ChapterName1,ChapterName2,Link,Mode,L,S,AuthCode),
 	format(string(Name),L,S).
+
+find_pbs_items(_P,PBS,Qty,Rpt,Code,required,'PBS Auth (increased qty.)'):-
+	once((pbs(Code,Chapter,PBS,PBSQty,PBSRpt,Mode),
+	          Chapter\='PI',
+	          Mode\=authority(_,_),
+	          Qty>PBSQty)),
+	ignore(PBSRpt=Rpt).
+	.
+	
 % offer option of private script
 find_pbs_items(_P,PBS,Qty,Rpt,private,null,'Private'):-
-	once(pbs(_Code,Chapter,PBS,PBSQty,PBSRpt,_Mode)),
-	Chapter\='PI', % private-only don't need a private option
+	once((pbs(_Code,Chapter,PBS,PBSQty,PBSRpt,_Mode)),
+	           Chapter\='PI'), % private-only don't need a private option
 	ignore(Qty=PBSQty),ignore(Rpt=PBSRpt).
 
 pbs_name(_Code,ChapterName1,ChapterName2,no,unrestricted,'~a ~a',[ChapterName1,ChapterName2],null).
 pbs_name(Code,ChapterName1,ChapterName2,yes,unrestricted,'<a href="/laece/nopatient/druginfo/~a">~a ~a</a>',[Code,ChapterName1,ChapterName2],null).
-pbs_name(Code,ChapterName1,_,_,authority(TextNo),'<a href="/laece/nopatient/druginfo/~a">~a Auth:~a</a>',[Code,ChapterName1,BriefText],null):-
-	brief_pbs_text(TextNo,BriefText).
-pbs_name(Code,ChapterName1,_,_,restricted(TextNo),'<a href="/laece/nopatient/druginfo/~a">~a Restrict:~a</a>',[Code,ChapterName1,BriefText],null):-
-	brief_pbs_text(TextNo,BriefText).
-pbs_name(Code,ChapterName1,_,_,streamlined(TextNo,AuthCode),'<a href="/laece/nopatient/druginfo/~a">~a Auth:~a</a>',[Code,ChapterName1,BriefText],AuthCode):-
-	brief_pbs_text(TextNo,BriefText).
+pbs_name(Code,ChapterName1,_,_,authority(TextNo,Text),'<a href="/laece/nopatient/druginfo/~a">~a Auth:~a</a>',[Code,ChapterName1,BriefText],required):-
+	once(brief_pbs_text(TextNo,Text,BriefText)).
+pbs_name(Code,ChapterName1,_,_,restricted(TextNo,Text),'<a href="/laece/nopatient/druginfo/~a">~a Restrict:~a</a>',[Code,ChapterName1,BriefText],null):-
+	once(brief_pbs_text(TextNo,Text,BriefText)).
+pbs_name(Code,ChapterName1,_,_,streamlined(TextNo,Text,AuthCode),'<a href="/laece/nopatient/druginfo/~a">~a Auth:~a</a>',[Code,ChapterName1,BriefText],AuthCode):-
+	once(brief_pbs_text(TextNo,Text,BriefText)).
 
 
 
@@ -274,6 +285,16 @@ chapter(_,'PI','Private script ','',no).
 % Of course there is no such PBS chapter, this is to allow entries for drugs 
 % with no true PBS entry.
 
+%% brief_pbs_text(+TextNo,+Text,-BriefText).
+%  compute a brief text (max couple of words) for the Authority text
+brief_pbs_text(TextNo,_,BriefText):-
+	% use a set of pre-defined facts in a separate DB
+	brief_pbs_text(TextNo,BriefText).
+brief_pbs_text(_,Text,BriefText):-
+	% no text found, so use start of text
+	sub_atom(Text,0,12,_,BriefText).
+brief_pbs_text(_,Text,Text).
+               % if the former fails, because text is less than 12 chars (unlikely)
 
 % drug editing screen
 
