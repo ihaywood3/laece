@@ -282,18 +282,18 @@ pbs_name(Code,ChapterName1,_,_,streamlined(TextNo,Text,AuthCode),'<a href="/laec
 % the result list
 
 chapter(P,'R1','RPBS','',no):-
-      p(P,_,_,veteran).
-chapter(P,'PL','PBS','Pall. Care',yes):-
-	diagnosis(P,_,_,DCode,_),
-	palliative(DCode).	
+      veteran(P).
+chapter(_P,'PL','PBS','Pall. Care',yes).
+	%diagnosis(P,_,_,DCode,_), % FIXME: auto-detection for palliative status? how?
+	%palliative(DCode).	
 chapter(_,'GE','PBS','',no). % GEneral items
 chapter(_,'SB','PBS','Special benefit',yes).
-chapter(P,'CI','PBS','Ileostomy/Colostomy',yes):-
-	diagnosis(P,_,_,DCode,_),
-	(  ileostomy(DCode);colostomy(DCode)).
-chapter(P,'PQ','PBS','Para/Quadraplegia',yes):-
-	diagnosis(P,_,_,DCode,_),
-	(    paraplegia(DCode);quadriplegia(DCode)).
+chapter(_P,'CI','PBS','Ileostomy/Colostomy',yes).
+	%diagnosis(P,_,_,DCode,_),
+	%(  ileostomy(DCode);colostomy(DCode)).
+chapter(_P,'PQ','PBS','Para/Quadraplegia',yes).
+	%diagnosis(P,_,_,DCode,_),
+	%(    paraplegia(DCode);quadriplegia(DCode)).
 chapter(_,X,'Sect. 100','',yes):-
 	memberchk(X,['CS','CT','HS','MF','GH','IF','SY']).
                % FIXME: should be divided up in separate section 100 chapters where this makes sense
@@ -313,7 +313,7 @@ brief_pbs_text(_,Text,BriefText):-
 brief_pbs_text(_,Text,Text).
                % if the former fails, because text is less than 12 chars (unlikely)
 
-% drug editing screen
+% authority handling
 
 reply(Request,[editdrug]):-
 	memberchk(patient=N,Request),
@@ -321,30 +321,18 @@ reply(Request,[editdrug]):-
 	memberchk(script=Script,Request),
 	Script=script(_Name,_Form,_Dose,_Instr,_Qty,_Rpt,_PBSCode,AuthCode,_Comment),
 	AuthCode\=required, % no Authority contact required
-	do_script(N,Script).
+	do_script(Request,Script).
 
 reply(Request,[editdrug]):-
 	memberchk(patient=N,Request),
 	N\=nopatient,
 	memberchk(script=script(Name,Form,Dose,Instr,Qty,Rpt,PBSCode,AuthCode,Comment),Request),
 	AuthCode==required,
-	memberchk(authcode=AuthCode2,Request),
-              memberchk(new_qty=Qty2,Request),
-	memberchk(new_rpt=Rpt2,Request),
-	(   AuthCode2=='' -> error_page(Request,authority_form,'Authority code required');true),
-	(   Qty2=='' -> 
-	           Qty3=Qty
-	     ;
-	           catch(atom_number(Qty2,Qty3),error(syntax_error(illegal_number),_),
-			 error_page(Request,authority_form,'Quantity must be number'))
-	),
-	(   Rpt2=='' -> 
-	           Rpt3=Rpt
-	     ;
-	           catch(atom_number(Rpt2,Rpt3),error(syntax_error(illegal_number),_),
-			 error_page(Request,authority_form,'Quantity must be number'))
-	),
-	do_script(N,script(Name,Form,Dose,Instr,Qty3,Rpt3,PBSCode,AuthCode2,Comment)).
+	verify_form(Request,[
+	      field(authority_code,AuthCode2,required),
+	      field(quantity,Qty2,[default(Qty),number]),
+	      field(repeats,Rpt2,[default(Rpt),natural])],authority_form),
+	do_script(Request,script(Name,Form,Dose,Instr,Qty2,Rpt2,PBSCode,AuthCode2,Comment)).
 
 reply(Request,[editdrug]):-
 	memberchk(patient=N,Request),
@@ -371,83 +359,22 @@ authority_form(Request):-
 	    form([action='/laece/'+N+'/editdrug',enctype='application/x-www-form-urlencoded',method='POST'],
 	           [
 		    input([type=hidden,name=prolog,value=Prolog],[]),
-		    p([b('Authority code:'),input([type=text,name=authcode],[])]),
-		    p([b('Quantity:'),input([type=text,name=new_qty,value=Qty],[])]),
-		    p([b('Quantity:'),input([type=text,name=new_qty,value=Rpt],[])])
+		    p([b('Authority code:'),input([type=text,name=authority_code],[])]),
+		    p([b('Quantity:'),input([type=text,name=quantity,value=Qty],[])]),
+		    p([b('Repeats:'),input([type=text,name=repeats,value=Rpt],[])])
 		   ])],authority).
 
 print_auth(N,[H|T])-->
 	html(p([N,'. ',\[H]])),{N2 is N+1},print_auth(N2,T).
 print_auth(_,[])-->[].
 
-patient_reply(N,[editdrug],script(Name,Form,Dose,Instr,Modes)):-N\=nopatient,
-    print_drug(Name,NameS),
-    print_dose(Dose,DoseS),
-    instr_to_latin(Instr,InstrL),
-    instr_to_english(Instr,InstrE),
-    with_output_to(atom(DrugS),writeq(drug(Name,Form,Dose))),
-    patient_page(N,'Edit Prescription',[
-      h2([NameS,' ',Form,' ',DoseS]),
-      form([action='/patient/'+N+'/main',enctype='application/x-www-form-urlencoded',method='POST'],
-	   [
-	    p(['Instructions:',input([type=text,name=instructions,size=40,value=InstrL],[])]),
-	    p(['Translation:',span([id=trans],InstrE)]),
-	    input([type=hidden,name=drug,value=DrugS],[]),
-	    h3('Prescription type'),
-	    dl([\script_types(Modes)]),
-	    input([type=submit,value='Submit'],[])])
-	   ]).
+% do script
+do_script(Request,Script):-
+	memberchk(patient=N,Request),
+	assert_patient(N,Script),
+	reply(Request,[medlist]).
 
-script_types([mode(Qty,Rpt,PBSMode,PBSCode)|T])-->
-	{make_auth(PBSMode,PBSCode,Auth),
-	 (pbs(_G,_F,PBSCode,_,_,Chapter,_,_);Chapter='PI'),
-	 pbs_title(PBSMode,PBSTitle),
-	 chapter(Chapter,ChapterName)},
-	html([dt([input([type=radio,name=mode,value=Auth],[]),ChapterName|PBSTitle]),
-	      dd([\pbs_body(PBSMode),
-	      'Quantity:',input([type=text,name=qty+Auth,value=Qty,size=3],[]),
-	      'Repeats:',input([type=text,name=rpt+Auth,value=Rpt,size=3],[])])]),
-	script_types(T).
-	
-script_types([])-->[].
-	
-pbs_body(auth(contact,_,Text))-->
-	html([\[Text],p(['Authority code: ',input([type=text,name=auth_code,length=7],[])])]).
-pbs_body(auth(Type,_,Text))-->{Type\=contact,Text\=''},
-	html([\[Text]]).
-pbs_body(auth(_,_,''))-->[].
 
-pbs_title(auth(unrestricted,_,_),[]).
-pbs_title(auth(contact,_,_),[strong('Authority')]).
-pbs_title(auth(restricted,_,_),['Restricted']).
-pbs_title(auth(streamlined,_,_),['Streamlined Authority']).
-
-patient_process(N,Params,Reply):-
-	memberchk(instructions=Instr1,Params),
-	parse_command(Instr1,Instr2),
-	parse_instr(Instr2,Instr,_,_),
-	termchk(drug=drug(Name,Form,Dose),Params),
-	ignore(memberchk(auth_code=UserAuthCode,Params)),
-	ignore(UserAuthCode=none),
-	termchk(mode=Auth,Params),
-	format(atom(QtyName),'~a~a',[qty,Auth]), % use packed auth string to access correct qty/rpt
-	memberchk(QtyName=Qty,Params),
-	format(atom(RptName),'~a~a',[rpt,Auth]),
-	memberchk(RptName=Rpt,Params),
-	atom_number(Rpt,Rpt2),
-	atom_number(Qty,Qty2),
-	concat_atom([PBSType,AuthCode,PBSCode],'_',Auth), % unpack auth string
-	assert_patient(N,script(Name,Form,Dose,Instr,pbs(PBSType,PBSCode,AuthCode,UserAuthCode),Qty2,Rpt2)),
-	once((pbs(_G,_F,PBSCode,_,_,Chapter,_,_);Chapter='PI')),
-	once(((PBSType=contact,ScriptAuthCode=UserAuthCode);ScriptAuthCode=AuthCode)),
-	asserta(print(N,drug(Name,Form,Dose,Instr,PBSType,Chapter,ScriptAuthCode,Qty2,Rpt2))),
-	print_drug(Name,DrugS),
-	print_dose(Dose,DoseS),
-	format(atom(Reply),'~a ~a ~a prescribed',[DrugS,Form,DoseS]).
-
-	
-make_auth(auth(Type,Code,_Text),PBSCode,Auth):-
-	format(atom(Auth),'~a_~a_~a',[Type,Code,PBSCode]).
 
 % predicates for the print engine
 
