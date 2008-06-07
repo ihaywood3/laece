@@ -1,0 +1,214 @@
+%   core module
+%   Copyright (C) 2007,2008 Ian Haywood
+%
+%   This program is free software: you can redistribute it and/or modify
+%   it under the terms of the GNU General Public License as published by
+%   the Free Software Foundation, either version 3 of the License, or
+%   (at your option) any later version.
+%
+%   This program is distributed in the hope that it will be useful,
+%   but WITHOUT ANY WARRANTY; without even the implied warranty of
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%   GNU General Public License for more details.
+%
+%   You should have received a copy of the GNU General Public License
+%   along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+:- use_module(src('web.pl')).
+
+:- multifile reply/2, completion/7, page_avail/3,command/2, command/3.
+:- discontiguous reply/2, completion/7, page_avail/3, command/2, command/3.
+:- dynamic help/3.
+
+
+:- consult('db.pl').
+:- consult('notes.pl').
+:- consult('diagnosis.pl').
+
+server_thread(Port):-
+        use_module(library('http/thread_httpd')),
+	use_module(library('http/http_error.pl')), % print stacktraces on error
+        reload_demographics,
+        %reload_contacts,
+        http_server(reply,[port(Port)]),
+        asserta(debug(_,_)),
+        http_current_worker(Port,Thread),
+        thread_join(Thread,_).
+
+server_xpce:-
+        use_module(library('http/xpce_httpd')),
+        asserta(':-'(debug(Message,Params),log(debug,Message,Params))),
+        reload_demographics,
+        load_help,
+        %reload_contacts,
+        guitracer,
+        absolute_file_name(src('web.pl'),A),emacs(A),
+        http_server(reply,[port(8080)]).
+
+reply(Request) :-
+        memberchk(path(Path), Request),
+        parse_path(Path,PathList),
+        once(get_params(Request,Request2)),
+        once(get_prolog(Request2,Request3)),
+        log(notice,'path ~w',[PathList]),
+        catch(reply(Request3,PathList),error(X),log(error,'exception ~q',[X])).
+
+reply(Request, []) :- not(memberchk(patient=_,Request)),
+		   !,reply(Request,[laece,nopatient,welcome]).
+
+reply(_, ['file',Filename]):-!,
+    mimetype(Suffix,Mimetype),
+    sub_atom(Filename,_,_,0,Suffix),
+    absolute_file_name(resources(Filename),AbsFname),
+    throw(http_reply(file(Mimetype,AbsFname))).
+
+reply(_,['reload','demographics']):-reload_demographics.
+
+reply(Request,[laece,N|Rest]):-
+    % authenticate here
+    (integer(N) -> atom_number(N2,N);N2=N),
+    (N\=nopatient -> load_patient(N2);true),
+    R2=[patient=N2|Request],
+    ignore(add_data(R2)),
+    ignore(print_data(R2)),
+    reply(R2,Rest).
+
+  
+reply(Request,[welcome]):-
+  reply_page(Request,'Welcome',[p(
+      'Welcome to Laece. Above this text is the command bar, which is used to control
+       laece. To load a patient type part of the firstname and part of surname, e.g. "jo smi" for 
+       John Smith, a list of possible patients will appear, select one with the arrow
+       keys to load that patient.')],[]).
+
+
+get_params(Request,Request2):-
+    memberchk(method(get),Request),
+    memberchk(search(Params),Request),
+    append(Request,Params,Request2).
+
+get_params(Request,Request2):-
+    memberchk(method(post),Request),
+    http_read_data(Request,Params,[]),
+    append(Request,Params,Request2).
+    
+get_params(Request,Request). % fallback option.
+
+get_prolog(Request2,Request3):- % add prolog variables to params list in request.
+    memberchk(prolog=P,Request2),
+    catch(term_to_atom(TCmd,P),error(syntax_error(_),_),fail),
+    append(TCmd,Request2,Request3).
+
+get_prolog(X,X). % fallback option
+
+reply(Request,[completions]):-
+    memberchk(widget=W,Request),memberchk(compl_text=S,Request),memberchk(patient=N,Request),
+    parse_command(S,L),
+    findall(completion(Params,Text,Html,Path),completion(N,L,W,Params,Text,Html,Path),Reply),
+    format('Content-Type: text/plain~n~n'),
+    print_completion(Reply).
+
+% general routine for recording new terms
+add_data(Request):-
+  memberchk(add=Term,Request),
+  memberchk(patient=N,Request),
+  N\=nopatient,
+  assert_patient(N,Term).
+  
+% general routine for printable items
+print_data(Request):-
+  memberchk(patient=N,Request),
+  N\=nopatient,
+  memberchk(toprint=_Print,Request),
+  % add to print queue here
+  true.
+  
+
+% as yet unused warnings mechanism
+warnings(N)-->
+    {
+        findall(wa(Level,L),phrase(warning(N,Level),L,[]),B),
+        B\=[],!,sort(B,B2)
+    },
+    html([h2('Warnings')]),
+    warn_p(B2).
+warnings(_)-->[].
+warn_p([wa(Level,L)|T])-->
+    html([p([class=warning+Level],\L)]),warn_p(T).
+warn_p([])-->[].
+
+% completions for demographics 
+
+% logic for basic commands
+completion(_N,[Cmd],cmdline,noop,submit_now,Html,Path):-
+	command(Name,Html,Path),
+	sub_atom(Name,0,_,_,Cmd).
+
+completion(_N,[Cmd],cmdline,noop,Name,Html,''):-
+	command(Name,Html),
+	sub_atom(Name,0,_,After,Cmd),
+	After>0.
+
+command(warranty,'warranty - lack of warranty','help/warranty').
+command(licence,'licence - display GNU licence','help/licence').
+command(help,'help <i>[topic]</i> - show help page, can add specific topic','help/main').
+
+% help system
+
+completion(_N,[help,T],cmdline,noop,submit_now,'<span class="compl_stem">Help</span> '+Topic+' - '+Html,'help/'+Topic):-
+	help(Topic,Html,_Content),
+	sub_atom(Topic,0,_,_,T).
+
+reply(R,[help,Topic]):-
+	help(Topic,_,Content),
+	reply_page(R,'Help : ~a'-Topic,\[Content],help).
+
+load_help:-
+	absolute_file_name(resources('help/*.html'),Pattern),
+	expand_file_name(Pattern,Files),
+	load_help_files(Files).
+
+load_help_files([File|T]):-
+	open(File,read,F),
+	get_code(F,Code),
+	read_line(F,Code,Line),atom_codes(Html,Line),
+	get_code(F,Code2),
+	read_rest(F,Code2,Rest),atom_codes(Content,Rest),
+	file_base_name(File,BaseFile),
+	file_name_extension(Topic,html,BaseFile),
+	asserta(help(Topic,Html,Content)),
+	close(F),
+	load_help_files(T).
+load_help_files([]).
+
+read_line(_,10,[]).
+read_line(_,13,[]).
+read_line(_,-1,[]).
+read_line(F,Code,[Code|T]):-
+	not(memberchk(Code,[10,13,-1])),
+	get_code(F,Code2),
+	read_line(F,Code2,T).
+
+read_rest(_,-1,[]).
+read_rest(F,Code,[Code|T]):-
+	Code\= -1,
+	get_code(F,Code2),
+	read_rest(F,Code2,T).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
