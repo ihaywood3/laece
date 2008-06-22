@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\usepackage[papersize={18in,12in}]{geometry}
+\usepackage[absolute]{textpos}
+\usepackage{color}
+%\usepackage[colorgrid,texcoord,gridunit=in]{eso-pic}[2002/11/16]
+\usepackage{calc}
+\usepackage{allrunes}
+\usepackage{forloop}
+\pagestyle{empty}
+\newcommand{\laece}[1]{
+\bgroup
+ \noindent\Huge\textcolor[rgb]{0.#1,0.#1,1.0}{\textbf{\textara{\textro{l\ae ce}}}}   
+\egroup}
+\begin{document}
+\textblockorigin{0cm}{0cm}
+\newcounter{pages}
+\setcounter{pages}{50}
+\newlength{\trimwidth}
+\newlength{\trimheight}
+\setlength{\trimheight}{10in}
+\setlength{\trimwidth}{8in}
+\newlength{\spine}
+\setlength{\spine}{0.002252in*\value{pages}}
+\newlength{\leftedge}
+\setlength{\leftedge}{(18in - (\trimwidth * 2) - \spine)/2}
+\newlength{\topedge}
+\setlength{\topedge}{(12in-\trimheight)/2}
+\newcounter{ct}
+\forloop{ct}{0}{\value{ct}<9}{
+\begin{textblock*}{4in}(\leftedge+\trimwidth+\spine+2in,\topedge+4.4in-0.3in*\value{ct})
+\laece{\arabic{ct}}
+\end{textblock*}}
+
+\begin{textblock*}{4in}(\leftedge+10in+\spine,\topedge+4.7in)
+\noindent\Huge\textcolor[rgb]{0.0,0.0,0.75}{L\AE CE}
+\end{textblock*}
+\end{document}
