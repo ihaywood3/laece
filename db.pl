@@ -14,9 +14,21 @@
 %   You should have received a copy of the GNU General Public License
 %   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+:- module(db,[reload_demographics/0,
+	      demo/4,
+	      demo/7,
+	      p/4,
+	      veteran/1,
+	      patient_name/2,
+	      load_contacts/0,
+	      contact/2,
+	      save_contact/1,
+	     load_patient/1,
+	     assert_patient/2]).
+
 :- initialization catch(mutex_create(db_general),error(permission_error(mutex, create, db_general), context(mutex_create/1, _)),true).
 
-:- dynamic p/4.
+:- dynamic p/4,pat_loaded/3,contact/2.
 
 reload_demographics:-
     with_mutex(db_general,consult(db('demo.pl'))).
@@ -43,26 +55,9 @@ patient_name(N,T):-
     capital_words(Lastname2,Lastname3),
     format(atom(T),'~s ~s (~a)',[Firstname3,Lastname3,N]).
 
-completion(_OldPatient,[SFirstname,SLastname],cmdline,[],submit_now,
-    '<span class="compl_stem">Open patient</span> ~s ~s'-[Firstname3,Lastname3],
-    '/laece/~a/diagnoses'-[NewPatient]):-
-        demo(NewPatient,Firstname,Lastname,_Dob),
-        sub_atom(Firstname,0,_,_,SFirstname),
-        sub_atom(Lastname,0,_,_,SLastname),
-        name(Firstname,Firstname2),
-        name(Lastname,Lastname2),
-        capital_words(Firstname2,Firstname3),
-        capital_words(Lastname2,Lastname3).
-
-completion(OldPatient,[SLastname,',',SFirstname],cmdline,noop,Text,Html,Path):-
-    completion(OldPatient,[SFirstname,SLastname],cmdline,noop,Text,Html,Path).
-
-
 load_contacts:-
     with_mutex(db_general,load_contacts_mutex).
     
-:- dynamic contact/2.
-
 load_contacts_mutex :- 
   absolute_file_name(db('contacts.pl'),File),
   open(File, read, Stream), 
@@ -176,3 +171,37 @@ assert_patient_mutex(N,Now,User,Data):-
     format(Fileno,'p(~f,~q,~q).~n',[Now,User,Data]),
     flush_output(Fileno),
     asserta(p(N,Now,User,Data)).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
