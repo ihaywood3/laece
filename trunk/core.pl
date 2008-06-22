@@ -56,7 +56,8 @@ reply(Request) :-
 reply(Request, []) :- not(memberchk(patient=_,Request)),
 		   !,reply(Request,[laece,nopatient,welcome]).
 
-reply(_, ['file',Filename]):-!,
+reply(_, [file|Path]):-!,
+    concat_atom(Path,'/',Filename),
     mimetype(Suffix,Mimetype),
     sub_atom(Filename,_,_,0,Suffix),
     absolute_file_name(resources(Filename),AbsFname),
@@ -155,8 +156,8 @@ command(help,'help <i>[topic]</i> - show help page, can add specific topic','hel
 
 % help system
 
-completion(_N,[help,T],cmdline,noop,submit_now,'<span class="compl_stem">Help</span> '+Topic+' - '+Html,'help/'+Topic):-
-	help(Topic,Html,_Content),
+completion(_N,[help,T],cmdline,noop,submit_now,'<span class="compl_stem">Help</span> '+Topic,'/file/laece/'+File):-
+	help(Topic,File),
 	sub_atom(Topic,0,_,_,T).
 
 reply(R,[help,Topic]):-
@@ -164,36 +165,18 @@ reply(R,[help,Topic]):-
 	reply_page(R,'Help : ~a'-Topic,\[Content],help).
 
 load_help:-
-	absolute_file_name(resources('help/*.html'),Pattern),
+	absolute_file_name(resources('laece/*.html'),Pattern),
 	expand_file_name(Pattern,Files),
 	load_help_files(Files).
 
 load_help_files([File|T]):-
-	open(File,read,F),
-	get_code(F,Code),
-	read_line(F,Code,Line),atom_codes(Html,Line),
-	get_code(F,Code2),
-	read_rest(F,Code2,Rest),atom_codes(Content,Rest),
 	file_base_name(File,BaseFile),
-	file_name_extension(Topic,html,BaseFile),
-	asserta(help(Topic,Html,Content)),
-	close(F),
+	file_name_extension(Stem,html,BaseFile),
+	downcase_atom(Stem,Topic),
+	asserta(help(Topic,BaseFile)),
 	load_help_files(T).
 load_help_files([]).
 
-read_line(_,10,[]).
-read_line(_,13,[]).
-read_line(_,-1,[]).
-read_line(F,Code,[Code|T]):-
-	not(memberchk(Code,[10,13,-1])),
-	get_code(F,Code2),
-	read_line(F,Code2,T).
-
-read_rest(_,-1,[]).
-read_rest(F,Code,[Code|T]):-
-	Code\= -1,
-	get_code(F,Code2),
-	read_rest(F,Code2,T).
 
 
 
