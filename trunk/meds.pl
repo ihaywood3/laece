@@ -15,24 +15,31 @@
 %   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 :- use_module(library(sgml)).
+:- use_module(library(debug)).
+:- use_module(library(lists)).
 
-% file of drug(Name,Dose,Form,StandardDose,PBSCodes).
+:- use_module(src(db)).
+:- use_module(src(latex)).
+
+% file of drug(GName,Dose,Form,DefaultInstr,PBS) and brand(GName,Brand).
 :- consult(src('medlist.pl')).
 % file of PBS Authority summaries
 :- consult(src('brief_pbs_texts.pl')).
 % file of
-% pbs(GenericName,PBSForm,ItemNo,MaxQuantity,MaxRepeats,[Availability]).
+% pbs(Code,Chapter,PBS,PBSQty,PBSRpt,Mode)
 % :- consult('pbs_data.pl').
+
+:- dynamic script_print_pending/2.
 
 
 completion(P,Query,cmdline,[script=Script],submit_now,
    '<span class="compl_stem">Script</span> ~a ~a ~a ~s ~a ~a + ~a (~s)'-[Name,Form,Dose,InstrL,Comment,Qty,Rpt,PBSName],
     editdrug):-
 	drug_query(P,Query,Script,PBSName),
-	Script=script(Name,Form,Dose,Instr,Qty,Rpt,_PBSCode,_AuthCode,Comment),
+	Script=rx(Name,Form,Dose,Instr,Qty,Rpt,_PBSCode,_AuthCode,Comment),
 	instr_to_latin(Instr,InstrL).
 
-drug_query(P,Query,script(Name,Form,Dose,Instr2,Qty,Rpt,PBSCode,AuthCode,Comment),PBSName):-
+drug_query(P,Query,rx(Name,Form,Dose,Instr2,Qty,Rpt,PBSCode,AuthCode,Comment),PBSName):-
 	findall(D1,query_name(Query,D1),Bag1),
 	findall(D2,query_dose(Bag1,Query,D2),Bag2),
 	findall(D3,query_form(Bag2,Query,D3),Bag3),
@@ -238,7 +245,7 @@ instr_to_english(midi(X),'~d at MIDDAY',[X]).
 instr_to_english(vesper(X),'~d in the AFTERNOON',[X]).
 instr_to_english(qxh(X,Y),'~d EVERY ~d HOURS',[Y,X]).
 instr_to_english(german(A,B,C,D),'~d at BREAKFAST, ~d at LUNCH, ~d at DINNER, ~d at BEDTIME',[A,B,C,D]).
-instr_to_english(as_directed,'as directed').
+instr_to_english(as_directed,'as directed',[]).
 
 %%	find_pbs_items(+Patient,+PBSId,?Qty,?Rpt,-PBSMode).
 % PBS searching
@@ -257,12 +264,11 @@ find_pbs_items(_P,PBS,Qty,Rpt,Code,required,'PBS Auth (increased qty.)'):-
 	          Mode\=authority(_,_),
 	          Qty>PBSQty)),
 	ignore(PBSRpt=Rpt).
-	.
 	
 % offer option of private script
 find_pbs_items(_P,PBS,Qty,Rpt,private,null,'Private'):-
-	once((pbs(_Code,Chapter,PBS,PBSQty,PBSRpt,_Mode)),
-	           Chapter\='PI'), % private-only don't need a private option
+	once((pbs(_Code,Chapter,PBS,PBSQty,PBSRpt,_Mode),
+	           Chapter\='PI')), % private-only don't need a private option
 	ignore(Qty=PBSQty),ignore(Rpt=PBSRpt).
 
 pbs_name(_Code,ChapterName1,ChapterName2,no,unrestricted,'~a ~a',[ChapterName1,ChapterName2],null).
@@ -313,92 +319,230 @@ brief_pbs_text(_,Text,BriefText):-
 brief_pbs_text(_,Text,Text).
                % if the former fails, because text is less than 12 chars (unlikely)
 
-% authority handling
+% receive new drug order
 
-reply(Request,[editdrug]):-
+reply(Request,[newdrug]):-
 	memberchk(patient=N,Request),
 	N\=nopatient,
-	memberchk(script=Script,Request),
-	Script=script(_Name,_Form,_Dose,_Instr,_Qty,_Rpt,_PBSCode,AuthCode,_Comment),
-	AuthCode\=required, % no Authority contact required
-	do_script(Request,Script).
+	memberchk(rx=Rx,Request),
+	assertion(functor(Rx,rx,9)), % sanity check
+	assert_patient(N,Rx),
+	asserta(script_print_pending(N,Rx)),
+	reply(Request,[medlist]).
 
-reply(Request,[editdrug]):-
-	memberchk(patient=N,Request),
-	N\=nopatient,
-	memberchk(script=script(Name,Form,Dose,Instr,Qty,Rpt,PBSCode,AuthCode,Comment),Request),
-	AuthCode==required,
-	verify_form(Request,[
-	      field(authority_code,AuthCode2,required),
-	      field(quantity,Qty2,[default(Qty),number]),
-	      field(repeats,Rpt2,[default(Rpt),natural])],authority_form),
-	do_script(Request,script(Name,Form,Dose,Instr,Qty2,Rpt2,PBSCode,AuthCode2,Comment)).
-
-reply(Request,[editdrug]):-
-	memberchk(patient=N,Request),
-	N\=nopatient,
-	memberchk(script=script(_Name,_Form,_Dose,_Instr,_Qty,_Rpt,_PBSCode,AuthCode,_Comment),Request),
-	AuthCode==required,
-	not(memberchk(authcode=_,Request)),
-	authority_form(Request).
-
-% display a web form requesting an authority
+% display a web form requesting the authorities
 authority_form(Request):-
 	memberchk(patient=N,Request),
-	memberchk(script=Script,Request),
-	Script=script(Name,Form,Dose,Instr,Qty,Rpt,PBSCode,_AuthCode,_Comment),
-	once((perday(Instr,PerDay);PerDay='--')),
-	format(atom(Prolog),'~q',[[prolog=Script]]),
-	findall(Text,pbs(PBSCode,_Chapter,_PBS,_PBSQty,_PBSRpt,authority(_No,Text)),Texts),
-	reply_page(Request,'Authority required',[
+	memberchk(scripts=Scripts,Request),
+	format(atom(Prolog),'~q',[[scripts=Scripts]]),
+	reply_page(Request,'Authority required',
+	      form([action='/laece/'+N+'/recieve_authority',
+		 enctype='application/x-www-form-urlencoded',
+		 method='POST'],[
+		      	    input([type=hidden,name=prolog,value=Prolog],[]),
+		                  \one_script_auth(Request,Scripts),
+			    p([],[input([type=submit,value='Submit'],[])])
+				])).
+
+one_script_auth(Request,[script(No,Rxs,_Chapter)|T])-->
+	(one_drug_auth(Request,No,Rxs);[]),
+	one_script_auth(T).
+one_script_auth(_,[])-->[].
+
+one_drug_auth(Request,No,[Rx|T])-->
+	{
+	     Rx=rx(Name,Form,Dose,Instr,Qty,Rpt,PBSCode,required,_Comment),!,
+	     once((perday(Instr,PerDay);PerDay='--')),
+	     findall(Text,pbs(PBSCode,_Chapter,_PBS,_PBSQty,_PBSRpt,authority(_No,Text)),Texts),
+	     once(((Texts==[],Texts2=['Increased quantity']);Texts=Texts2))
+	},
+	html([
 	    h2('Authority required'),
 	    p([b('Drug:'),Name,' ',Form,' ',Dose]),
+	    p([b('Script No.'),No]),
 	    p([b('Amount per day:'),PerDay]),
 	    h3('Authority Text'),					 
-	    \print_auth(1,Text),
-	    form([action='/laece/'+N+'/editdrug',enctype='application/x-www-form-urlencoded',method='POST'],
-	           [
-		    input([type=hidden,name=prolog,value=Prolog],[]),
-		    p([b('Authority code:'),input([type=text,name=authority_code],[])]),
-		    p([b('Quantity:'),input([type=text,name=quantity,value=Qty],[])]),
-		    p([b('Repeats:'),input([type=text,name=repeats,value=Rpt],[])])
-		   ])],authority).
+	    \print_auth(1,Texts2),
+	    p([b('Authority code:'),input([type=text,name=authority_code_+PBSCode],[])]),
+	    p([b('Quantity:'),input([type=text,name=quantity_+PBSCode,value=Qty],[])]),
+	    p([b('Repeats:'),input([type=text,name=repeats_+PBSCode,value=Rpt],[])])
+	     ]),
+	one_drug_auth(Request,No,T).
+one_drug_auth(R,No,[_|T])-->one_drug_auth(R,No,T). % not authority drug, so skip
+one_drug_auth(_,_,[])-->[].
 
 print_auth(N,[H|T])-->
 	html(p([N,'. ',\[H]])),{N2 is N+1},print_auth(N2,T).
 print_auth(_,[])-->[].
 
-% do script
-do_script(Request,Script):-
-	memberchk(patient=N,Request),
-	assert_patient(N,Script),
-	reply(Request,[medlist]).
-
-
-
 % predicates for the print engine
 
+command([print,X],'print prescriptions - print pending prescriptions','print_scripts'):-
+	member(X,[drugs,scripts,prescriptions]).
 
-print_list(N,drug(Name,Form,Dose,Instr,Qty,Rpt,AuthCode),'Authority Script'):-
-	print(N,drug(Name,Form,Dose,Instr,PBSType,_Chapter,AuthCode,Qty,Rpt)),
-	(PBSType=contact;PBSType=streamlined).
+reply(Request,[print_scripts]):-
+	memberchk(patient=N,Request),
+	findall(Script,script_print_pending(N,Script),ScriptBag),
+	filter_auths(ScriptBag,NonAuths,Auths),
+	maplist(get_chapter,ScriptBag2,NonAuths),
+	maplist(get_chapter,Auths,Auths2),
+	keysort(ScriptBag2,ScriptBag3),
+	split_meds_list(ScriptBag3,[],ScriptBag4),
+	append(ScriptBag4,Auths2,ScriptBag5),
+	maplist(make_script,ScriptBag5,ScriptBag6),
+	(   Auths==[] ->
+	     print_scripts(Request,ScriptBag6)
+	;   
+	    authority_form([scripts=ScriptBag6|Request])).
 
-print_list(N,druglist(L2),'Script'):-
-	(IsRepat=yes;IsRepat=no),
-	findall(drug(Name,Form,Dose,Instr,Qty,Rpt),search_drug_printlist(N,IsRepat,Name,Form,Dose,Instr,Qty,Rpt),L),
-	break_into_threes(L,L2).
+%%	make_script(+In,-Out).
+% converts list of drugs into script term
+% actually just gets a script number
+% FIXME: currently a dummy value, need a sequential
+% number generator
+make_script(In,script(No,Out,Chapter)):-
+	No='123456', % FIXME: use sequential values
+	In=[Chapter-_|_],
+	maplist(strip_chapter,In,Out).
+	
+%% filter_auths(OriginalList,NonAuths,Auths).
+% separates authority and non-authority drugs
+% authority drugs go in one-item lists because they will be one-drug
+% scripts
+
+filter_auths([],[],[]).
+filter_auths([H|T1],[H|T2],L):-
+	H=rx(_Name,_Form,_Dose,_Instr,_Qty,_Rpt,_PBSCode,AuthCode,_Comment),
+	AuthCode==null,
+	filter_auths(T1,T2,L).
+filter_auths([H|T1],L,[[H]|T2]):-
+	H=rx(_Name,_Form,_Dose,_Instr,_Qty,_Rpt,_PBSCode,AuthCode,_Comment),
+	AuthCode\=null,
+	filter_auths(T1,L,T2).
+
+% gets drug chapter fr sorting out scripts (all drugs on a script must
+% be same chapter)
+
+get_chapter('PI'-Rx,Rx):-
+	Rx=rx(_,_,_,_,_,_,private,_,_).
+get_chapter(Chapter-Rx,Rx):-
+	    Rx=rx(_,_,_,_,_,_,PBSCode,_,_),
+	    pbs(PBSCode,Chapter,_PBS,_PBSQty,_PBSRpt,_Mode).
+
+%%	split_meds_list(+In,-Temp,-Final).
+% splits a sorted list of meds by chapter
+split_meds_list([],[],[]).
+split_meds_list([],[H|T],[[H|T]]).
+split_meds_list([H|T],[],L):-!,
+	split_meds_list(T,[H],L).
+split_meds_list([C1-Rx1|T],[C2-Rx2|T2],L):-
+	C1==C2,
+	settings:script_max(ScriptMax),
+	X is ScriptMax-1,
+	length(T2,N),N<X,!,
+	split_meds_list(T,[C1-Rx1,C2-Rx2|T2],L).
+split_meds_list([H|T],L1,[L1|L2]):-
+	split_meds_list(T,[H],L2).
+
+strip_chapter(_Chapter-Rx,Rx).
+
+% print_script(+Request,+ScriptBag).
+% print some scripts
+print_scripts(Request,[script(No,Rxs,Chapter)|T]):-
+	memberchk(patient=N,Request),
+	demo(N,Firstname,Lastname,Dob,Address,Postcode,_Telephone,Medicare,DVA,CRN),
+	latex([documentclass(article),begin(document),
+	       textbf('Patient Details:'),Firstname,Lastname,nl,
+	       'DOB:',Dob,nl,Address,' ',Postcode,nl,
+	       \script_patient_number(Medicare,DVA,CRN,Chapter),
+	       textbf('Script No.: '),No,p,
+	       \print_one_drug(Rxs),
+	      end(document)]),
+	print_scripts(Request,T).
+print_scripts(_,[]).
+
+script_patient_number(Medicare,_,CRN,Chapter)-->
+	{Chapter\='PI',CRN\=none,Chapter\='R1'},
+	latex([textbf('Medicare: '),Medicare,textbf(' CRN:'),CRN,nl]).
+
+script_patient_number(Medicare,_,none,Chapter)-->
+	{Chapter\='PI',Chapter\='R1'},
+	latex([textbf('Medicare: '),Medicare,nl]).
 
 
-search_drug_printlist(N,IsRepat,Name,Form,Dose,Instr,Qty,Rpt):-
-	print(N,drug(Name,Form,Dose,Instr,PBSType,Chapter,_ScriptAuthCode,Qty,Rpt)),
-	(PBSType=unrestricted;PBSType=restricted),
-	((IsRepat=yes,Chapter='R1');(IsRepat\=yes,Chapter\='R1')).
+script_patient_number(_,_,_,'PI')-->
+	latex([textbf('**PRIVATE SCRIPT**')]).
 
-% break list of scripts into groups of 3: legal limit for one script
-break_into_threes(L,L):-
-	length(L,X),X<3,X>0.
-break_into_threes([L1,L2,L3|Rest],L4):-
-	L4=[L1,L2,L3];break_into_threes(Rest,L4).
+
+script_patient_number(_,DVA,_,'R1')-->
+	latex([textbf('DVA number: '),DVA,nl]).
+
+print_one_drug([rx(_Name,_Form,_Dose,_Instr,_Qty,_Rpt,_PBSCode,AuthCode,_Comment),
+	AuthCode\=null,
+	filter_auths(T1,L,T2).
+
+% gets drug chapter fr sorting out scripts (all drugs on a script must
+% be same chapter)
+
+get_chapter('PI'-Rx,Rx):-
+	Rx=rx(_,_,_,_,_,_,private,_,_).
+get_chapter(Chapter-Rx,Rx):-
+	    Rx=rx(_,_,_,_,_,_,PBSCode,_,_),
+	    pbs(PBSCode,Chapter,_PBS,_PBSQty,_PBSRpt,_Mode).
+
+%%	split_meds_list(+In,-Temp,-Final).
+% splits a sorted list of meds by chapter
+split_meds_list([],[],[]).
+split_meds_list([],[H|T],[[H|T]]).
+split_meds_list([H|T],[],L):-!,
+	split_meds_list(T,[H],L).
+split_meds_list([C1-Rx1|T],[C2-Rx2|T2],L):-
+	C1==C2,
+	settings:script_max(ScriptMax),
+	X is ScriptMax-1,
+	length(T2,N),N<X,!,
+	split_meds_list(T,[C1-Rx1,C2-Rx2|T2],L).
+split_meds_list([H|T],L1,[L1|L2]):-
+	split_meds_list(T,[H],L2).
+
+strip_chapter(_Chapter-Rx,Rx).
+
+% print_script(+Request,+ScriptBag).
+% print some scripts
+print_scripts(Request,[script(No,Rxs,Chapter)|T]):-
+	memberchk(patient=N,Request),
+	demo(N,Firstname,Lastname,Dob,Address,Postcode,_Telephone,Medicare,DVA,CRN),
+	latex([documentclass(article),begin(document),
+	       textbf('Patient Details:'),Firstname,Lastname,nl,
+	       'DOB:',Dob,nl,Address,' ',Postcode,nl,
+	       \script_patient_number(Medicare,DVA,CRN,Chapter),
+	       textbf('Script No.: '),No,p,
+	       \print_one_drug(Rxs),
+	      end(document)]),
+	print_scripts(Request,T).
+print_scripts(_,[]).
+
+script_patient_number(Medicare,_,CRN,Chapter)-->
+	{Chapter\='PI',CRN\=none,Chapter\='R1'},
+	latex([textbf('Medicare: '),Medicare,textbf(' CRN:'),CRN,nl]).
+
+script_patient_number(Medicare,_,none,Chapter)-->
+	{Chapter\='PI',Chapter\='R1'},
+	latex([textbf('Medicare: '),Medicare,nl]).
+
+
+script_patient_number(_,_,_,'PI')-->
+	latex([textbf('**PRIVATE SCRIPT**')]).
+
+
+script_patient_number(_,DVA,_,'R1')-->
+	latex([textbf('DVA number: '),DVA,nl]).
+
+print_one_drug([rx(Name,Form,Dose,Instr,Qty,Rpt,_,AuthCode,Comment)|T])-->
+	latex,
+	print_one_drug(T).
+print_one_drug(T)-->[]..
+
 
 % queries for summary display
 

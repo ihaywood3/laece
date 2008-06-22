@@ -24,7 +24,8 @@
 	          html_forall//3,
 	          html_forall//2,
 	          verify_form/3,
-	          capital_words/2]).
+	          capital_words/2,
+	           mimetype/2]).
 
 :- use_module(library('http/http_session')).
 :- use_module(library('http/http_error')).

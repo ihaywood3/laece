@@ -15,19 +15,21 @@
 %   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 :- use_module(src('web.pl')).
+:- use_module(src('db.pl')).
+	      
+:- multifile reply/2, completion/7, page_avail/3,command/3.
+:- discontiguous reply/2, completion/7, page_avail/3, command/3.
+:- dynamic help/3,debug/2.
+% settings
+settings:consult(src('settings.pl')).
 
-:- multifile reply/2, completion/7, page_avail/3,command/2, command/3.
-:- discontiguous reply/2, completion/7, page_avail/3, command/2, command/3.
-:- dynamic help/3.
-
-
-:- consult('db.pl').
-:- consult('notes.pl').
-:- consult('diagnosis.pl').
+% clinical modules
+:- consult(src('notes.pl')).
+:- consult(src('diagnosis.pl')).
 
 server_thread(Port):-
         use_module(library('http/thread_httpd')),
-	use_module(library('http/http_error.pl')), % print stacktraces on error
+        use_module(library('http/http_error.pl')), % print stacktraces on error
         reload_demographics,
         %reload_contacts,
         http_server(reply,[port(Port)]),
@@ -37,13 +39,20 @@ server_thread(Port):-
 
 server_xpce:-
         use_module(library('http/xpce_httpd')),
+        use_module(library('http/http_error.pl')), % print stacktraces on error
         asserta(':-'(debug(Message,Params),log(debug,Message,Params))),
         reload_demographics,
         load_help,
         %reload_contacts,
         guitracer,
-        absolute_file_name(src('web.pl'),A),emacs(A),
         http_server(reply,[port(8080)]).
+
+% convience function
+e(A):-
+	concat_atom([A,'.pl'],B),
+	absolute_file_name(src(B),C),
+	emacs(C).
+:- op(200,fy,e).
 
 reply(Request) :-
         memberchk(path(Path), Request),
@@ -140,15 +149,42 @@ warn_p([])-->[].
 
 % completions for demographics 
 
+
+completion(_OldPatient,[SFirstname,SLastname],cmdline,[],submit_now,
+    '<span class="compl_stem">Open patient</span> ~s ~s'-[Firstname3,Lastname3],
+    '/laece/~a/diagnoses'-[NewPatient]):-
+        demo(NewPatient,Firstname,Lastname,_Dob),
+        sub_atom(Firstname,0,_,_,SFirstname),
+        sub_atom(Lastname,0,_,_,SLastname),
+        name(Firstname,Firstname2),
+        name(Lastname,Lastname2),
+        capital_words(Firstname2,Firstname3),
+        capital_words(Lastname2,Lastname3).
+
+completion(OldPatient,[SLastname,',',SFirstname],cmdline,noop,Text,Html,Path):-
+    completion(OldPatient,[SFirstname,SLastname],cmdline,noop,Text,Html,Path).
+
+
 % logic for basic commands
 completion(_N,[Cmd],cmdline,noop,submit_now,Html,Path):-
 	command(Name,Html,Path),
+	atom(Name),
 	sub_atom(Name,0,_,_,Cmd).
 
-completion(_N,[Cmd],cmdline,noop,Name,Html,''):-
-	command(Name,Html),
-	sub_atom(Name,0,_,After,Cmd),
-	After>0.
+completion(_N,[Cmd1],cmdline,noop,submit_now,Html,Path):-
+	command([Name1|_],Html,Path),
+	sub_atom(Name1,0,_,_,Cmd1).
+
+completion(_N,[Cmd1,Cmd2],cmdline,noop,submit_now,Html,Path):-
+	command([Name1,Name2|_],Html,Path),
+	sub_atom(Name1,0,_,_,Cmd1),
+	sub_atom(Name2,0,_,_,Cmd2).
+
+completion(_N,[Cmd1,Cmd2,Cmd3],cmdline,noop,submit_now,Html,Path):-
+	command([Name1,Name2,Name3|_],Html,Path),
+	sub_atom(Name1,0,_,_,Cmd1),
+	sub_atom(Name2,0,_,_,Cmd2),
+	sub_atom(Name3,0,_,_,Cmd3).
 
 command(licence,'licence - display GNU licence','/file/laece/Copying.html').
 command(help,'help <i>[topic]</i> - show help page, can add specific topic','/file/laece/index.html').
