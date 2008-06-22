@@ -14,12 +14,19 @@
 %   You should have received a copy of the GNU General Public License
 %   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+:- use_module(library(debug)).
+:- use_module(library('http/http_session')).
+:- use_module(library('http/http_error')).
+:- use_module(library('http/http_client')).
+:- use_module(library('http/html_write.pl')).
+
 :- use_module(src('web.pl')).
 :- use_module(src('db.pl')).
 	      
 :- multifile reply/2, completion/7, page_avail/3,command/3.
 :- discontiguous reply/2, completion/7, page_avail/3, command/3.
 :- dynamic help/3,debug/2.
+:- thread_local user/1, patient/1.
 % settings
 settings:consult(src('settings.pl')).
 
@@ -29,11 +36,12 @@ settings:consult(src('settings.pl')).
 
 server_thread(Port):-
         use_module(library('http/thread_httpd')),
-        use_module(library('http/http_error.pl')), % print stacktraces on error
+        % don't print stacktrace as security risk in porduction
         reload_demographics,
         %reload_contacts,
         http_server(reply,[port(Port)]),
         asserta(debug(_,_)),
+        load_help,
         http_current_worker(Port,Thread),
         thread_join(Thread,_).
 
@@ -41,7 +49,6 @@ server_xpce:-
         use_module(library('http/xpce_httpd')),
         use_module(library('http/http_error.pl')), % print stacktraces on error
         asserta(':-'(debug(Message,Params),log(debug,Message,Params))),
-        reload_demographics,
         load_help,
         %reload_contacts,
         guitracer,
@@ -79,6 +86,10 @@ reply(Request,[laece,N|Rest]):-
     (integer(N) -> atom_number(N2,N);N2=N),
     (N\=nopatient -> load_patient(N2);true),
     R2=[patient=N2|Request],
+    retractall(user(_)),
+    retractall(patient(_)),
+    asserta(user(ian)), % FIXME: need a real auth mechanism
+    asserta(patient(N)),
     ignore(add_data(R2)),
     ignore(print_data(R2)),
     reply(R2,Rest).
@@ -153,7 +164,7 @@ warn_p([])-->[].
 completion(_OldPatient,[SFirstname,SLastname],cmdline,[],submit_now,
     '<span class="compl_stem">Open patient</span> ~s ~s'-[Firstname3,Lastname3],
     '/laece/~a/diagnoses'-[NewPatient]):-
-        demo(NewPatient,Firstname,Lastname,_Dob),
+        demo(NewPatient,Firstname,Lastname,_,_),
         sub_atom(Firstname,0,_,_,SFirstname),
         sub_atom(Lastname,0,_,_,SLastname),
         name(Firstname,Firstname2),

@@ -27,9 +27,12 @@ reply(Request,[View]):-
 	findall(Match,get_notes(N,Match,Query),Bag1),
 	sort(Bag1,Bag2),
 	reverse(Bag2,Bag3),
-	reply_page(Request,'Notes',[
-	    \if(Bag3==[],['No notes'], \print_notes(Bag3,null,[]))
-	],View).
+	(Bag1== [] ->
+	       Page='No notes'
+	;   
+	       Page= \print_notes(Bag3,null,[])
+	),
+	reply_page(Request,'Notes',Page,View).
 
 get_notes(N,Match,Query):-
 	p(N,When,Who,What),
