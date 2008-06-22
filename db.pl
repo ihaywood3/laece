@@ -15,8 +15,9 @@
 %   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 :- module(db,[reload_demographics/0,
-	      demo/4,
-	      demo/7,
+	      demo/5,
+	      demo/8,
+	      demo/11,
 	      p/4,
 	      veteran/1,
 	      patient_name/2,
@@ -31,24 +32,26 @@
 :- dynamic p/4,pat_loaded/3,contact/2.
 
 reload_demographics:-
-    with_mutex(db_general,consult(db('demo.pl'))).
+    with_mutex(db_general,db:consult(db('demo.pl'))).
+
+:- reload_demographics.
 
 % convience functions
 
-demo(N,Firstname,Lastname,Dob):-
-    demo(N,Firstname,Lastname,Dob,_Address,_Postcode,_Telephone,_Medicare,_DVA,_CRN).
+demo(N,Firstname,Lastname,Dob,Gender):-
+    demo(N,Firstname,Lastname,Dob,Gender,_Address,_Postcode,_Telephone,_Medicare,_DVA,_CRN).
     
-demo(N,Firstname,Lastname,Dob,Address,Postcode,Telephone):-
-    demo(N,Firstname,Lastname,Dob,Address,Postcode,Telephone,_Medicare,_DVA,_CRN).
+demo(N,Firstname,Lastname,Dob,Gender,Address,Postcode,Telephone):-
+    demo(N,Firstname,Lastname,Dob,Gender,Address,Postcode,Telephone,_Medicare,_DVA,_CRN).
 
 veteran(N):-
-	demo(N,_Firstname,_Lastname,_Dob,_Address,_Postcode,_Telephone,_Medicare,DVA,_CRN),
+	demo(N,_Firstname,_Lastname,_Dob,_Gender,_Address,_Postcode,_Telephone,_Medicare,DVA,_CRN),
 	DVA\=none.	
 	
     
 patient_name(nopatient,'No patient loaded'):-!.
 patient_name(N,T):-
-    demo(N,Firstname,Lastname,_Dob),
+    demo(N,Firstname,Lastname,_,_),
     name(Firstname,Firstname2),
     name(Lastname,Lastname2),
     capital_words(Firstname2,Firstname3),

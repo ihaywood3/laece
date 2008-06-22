@@ -18,19 +18,36 @@
 :- consult('icd10.pl').
 :- use_module(library(url)).
 
-completion(N,[DiseaseName|Remainder],cmdline,[add=diagnosis(Code,UserDisease),flash=Flash],submit_now,
+completion(N,DiseaseNames,cmdline,[add=diagnosis(Code,UserDisease),flash=Flash],submit_now,
    '<span class="compl_stem">Diagnosis</span> ~a'-[IcdName],diagnoses):-
     N\=nopatient,
-    atom_length(DiseaseName,L),L>3,
-    icd10(Code,IcdName),sub_atom(IcdName,_,_,_,DiseaseName),
+    DiseaseNames=[First|_],
+    atom_length(First,L),L>3,
+    split_d_names(DiseaseNames,DSearch,Remainder),
+    (  Remainder==[] ->
+	UserDisease=''
+    ;	
+              concat_atom(Remainder,' ',UserDisease)
+    ),
+    icd10(Code,IcdName),
     not(diagnosis(N,_,_,Code,_)),
-    format(atom(Flash),'~a diagnosed',[IcdName]),
-    (	
-       Remainder==[] ->
-          join([DiseaseName|Remainder]," ",UserDisease)
-       ; 
-	  UserDisease=IcdName
-    ).
+    disease_match(IcdName,DSearch),
+    Flash=[IcdName,' diagnosed'].
+
+
+split_d_names(['-'|R],[],R).
+split_d_names([],[],[]).
+split_d_names([H|T],[[H,H2,H3]|T2],R):- H\= '-',
+	atom_concat(' ',H,H2),
+	atom_concat('(',H,H3),
+	split_d_names(T,T2,R).
+
+disease_match(IcdName,[[H1,H2,H3]|T]):-
+	once((   sub_atom(IcdName,0,_,_,H1);
+                           sub_atom(IcdName,_,_,_,H2);
+                           sub_atom(IcdName,_,_,_,H3))),
+	disease_match(IcdName,T).
+disease_match(_,[]).
 
 page_avail(_,diagnoses,'Diagnoses').
 
@@ -46,10 +63,11 @@ diagnosis(N,When,User,Code,UserDisease):-
 print_diagnoses_list(N,[diagnosis(When,User,Code,UserDisease)|T])-->
 	{format_time(atom(WhenS),'%c',When),
 	format(atom(UserDisease2),'~q',[UserDisease]),
-	www_form_encode(UserDisease2,UserDisease3)},
+	www_form_encode(UserDisease2,UserDisease3),
+	 disease_name(Code,UserDisease,DiseaseName)},
 	html(
 	     [div([class=list],[
-			     span([class=list_title],[UserDisease,' (',Code,')']),
+			     span([class=list_title],DiseaseName),
 			     ' Diagnosed by ',User,' on ',WhenS,' ',
 			     a([href='javascript:show_form(\'dx'+Code+'\');',id='btn_dx'+Code],'Change'), ' ',
 			     a([href='/laece/'+N+'/diagnoses?prolog=%5Badd%3Ddediagnosis%28%27'+Code+'%27%2C'+UserDisease3+'%29%5D&flash=Diagnosis%20deleted'],'Delete')
@@ -69,6 +87,12 @@ print_diagnoses_list(N,[diagnosis(When,User,Code,UserDisease)|T])-->
 
 print_diagnoses_list(_,[])-->[].
 
+disease_name(Code,UserDisease,D2):-
+	icd10(Code,IcdName),
+	 End=[' (',Code,')'],
+	(UserDisease== ''  ->D2=[IcdName|End];D2=[IcdName,' - ',UserDisease|End]).
+
+
 reply(Request,[change_diagnosis]):-
 	memberchk(patient=N,Request),
 	memberchk(newdescription=UserDisease,Request),
@@ -76,8 +100,13 @@ reply(Request,[change_diagnosis]):-
 	assert_patient(N,diagnosis(Code,UserDisease)),
 	reply([flash='Diagnosis changed'|Request],[diagnoses]).
 
-html_display(diagnosis(Code,Text))-->html([Text,' (',Code,') diagnosed']).
-html_display(dediagnosis(Code,Text))-->html([Text,' (',Code,') removed']).
+html_display(diagnosis(Code,Text))-->{disease_name(Code,Text,DN),append(DN,[' diagnosed'],D3)},
+	html(D3).
+html_display(dediagnosis(Code,Text))-->{disease_name(Code,Text,DN),append(DN,[' removed'],D3)},
+	html(D3).
+
+
+
 
 
 

@@ -14,6 +14,9 @@
 %   You should have received a copy of the GNU General Public License
 %   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+:- use_module(src(db)).
+
+
 :- op(1000,xfx,then).
 :- op(950,fx,if).
 :- op(950,fx,when).
@@ -52,3 +55,25 @@ trans(N,not(A),not(A2)):-
 trans(N,has(X),diagnosed(N,X)):-
 	X\=allergy(_).
 trans(N,prescribed(X),prescribed(N,X)).
+trans(N,female,female(N)).
+trans(N,male,not(female(N))).
+trans(N,age>X,(age(N,A),A>X)).
+trans(N,age>X,(age(N,A),A<X)).
+trans(N,age>=X,(age(N,A),A>=X)).
+trans(N,age=<X,(age(N,A),A=<X)).
+
+female(N):-
+	demo(N,_FN,_SN,_DOB,female).
+age(N,Age):-
+	demo(N,_,_,date(Y,M,D),_),
+	get_time(Time),
+	stamp_date_time(Time,date(Y2,M2,D2,_,_,_,_,_,_),local),
+	Age is (Y2-Y)+((M2-M)/12)+((D2-D)/365).
+
+	
+
+
+
+
+
+
