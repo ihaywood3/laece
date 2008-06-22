@@ -150,19 +150,14 @@ completion(_N,[Cmd],cmdline,noop,Name,Html,''):-
 	sub_atom(Name,0,_,After,Cmd),
 	After>0.
 
-command(warranty,'warranty - lack of warranty','help/warranty').
-command(licence,'licence - display GNU licence','help/licence').
-command(help,'help <i>[topic]</i> - show help page, can add specific topic','help/main').
+command(licence,'licence - display GNU licence','/file/laece/Copying.html').
+command(help,'help <i>[topic]</i> - show help page, can add specific topic','/file/laece/index.html').
 
 % help system
 
 completion(_N,[help,T],cmdline,noop,submit_now,'<span class="compl_stem">Help</span> '+Topic,'/file/laece/'+File):-
 	help(Topic,File),
 	sub_atom(Topic,0,_,_,T).
-
-reply(R,[help,Topic]):-
-	help(Topic,_,Content),
-	reply_page(R,'Help : ~a'-Topic,\[Content],help).
 
 load_help:-
 	absolute_file_name(resources('laece/*.html'),Pattern),

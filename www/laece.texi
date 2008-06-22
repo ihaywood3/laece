@@ -1,16 +1,16 @@
 \input texinfo
 @c %**start of header
 @setfilename laece.info
-@settitle Laece Manual
+@settitle L@ae{}ce Manual
 @c %**end of header
 
 @dircategory Miscellaneous commands and documents
 @direntry 
-* Rat: (laece). The Laece Medical Records System
+* Laece: (laece). The L@ae{}ce Medical Records System
 @end direntry
 
 @ifnottex
-This the online manual for Laece
+This the online manual for L@ae{}ce
 
 Copyright @copyright{} 2008 Ian Haywood
 @end ifnottex
@@ -26,11 +26,14 @@ Copyright @copyright{} 2008 Ian Haywood
 @end titlepage
 @ifnottex
 @node Top, Introduction, (dir), (dir)
-@top Laece
-Laece is a web-based medical records system
+@top L@ae{}ce
+L@ae{}ce is a web-based medical records system
 @end ifnottex
+@iftex
+@contents
+@end iftex
 @menu
-* Introduction::   Introduction to Laece
+* Introduction::   Introduction to L@ae{}ce
 * Copying:: L@ae{}ce is freely redistributable. 
 @end menu
 
@@ -761,7 +764,4 @@ applications with the library.  If this is what you want to do, use
 the GNU Lesser General Public License instead of this License.  But
 first, please read @url{http://www.gnu.org/philosophy/why-not-lgpl.html}.
 
-
-
-@contents
 @bye
