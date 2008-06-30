@@ -1,213 +1,213 @@
-icd10('A00','cholera').
-icd10('A422','cervicofacial actinomycosis').
-icd10('B15','acute hepatitis a').
-icd10('B368','other specified superficial mycoses').
-icd10('B74','filariasis').
-icd10('D86','sarcoidosis').
-icd10('E85','amyloidosis').
-icd10('G560','carpal tunnel syndrome').
-icd10('H110','pterygium').
-icd10('H476','disorders of visual cortex').
-icd10('H702','petrositis').
-icd10('H91','other hearing loss').
-icd10('I42','cardiomyopathy').
-icd10('I517','cardiomegaly').
-icd10('I78','diseases of capillaries').
-icd10('J21','acute bronchiolitis').
-icd10('J954','mendelson\'s syndrome').
-icd10('K27','peptic ulcer, site unspecified').
-icd10('K634','enteroptosis').
-icd10('L730','acne keloid').
-icd10('L980','pyogenic granuloma').
-icd10('M08','juvenile arthritis').
-icd10('M10','gout').
-icd10('M13','other arthritis').
-icd10('M1992','arthrosis, unspecified, upper arm').
-icd10('M2185','other specified acquired deformities of limbs, pelvic region and thigh').
-icd10('M300','polyarteritis nodosa').
-icd10('M4129','other idiopathic scoliosis, site unspecified').
-icd10('M45','ankylosing spondylitis').
-icd10('M494','neuropathic spondylopathy').
-icd10('M650','abscess of tendon sheath').
-icd10('M701','bursitis of hand').
-icd10('M8204','osteoporosis in multiple myelomatosis, hand (c90.0+)').
-icd10('M862','subacute osteomyelitis').
-icd10('N13','obstructive and reflux uropathy').
-icd10('N990','postprocedural renal failure').
-icd10('O09','duration of pregnancy').
-icd10('O232','infections of urethra in pregnancy').
-icd10('O621','secondary uterine inertia').
-icd10('O721','other immediate postpartum haemorrhage').
-icd10('P12','birth injury to scalp').
-icd10('P80','hypothermia of newborn').
-icd10('Q187','microcheilia').
-icd10('Q435','ectopic anus').
-icd10('Q553','atresia of vas deferens').
-icd10('R040','epistaxis').
-icd10('S097','multiple injuries of head').
-icd10('S220','fracture of thoracic vertebra').
-icd10('S52','fracture of forearm').
-icd10('S643','injury of digital nerve of thumb').
-icd10('S7211','fracture of intertrochanteric section of femur').
-icd10('S910','open wound of ankle').
-icd10('T403','methadone').
-icd10('T483','antitussives').
-icd10('Y64','contaminated medical or biological substances').
-icd10('Y920','home').
-icd10('Y98','lifestyle-related condition').
-icd10('Z22','carrier of infectious disease').
-icd10('Z644','discord with counsellors').
-icd10('Z806','family history of leukaemia').
-icd10('M8248','apudoma').
-icd10('M84800','mucinous adenoma').
-icd10('M87261','magnocellular naevus').
-icd10('M9271','dentinoma').
-icd10('M9710','microglioma').
-icd10('A000','cholera due to vibrio cholerae 01, biovar cholerae').
-icd10('A001','cholera due to vibrio cholerae 01, biovar eltor').
-icd10('A009','cholera, unspecified').
-icd10('A01','typhoid and paratyphoid fevers').
-icd10('A010','typhoid fever').
-icd10('A011','paratyphoid fever a').
-icd10('A012','paratyphoid fever b').
-icd10('A013','paratyphoid fever c').
-icd10('A014','paratyphoid fever, unspecified').
-icd10('A02','other salmonella infections').
-icd10('A020','salmonella enteritis').
-icd10('A021','salmonella septicaemia').
-icd10('A022','localised salmonella infections').
-icd10('A028','other specified salmonella infections').
-icd10('A029','salmonella infection, unspecified').
-icd10('A03','shigellosis').
-icd10('A030','shigellosis due to shigella dysenteriae').
-icd10('A031','shigellosis due to shigella flexneri').
-icd10('A032','shigellosis due to shigella boydii').
-icd10('A033','shigellosis due to shigella sonnei').
-icd10('A038','other shigellosis').
-icd10('A039','shigellosis, unspecified').
-icd10('A04','other bacterial intestinal infections').
-icd10('A040','enteropathogenic escherichia coli infection').
-icd10('A041','enterotoxigenic escherichia coli infection').
-icd10('A042','enteroinvasive escherichia coli infection').
-icd10('A043','enterohaemorrhagic escherichia coli infection').
-icd10('A044','other intestinal escherichia coli infections').
-icd10('A045','campylobacter enteritis').
-icd10('A046','enteritis due to yersinia enterocolitica').
-icd10('A047','enterocolitis due to clostridium difficile').
-icd10('A048','other specified bacterial intestinal infections').
-icd10('A049','bacterial intestinal infection, unspecified').
-icd10('A05','other bacterial foodborne intoxications').
-icd10('A050','foodborne staphylococcal intoxication').
-icd10('A051','botulism').
-icd10('A052','foodborne clostridium perfringens [clostridium welchii] intoxication').
-icd10('A053','foodborne vibrio parahaemolyticus intoxication').
-icd10('A054','foodborne bacillus cereus intoxication').
-icd10('A058','other specified bacterial foodborne intoxications').
-icd10('A059','bacterial foodborne intoxication, unspecified').
-icd10('A06','amoebiasis').
-icd10('A060','acute amoebic dysentery').
-icd10('A061','chronic intestinal amoebiasis').
-icd10('A062','amoebic nondysenteric colitis').
-icd10('A063','amoeboma of intestine').
-icd10('A064','amoebic liver abscess').
-icd10('A065','amoebic lung abscess (j99.8*)').
-icd10('A066','amoebic brain abscess (g07*)').
-icd10('A067','cutaneous amoebiasis').
-icd10('A068','amoebic infection of other sites').
-icd10('A069','amoebiasis, unspecified').
-icd10('A07','other protozoal intestinal diseases').
-icd10('A070','balantidiasis').
-icd10('A071','giardiasis [lambliasis]').
-icd10('A072','cryptosporidiosis').
-icd10('A073','isosporiasis').
-icd10('A078','other specified protozoal intestinal diseases').
-icd10('A079','protozoal intestinal disease, unspecified').
-icd10('A08','viral and other specified intestinal infections').
-icd10('A080','rotaviral enteritis').
-icd10('A081','acute gastroenteropathy due to norwalk agent').
-icd10('A082','adenoviral enteritis').
-icd10('A083','other viral enteritis').
-icd10('A084','viral intestinal infection, unspecified').
-icd10('A085','other specified intestinal infections').
-icd10('A09','diarrhoea and gastroenteritis of presumed infectious origin').
-icd10('A15','respiratory tuberculosis, bacteriologically and histologically confirmed').
-icd10('A150','tuberculosis of lung, confirmed by sputum microscopy with or without culture').
-icd10('A151','tuberculosis of lung, confirmed by culture only').
-icd10('A152','tuberculosis of lung, confirmed histologically').
-icd10('A153','tuberculosis of lung, confirmed by unspecified means').
-icd10('A154','tuberculosis of intrathoracic lymph nodes, confirmed bacteriologically and histologically').
-icd10('A155','tuberculosis of larynx, trachea and bronchus, confirmed bacteriologically and histologically').
-icd10('A156','tuberculous pleurisy, confirmed bacteriologically and histologically').
-icd10('A157','primary respiratory tuberculosis, confirmed bacteriologically and histologically').
-icd10('A158','other respiratory tuberculosis, confirmed bacteriologically and histologically').
-icd10('A159','respiratory tuberculosis unspecified, confirmed bacteriologically and histologically').
-icd10('A16','respiratory tuberculosis, not confirmed bacteriologically or histologically').
-icd10('A160','tuberculosis of lung, bacteriologically and histologically negative').
-icd10('A161','tuberculosis of lung, bacteriological and histological examination not done').
-icd10('A162','tuberculosis of lung, without mention of bacteriological or histological confirmation').
-icd10('A163','tuberculosis of intrathoracic lymph nodes, without mention of bacteriological or histological confirmation').
-icd10('A164','tuberculosis of larynx, trachea and bronchus, without mention of bacteriological or histological confirmation').
-icd10('A165','tuberculous pleurisy, without mention of bacteriological or histological confirmation').
-icd10('A167','primary respiratory tuberculosis without mention of bacteriological or histological confirmation').
-icd10('A168','other respiratory tuberculosis, without mention of bacteriological or histological confirmation').
-icd10('A169','respiratory tuberculosis unspecified, without mention of bacteriological or histological confirmation').
-icd10('A17','tuberculosis of nervous system').
-icd10('A170','tuberculous meningitis (g01*)').
-icd10('A171','meningeal tuberculoma (g07*)').
-icd10('A178','other tuberculosis of nervous system').
-icd10('A179','tuberculosis of nervous system, unspecified (g99.8*)').
-icd10('A18','tuberculosis of other organs').
-icd10('A180','tuberculosis of bones and joints').
-icd10('A181','tuberculosis of genitourinary system').
-icd10('A182','tuberculous peripheral lymphadenopathy').
-icd10('A183','tuberculosis of intestines, peritoneum and mesenteric glands').
-icd10('A184','tuberculosis of skin and subcutaneous tissue').
-icd10('A185','tuberculosis of eye').
-icd10('A186','tuberculosis of ear').
-icd10('A187','tuberculosis of adrenal glands (e35.1*)').
-icd10('A188','tuberculosis of other specified organs').
-icd10('A19','miliary tuberculosis').
-icd10('A190','acute miliary tuberculosis of a single specified site').
-icd10('A191','acute miliary tuberculosis of multiple sites').
-icd10('A192','acute miliary tuberculosis, unspecified').
-icd10('A198','other miliary tuberculosis').
-icd10('A199','miliary tuberculosis, unspecified').
-icd10('A20','plague').
-icd10('A200','bubonic plague').
-icd10('A201','cellulocutaneous plague').
-icd10('A202','pneumonic plague').
-icd10('A203','plague meningitis').
-icd10('A207','septicaemic plague').
-icd10('A208','other forms of plague').
-icd10('A209','plague, unspecified').
-icd10('A21','tularaemia').
-icd10('A210','ulceroglandular tularaemia').
-icd10('A211','oculoglandular tularaemia').
-icd10('A212','pulmonary tularaemia').
-icd10('A213','gastrointestinal tularaemia').
-icd10('A217','generalised tularaemia').
-icd10('A218','other forms of tularaemia').
-icd10('A219','tularaemia, unspecified').
-icd10('A22','anthrax').
-icd10('A220','cutaneous anthrax').
-icd10('A221','pulmonary anthrax').
-icd10('A222','gastrointestinal anthrax').
-icd10('A227','anthrax septicaemia').
-icd10('A228','other forms of anthrax').
-icd10('A229','anthrax, unspecified').
-icd10('A23','brucellosis').
-icd10('A230','brucellosis due to brucella melitensis').
-icd10('A231','brucellosis due to brucella abortus').
-icd10('A232','brucellosis due to brucella suis').
-icd10('A233','brucellosis due to brucella canis').
-icd10('A238','other brucellosis').
-icd10('A239','brucellosis, unspecified').
-icd10('A24','glanders and melioidosis').
-icd10('A240','glanders').
-icd10('A241','acute and fulminating melioidosis').
-icd10('A242','subacute and chronic melioidosis').
-icd10('A243','other melioidosis').
-icd10('A244','melioidosis, unspecified').
+icd10('A00','cholera',[cholera],[]).
+icd10('A422','cervicofacial actinomycosis',[actinomycosis],[]).
+icd10('B15','acute hepatitis a',[hepatitis],[hav]).
+icd10('B368','other specified superficial mycoses',[mycosis],[]).
+icd10('B74','filariasis',[filariasis],[]).
+icd10('D86','sarcoidosis',[sarcoidosis],[]).
+icd10('E85','amyloidosis',[amyloidosis],[]).
+icd10('G560','carpal tunnel syndrome',[carpal,tunnel],[cts]).
+icd10('H110','pterygium',[pterygium],[]).
+icd10('H476','disorders of visual cortex',[],[]).
+icd10('H702','petrositis',[petrositis],[]).
+icd10('H91','other hearing loss',[hearing],[]).
+icd10('I42','cardiomyopathy',[cardiomyopathy],[]).
+icd10('I517','cardiomegaly',[cardiomegaly],[]).
+icd10('I78','diseases of capillaries',[capillary],[]).
+icd10('J21','acute bronchiolitis',[ronchiolitis],[]).
+icd10('J954','mendelson\'s syndrome',[mendolson],[]).
+icd10('K27','peptic ulcer, site unspecified',[peptic,ulcer],[]).
+icd10('K634','enteroptosis',[enteroptosis],[]).
+icd10('L730','acne keloid',[anne,keloid],[]).
+icd10('L980','pyogenic granuloma',[granuloma,pyogenic],[]).
+icd10('M08','juvenile arthritis',[juvenile,arthritis],[ja]).
+icd10('M10','gout',[gout],[]).
+icd10('M13','other arthritis',[arthritis],[]).
+icd10('M1992','arthrosis, unspecified, upper arm',[],[]).
+icd10('M2185','other specified acquired deformities of limbs, pelvic region and thigh',[],[]).
+icd10('M300','polyarteritis nodosa',[polyarteritis,nodosa],[]).
+icd10('M4129','other idiopathic scoliosis, site unspecified',[scoliosis],[]).
+icd10('M45','ankylosing spondylitis',[ankylosing,spondylitis],[]).
+icd10('M494','neuropathic spondylopathy',[spondylopathy]).
+icd10('M650','abscess of tendon sheath',[abscess,tendon,shealth],[]).
+icd10('M701','bursitis of hand',[bursitis],[]).
+icd10('M8204','osteoporosis in multiple myelomatosis, hand (c90.0+)',[osteoporois],[]).
+icd10('M862','subacute osteomyelitis',[osteomyelitis],[]).
+icd10('N13','obstructive and reflux uropathy',[reflux,obstructive,uropathy],[]).
+icd10('N990','postprocedural renal failure',[renal],[]).
+icd10('O09','duration of pregnancy',[pregnancy],[]).
+icd10('O232','infections of urethra in pregnancy',[urethra],[]).
+icd10('O621','secondary uterine inertia',[uterus,inertia],[]).
+icd10('O721','other immediate postpartum haemorrhage',[postpartum,haemorrhage],[]).
+icd10('P12','birth injury to scalp',[scalp],[]).
+icd10('P80','hypothermia of newborn',[hypothermia],[]).
+icd10('Q187','microcheilia',[microcheilia],[]).
+icd10('Q435','ectopic anus',[anus],[]).
+icd10('Q553','atresia of vas deferens',[vas,atresia],[]).
+icd10('R040','epistaxis',[epistaxis],[]).
+icd10('S097','multiple injuries of head',[head,injury],[]).
+icd10('S220','fracture of thoracic vertebra',[fracture,thorax,vertebra],[]).
+icd10('S52','fracture of forearm',[fracture,forearm]).
+icd10('S643','injury of digital nerve of thumb',[injury,nerve,thumb],[]).
+icd10('S7211','fracture of intertrochanteric section of femur',[trochanter,fracture,intertrochanteric],[]).
+icd10('S910','open wound of ankle',[wound,ankle],[]).
+icd10('T403','methadone',[],[]).
+icd10('T483','antitussives',[],[]).
+icd10('Y64','contaminated medical or biological substances',[containated[,[]).
+icd10('Y920','home',[],[]).
+icd10('Y98','lifestyle-related condition',[lifestyle],[]).
+icd10('Z22','carrier of infectious disease',[carrier],[]).
+icd10('Z644','discord with counsellors',[counsellor],[]).
+icd10('Z806','family history of leukaemia',[leukaemia,family],[]).
+icd10('M8248','apudoma',[apudoma],[]).
+icd10('M84800','mucinous adenoma',[mucinous],[]).
+icd10('M87261','magnocellular naevus',[magnocellular],[naevus],[]).
+icd10('M9271','dentinoma',[dentinoma],[]).
+icd10('M9710','microglioma',[microglioma],[]).
+icd10('A000','cholera due to vibrio cholerae 01, biovar cholerae',[cholera],[]).
+icd10('A001','cholera due to vibrio cholerae 01, biovar eltor',[cholera,eitor],[]).
+icd10('A009','cholera, unspecified',[],[]).
+icd10('A01','typhoid and paratyphoid fevers',[],[]).
+icd10('A010','typhoid fever',[typhoid],[]).
+icd10('A011','paratyphoid fever a',[paratyphoid],[]).
+icd10('A012','paratyphoid fever b',[paratyphoid],[]).
+icd10('A013','paratyphoid fever c',[paratyphoid],[]).
+icd10('A014','paratyphoid fever, unspecified',[paratyphoid],[]).
+icd10('A02','other salmonella infections',[],[]).
+icd10('A020','salmonella enteritis',[salmonella],[]).
+icd10('A021','salmonella septicaemia',[salmonella],[]).
+icd10('A022','localised salmonella infections',[salmonella],[]).
+icd10('A028','other specified salmonella infections',[salmonella]).
+icd10('A029','salmonella infection, unspecified',[salmonella]).
+icd10('A03','shigellosis',[shigellosis]).
+icd10('A030','shigellosis due to shigella dysenteriae',[shigellois,dysenteriae],[]).
+icd10('A031','shigellosis due to shigella flexneri',[shigellosis,flexneri],[]).
+icd10('A032','shigellosis due to shigella boydii',[shigellosis,boydii],[]).
+icd10('A033','shigellosis due to shigella sonnei',[shigellosis,sonnei],[]).
+icd10('A038','other shigellosis',[shigellosis],[]).
+icd10('A039','shigellosis, unspecified',[shigellosis],[]).
+icd10('A04','other bacterial intestinal infections',[],[]).
+icd10('A040','enteropathogenic escherichia coli infection',[coli],[]).
+icd10('A041','enterotoxigenic escherichia coli infection',[coli],[]).
+icd10('A042','enteroinvasive escherichia coli infection',[coli],[]).
+icd10('A043','enterohaemorrhagic escherichia coli infection',[coli],[]).
+icd10('A044','other intestinal escherichia coli infections',[coli],[]).
+icd10('A045','campylobacter enteritis',[campylobacter],[enteritis]]).
+icd10('A046','enteritis due to yersinia enterocolitica',[yersinia,enteritis],[]).
+icd10('A047','enterocolitis due to clostridium difficile',[enteritis,clostridium],[]).
+icd10('A048','other specified bacterial intestinal infections',[],[]).
+icd10('A049','bacterial intestinal infection, unspecified',[bacterial],[]).
+icd10('A05','other bacterial foodborne intoxications',[food,bacterial],[]).
+icd10('A050','foodborne staphylococcal intoxication',[food,staphlococcus],[]).
+icd10('A051','botulism',[botulism],[]).
+icd10('A052','foodborne clostridium perfringens [clostridium welchii] intoxication',[food,clostridium],[]).
+icd10('A053','foodborne vibrio parahaemolyticus intoxication',[food,vibrio,parahaemolyticus],[]).
+icd10('A054','foodborne bacillus cereus intoxication',[food,bacillus,cereus],[]).
+icd10('A058','other specified bacterial foodborne intoxications',[food],[]).
+icd10('A059','bacterial foodborne intoxication, unspecified',[food],[]).
+icd10('A06','amoebiasis',[amoebiasis],[]).
+icd10('A060','acute amoebic dysentery',[amoebic,dysentry],[]).
+icd10('A061','chronic intestinal amoebiasis',[amoebiasis],[]).
+icd10('A062','amoebic nondysenteric colitis',[amoebic,colitis],[]).
+icd10('A063','amoeboma of intestine',[amoeboma],[]).
+icd10('A064','amoebic liver abscess',[ameoboma,liver]).
+icd10('A065','amoebic lung abscess (j99.8*)',[amoebic,lung],[]).
+icd10('A066','amoebic brain abscess (g07*)',[amoebic,brain],[]).
+icd10('A067','cutaneous amoebiasis',[amoebiasis],[]).
+icd10('A068','amoebic infection of other sites',[amoebic],[]).
+icd10('A069','amoebiasis, unspecified',[amoebiasis],[]).
+icd10('A07','other protozoal intestinal diseases',[protozoa],[]).
+icd10('A070','balantidiasis',[balantidiasis],[]).
+icd10('A071','giardiasis [lambliasis]',[giardiasis],[]).
+icd10('A072','cryptosporidiosis',[cryptosporidosis],[]).
+icd10('A073','isosporiasis',[isosporiasis],[]).
+icd10('A078','other specified protozoal intestinal diseases',[protozoal],[]).
+icd10('A079','protozoal intestinal disease, unspecified',[protozoal],[]).
+icd10('A08','viral and other specified intestinal infections',[viral,intestinal,gastro],[]).
+icd10('A080','rotaviral enteritis',[rotaviral,gastro],[]).
+icd10('A081','acute gastroenteropathy due to norwalk agent',[norwalk,enteritis],[]).
+icd10('A082','adenoviral enteritis',[adenoviral,enteritis],[]).
+icd10('A083','other viral enteritis',[viral,enteritis,gastro],[]).
+icd10('A084','viral intestinal infection, unspecified',[viral,inestinal,gastro],[]).
+icd10('A085','other specified intestinal infections',[],[]).
+icd10('A09','diarrhoea and gastroenteritis of presumed infectious origin',[gastro,enteritis,diarrhoea],[]).
+icd10('A15','respiratory tuberculosis, bacteriologically and histologically confirmed',[tuberculosis,lung],[tb]).
+icd10('A150','tuberculosis of lung, confirmed by sputum microscopy with or without culture',[tuberculosis,lung],[tb]).
+icd10('A151','tuberculosis of lung, confirmed by culture only',[tuberculosis,lung],[tb]).
+icd10('A152','tuberculosis of lung, confirmed histologically',[tuberculosis,lung],[tb]).
+icd10('A153','tuberculosis of lung, confirmed by unspecified means',[tuberculosis,lung],[tb]).
+icd10('A154','tuberculosis of intrathoracic lymph nodes, confirmed bacteriologically and histologically',[tuberculosis,lung],[tb]).
+icd10('A155','tuberculosis of larynx, trachea and bronchus, confirmed bacteriologically and histologically',[tuberculosis],[tb]).
+icd10('A156','tuberculous pleurisy, confirmed bacteriologically and histologically',[tuberculosis,lung],[tb]).
+icd10('A157','primary respiratory tuberculosis, confirmed bacteriologically and histologically',[tuberculosis,lung],[tb]).
+icd10('A158','other respiratory tuberculosis, confirmed bacteriologically and histologically',[tuberculosis,lung],[tb]).
+icd10('A159','respiratory tuberculosis unspecified, confirmed bacteriologically and histologically',[tuberculosis,lung],[tb]).
+icd10('A16','respiratory tuberculosis, not confirmed bacteriologically or histologically',[tuberculosis,lung],[tb]).
+icd10('A160','tuberculosis of lung, bacteriologically and histologically negative',[tuberculosis,lung],[tb]).
+icd10('A161','tuberculosis of lung, bacteriological and histological examination not done',[tuberculosis,lung],[tb]).
+icd10('A162','tuberculosis of lung, without mention of bacteriological or histological confirmation',[tuberculosis,lung],[tb]).
+icd10('A163','tuberculosis of intrathoracic lymph nodes, without mention of bacteriological or histological confirmation',[tuberculosis,lymph,cold],[tb]).
+icd10('A164','tuberculosis of larynx, trachea and bronchus, without mention of bacteriological or histological confirmation',[tuberculosis],[tb]).
+icd10('A165','tuberculous pleurisy, without mention of bacteriological or histological confirmation',[tuberculosis,pleurisy],[tb]).
+icd10('A167','primary respiratory tuberculosis without mention of bacteriological or histological confirmation',[tuberculosis,lung],[tb]).
+icd10('A168','other respiratory tuberculosis, without mention of bacteriological or histological confirmation',[tuberculosis,lung],[tb]).
+icd10('A169','respiratory tuberculosis unspecified, without mention of bacteriological or histological confirmation',[tuberculosis,lung],[tb]).
+icd10('A17','tuberculosis of nervous system',[tuberculosis,nervous],[]).
+icd10('A170','tuberculous meningitis (g01*)',[tuberculous,meningitis]).
+icd10('A171','meningeal tuberculoma (g07*)',[tuberculoma,meningeal],[]).
+icd10('A178','other tuberculosis of nervous system',[tuberculosis,nervous]).
+icd10('A179','tuberculosis of nervous system, unspecified (g99.8*)',[tuberculous,nervous],[]).
+icd10('A18','tuberculosis of other organs',[],[]).
+icd10('A180','tuberculosis of bones and joints',[pott,tuberculosis,bone,joint],[]).
+icd10('A181','tuberculosis of genitourinary system',[genito,urinary,bladder,tuberculosis],[]).
+icd10('A182','tuberculous peripheral lymphadenopathy',[cold,abscess,tuberculous],[]).
+icd10('A183','tuberculosis of intestines, peritoneum and mesenteric glands',[tuberculosis],[]).
+icd10('A184','tuberculosis of skin and subcutaneous tissue',[tuberculosis,skin],[]).
+icd10('A185','tuberculosis of eye',[tuberculosis,eye],[]).
+icd10('A186','tuberculosis of ear',[tuberculosis,ear],[]).
+icd10('A187','tuberculosis of adrenal glands (e35.1*)',[tuberculosis,adrenal],[]).
+icd10('A188','tuberculosis of other specified organs',[tuberculosis],[]).
+icd10('A19','miliary tuberculosis',[miliary],[]).
+icd10('A190','acute miliary tuberculosis of a single specified site',[miliary],[]).
+icd10('A191','acute miliary tuberculosis of multiple sites',[miliary],[]).
+icd10('A192','acute miliary tuberculosis, unspecified',[miliary],[]).
+icd10('A198','other miliary tuberculosis',[miliary],[]).
+icd10('A199','miliary tuberculosis, unspecified',[miliary],[]).
+icd10('A20','plague',[plague],[]).
+icd10('A200','bubonic plague',[bubonic,plague],[]).
+icd10('A201','cellulocutaneous plague',[cellulocutaneous,plague],[]).
+icd10('A202','pneumonic plague',[plague],[]).
+icd10('A203','plague meningitis',[plague],[]).
+icd10('A207','septicaemic plague',[plague],[]).
+icd10('A208','other forms of plague',[plague],[]).
+icd10('A209','plague, unspecified',[plague],[]).
+icd10('A21','tularaemia',[tularaemia],[]).
+icd10('A210','ulceroglandular tularaemia',[tularaemia],[]).
+icd10('A211','oculoglandular tularaemia',[tularaemia],[]).
+icd10('A212','pulmonary tularaemia',[tularaemia],[]).
+icd10('A213','gastrointestinal tularaemia',[tularaemia],[]).
+icd10('A217','generalised tularaemia',[tularaemia],[]).
+icd10('A218','other forms of tularaemia',[tularaemia],[]).
+icd10('A219','tularaemia, unspecified',[tularaemia],[]).
+icd10('A22','anthrax',[anthrax],[]).
+icd10('A220','cutaneous anthrax',[anthrax,skin,cutaneous],[]).
+icd10('A221','pulmonary anthrax',[anthrax],[]).
+icd10('A222','gastrointestinal anthrax',[anthrax],[]).
+icd10('A227','anthrax septicaemia',[anthrax],[]).
+icd10('A228','other forms of anthrax',[anthrax],[]).
+icd10('A229','anthrax, unspecified',[anthrax],[]).
+icd10('A23','brucellosis',[brucelliosis],[]).
+icd10('A230','brucellosis due to brucella melitensis',[brucelliosis,melitensis],[]).
+icd10('A231','brucellosis due to brucella abortus',[brucellosis,abortus],[]).
+icd10('A232','brucellosis due to brucella suis',[brucellosis,suis],[]).
+icd10('A233','brucellosis due to brucella canis',[brucellosis,canis],[]).
+icd10('A238','other brucellosis',[brucellosis],[]).
+icd10('A239','brucellosis, unspecified',[brucellosis],[]).
+icd10('A24','glanders and melioidosis',[],[]).
+icd10('A240','glanders',[glanders],[]).
+icd10('A241','acute and fulminating melioidosis',[melioidosis],[]).
+icd10('A242','subacute and chronic melioidosis',[melioidosis],[]).
+icd10('A243','other melioidosis',[melioidosis],[]).
+icd10('A244','melioidosis, unspecified',[meliodosis],[]).
 icd10('A25','rat-bite fevers').
 icd10('A250','spirillosis').
 icd10('A251','streptobacillosis').
@@ -15384,968 +15384,968 @@ icd10('Y602','unintentional cut, puncture, perforation or haemorrhage during kid
 icd10('Y603','unintentional cut, puncture, perforation or haemorrhage during injection or immunisation').
 icd10('Y604','unintentional cut, puncture, perforation or haemorrhage during endoscopic examination').
 icd10('Y605','unintentional cut, puncture, perforation or haemorrhage during heart catheterisation').
-icd10('Y606','unintentional cut, puncture, perforation or haemorrhage during aspiration, puncture and other catheterisation').
-icd10('Y607','unintentional cut, puncture, perforation or haemorrhage during administration of enema').
-icd10('Y608','unintentional cut, puncture, perforation or haemorrhage during other surgical and medical care').
-icd10('Y609','unintentional cut, puncture, perforation or haemorrhage during unspecified surgical and medical care').
-icd10('Y61','foreign object accidentally left in body during surgical and medical care').
-icd10('Y610','foreign object accidentally left in body during surgical operation').
-icd10('Y611','foreign object accidentally left in body during infusion or transfusion').
-icd10('Y612','foreign object accidentally left in body during kidney dialysis or other perfusion').
-icd10('Y613','foreign object accidentally left in body during injection or immunisation').
-icd10('Y614','foreign object accidentally left in body during endoscopic examination').
-icd10('Y615','foreign object accidentally left in body during heart catheterisation').
-icd10('Y616','foreign object accidentally left in body during aspiration, puncture and other catheterisation').
-icd10('Y617','foreign object accidentally left in body during removal of catheter or packing').
-icd10('Y618','foreign object accidentally left in body during other surgical and medical care').
-icd10('Y619','foreign object accidentally left in body during unspecified surgical and medical care').
-icd10('Y62','failure of sterile precautions during surgical and medical care').
-icd10('Y620','failure of sterile precautions during surgical operation').
-icd10('Y621','failure of sterile precautions during infusion or transfusion').
-icd10('Y622','failure of sterile precautions during kidney dialysis or other perfusion').
-icd10('Y623','failure of sterile precautions during injection or immunisation').
-icd10('Y624','failure of sterile precautions during endoscopic examination').
-icd10('Y625','failure of sterile precautions during heart catheterisation').
-icd10('Y626','failure of sterile precautions during aspiration, puncture and other catheterisation').
-icd10('Y628','failure of sterile precautions during other surgical and medical care').
-icd10('Y629','failure of sterile precautions during unspecified surgical and medical care').
-icd10('Y63','failure in dosage during surgical and medical care').
-icd10('Y630','excessive amount of blood or other fluid given during transfusion or infusion').
-icd10('Y631','incorrect dilution of fluid used during infusion').
-icd10('Y632','overdose of radiation given during therapy').
-icd10('Y633','inadvertent exposure of patient to radiation during medical care').
-icd10('Y634','failure in dosage in electroshock or insulin-shock therapy').
-icd10('Y635','inappropriate temperature in local application and packing').
-icd10('Y636','nonadministration of necessary drug, medicament or biological substance').
-icd10('Y638','failure in dosage during other surgical and medical care').
-icd10('Y639','failure in dosage during unspecified surgical and medical care').
-icd10('Y640','contaminated medical or biological substance, transfused or infused').
-icd10('Y641','contaminated medical or biological substance, injected or used for immunisation').
-icd10('Y648','contaminated medical or biological substance administered by other means').
-icd10('Y649','contaminated medical or biological substance administered by unspecified means').
-icd10('Y65','other misadventures during surgical and medical care').
-icd10('Y650','mismatched blood used in transfusion').
-icd10('Y651','wrong fluid used in infusion').
-icd10('Y652','failure in suture or ligature during surgical operation').
-icd10('Y653','endotracheal tube wrongly placed during anaesthetic procedure').
-icd10('Y654','failure to introduce or to remove other tube or instrument').
-icd10('Y655','performance of inappropriate operation').
-icd10('Y658','other specified misadventures during surgical and medical care').
-icd10('Y66','nonadministration of surgical and medical care').
-icd10('Y69','unspecified misadventure during surgical and medical care').
-icd10('Y70','anaesthesiology devices associated with misadventures').
-icd10('Y700','anaesthesiology devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y701','anaesthesiology devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y702','anaesthesiology devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y703','anaesthesiology devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y708','anaesthesiology devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y71','cardiovascular devices associated with misadventures').
-icd10('Y710','cardiovascular devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y711','cardiovascular devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y712','cardiovascular devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y713','cardiovascular devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y718','cardiovascular devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y72','otorhinolaryngological devices associated with misadventures').
-icd10('Y720','otorhinolaryngological devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y721','otorhinolaryngological devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y722','otorhinolaryngological devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y723','otorhinolaryngological devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y728','otorhinolaryngological devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y73','gastroenterology and urology devices associated with misadventures').
-icd10('Y730','gastroenterology and urology devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y731','gastroenterology and urology devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y732','gastroenterology and urology devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y733','gastroenterology and urology devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y738','gastroenterology and urology devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y74','general hospital and personal-use devices associated with misadventures').
-icd10('Y740','general hospital and personal-use devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y741','general hospital and personal-use devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y742','general hospital and personal-use devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y743','general hospital and personal-use devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y748','general hospital and personal-use devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y75','neurological devices associated with misadventures').
-icd10('Y750','neurological devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y751','neurological devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y752','neurological devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y753','neurological devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y758','neurological devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y76','obstetric and gynaecological devices associated with misadventures').
-icd10('Y760','obstetric and gynaecological devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y761','obstetric and gynaecological devices associated with misadventuress, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y762','obstetric and gynaecological devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y763','obstetric and gynaecological devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y768','obstetric and gynaecological devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y77','ophthalmic devices associated with misadventures').
-icd10('Y770','ophthalmic devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y771','ophthalmic devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y772','ophthalmic devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y773','ophthalmic devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y778','ophthalmic devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y78','radiological devices associated with misadventures').
-icd10('Y780','radiological devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y781','radiological devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y782','radiological devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y783','radiological devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y788','radiological devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y79','orthopaedic devices associated with misadventures').
-icd10('Y790','orthopaedic devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y791','orthopaedic devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y792','orthopaedic devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y793','orthopaedic devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y798','orthopaedic devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y80','physical medicine devices associated with misadventures').
-icd10('Y800','physical medicine devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y801','physical medicine devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y802','physical medicine devices associated with adverse incidents, prosthetic and other implants, materials and accessory devices').
-icd10('Y803','physical medicine devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y808','physical medicine devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y81','general and plastic-surgery devices associated with misadventures').
-icd10('Y810','general- and plastic-surgery devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y811','general- and plastic-surgery devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y812','general- and plastic-surgery devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y813','general- and plastic-surgery devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y818','general- and plastic-surgery devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y82','other and unspecified medical devices associated with misadventures').
-icd10('Y820','other and unspecified medical devices associated with misadventures, diagnostic and monitoring devices').
-icd10('Y821','other and unspecified medical devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices').
-icd10('Y822','other and unspecified medical devices associated with misadventures, prosthetic and other implants, materials and accessory devices').
-icd10('Y823','other and unspecified medical devices associated with misadventures, surgical instruments, materials and devices (including sutures)').
-icd10('Y828','other and unspecified medical devices associated with misadventures, miscellaneous devices, not elsewhere classified').
-icd10('Y83','surgical operation and other surgical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y830','surgical operation with transplant of whole organ').
-icd10('Y831','surgical operation with implant of artificial internal device').
-icd10('Y832','surgical operation with anastomosis, bypass or graft').
-icd10('Y833','surgical operation with formation of external stoma').
-icd10('Y834','other reconstructive surgery').
-icd10('Y835','amputation of limb(s)').
-icd10('Y836','removal of other organ (partial) (total)').
-icd10('Y838','other surgical procedures').
-icd10('Y839','surgical procedure, unspecified').
-icd10('Y84','other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y840','cardiac catheterisation as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y841','kidney dialysis as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y97','environmental-pollution-related condition').
-icd10('Y842','radiological procedure and radiotherapy as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y843','shock therapy as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y844','aspiration of fluid as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Z006','examination for normal comparison and control in clinical research programme').
-icd10('Z008','other general examinations').
-icd10('Y845','insertion of gastric or duodenal sound as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y846','urinary catheterisation as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y847','blood-sampling as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y848','other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y849','medical procedure, unspecified as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y85','sequelae of transport accidents').
-icd10('Y850','sequelae of motor-vehicle accident').
-icd10('Y859','sequelae of other and unspecified transport accidents').
-icd10('Y86','sequelae of other accidents').
-icd10('Y87','sequelae of intentional self-harm, assault and events of undetermined intent').
-icd10('Y870','sequelae of intentional self-harm').
-icd10('Y871','sequelae of assault').
-icd10('Y872','sequelae of events of undetermined intent').
-icd10('Y88','sequelae with surgical and medical care as external cause').
-icd10('Y880','sequelae of adverse effects caused by drugs, medicaments and biological substances in therapeutic use').
-icd10('Y881','sequelae of misadventures to patients during surgical and medical procedures').
-icd10('Y882','sequelae of adverse incidents associated with medical devices in diagnostic and therapeutic use').
-icd10('Y883','sequelae of surgical and medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure').
-icd10('Y89','sequelae of other external causes').
-icd10('Y890','sequelae of legal intervention').
-icd10('Y891','sequelae of war operations').
-icd10('Y899','sequelae of unspecified external cause').
-icd10('Y90','evidence of alcohol involvement determined by blood alcohol level').
-icd10('Y900','blood alcohol level of less than 20 mg/100 ml').
-icd10('Y901','blood alcohol level of 20-39 mg/100 ml').
-icd10('Y902','blood alcohol level of 40-59 mg/100 ml').
-icd10('Y903','blood alcohol level of 60-79 mg/100 ml').
-icd10('Y904','blood alcohol level of 80-99 mg/100 ml').
-icd10('Y905','blood alcohol level of 100-119 mg/100 ml').
-icd10('Y906','blood alcohol level of 120-199 mg/100 ml').
-icd10('Y907','blood alcohol level of 200-239 mg/100 ml').
-icd10('Y908','blood alcohol level of 240 mg/100 ml or more').
-icd10('Y909','presence of alcohol in blood, level not specified').
-icd10('Y91','evidence of alcohol involvement determined by level of intoxication').
-icd10('Y910','mild alcohol intoxication').
-icd10('Y911','moderate alcohol intoxication').
-icd10('Y912','severe alcohol intoxication').
-icd10('Y913','very severe alcohol intoxication').
-icd10('Y919','alcohol involvement, not otherwise specified').
-icd10('Y92','place of occurrence').
-icd10('Y921','residential institution').
-icd10('Y922','school, other institution and public administrative area').
-icd10('Y9221','school').
-icd10('Y9222','health service area').
-icd10('Y9229','other specified institution and public administrative area').
-icd10('Y923','sports and athletics area').
-icd10('Y924','street and highway').
-icd10('Y925','trade and service area').
-icd10('Y926','industrial and construction area').
-icd10('Y927','farm').
-icd10('Y928','other specified place of occurrence').
-icd10('Y929','unspecified place of occurrence').
-icd10('Y93','activity').
-icd10('Y930','while engaged in sports').
-icd10('Y9300','football, rugby').
-icd10('Y9301','football, australian').
-icd10('Y9302','football, soccer').
-icd10('Y9303','hockey').
-icd10('Y9304','squash').
-icd10('Y9305','basketball').
-icd10('Y9306','netball').
-icd10('Y9307','cricket').
-icd10('Y9308','roller blading').
-icd10('Y9309','other and unspecified sporting activity').
-icd10('Y931','while engaged in leisure').
-icd10('Y932','while working for income').
-icd10('Y933','while engaged in other types of work').
-icd10('Y934','while resting, sleeping, eating or engaging in other vital activities').
-icd10('Y938','other specified activity').
-icd10('Y939','unspecified activity').
-icd10('Y95','nosocomial condition').
-icd10('Y96','work-related condition').
-icd10('Z00','general examination and investigation of persons without complaint or reported diagnosis').
-icd10('Z000','general medical examination').
-icd10('Z001','routine child health examination').
-icd10('Z002','examination for period of rapid growth in childhood').
-icd10('Z003','examination for adolescent development state').
-icd10('Z004','general psychiatric examination, not elsewhere classified').
-icd10('Z005','examination of potential donor of organ and tissue').
-icd10('Z01','other special examinations and investigations of persons without complaint or reported diagnosis').
-icd10('Z010','examination of eyes and vision').
-icd10('Z011','examination of ears and hearing').
-icd10('Z012','dental examination').
-icd10('Z013','examination of blood pressure').
-icd10('Z014','gynaecological examination (general)(routine)').
-icd10('Z015','diagnostic skin and sensitisation tests').
-icd10('Z016','radiological examination, not elsewhere classified').
-icd10('Z017','laboratory examination').
-icd10('Z018','other specified special examinations').
-icd10('Z019','special examination, unspecified').
-icd10('Z02','examination and encounter for administrative purposes').
-icd10('Z020','examination for admission to educational institution').
-icd10('Z021','pre-employment examination').
-icd10('Z022','examination for admission to residential institutions').
-icd10('Z023','examination for recruitment to armed forces').
-icd10('Z024','examination for driving licence').
-icd10('Z025','examination for participation in sport').
-icd10('Z026','examination for insurance purposes').
-icd10('Z027','issue of medical certificate').
-icd10('Z028','other examinations for administrative purposes').
-icd10('Z029','examination for administrative purposes, unspecified').
-icd10('Z03','medical observation and evaluation for suspected diseases and conditions').
-icd10('Z030','observation for suspected tuberculosis').
-icd10('Z031','observation for suspected malignant neoplasm').
-icd10('Z032','observation for suspected mental and behavioural disorders').
-icd10('Z033','observation for suspected nervous system disorder').
-icd10('Z034','observation for suspected myocardial infarction').
-icd10('Z035','observation for other suspected cardiovascular diseases').
-icd10('Z036','observation for suspected toxic effect from ingested substance').
-icd10('Z038','observation for other suspected diseases and conditions').
-icd10('Z039','observation for suspected disease or condition, unspecified').
-icd10('Z04','examination and observation for other reasons').
-icd10('Z040','blood-alcohol and blood-drug test').
-icd10('Z041','examination and observation following transport accident').
-icd10('Z042','examination and observation following work accident').
-icd10('Z043','examination and observation following other accident').
-icd10('Z044','examination and observation following alleged rape and seduction').
-icd10('Z045','examination and observation following other inflicted injury').
-icd10('Z046','general psychiatric examination, requested by authority').
-icd10('Z048','examination and observation for other specified reasons').
-icd10('Z049','examination and observation for unspecified reason').
-icd10('Z06','infection with drug-resistant microorganism').
-icd10('Z08','follow-up examination after treatment for malignant neoplasms').
-icd10('Z080','follow-up examination after surgery for malignant neoplasm').
-icd10('Z081','follow-up examination after radiotherapy for malignant neoplasm').
-icd10('Z082','follow-up examination after chemotherapy for malignant neoplasm').
-icd10('Z087','follow-up examination after combined treatment for malignant neoplasm').
-icd10('Z088','follow-up examination after other treatment for malignant neoplasm').
-icd10('Z089','follow-up examination after unspecified treatment for malignant neoplasm').
-icd10('Z09','follow-up examination after treatment for conditions other than malignant neoplasms').
-icd10('Z090','follow-up examination after surgery for other conditions').
-icd10('Z091','follow-up examination after radiotherapy for other conditions').
-icd10('Z092','follow-up examination after chemotherapy for other conditions').
-icd10('Z093','follow-up examination after psychotherapy').
-icd10('Z094','follow-up examination after treatment of fracture').
-icd10('Z097','follow-up examination after combined treatment for other conditions').
-icd10('Z098','follow-up examination after other treatment for other conditions').
-icd10('Z099','follow-up examination after unspecified treatment for other conditions').
-icd10('Z10','routine general health check-up of defined subpopulation').
-icd10('Z100','occupational health examination').
-icd10('Z101','routine general health check-up of inhabitants of institutions').
-icd10('Z102','routine general health check-up of armed forces').
-icd10('Z103','routine general health check-up of sports teams').
-icd10('Z108','routine general health check-up of other defined subpopulations').
-icd10('Z11','special screening examination for infectious and parasitic diseases').
-icd10('Z110','special screening examination for intestinal infectious diseases').
-icd10('Z111','special screening examination for respiratory tuberculosis').
-icd10('Z112','special screening examination for other bacterial diseases').
-icd10('Z113','special screening examination for infections with a predominantly sexual mode of transmission').
-icd10('Z114','special screening examination for human immunodeficiency virus [hiv]').
-icd10('Z115','special screening examination for other viral diseases').
-icd10('Z116','special screening examination for other protozoal diseases and helminthiases').
-icd10('Z118','special screening examination for other infectious and parasitic diseases').
-icd10('Z119','special screening examination for infectious and parasitic diseases, unspecified').
-icd10('Z12','special screening examination for neoplasms').
-icd10('Z120','special screening examination for neoplasm of stomach').
-icd10('Z121','special screening examination for neoplasm of intestinal tract').
-icd10('Z122','special screening examination for neoplasm of respiratory organs').
-icd10('Z123','special screening examination for neoplasm of breast').
-icd10('Z124','special screening examination for neoplasm of cervix').
-icd10('Z125','special screening examination for neoplasm of prostate').
-icd10('Z126','special screening examination for neoplasm of bladder').
-icd10('Z128','special screening examination for neoplasms of other sites').
-icd10('Z129','special screening examination for neoplasm, unspecified').
-icd10('Z13','special screening examination for other diseases and disorders').
-icd10('Z130','special screening examination for diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism').
-icd10('Z131','special screening examination for diabetes mellitus').
-icd10('Z132','special screening examination for nutritional disorders').
-icd10('Z133','special screening examination for mental and behavioural disorders').
-icd10('Z134','special screening examination for certain developmental disorders in childhood').
-icd10('Z135','special screening examination for eye and ear disorders').
-icd10('Z136','special screening examination for cardiovascular disorders').
-icd10('Z137','special screening examination for congenital malformations, deformations and chromosomal abnormalities').
-icd10('Z138','special screening examination for other specified diseases and disorders').
-icd10('Z1381','special screening examination for nervous system disorder').
-icd10('Z1382','special screening examination for respiratory disorder').
-icd10('Z1383','special screening examination for digestive tract disorder').
-icd10('Z1384','special screening examination for musculoskeletal disorder').
-icd10('Z1385','special screening examination for genitourinary disorder').
-icd10('Z1386','special screening examination for endocrine and metabolic disorder').
-icd10('Z1388','special screening examination for other specified diseases and disorders').
-icd10('Z139','special screening examination, unspecified').
-icd10('Z20','contact with and exposure to communicable diseases').
-icd10('Z200','contact with and exposure to intestinal infectious diseases').
-icd10('Z201','contact with and exposure to tuberculosis').
-icd10('Z202','contact with and exposure to infections with a predominantly sexual mode of transmission').
-icd10('Z203','contact with and exposure to rabies').
-icd10('Z204','contact with and exposure to rubella').
-icd10('Z205','contact with and exposure to viral hepatitis').
-icd10('Z206','contact with and exposure to human immunodeficiency virus [hiv]').
-icd10('Z207','contact with and exposure to pediculosis, acariasis and other infestations').
-icd10('Z208','contact with and exposure to other communicable diseases').
-icd10('Z209','contact with and exposure to unspecified communicable disease').
-icd10('Z21','asymptomatic human immunodeficiency virus [hiv] infection status').
-icd10('Z220','carrier of typhoid').
-icd10('Z221','carrier of other intestinal infectious diseases').
-icd10('Z222','carrier of diphtheria').
-icd10('Z223','carrier of other specified bacterial diseases').
-icd10('Z224','carrier of infections with a predominantly sexual mode of transmission').
-icd10('Z225','carrier of viral hepatitis').
-icd10('Z2251','carrier of viral hepatitis b').
-icd10('Z2252','carrier of viral hepatitis c').
-icd10('Z2259','carrier of other specified viral hepatitis').
-icd10('Z226','carrier of human t-lymphotropic virus type-1 [htlv-1] infection').
-icd10('Z228','carrier of other infectious diseases').
-icd10('Z229','carrier of infectious disease, unspecified').
-icd10('Z23','need for immunisation against single bacterial diseases').
-icd10('Z230','need for immunisation against cholera alone').
-icd10('Z231','need for immunisation against typhoid-paratyphoid alone [tab]').
-icd10('Z232','need for immunisation against tuberculosis [bcg]').
-icd10('Z233','need for immunisation against plague').
-icd10('Z234','need for immunisation against tularaemia').
-icd10('Z235','need for immunisation against tetanus alone').
-icd10('Z236','need for immunisation against diphtheria alone').
-icd10('Z237','need for immunisation against pertussis alone').
-icd10('Z238','need for immunisation against other single bacterial diseases').
-icd10('Z24','need for immunisation against certain single viral diseases').
-icd10('Z240','need for immunisation against poliomyelitis').
-icd10('Z241','need for immunisation against arthropod-borne viral encephalitis').
-icd10('Z242','need for immunisation against rabies').
-icd10('Z243','need for immunisation against yellow fever').
-icd10('Z244','need for immunisation against measles alone').
-icd10('Z245','need for immunisation against rubella alone').
-icd10('Z246','need for immunisation against viral hepatitis').
-icd10('Z25','need for immunisation against other single viral diseases').
-icd10('Z250','need for immunisation against mumps alone').
-icd10('Z251','need for immunisation against influenza').
-icd10('Z258','need for immunisation against other specified single viral diseases').
-icd10('Z26','need for immunisation against other single infectious diseases').
-icd10('Z260','need for immunisation against leishmaniasis').
-icd10('Z268','need for immunisation against other specified single infectious diseases').
-icd10('Z269','need for immunisation against unspecified infectious disease').
-icd10('Z27','need for immunisation against combinations of infectious diseases').
-icd10('Z270','need for immunisation against cholera with typhoid-paratyphoid [cholera + tab]').
-icd10('Z271','need for immunisation against diphtheria-tetanus-pertussis, combined [dtp]').
-icd10('Z272','need for immunisation against diphtheria-tetanus-pertussis with typhoid-paratyphoid [dtp + tab]').
-icd10('Z273','need for immunisation against diphtheria-tetanus-pertussis with poliomyelitis [dtp + polio]').
-icd10('Z274','need for immunisation against measles-mumps-rubella [mmr]').
-icd10('Z278','need for immunisation against other combinations of infectious diseases').
-icd10('Z279','need for immunisation against unspecified combinations of infectious diseases').
-icd10('Z28','immunisation not carried out').
-icd10('Z280','immunisation not carried out because of contraindication').
-icd10('Z281','immunisation not carried out because of patient\'s decision for reasons of belief and group pressure').
-icd10('Z282','immunisation not carried out because of patient\'s decision for other and unspecified reasons').
-icd10('Z288','immunisation not carried out for other reasons').
-icd10('Z289','immunisation not carried out for unspecified reason').
-icd10('Z29','need for other prophylactic measures').
-icd10('Z290','isolation').
-icd10('Z291','prophylactic immunotherapy').
-icd10('Z292','other prophylactic chemotherapy').
-icd10('Z298','other specified prophylactic measures').
-icd10('Z299','prophylactic measure, unspecified').
-icd10('Z30','contraceptive management').
-icd10('Z300','general counselling and advice on contraception').
-icd10('Z301','insertion of (intrauterine) contraceptive device').
-icd10('Z302','sterilisation').
-icd10('Z303','menstrual extraction').
-icd10('Z304','surveillance of contraceptive drugs').
-icd10('Z305','surveillance of (intrauterine) contraceptive device').
-icd10('Z308','other contraceptive management').
-icd10('Z309','contraceptive management, unspecified').
-icd10('Z31','procreative management').
-icd10('Z310','tuboplasty or vasoplasty after previous sterilisation').
-icd10('Z311','artificial insemination').
-icd10('Z312','in vitro fertilisation').
-icd10('Z313','other assisted fertilisation methods').
-icd10('Z314','procreative investigation and testing').
-icd10('Z315','genetic counselling').
-icd10('Z316','general counselling and advice on procreation').
-icd10('Z318','other procreative management').
-icd10('Z319','procreative management, unspecified').
-icd10('Z32','pregnancy examination and test').
-icd10('Z320','pregnancy, not (yet) confirmed').
-icd10('Z321','pregnancy confirmed').
-icd10('Z33','pregnant state, incidental').
-icd10('Z34','supervision of normal pregnancy').
-icd10('Z340','supervision of normal first pregnancy').
-icd10('Z348','supervision of other normal pregnancy').
-icd10('Z349','supervision of normal pregnancy, unspecified').
-icd10('Z35','supervision of high-risk pregnancy').
-icd10('Z350','supervision of pregnancy with history of infertility').
-icd10('Z351','supervision of pregnancy with history of abortive outcome').
-icd10('Z352','supervision of pregnancy with other poor reproductive or obstetric history').
-icd10('Z353','supervision of pregnancy with history of insufficient antenatal care').
-icd10('Z354','supervision of pregnancy with grand multiparity').
-icd10('Z355','supervision of elderly primigravida').
-icd10('Z356','supervision of (very) young primigravida').
-icd10('Z357','supervision of high-risk pregnancy due to social problems').
-icd10('Z358','supervision of other high-risk pregnancies').
-icd10('Z359','supervision of high-risk pregnancy, unspecified').
-icd10('Z36','antenatal screening').
-icd10('Z360','antenatal screening for chromosomal anomalies').
-icd10('Z361','antenatal screening for raised alphafetoprotein level').
-icd10('Z362','other antenatal screening based on amniocentesis').
-icd10('Z363','antenatal screening for malformations using ultrasound and other physical methods').
-icd10('Z364','antenatal screening for fetal growth retardation using ultrasound and other physical methods').
-icd10('Z365','antenatal screening for isoimmunisation').
-icd10('Z368','other antenatal screening').
-icd10('Z369','antenatal screening, unspecified').
-icd10('Z37','outcome of delivery').
-icd10('Z370','single live birth').
-icd10('Z371','single stillbirth').
-icd10('Z372','twins, both liveborn').
-icd10('Z373','twins, one liveborn and one stillborn').
-icd10('Z374','twins, both stillborn').
-icd10('Z375','other multiple births, all liveborn').
-icd10('Z376','other multiple births, some liveborn').
-icd10('Z377','other multiple births, all stillborn').
-icd10('Z379','outcome of delivery, unspecified').
-icd10('Z38','liveborn infants according to place of birth').
-icd10('Z380','singleton, born in hospital').
-icd10('Z381','singleton, born outside hospital').
-icd10('Z382','singleton, unspecified as to place of birth').
-icd10('Z383','twin, born in hospital').
-icd10('Z384','twin, born outside hospital').
-icd10('Z385','twin, unspecified as to place of birth').
-icd10('Z386','other multiple, born in hospital').
-icd10('Z387','other multiple, born outside hospital').
-icd10('Z388','other multiple, unspecified as to place of birth').
-icd10('Z39','postpartum care and examination').
-icd10('Z390','postpartum care and examination immediately after delivery').
-icd10('Z3900','postpartum care and examination after delivery, unspecified').
-icd10('Z3901','postpartum care after hospital delivery').
-icd10('Z3902','postpartum care after planned, out of hospital delivery').
-icd10('Z3903','postpartum care after unplanned, out of hospital delivery').
-icd10('Z391','care and examination of lactating mother').
-icd10('Z392','routine postpartum follow-up').
-icd10('Z40','prophylactic surgery').
-icd10('Z400','prophylactic surgery for risk-factors related to malignant neoplasms').
-icd10('Z4000','prophylactic surgery for risk-factors related to malignant neoplasms, breast').
-icd10('Z4001','prophylactic surgery for risk-factors related to malignant neoplasms, ovary').
-icd10('Z4008','prophylactic surgery for risk-factors related to malignant neoplasms, other').
-icd10('Z408','prophylactic surgery for risk-factors related to malignant neoplasms, other prophylactic surgery').
-icd10('Z409','prophylactic surgery, unspecified').
-icd10('Z41','procedures for purposes other than remedying health state').
-icd10('Z410','hair transplant').
-icd10('Z411','other plastic surgery for unacceptable cosmetic appearance').
-icd10('Z412','routine and ritual circumcision').
-icd10('Z413','ear piercing').
-icd10('Z418','other procedures for purposes other than remedying health state').
-icd10('Z419','procedure for purposes other than remedying health state, unspecified').
-icd10('Z42','follow-up care involving plastic surgery').
-icd10('Z420','follow-up care involving plastic surgery of head and neck').
-icd10('Z421','follow-up care involving plastic surgery of breast').
-icd10('Z422','follow-up care involving plastic surgery of other parts of trunk').
-icd10('Z423','follow-up care involving plastic surgery of upper extremity').
-icd10('Z424','follow-up care involving plastic surgery of lower extremity').
-icd10('Z428','follow-up care involving plastic surgery of other body part').
-icd10('Z429','follow-up care involving plastic surgery, unspecified').
-icd10('Z43','attention to artificial openings').
-icd10('Z430','attention to tracheostomy').
-icd10('Z431','attention to gastrostomy').
-icd10('Z432','attention to ileostomy').
-icd10('Z433','attention to colostomy').
-icd10('Z434','attention to other artificial openings of digestive tract').
-icd10('Z435','attention to cystostomy').
-icd10('Z436','attention to other artificial openings of urinary tract').
-icd10('Z437','attention to artificial vagina').
-icd10('Z438','attention to other artificial openings').
-icd10('Z439','attention to unspecified artificial opening').
-icd10('Z44','fitting and adjustment of external prosthetic device').
-icd10('Z440','fitting and adjustment of artificial arm (complete)(partial)').
-icd10('Z441','fitting and adjustment of artificial leg (complete)(partial)').
-icd10('Z442','fitting and adjustment of artificial eye').
-icd10('Z443','fitting and adjustment of external breast prosthesis').
-icd10('Z448','fitting and adjustment of other external prosthetic devices').
-icd10('Z449','fitting and adjustment of unspecified external prosthetic device').
-icd10('Z45','adjustment and management of implanted device').
-icd10('Z450','adjustment and management of cardiac device').
-icd10('Z451','adjustment and management of implantable infusion device or pump').
-icd10('Z452','adjustment and management of vascular access device').
-icd10('Z453','adjustment and management of implanted hearing device').
-icd10('Z458','adjustment and management of other implanted devices').
-icd10('Z459','adjustment and management of unspecified implanted device').
-icd10('Z46','fitting and adjustment of other devices').
-icd10('Z460','fitting and adjustment of spectacles and contact lenses').
-icd10('Z461','fitting and adjustment of hearing aid').
-icd10('Z462','fitting and adjustment of other devices related to nervous system and special senses').
-icd10('Z463','fitting and adjustment of dental prosthetic device').
-icd10('Z464','fitting and adjustment of orthodontic device').
-icd10('Z465','fitting and adjustment of ileostomy and other intestinal appliances').
-icd10('Z466','fitting and adjustment of urinary device').
-icd10('Z467','fitting and adjustment of orthopaedic device').
-icd10('Z468','fitting and adjustment of other specified devices').
-icd10('Z469','fitting and adjustment of unspecified device').
-icd10('Z47','other orthopaedic follow-up care').
-icd10('Z470','follow-up care involving removal of fracture plate and other internal fixation device').
-icd10('Z478','other specified orthopaedic follow-up care').
-icd10('Z479','orthopaedic follow-up care, unspecified').
-icd10('Z48','other surgical follow-up care').
-icd10('Z480','attention to surgical dressings and sutures').
-icd10('Z488','other specified surgical follow-up care').
-icd10('Z489','surgical follow-up care, unspecified').
-icd10('Z49','care involving dialysis').
-icd10('Z490','preparatory care for dialysis').
-icd10('Z491','extracorporeal dialysis').
-icd10('Z492','other dialysis').
-icd10('Z50','care involving use of rehabilitation procedures').
-icd10('Z500','cardiac rehabilitation').
-icd10('Z501','other physical therapy').
-icd10('Z502','alcohol rehabilitation').
-icd10('Z503','drug rehabilitation').
-icd10('Z504','psychotherapy, not elsewhere classified').
-icd10('Z505','speech therapy').
-icd10('Z506','orthoptic training').
-icd10('Z507','occupational therapy and vocational rehabilitation, not elsewhere classified').
-icd10('Z508','care involving use of other rehabilitation procedures').
-icd10('Z509','care involving use of rehabilitation procedure, unspecified').
-icd10('Z51','other medical care').
-icd10('Z510','radiotherapy session').
-icd10('Z511','chemotherapy session for neoplasm').
-icd10('Z512','other chemotherapy').
-icd10('Z513','blood transfusion without reported diagnosis').
-icd10('Z514','preparatory care for subsequent treatment, not elsewhere classified').
-icd10('Z515','palliative care').
-icd10('Z516','desensitisation to allergens').
-icd10('Z518','other specified medical care').
-icd10('Z5181','apheresis').
-icd10('Z5188','other specified medical care').
-icd10('Z519','medical care, unspecified').
-icd10('Z52','donors of organs and tissues').
-icd10('Z520','blood donor').
-icd10('Z5200','whole blood donor').
-icd10('Z5201','stem cell donor').
-icd10('Z5208','other blood products donor').
-icd10('Z521','skin donor').
-icd10('Z522','bone donor').
-icd10('Z523','bone marrow donor').
-icd10('Z524','kidney donor').
-icd10('Z525','cornea donor').
-icd10('Z526','liver donor').
-icd10('Z527','heart donor').
-icd10('Z528','donor of other organs and tissues').
-icd10('Z529','donor of unspecified organ or tissue').
-icd10('Z53','persons encountering health services for specific procedures, not carried out').
-icd10('Z530','procedure not carried out because of contraindication').
-icd10('Z531','procedure not carried out because of patient\'s decision for reasons of belief and group pressure').
-icd10('Z532','procedure not carried out because of patient\'s decision for other and unspecified reasons').
-icd10('Z538','procedure not carried out for other reasons').
-icd10('Z539','procedure not carried out, unspecified reason').
-icd10('Z54','convalescence').
-icd10('Z540','convalescence following surgery').
-icd10('Z541','convalescence following radiotherapy').
-icd10('Z542','convalescence following chemotherapy').
-icd10('Z543','convalescence following psychotherapy').
-icd10('Z544','convalescence following treatment of fracture').
-icd10('Z547','convalescence following combined treatment').
-icd10('Z548','convalescence following other treatment').
-icd10('Z549','convalescence following unspecified treatment').
-icd10('Z55','problems related to education and literacy').
-icd10('Z550','illiteracy and low-level literacy').
-icd10('Z551','schooling unavailable and unattainable').
-icd10('Z552','failed examinations').
-icd10('Z553','underachievement in school').
-icd10('Z554','educational maladjustment and discord with teachers and classmates').
-icd10('Z558','other problems related to education and literacy').
-icd10('Z559','problem related to education and literacy, unspecified').
-icd10('Z56','problems related to employment and unemployment').
-icd10('Z560','unemployment, unspecified').
-icd10('Z561','change of job').
-icd10('Z562','threat of job loss').
-icd10('Z563','stressful work schedule').
-icd10('Z564','discord with boss and workmates').
-icd10('Z565','uncongenial work').
-icd10('Z566','other physical and mental strain related to work').
-icd10('Z567','other and unspecified problems related to employment').
-icd10('Z57','occupational exposure to risk-factors').
-icd10('Z570','occupational exposure to noise').
-icd10('Z571','occupational exposure to radiation').
-icd10('Z572','occupational exposure to dust').
-icd10('Z573','occupational exposure to other air contaminants').
-icd10('Z574','occupational exposure to toxic agents in agriculture').
-icd10('Z575','occupational exposure to toxic agents in other industries').
-icd10('Z576','occupational exposure to extreme temperature').
-icd10('Z577','occupational exposure to vibration').
-icd10('Z578','occupational exposure to other risk-factors').
-icd10('Z579','occupational exposure to unspecified risk-factor').
-icd10('Z58','problems related to physical environment').
-icd10('Z580','problems related to exposure to noise').
-icd10('Z581','exposure to air pollution').
-icd10('Z582','exposure to water pollution').
-icd10('Z583','exposure to soil pollution').
-icd10('Z584','exposure to radiation').
-icd10('Z585','exposure to other pollution').
-icd10('Z586','inadequate drinking-water supply').
-icd10('Z588','other problems related to physical environment').
-icd10('Z589','problem related to physical environment, unspecified').
-icd10('Z59','problems related to housing and economic circumstances').
-icd10('Z590','homelessness').
-icd10('Z591','inadequate housing').
-icd10('Z592','discord with neighbours, lodgers and landlord').
-icd10('Z593','problems related to living in residential institution').
-icd10('Z594','lack of adequate food').
-icd10('Z595','extreme poverty').
-icd10('Z596','low income').
-icd10('Z597','insufficient social insurance and welfare support').
-icd10('Z598','other problems related to housing and economic circumstances').
-icd10('Z599','problem related to housing and economic circumstances, unspecified').
-icd10('Z60','problems related to social environment').
-icd10('Z600','problems of adjustment to life-cycle transitions').
-icd10('Z601','atypical parenting situation').
-icd10('Z602','living alone').
-icd10('Z603','acculturation difficulty').
-icd10('Z604','social exclusion and rejection').
-icd10('Z605','target of perceived adverse discrimination and persecution').
-icd10('Z608','other problems related to social environment').
-icd10('Z609','problem related to social environment, unspecified').
-icd10('Z61','problems related to negative life events in childhood').
-icd10('Z610','loss of love relationship in childhood').
-icd10('Z611','removal from home in childhood').
-icd10('Z612','altered pattern of family relationships in childhood').
-icd10('Z613','events resulting in loss of self-esteem in childhood').
-icd10('Z614','problems related to alleged sexual abuse of child by person within primary support group').
-icd10('Z615','problems related to alleged sexual abuse of child by person outside primary support group').
+icd10('Y606','unintentional cut, puncture, perforation or haemorrhage during aspiration, puncture and other catheterisation',[],[]).
+icd10('Y607','unintentional cut, puncture, perforation or haemorrhage during administration of enema',[],[]).
+icd10('Y608','unintentional cut, puncture, perforation or haemorrhage during other surgical and medical care',[],[]).
+icd10('Y609','unintentional cut, puncture, perforation or haemorrhage during unspecified surgical and medical care',[],[]).
+icd10('Y61','foreign object accidentally left in body during surgical and medical care',[foreign,object,surgery,complication],[]).
+icd10('Y610','foreign object accidentally left in body during surgical operation',[foreign,object,surgery,complication],[]).
+icd10('Y611','foreign object accidentally left in body during infusion or transfusion',[foreign,object,surgery,complication],[]).
+icd10('Y612','foreign object accidentally left in body during kidney dialysis or other perfusion',[foreign,object,surgery,complication],[]).
+icd10('Y613','foreign object accidentally left in body during injection or immunisation',[foreign,object,surgery,complication],[]).
+icd10('Y614','foreign object accidentally left in body during endoscopic examination',[foreign,object,surgery,complication],[]).
+icd10('Y615','foreign object accidentally left in body during heart catheterisation',[foreign,object,surgery,complication],[]).
+icd10('Y616','foreign object accidentally left in body during aspiration, puncture and other catheterisation',[foreign,object,surgery,complication],[]).
+icd10('Y617','foreign object accidentally left in body during removal of catheter or packing',[foreign,object,surgery,complication],[]).
+icd10('Y618','foreign object accidentally left in body during other surgical and medical care',[foreign,object,surgery,complication],[]).
+icd10('Y619','foreign object accidentally left in body during unspecified surgical and medical care',[foreign,object,surgery,complication],[]).
+icd10('Y62','failure of sterile precautions during surgical and medical care',[],[]).
+icd10('Y620','failure of sterile precautions during surgical operation',[],[]).
+icd10('Y621','failure of sterile precautions during infusion or transfusion',[],[]).
+icd10('Y622','failure of sterile precautions during kidney dialysis or other perfusion',[],[]).
+icd10('Y623','failure of sterile precautions during injection or immunisation',[],[]).
+icd10('Y624','failure of sterile precautions during endoscopic examination',[],[]).
+icd10('Y625','failure of sterile precautions during heart catheterisation',[],[]).
+icd10('Y626','failure of sterile precautions during aspiration, puncture and other catheterisation',[],[]).
+icd10('Y628','failure of sterile precautions during other surgical and medical care',[],[]).
+icd10('Y629','failure of sterile precautions during unspecified surgical and medical care',[],[]).
+icd10('Y63','failure in dosage during surgical and medical care',[],[]).
+icd10('Y630','excessive amount of blood or other fluid given during transfusion or infusion',[],[]).
+icd10('Y631','incorrect dilution of fluid used during infusion',[],[]).
+icd10('Y632','overdose of radiation given during therapy',[],[]).
+icd10('Y633','inadvertent exposure of patient to radiation during medical care',[],[]).
+icd10('Y634','failure in dosage in electroshock or insulin-shock therapy',[],[]).
+icd10('Y635','inappropriate temperature in local application and packing',[],[]).
+icd10('Y636','nonadministration of necessary drug, medicament or biological substance'[],[]).
+icd10('Y638','failure in dosage during other surgical and medical care',[],[]).
+icd10('Y639','failure in dosage during unspecified surgical and medical care',[],[]).
+icd10('Y640','contaminated medical or biological substance, transfused or infused',[],[]).
+icd10('Y641','contaminated medical or biological substance, injected or used for immunisation',[],[]).
+icd10('Y648','contaminated medical or biological substance administered by other means',[],[]).
+icd10('Y649','contaminated medical or biological substance administered by unspecified means',[],[]).
+icd10('Y65','other misadventures during surgical and medical care',[],[]).
+icd10('Y650','mismatched blood used in transfusion',[blood,transfusion],[]).
+icd10('Y651','wrong fluid used in infusion',[],[]).
+icd10('Y652','failure in suture or ligature during surgical operation',[suture,ligature],[]).
+icd10('Y653','endotracheal tube wrongly placed during anaesthetic procedure',[intubation,endotracheal],[]).
+icd10('Y654','failure to introduce or to remove other tube or instrument',[],[]).
+icd10('Y655','performance of inappropriate operation',[],[]).
+icd10('Y658','other specified misadventures during surgical and medical care',[],[]).
+icd10('Y66','nonadministration of surgical and medical care',[],[]).
+icd10('Y69','unspecified misadventure during surgical and medical care',[],[]).
+icd10('Y70','anaesthesiology devices associated with misadventures',[],[]).
+icd10('Y700','anaesthesiology devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y701','anaesthesiology devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y702','anaesthesiology devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y703','anaesthesiology devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y708','anaesthesiology devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y71','cardiovascular devices associated with misadventures',[],[]).
+icd10('Y710','cardiovascular devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y711','cardiovascular devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y712','cardiovascular devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y713','cardiovascular devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y718','cardiovascular devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y72','otorhinolaryngological devices associated with misadventures',[],[]).
+icd10('Y720','otorhinolaryngological devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y721','otorhinolaryngological devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y722','otorhinolaryngological devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y723','otorhinolaryngological devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y728','otorhinolaryngological devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y73','gastroenterology and urology devices associated with misadventures',[],[]).
+icd10('Y730','gastroenterology and urology devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y731','gastroenterology and urology devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y732','gastroenterology and urology devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y733','gastroenterology and urology devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y738','gastroenterology and urology devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y74','general hospital and personal-use devices associated with misadventures',[],[]).
+icd10('Y740','general hospital and personal-use devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y741','general hospital and personal-use devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y742','general hospital and personal-use devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y743','general hospital and personal-use devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y748','general hospital and personal-use devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y75','neurological devices associated with misadventures',[],[]).
+icd10('Y750','neurological devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y751','neurological devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y752','neurological devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y753','neurological devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y758','neurological devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y76','obstetric and gynaecological devices associated with misadventures',[],[]).
+icd10('Y760','obstetric and gynaecological devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y761','obstetric and gynaecological devices associated with misadventuress, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y762','obstetric and gynaecological devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y763','obstetric and gynaecological devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y768','obstetric and gynaecological devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y77','ophthalmic devices associated with misadventures',[],[]).
+icd10('Y770','ophthalmic devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y771','ophthalmic devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y772','ophthalmic devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y773','ophthalmic devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y778','ophthalmic devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y78','radiological devices associated with misadventures',[],[]).
+icd10('Y780','radiological devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y781','radiological devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y782','radiological devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y783','radiological devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y788','radiological devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y79','orthopaedic devices associated with misadventures',[],[]).
+icd10('Y790','orthopaedic devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y791','orthopaedic devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y792','orthopaedic devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y793','orthopaedic devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y798','orthopaedic devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y80','physical medicine devices associated with misadventures',[],[]).
+icd10('Y800','physical medicine devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y801','physical medicine devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y802','physical medicine devices associated with adverse incidents, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y803','physical medicine devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y808','physical medicine devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y81','general and plastic-surgery devices associated with misadventures',[],[]).
+icd10('Y810','general- and plastic-surgery devices associated with misadventures, diagnostic and monitoring devices'[],[]).
+icd10('Y811','general- and plastic-surgery devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y812','general- and plastic-surgery devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y813','general- and plastic-surgery devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y818','general- and plastic-surgery devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y82','other and unspecified medical devices associated with misadventures',[],[]).
+icd10('Y820','other and unspecified medical devices associated with misadventures, diagnostic and monitoring devices',[],[]).
+icd10('Y821','other and unspecified medical devices associated with misadventures, therapeutic (nonsurgical) and rehabilitative devices',[],[]).
+icd10('Y822','other and unspecified medical devices associated with misadventures, prosthetic and other implants, materials and accessory devices',[],[]).
+icd10('Y823','other and unspecified medical devices associated with misadventures, surgical instruments, materials and devices (including sutures)',[],[]).
+icd10('Y828','other and unspecified medical devices associated with misadventures, miscellaneous devices, not elsewhere classified',[],[]).
+icd10('Y83','surgical operation and other surgical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[],[]).
+icd10('Y830','surgical operation with transplant of whole organ',[],[]).
+icd10('Y831','surgical operation with implant of artificial internal device',[],[]).
+icd10('Y832','surgical operation with anastomosis, bypass or graft',[],[]).
+icd10('Y833','surgical operation with formation of external stoma',[],[]).
+icd10('Y834','other reconstructive surgery',[reconstructive],[]).
+icd10('Y835','amputation of limb(s)',[amputation],[]).
+icd10('Y836','removal of other organ (partial) (total)',[excision,removal],[]).
+icd10('Y838','other surgical procedures',[surgery,procedure],[]).
+icd10('Y839','surgical procedure, unspecified',[surgery,procedure],[]).
+icd10('Y84','other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[complication],[]).
+icd10('Y840','cardiac catheterisation as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[catheterisation,angiogram,comparsion],[]).
+icd10('Y841','kidney dialysis as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[dialysis,complication],[]).
+icd10('Y97','environmental-pollution-related condition',[pollution,environment],[]).
+icd10('Y842','radiological procedure and radiotherapy as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[radiotherapy,complication],[]).
+icd10('Y843','shock therapy as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[complication,ect],[]).
+icd10('Y844','aspiration of fluid as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[],[]).
+icd10('Z006','examination for normal comparison and control in clinical research programme',[],[]).
+icd10('Z008','other general examinations',[],[]).
+icd10('Y845','insertion of gastric or duodenal sound as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[],[]).
+icd10('Y846','urinary catheterisation as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[],[]).
+icd10('Y847','blood-sampling as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[],[]).
+icd10('Y848','other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[],[]).
+icd10('Y849','medical procedure, unspecified as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[],[]).
+icd10('Y85','sequelae of transport accidents',[accident],[]).
+icd10('Y850','sequelae of motor-vehicle accident',[accident],[]).
+icd10('Y859','sequelae of other and unspecified transport accidents',[accident],[]).
+icd10('Y86','sequelae of other accidents',[],[]).
+icd10('Y87','sequelae of intentional self-harm, assault and events of undetermined intent',[],[]).
+icd10('Y870','sequelae of intentional self-harm',[self,harm],[]).
+icd10('Y871','sequelae of assault',[assault],[]).
+icd10('Y872','sequelae of events of undetermined intent',[],[]).
+icd10('Y88','sequelae with surgical and medical care as external cause',[complication,sequelae],[]).
+icd10('Y880','sequelae of adverse effects caused by drugs, medicaments and biological substances in therapeutic use',[complication,side,effect],[]).
+icd10('Y881','sequelae of misadventures to patients during surgical and medical procedures',[complication,surgery],[]).
+icd10('Y882','sequelae of adverse incidents associated with medical devices in diagnostic and therapeutic use',[device,complication],[]).
+icd10('Y883','sequelae of surgical and medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure',[complication],[]).
+icd10('Y89','sequelae of other external causes',[external],[]).
+icd10('Y890','sequelae of legal intervention',[legal],[]).
+icd10('Y891','sequelae of war operations',[war],[]).
+icd10('Y899','sequelae of unspecified external cause',[],[]).
+icd10('Y90','evidence of alcohol involvement determined by blood alcohol level',[],[]).
+icd10('Y900','blood alcohol level of less than 20 mg/100 ml',[],[]).
+icd10('Y901','blood alcohol level of 20-39 mg/100 ml',[],[]).
+icd10('Y902','blood alcohol level of 40-59 mg/100 ml',[],[]).
+icd10('Y903','blood alcohol level of 60-79 mg/100 ml',[],[]).
+icd10('Y904','blood alcohol level of 80-99 mg/100 ml',[],[]).
+icd10('Y905','blood alcohol level of 100-119 mg/100 ml',[],[]).
+icd10('Y906','blood alcohol level of 120-199 mg/100 ml',[],[]).
+icd10('Y907','blood alcohol level of 200-239 mg/100 ml',[],[]).
+icd10('Y908','blood alcohol level of 240 mg/100 ml or more',[],[]).
+icd10('Y909','presence of alcohol in blood, level not specified',[],[]).
+icd10('Y91','evidence of alcohol involvement determined by level of intoxication',[],[]).
+icd10('Y910','mild alcohol intoxication',[drunk,intoxication],[]).
+icd10('Y911','moderate alcohol intoxication',[drunk,intoxication],[]).
+icd10('Y912','severe alcohol intoxication',[drunk,intoxication],[]).
+icd10('Y913','very severe alcohol intoxication',[intoxication,drunk],[]).
+icd10('Y919','alcohol involvement, not otherwise specified',[],[]).
+icd10('Y92','place of occurrence',[],[]).
+icd10('Y921','residential institution',[],[]).
+icd10('Y922','school, other institution and public administrative area',[],[]).
+icd10('Y9221','school',[],[]).
+icd10('Y9222','health service area',[],[]).
+icd10('Y9229','other specified institution and public administrative area',[],[]).
+icd10('Y923','sports and athletics area',[],[]).
+icd10('Y924','street and highway',[],[]).
+icd10('Y925','trade and service area',[],[]).
+icd10('Y926','industrial and construction area',[],[]).
+icd10('Y927','farm',[],[]).
+icd10('Y928','other specified place of occurrence',[],[]).
+icd10('Y929','unspecified place of occurrence',[],[]).
+icd10('Y93','activity',[],[]).
+icd10('Y930','while engaged in sports',[],[]).
+icd10('Y9300','football, rugby',[],[]).
+icd10('Y9301','football, australian',[],[]).
+icd10('Y9302','football, soccer',[],[]).
+icd10('Y9303','hockey',[],[]).
+icd10('Y9304','squash',[],[]).
+icd10('Y9305','basketball',[],[]).
+icd10('Y9306','netball',[],[]).
+icd10('Y9307','cricket',[],[]).
+icd10('Y9308','roller blading',[],[]).
+icd10('Y9309','other and unspecified sporting activity',[],[]).
+icd10('Y931','while engaged in leisure',[],[]).
+icd10('Y932','while working for income',[],[]).
+icd10('Y933','while engaged in other types of work',[],[]).
+icd10('Y934','while resting, sleeping, eating or engaging in other vital activities',[],[]).
+icd10('Y938','other specified activity',[],[]).
+icd10('Y939','unspecified activity',[],[]).
+icd10('Y95','nosocomial condition',[nosocomial],[]).
+icd10('Y96','work-related condition',[work],[]).
+icd10('Z00','general examination and investigation of persons without complaint or reported diagnosis',[],[]).
+icd10('Z000','general medical examination',[],[]).
+icd10('Z001','routine child health examination',[],[]).
+icd10('Z002','examination for period of rapid growth in childhood',[],[]).
+icd10('Z003','examination for adolescent development state',[],[]).
+icd10('Z004','general psychiatric examination, not elsewhere classified',[],[]).
+icd10('Z005','examination of potential donor of organ and tissue',[],[]).
+icd10('Z01','other special examinations and investigations of persons without complaint or reported diagnosis',[],[]).
+icd10('Z010','examination of eyes and vision',[],[]).
+icd10('Z011','examination of ears and hearing',[],[]).
+icd10('Z012','dental examination',[],[]).
+icd10('Z013','examination of blood pressure',[],[]).
+icd10('Z014','gynaecological examination (general)(routine)',[],[]).
+icd10('Z015','diagnostic skin and sensitisation tests',[],[]).
+icd10('Z016','radiological examination, not elsewhere classified',[],[]).
+icd10('Z017','laboratory examination',[],[]).
+icd10('Z018','other specified special examinations',[],[]).
+icd10('Z019','special examination, unspecified',[],[]).
+icd10('Z02','examination and encounter for administrative purposes',[],[]).
+icd10('Z020','examination for admission to educational institution',[],[]).
+icd10('Z021','pre-employment examination',[],[]).
+icd10('Z022','examination for admission to residential institutions',[],[]).
+icd10('Z023','examination for recruitment to armed forces',[],[]).
+icd10('Z024','examination for driving licence',[],[]).
+icd10('Z025','examination for participation in sport',[],[]).
+icd10('Z026','examination for insurance purposes',[],[]).
+icd10('Z027','issue of medical certificate',[],[]).
+icd10('Z028','other examinations for administrative purposes',[],[]).
+icd10('Z029','examination for administrative purposes, unspecified',[],[]).
+icd10('Z03','medical observation and evaluation for suspected diseases and conditions',[],[]).
+icd10('Z030','observation for suspected tuberculosis',[],[]).
+icd10('Z031','observation for suspected malignant neoplasm',[],[]).
+icd10('Z032','observation for suspected mental and behavioural disorders',[],[]).
+icd10('Z033','observation for suspected nervous system disorder',[],[]).
+icd10('Z034','observation for suspected myocardial infarction',[],[]).
+icd10('Z035','observation for other suspected cardiovascular diseases',[],[]).
+icd10('Z036','observation for suspected toxic effect from ingested substance',[],[]).
+icd10('Z038','observation for other suspected diseases and conditions',[],[]).
+icd10('Z039','observation for suspected disease or condition, unspecified',[],[]).
+icd10('Z04','examination and observation for other reasons',[],[]).
+icd10('Z040','blood-alcohol and blood-drug test',[],[]).
+icd10('Z041','examination and observation following transport accident',[],[]).
+icd10('Z042','examination and observation following work accident',[],[]).
+icd10('Z043','examination and observation following other accident',[],[]).
+icd10('Z044','examination and observation following alleged rape and seduction',[],[]).
+icd10('Z045','examination and observation following other inflicted injury',[],[]).
+icd10('Z046','general psychiatric examination, requested by authority',[],[]).
+icd10('Z048','examination and observation for other specified reasons',[],[]).
+icd10('Z049','examination and observation for unspecified reason',[],[]).
+icd10('Z06','infection with drug-resistant microorganism',[],[]).
+icd10('Z08','follow-up examination after treatment for malignant neoplasms',[],[]).
+icd10('Z080','follow-up examination after surgery for malignant neoplasm',[],[]).
+icd10('Z081','follow-up examination after radiotherapy for malignant neoplasm',[],[]).
+icd10('Z082','follow-up examination after chemotherapy for malignant neoplasm',[],[]).
+icd10('Z087','follow-up examination after combined treatment for malignant neoplasm',[],[]).
+icd10('Z088','follow-up examination after other treatment for malignant neoplasm',[],[]).
+icd10('Z089','follow-up examination after unspecified treatment for malignant neoplasm',[],[]).
+icd10('Z09','follow-up examination after treatment for conditions other than malignant neoplasms',[],[]).
+icd10('Z090','follow-up examination after surgery for other conditions',[],[]).
+icd10('Z091','follow-up examination after radiotherapy for other conditions',[],[]).
+icd10('Z092','follow-up examination after chemotherapy for other conditions',[],[]).
+icd10('Z093','follow-up examination after psychotherapy',[],[]).
+icd10('Z094','follow-up examination after treatment of fracture',[],[]).
+icd10('Z097','follow-up examination after combined treatment for other conditions',[],[]).
+icd10('Z098','follow-up examination after other treatment for other conditions',[],[]).
+icd10('Z099','follow-up examination after unspecified treatment for other conditions',[],[]).
+icd10('Z10','routine general health check-up of defined subpopulation',[],[]).
+icd10('Z100','occupational health examination',[],[]).
+icd10('Z101','routine general health check-up of inhabitants of institutions',[],[]).
+icd10('Z102','routine general health check-up of armed forces',[],[]).
+icd10('Z103','routine general health check-up of sports teams',[],[]).
+icd10('Z108','routine general health check-up of other defined subpopulations',[],[]).
+icd10('Z11','special screening examination for infectious and parasitic diseases',[],[]).
+icd10('Z110','special screening examination for intestinal infectious diseases',[],[]).
+icd10('Z111','special screening examination for respiratory tuberculosis',[],[]).
+icd10('Z112','special screening examination for other bacterial diseases',[],[]).
+icd10('Z113','special screening examination for infections with a predominantly sexual mode of transmission',[],[]).
+icd10('Z114','special screening examination for human immunodeficiency virus [hiv]',[],[]).
+icd10('Z115','special screening examination for other viral diseases',[],[]).
+icd10('Z116','special screening examination for other protozoal diseases and helminthiases',[],[]).
+icd10('Z118','special screening examination for other infectious and parasitic diseases',[],[]).
+icd10('Z119','special screening examination for infectious and parasitic diseases, unspecified',[],[]).
+icd10('Z12','special screening examination for neoplasms',[],[]).
+icd10('Z120','special screening examination for neoplasm of stomach',[],[]).
+icd10('Z121','special screening examination for neoplasm of intestinal tract',[],[]).
+icd10('Z122','special screening examination for neoplasm of respiratory organs',[],[]).
+icd10('Z123','special screening examination for neoplasm of breast',[],[]).
+icd10('Z124','special screening examination for neoplasm of cervix',[],[]).
+icd10('Z125','special screening examination for neoplasm of prostate',[],[]).
+icd10('Z126','special screening examination for neoplasm of bladder',[],[]).
+icd10('Z128','special screening examination for neoplasms of other sites',[],[]).
+icd10('Z129','special screening examination for neoplasm, unspecified',[],[]).
+icd10('Z13','special screening examination for other diseases and disorders',[],[]).
+icd10('Z130','special screening examination for diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism',[],[]).
+icd10('Z131','special screening examination for diabetes mellitus',[],[]).
+icd10('Z132','special screening examination for nutritional disorders',[],[]).
+icd10('Z133','special screening examination for mental and behavioural disorders',[],[]).
+icd10('Z134','special screening examination for certain developmental disorders in childhood',[],[]).
+icd10('Z135','special screening examination for eye and ear disorders',[],[]).
+icd10('Z136','special screening examination for cardiovascular disorders',[],[]).
+icd10('Z137','special screening examination for congenital malformations, deformations and chromosomal abnormalities',[],[]).
+icd10('Z138','special screening examination for other specified diseases and disorders',[],[]).
+icd10('Z1381','special screening examination for nervous system disorder',[],[]).
+icd10('Z1382','special screening examination for respiratory disorder',[],[]).
+icd10('Z1383','special screening examination for digestive tract disorder',[],[]).
+icd10('Z1384','special screening examination for musculoskeletal disorder',[],[]).
+icd10('Z1385','special screening examination for genitourinary disorder',[],[]).
+icd10('Z1386','special screening examination for endocrine and metabolic disorder',[],[]).
+icd10('Z1388','special screening examination for other specified diseases and disorders',[],[]).
+icd10('Z139','special screening examination, unspecified',[],[]).
+icd10('Z20','contact with and exposure to communicable diseases',exposure],[]).
+icd10('Z200','contact with and exposure to intestinal infectious diseases',[exposure],[]).
+icd10('Z201','contact with and exposure to tuberculosis',[exposure,tb],[]).
+icd10('Z202','contact with and exposure to infections with a predominantly sexual mode of transmission',[exposure],[]).
+icd10('Z203','contact with and exposure to rabies',[exposure,rabies],[]).
+icd10('Z204','contact with and exposure to rubella',[exposure,rubella],[]).
+icd10('Z205','contact with and exposure to viral hepatitis',[exposure,hepatitis],[]).
+icd10('Z206','contact with and exposure to human immunodeficiency virus [hiv]',[exposure,hiv],[]).
+icd10('Z207','contact with and exposure to pediculosis, acariasis and other infestations',[exposure],[]).
+icd10('Z208','contact with and exposure to other communicable diseases',[exposure],[]).
+icd10('Z209','contact with and exposure to unspecified communicable disease',[exposure],[]).
+icd10('Z21','asymptomatic human immunodeficiency virus [hiv] infection status',[carrier,hiv],[]).
+icd10('Z220','carrier of typhoid',[carrier,typhoid],[]).
+icd10('Z221','carrier of other intestinal infectious diseases',[carrier],[]).
+icd10('Z222','carrier of diphtheria',[carrier,diphtheria],[]).
+icd10('Z223','carrier of other specified bacterial diseases',[carrier],[]).
+icd10('Z224','carrier of infections with a predominantly sexual mode of transmission',[carrier],[]).
+icd10('Z225','carrier of viral hepatitis',[carrier,hepatitis],[]).
+icd10('Z2251','carrier of viral hepatitis b',[carrier,hepatitis],[]).
+icd10('Z2252','carrier of viral hepatitis c',[carrier,hepatitis],[]).
+icd10('Z2259','carrier of other specified viral hepatitis',[carrier,hepatitis],[]).
+icd10('Z226','carrier of human t-lymphotropic virus type-1 [htlv-1] infection',[carrier,htlv],[]).
+icd10('Z228','carrier of other infectious diseases',[carrier],[]).
+icd10('Z229','carrier of infectious disease, unspecified',[carrier],[]).
+icd10('Z23','need for immunisation against single bacterial diseases',[],[]).
+icd10('Z230','need for immunisation against cholera alone',[],[]).
+icd10('Z231','need for immunisation against typhoid-paratyphoid alone [tab]',[],[]).
+icd10('Z232','need for immunisation against tuberculosis [bcg]',[],[]).
+icd10('Z233','need for immunisation against plague',[],[]).
+icd10('Z234','need for immunisation against tularaemia',[],[]).
+icd10('Z235','need for immunisation against tetanus alone',[],[]).
+icd10('Z236','need for immunisation against diphtheria alone',[],[]).
+icd10('Z237','need for immunisation against pertussis alone',[],[]).
+icd10('Z238','need for immunisation against other single bacterial diseases',[],[]).
+icd10('Z24','need for immunisation against certain single viral diseases',[],[]).
+icd10('Z240','need for immunisation against poliomyelitis',[],[]).
+icd10('Z241','need for immunisation against arthropod-borne viral encephalitis',[],[]).
+icd10('Z242','need for immunisation against rabies',[],[]).
+icd10('Z243','need for immunisation against yellow fever',[],[]).
+icd10('Z244','need for immunisation against measles alone',[],[]).
+icd10('Z245','need for immunisation against rubella alone',[],[]).
+icd10('Z246','need for immunisation against viral hepatitis',[],[]).
+icd10('Z25','need for immunisation against other single viral diseases',[],[]).
+icd10('Z250','need for immunisation against mumps alone',[],[]).
+icd10('Z251','need for immunisation against influenza',[],[]).
+icd10('Z258','need for immunisation against other specified single viral diseases',[],[]).
+icd10('Z26','need for immunisation against other single infectious diseases',[],[]).
+icd10('Z260','need for immunisation against leishmaniasis',[],[]).
+icd10('Z268','need for immunisation against other specified single infectious diseases',[],[]).
+icd10('Z269','need for immunisation against unspecified infectious disease',[],[]).
+icd10('Z27','need for immunisation against combinations of infectious diseases',[],[]).
+icd10('Z270','need for immunisation against cholera with typhoid-paratyphoid [cholera + tab]',[],[]).
+icd10('Z271','need for immunisation against diphtheria-tetanus-pertussis, combined [dtp]',[],[]).
+icd10('Z272','need for immunisation against diphtheria-tetanus-pertussis with typhoid-paratyphoid [dtp + tab]',[],[]).
+icd10('Z273','need for immunisation against diphtheria-tetanus-pertussis with poliomyelitis [dtp + polio]',[],[]).
+icd10('Z274','need for immunisation against measles-mumps-rubella [mmr]',[],[]).
+icd10('Z278','need for immunisation against other combinations of infectious diseases',[],[]).
+icd10('Z279','need for immunisation against unspecified combinations of infectious diseases',[],[]).
+icd10('Z28','immunisation not carried out',[immunisation],[]).
+icd10('Z280','immunisation not carried out because of contraindication',[immunisation],[]).
+icd10('Z281','immunisation not carried out because of patient\'s decision for reasons of belief and group pressure',[immunisation,refusal,objector,conscientious],[]).
+icd10('Z282','immunisation not carried out because of patient\'s decision for other and unspecified reasons',[immunisation,objector,conscientious],[]).
+icd10('Z288','immunisation not carried out for other reasons',[],[]).
+icd10('Z289','immunisation not carried out for unspecified reason',[],[]).
+icd10('Z29','need for other prophylactic measures'[],[]).
+icd10('Z290','isolation',[],[]).
+icd10('Z291','prophylactic immunotherapy',[],[]).
+icd10('Z292','other prophylactic chemotherapy',[],[]).
+icd10('Z298','other specified prophylactic measures',[],[]).
+icd10('Z299','prophylactic measure, unspecified',[],[]).
+icd10('Z30','contraceptive management',[],[]).
+icd10('Z300','general counselling and advice on contraception',[],[]).
+icd10('Z301','insertion of (intrauterine) contraceptive device',[],[]).
+icd10('Z302','sterilisation',[sterilisation],[]).
+icd10('Z303','menstrual extraction',[],[]).
+icd10('Z304','surveillance of contraceptive drugs',[],[]).
+icd10('Z305','surveillance of (intrauterine) contraceptive device',[],[]).
+icd10('Z308','other contraceptive management',[],[]).
+icd10('Z309','contraceptive management, unspecified',[],[]).
+icd10('Z31','procreative management',[],[]).
+icd10('Z310','tuboplasty or vasoplasty after previous sterilisation',[reanastomosis,tuboplasty,vasoplasty],[]).
+icd10('Z311','artificial insemination',[insemination],[]).
+icd10('Z312','in vitro fertilisation',[vitro],[ivf]).
+icd10('Z313','other assisted fertilisation methods',[],[]).
+icd10('Z314','procreative investigation and testing',[],[]).
+icd10('Z315','genetic counselling',[],[]).
+icd10('Z316','general counselling and advice on procreation',[],[]).
+icd10('Z318','other procreative management',[],[]).
+icd10('Z319','procreative management, unspecified',[],[]).
+icd10('Z32','pregnancy examination and test',[],[]).
+icd10('Z320','pregnancy, not (yet) confirmed',[],[]).
+icd10('Z321','pregnancy confirmed',[pregnant],[]).
+icd10('Z33','pregnant state, incidental',[],[]).
+icd10('Z34','supervision of normal pregnancy',[],[]).
+icd10('Z340','supervision of normal first pregnancy',[],[]).
+icd10('Z348','supervision of other normal pregnancy',[],[]).
+icd10('Z349','supervision of normal pregnancy, unspecified',[],[]).
+icd10('Z35','supervision of high-risk pregnancy',[],[]).
+icd10('Z350','supervision of pregnancy with history of infertility',[],[]).
+icd10('Z351','supervision of pregnancy with history of abortive outcome',[],[]).
+icd10('Z352','supervision of pregnancy with other poor reproductive or obstetric history',[],[]).
+icd10('Z353','supervision of pregnancy with history of insufficient antenatal care',[],[]).
+icd10('Z354','supervision of pregnancy with grand multiparity',[],[]).
+icd10('Z355','supervision of elderly primigravida',[],[]).
+icd10('Z356','supervision of (very) young primigravida',[],[]).
+icd10('Z357','supervision of high-risk pregnancy due to social problems',[],[]).
+icd10('Z358','supervision of other high-risk pregnancies',[],[]).
+icd10('Z359','supervision of high-risk pregnancy, unspecified',[],[]).
+icd10('Z36','antenatal screening',[],[]).
+icd10('Z360','antenatal screening for chromosomal anomalies',[],[]).
+icd10('Z361','antenatal screening for raised alphafetoprotein level',[],[]).
+icd10('Z362','other antenatal screening based on amniocentesis',[],[]).
+icd10('Z363','antenatal screening for malformations using ultrasound and other physical methods',[],[]).
+icd10('Z364','antenatal screening for fetal growth retardation using ultrasound and other physical methods',[],[]).
+icd10('Z365','antenatal screening for isoimmunisation',[],[]).
+icd10('Z368','other antenatal screening',[],[]).
+icd10('Z369','antenatal screening, unspecified',[],[]).
+icd10('Z37','outcome of delivery',[],[]).
+icd10('Z370','single live birth',[birth,delivery],[]).
+icd10('Z371','single stillbirth',[stillbirth],[]).
+icd10('Z372','twins, both liveborn',[twin.biryh,delivery],[]).
+icd10('Z373','twins, one liveborn and one stillborn',[stillbirth,twin,birth,delivery],[]).
+icd10('Z374','twins, both stillborn',[stillbirth],[]).
+icd10('Z375','other multiple births, all liveborn',[multiple,birth,delivery],[]).
+icd10('Z376','other multiple births, some liveborn',[multiple,birth,delivery],[]).
+icd10('Z377','other multiple births, all stillborn',[stillbirth],[]).
+icd10('Z379','outcome of delivery, unspecified',[],[]).
+icd10('Z38','liveborn infants according to place of birth',[],[]).
+icd10('Z380','singleton, born in hospital',[],[]).
+icd10('Z381','singleton, born outside hospital',[],[]).
+icd10('Z382','singleton, unspecified as to place of birth',[],[]).
+icd10('Z383','twin, born in hospital',[],[]).
+icd10('Z384','twin, born outside hospital',[],[]).
+icd10('Z385','twin, unspecified as to place of birth',[],[]).
+icd10('Z386','other multiple, born in hospital',[],[]).
+icd10('Z387','other multiple, born outside hospital',[],[]).
+icd10('Z388','other multiple, unspecified as to place of birth',[],[]).
+icd10('Z39','postpartum care and examination',[],[]).
+icd10('Z390','postpartum care and examination immediately after delivery',[],[]).
+icd10('Z3900','postpartum care and examination after delivery, unspecified',[],[]).
+icd10('Z3901','postpartum care after hospital delivery',[],[]).
+icd10('Z3902','postpartum care after planned, out of hospital delivery',[],[]).
+icd10('Z3903','postpartum care after unplanned, out of hospital delivery',[],[]).
+icd10('Z391','care and examination of lactating mother',[],[]).
+icd10('Z392','routine postpartum follow-up',[],[]).
+icd10('Z40','prophylactic surgery',[prophylactic,surgery],[]).
+icd10('Z400','prophylactic surgery for risk-factors related to malignant neoplasms',[prophylactic,surgery,cancer],[]).
+icd10('Z4000','prophylactic surgery for risk-factors related to malignant neoplasms, breast',[mastectomy,breast,propylactic],[]).
+icd10('Z4001','prophylactic surgery for risk-factors related to malignant neoplasms, ovary',[prophylactic,ovary,oophorectomy],[]).
+icd10('Z4008','prophylactic surgery for risk-factors related to malignant neoplasms, other',[prophylactic],[]).
+icd10('Z408','prophylactic surgery for risk-factors related to malignant neoplasms, other prophylactic surgery',[prophylactic],[]).
+icd10('Z409','prophylactic surgery, unspecified',[prophylactic],[]).
+icd10('Z41','procedures for purposes other than remedying health state',[],[]).
+icd10('Z410','hair transplant',[hair,transplant],[]).
+icd10('Z411','other plastic surgery for unacceptable cosmetic appearance',[cosmetic,plastic,aesthetic],[]).
+icd10('Z412','routine and ritual circumcision',[circumcision],[]).
+icd10('Z413','ear piercing',[ear,piercing],[]).
+icd10('Z418','other procedures for purposes other than remedying health state',[piercing,procedure],[]).
+icd10('Z419','procedure for purposes other than remedying health state, unspecified',[piercing,tattoo],[]).
+icd10('Z42','follow-up care involving plastic surgery',[],[]).
+icd10('Z420','follow-up care involving plastic surgery of head and neck',[],[]).
+icd10('Z421','follow-up care involving plastic surgery of breast',[],[]).
+icd10('Z422','follow-up care involving plastic surgery of other parts of trunk',[],[]).
+icd10('Z423','follow-up care involving plastic surgery of upper extremity',[],[]).
+icd10('Z424','follow-up care involving plastic surgery of lower extremity',[],[]).
+icd10('Z428','follow-up care involving plastic surgery of other body part',[],[]).
+icd10('Z429','follow-up care involving plastic surgery, unspecified',[],[]).
+icd10('Z43','attention to artificial openings',[],[]).
+icd10('Z430','attention to tracheostomy',[],[]).
+icd10('Z431','attention to gastrostomy',[],[]).
+icd10('Z432','attention to ileostomy',[],[]).
+icd10('Z433','attention to colostomy',[],[]).
+icd10('Z434','attention to other artificial openings of digestive tract',[],[]).
+icd10('Z435','attention to cystostomy',[],[]).
+icd10('Z436','attention to other artificial openings of urinary tract',[],[]).
+icd10('Z437','attention to artificial vagina',[],[]).
+icd10('Z438','attention to other artificial openings',[],[]).
+icd10('Z439','attention to unspecified artificial opening',[],[]).
+icd10('Z44','fitting and adjustment of external prosthetic device',[],[]).
+icd10('Z440','fitting and adjustment of artificial arm (complete)(partial)',[],[]).
+icd10('Z441','fitting and adjustment of artificial leg (complete)(partial)',[],[]).
+icd10('Z442','fitting and adjustment of artificial eye',[],[]).
+icd10('Z443','fitting and adjustment of external breast prosthesis',[],[]).
+icd10('Z448','fitting and adjustment of other external prosthetic devices',[],[]).
+icd10('Z449','fitting and adjustment of unspecified external prosthetic device',[],[]).
+icd10('Z45','adjustment and management of implanted device',[],[]).
+icd10('Z450','adjustment and management of cardiac device',[],[]).
+icd10('Z451','adjustment and management of implantable infusion device or pump',[],[]).
+icd10('Z452','adjustment and management of vascular access device',[],[]).
+icd10('Z453','adjustment and management of implanted hearing device',[],[]).
+icd10('Z458','adjustment and management of other implanted devices',[],[]).
+icd10('Z459','adjustment and management of unspecified implanted device',[],[]).
+icd10('Z46','fitting and adjustment of other devices',[],[]).
+icd10('Z460','fitting and adjustment of spectacles and contact lenses',[],[]).
+icd10('Z461','fitting and adjustment of hearing aid',[],[]).
+icd10('Z462','fitting and adjustment of other devices related to nervous system and special senses',[],[]).
+icd10('Z463','fitting and adjustment of dental prosthetic device',[],[]).
+icd10('Z464','fitting and adjustment of orthodontic device',[],[]).
+icd10('Z465','fitting and adjustment of ileostomy and other intestinal appliances',[],[]).
+icd10('Z466','fitting and adjustment of urinary device',[],[]).
+icd10('Z467','fitting and adjustment of orthopaedic device',[],[]).
+icd10('Z468','fitting and adjustment of other specified devices',[],[]).
+icd10('Z469','fitting and adjustment of unspecified device',[],[]).
+icd10('Z47','other orthopaedic follow-up care',[],[]).
+icd10('Z470','follow-up care involving removal of fracture plate and other internal fixation device',[],[]).
+icd10('Z478','other specified orthopaedic follow-up care',[],[]).
+icd10('Z479','orthopaedic follow-up care, unspecified',[],[]).
+icd10('Z48','other surgical follow-up care',[surgical,follow],[]).
+icd10('Z480','attention to surgical dressings and sutures',[dressing,suture],[]).
+icd10('Z488','other specified surgical follow-up care',[surgical,post,operation],[]).
+icd10('Z489','surgical follow-up care, unspecified',[],[]).
+icd10('Z49','care involving dialysis',[dialysis],[]).
+icd10('Z490','preparatory care for dialysis',[dialysis],[]).
+icd10('Z491','extracorporeal dialysis',[extracorporeal,dialysis],[]).
+icd10('Z492','other dialysis',[dialysis],[]).
+icd10('Z50','care involving use of rehabilitation procedures',[rehabilitation],[]).
+icd10('Z500','cardiac rehabilitation',[cardiac,heailitation],[]).
+icd10('Z501','other physical therapy',[physiotherapy],[]).
+icd10('Z502','alcohol rehabilitation',[alcohol,rehabilitation],[]).
+icd10('Z503','drug rehabilitation',[drug,rehabilitation],[]).
+icd10('Z504','psychotherapy, not elsewhere classified',[psychotherapy],[]).
+icd10('Z505','speech therapy',[speech],[]).
+icd10('Z506','orthoptic training',[orthoptic],[]).
+icd10('Z507','occupational therapy and vocational rehabilitation, not elsewhere classified',[occupational],[]).
+icd10('Z508','care involving use of other rehabilitation procedures',[rehabilitation],[]).
+icd10('Z509','care involving use of rehabilitation procedure, unspecified',[rehabilitation],[]).
+icd10('Z51','other medical care',[],[]).
+icd10('Z510','radiotherapy session',[radiotherapy],[]).
+icd10('Z511','chemotherapy session for neoplasm',[chemotherapy,cancer,neoplasm],[]).
+icd10('Z512','other chemotherapy',[chemotherapy],[]).
+icd10('Z513','blood transfusion without reported diagnosis',[tranfusion],[]).
+icd10('Z514','preparatory care for subsequent treatment, not elsewhere classified',[],[]).
+icd10('Z515','palliative care',[paliative,hospice],[]).
+icd10('Z516','desensitisation to allergens',[desensitisation,allergen,immunothrapy],[]).
+icd10('Z518','other specified medical care',[],[]).
+icd10('Z5181','apheresis',[apheresis],[]).
+icd10('Z5188','other specified medical care',[],[]).
+icd10('Z519','medical care, unspecified',[],[]).
+icd10('Z52','donors of organs and tissues',[donor],[]).
+icd10('Z520','blood donor',[blood,donor],[]).
+icd10('Z5200','whole blood donor',[blood,donor],[]).
+icd10('Z5201','stem cell donor',[stem,cell,donor],[]).
+icd10('Z5208','other blood products donor',[blood,donor],[]).
+icd10('Z521','skin donor',[skin.donor],[]).
+icd10('Z522','bone donor',[bone,donor],[]).
+icd10('Z523','bone marrow donor',[marrow,donor],[]).
+icd10('Z524','kidney donor',[renal,transplant,donor,kidney],[]).
+icd10('Z525','cornea donor',[cornea,donor],[]).
+icd10('Z526','liver donor',[liver,hepatic,donor],[]).
+icd10('Z527','heart donor',[cardiac,heart,donor],[]).
+icd10('Z528','donor of other organs and tissues',[donor],[]).
+icd10('Z529','donor of unspecified organ or tissue',[donor],[]).
+icd10('Z53','persons encountering health services for specific procedures, not carried out',[],[]).
+icd10('Z530','procedure not carried out because of contraindication',[],[]).
+icd10('Z531','procedure not carried out because of patient\'s decision for reasons of belief and group pressure',[],[]).
+icd10('Z532','procedure not carried out because of patient\'s decision for other and unspecified reasons',[],[]).
+icd10('Z538','procedure not carried out for other reasons',[],[]).
+icd10('Z539','procedure not carried out, unspecified reason',[],[]).
+icd10('Z54','convalescence',[convalescence],[]).
+icd10('Z540','convalescence following surgery',[convalescence],[]).
+icd10('Z541','convalescence following radiotherapy',[convalescence],[]).
+icd10('Z542','convalescence following chemotherapy',[convalescence],[]).
+icd10('Z543','convalescence following psychotherapy',[convalescence],[]). % ?!
+icd10('Z544','convalescence following treatment of fracture',[convalescence],[]).
+icd10('Z547','convalescence following combined treatment',[convalescence],[]).
+icd10('Z548','convalescence following other treatment',[convalescence],[]).
+icd10('Z549','convalescence following unspecified treatment',[convalescence],[]).
+icd10('Z55','problems related to education and literacy',[education,literacy,illiteracy],[]).
+icd10('Z550','illiteracy and low-level literacy',[illiteracy,low,literacy],[]).
+icd10('Z551','schooling unavailable and unattainable',[school],[]).
+icd10('Z552','failed examinations',[failed,examination],[]).
+icd10('Z553','underachievement in school',[underachievement,school],[]).
+icd10('Z554','educational maladjustment and discord with teachers and classmates',[teacher,school],[]).
+icd10('Z558','other problems related to education and literacy',[education,illiterate,literacy,illiteracy],[]).
+icd10('Z559','problem related to education and literacy, unspecified',[education],[]).
+icd10('Z56','problems related to employment and unemployment',[],[]).
+icd10('Z560','unemployment, unspecified',[uneployment,dole,centrelink],[]).
+icd10('Z561','change of job',[job,change],[]).
+icd10('Z562','threat of job loss',[unemployment,boss,fired,sack,sacked],[]).
+icd10('Z563','stressful work schedule',[stress,work],[]).
+icd10('Z564','discord with boss and workmates',[stress,work,boss,colleague,workmate],[]).
+icd10('Z565','uncongenial work',[work,problem,congenial],[]).
+icd10('Z566','other physical and mental strain related to work',[work,stress,mental,physical],[]).
+icd10('Z567','other and unspecified problems related to employment',[employment,work,problem],[]).
+icd10('Z57','occupational exposure to risk-factors',[occupational],[]).
+icd10('Z570','occupational exposure to noise',[noise,loud],[]).
+icd10('Z571','occupational exposure to radiation',[radiation,irradiated,ionising],[]).
+icd10('Z572','occupational exposure to dust',[dust,occupational],[]).
+icd10('Z573','occupational exposure to other air contaminants',[air,smoke,gas,occupational],[]).
+icd10('Z574','occupational exposure to toxic agents in agriculture',[agriculture,farm,poison.toxic],[]).
+icd10('Z575','occupational exposure to toxic agents in other industries',[toxic,poison,factory,industrial],[]).
+icd10('Z576','occupational exposure to extreme temperature',[hot.cold,heat,freeze],[]).
+icd10('Z577','occupational exposure to vibration',[vibration],[]).
+icd10('Z578','occupational exposure to other risk-factors',[occupational],,[]).
+icd10('Z579','occupational exposure to unspecified risk-factor',[occupational],[]).
+icd10('Z58','problems related to physical environment',[],[]).
+icd10('Z580','problems related to exposure to noise',[noise],[]).
+icd10('Z581','exposure to air pollution',[air,smog,smoke],[]).
+icd10('Z582','exposure to water pollution',[water,pollution,dirty,heavy,metal],[]).
+icd10('Z583','exposure to soil pollution',[soil,pollution,heavy,metal],[]).
+icd10('Z584','exposure to radiation',[radiation,irradiated,ionising],[]).
+icd10('Z585','exposure to other pollution',[pollution],[]).
+icd10('Z586','inadequate drinking-water supply',[water],[]).
+icd10('Z588','other problems related to physical environment',[environment],[]).
+icd10('Z589','problem related to physical environment, unspecified',[],[]).
+icd10('Z59','problems related to housing and economic circumstances',[],[]).
+icd10('Z590','homelessness',[homelessness],[]).
+icd10('Z591','inadequate housing',[housing,homeless,srs],[]).
+icd10('Z592','discord with neighbours, lodgers and landlord',[argument,discord,landlord,neighbour],[]).
+icd10('Z593','problems related to living in residential institution',[institution,srs],[]).
+icd10('Z594','lack of adequate food',[food,starvation],[]).
+icd10('Z595','extreme poverty',[low,income,poverty,poor],[]).
+icd10('Z596','low income',[low,income,poor,poverty],[]).
+icd10('Z597','insufficient social insurance and welfare support',[social,welfare,insurance],[]).
+icd10('Z598','other problems related to housing and economic circumstances',[housing,homeless],[]).
+icd10('Z599','problem related to housing and economic circumstances, unspecified',[house,homeless],[]).
+icd10('Z60','problems related to social environment',[social,environment],[]).
+icd10('Z600','problems of adjustment to life-cycle transitions',[life,cycle],[]).
+icd10('Z601','atypical parenting situation',[parent],[]).
+icd10('Z602','living alone',[alone,isolation],[]).
+icd10('Z603','acculturation difficulty',[culture,shock,acculturation],[]).
+icd10('Z604','social exclusion and rejection',[exclusion,rejection],[]).
+icd10('Z605','target of perceived adverse discrimination and persecution',[discrimination,racism],[]).
+icd10('Z608','other problems related to social environment',[social],[]).
+icd10('Z609','problem related to social environment, unspecified',[],[]).
+icd10('Z61','problems related to negative life events in childhood',[negative,childhood],[]).
+icd10('Z610','loss of love relationship in childhood',[love,childhood],[]).
+icd10('Z611','removal from home in childhood',[removal,docs,child,protection],[]).
+icd10('Z612','altered pattern of family relationships in childhood',[],[]).
+icd10('Z613','events resulting in loss of self-esteem in childhood',[esteem],[]).
+icd10('Z614','problems related to alleged sexual abuse of child by person within primary support group',[child,abuse,sexual,molestation],[csa]).
+icd10('Z615','problems related to alleged sexual abuse of child by person outside primary support group',[child,abuse,sexual,molestation],[csa]).
 icd10('Z616','problems related to alleged physical abuse of child').
 icd10('Z617','personal frightening experience in childhood').
-icd10('Z618','other negative life events in childhood').
-icd10('Z619','negative life event in childhood, unspecified').
-icd10('Z62','other problems related to upbringing').
-icd10('Z620','inadequate parental supervision and control').
-icd10('Z621','parental overprotection').
-icd10('Z622','institutional upbringing').
-icd10('Z623','hostility towards and scapegoating of child').
-icd10('Z624','emotional neglect of child').
-icd10('Z625','other problems related to neglect in upbringing').
-icd10('Z626','inappropriate parental pressure and other abnormal qualities of upbringing').
-icd10('Z628','other specified problems related to upbringing').
-icd10('Z629','problem related to upbringing, unspecified').
-icd10('Z63','other problems related to primary support group, including family circumstances').
-icd10('Z630','problems in relationship with spouse or partner').
-icd10('Z631','problems in relationship with parents and in-laws').
-icd10('Z632','inadequate family support').
-icd10('Z633','absence of family member').
-icd10('Z634','disappearance and death of family member').
-icd10('Z635','disruption of family by separation and divorce').
-icd10('Z636','dependent relative needing care at home').
-icd10('Z637','other stressful life events affecting family and household').
-icd10('Z638','other specified problems related to primary support group').
-icd10('Z639','problem related to primary support group, unspecified').
-icd10('Z64','problems related to certain psychosocial circumstances').
-icd10('Z640','problems related to unwanted pregnancy').
-icd10('Z641','problems related to multiparity').
-icd10('Z642','seeking and accepting physical, nutritional and chemical interventions known to be hazardous and harmful').
-icd10('Z643','seeking and accepting behavioural and psychological interventions known to be hazardous and harmful').
-icd10('Z65','problems related to other psychosocial circumstances').
-icd10('Z650','conviction in civil and criminal proceedings without imprisonment').
-icd10('Z651','imprisonment and other incarceration').
-icd10('Z652','problems related to release from prison').
-icd10('Z653','problems related to other legal circumstances').
-icd10('Z654','victim of crime and terrorism').
-icd10('Z655','exposure to disaster, war and other hostilities').
-icd10('Z658','other specified problems related to psychosocial circumstances').
-icd10('Z659','problem related to unspecified psychosocial circumstances').
-icd10('Z70','counselling related to sexual attitude, behaviour and orientation').
-icd10('Z700','counselling related to sexual attitude').
-icd10('Z701','counselling related to patient\'s sexual behaviour and orientation').
-icd10('Z702','counselling related to sexual behaviour and orientation of third party').
-icd10('Z703','counselling related to combined concerns regarding sexual attitude, behaviour and orientation').
-icd10('Z708','other sex counselling').
-icd10('Z709','sex counselling, unspecified').
-icd10('Z71','persons encountering health services for other counselling and medical advice, not elsewhere classified').
-icd10('Z710','person consulting on behalf of another person').
-icd10('Z711','person with feared complaint in whom no diagnosis is made').
-icd10('Z712','person consulting for explanation of investigation findings').
-icd10('Z713','dietary counselling and surveillance').
-icd10('Z714','counselling and surveillance for alcohol use disorder').
-icd10('Z715','counselling and surveillance for drug use disorder').
-icd10('Z716','counselling for tobacco use disorder').
-icd10('Z717','human immunodeficiency virus [hiv] counselling').
-icd10('Z718','other specified counselling').
-icd10('Z719','counselling, unspecified').
-icd10('Z72','problems related to lifestyle').
-icd10('Z720','tobacco use, current').
-icd10('Z721','alcohol use').
-icd10('Z722','drug use').
-icd10('Z723','lack of physical exercise').
-icd10('Z724','inappropriate diet and eating habits').
-icd10('Z725','high-risk sexual behaviour').
-icd10('Z726','gambling and betting').
-icd10('Z728','other problems related to lifestyle').
-icd10('Z729','problem related to lifestyle, unspecified').
-icd10('Z73','problems related to life-management difficulty').
-icd10('Z730','burn-out').
-icd10('Z731','accentuation of personality traits').
-icd10('Z732','lack of relaxation and leisure').
-icd10('Z733','stress, not elsewhere classified').
-icd10('Z734','inadequate social skills, not elsewhere classified').
-icd10('Z735','social role conflict, not elsewhere classified').
+icd10('Z618','other negative life events in childhood',[],[]).
+icd10('Z619','negative life event in childhood, unspecified',[],[]).
+icd10('Z62','other problems related to upbringing',[childhood,upbringing],[]).
+icd10('Z620','inadequate parental supervision and control',[parent,supervision,neglect],[]).
+icd10('Z621','parental overprotection',[overprotection,cotton.wool],[]).
+icd10('Z622','institutional upbringing',[orphan,care,institutional],[]).
+icd10('Z623','hostility towards and scapegoating of child',[scapegoat,childhood],[]).
+icd10('Z624','emotional neglect of child',[neglect,childhood],[]).
+icd10('Z625','other problems related to neglect in upbringing',[neglect,abuse,childhood],[]).
+icd10('Z626','inappropriate parental pressure and other abnormal qualities of upbringing',[parent,pressure],[]).
+icd10('Z628','other specified problems related to upbringing',[upbringing,childhood],[]).
+icd10('Z629','problem related to upbringing, unspecified',[upbringing,childhood],[]).
+icd10('Z63','other problems related to primary support group, including family circumstances',[problem,family,relationship],[]).
+icd10('Z630','problems in relationship with spouse or partner',[problem,relationship,husband,wife,partner],[]).
+icd10('Z631','problems in relationship with parents and in-laws',[parent,problem,relationship],[]).
+icd10('Z632','inadequate family support',[inadequate,family,support],[]).
+icd10('Z633','absence of family member',[ansence,family],[]).
+icd10('Z634','disappearance and death of family member',[death,grief,bereavement],[]).
+icd10('Z635','disruption of family by separation and divorce',[divorce,separation],[]).
+icd10('Z636','dependent relative needing care at home',[dependent,carer],[]).
+icd10('Z637','other stressful life events affecting family and household',[stress],[]).
+icd10('Z638','other specified problems related to primary support group',[],[]).
+icd10('Z639','problem related to primary support group, unspecified',[],[]).
+icd10('Z64','problems related to certain psychosocial circumstances',[],[]).
+icd10('Z640','problems related to unwanted pregnancy',[unwanted,pregnancy]).
+icd10('Z641','problems related to multiparity',[grand,multi],[]).
+icd10('Z642','seeking and accepting physical, nutritional and chemical interventions known to be hazardous and harmful',[alternative,harmful,quack,naturopath],[]).
+icd10('Z643','seeking and accepting behavioural and psychological interventions known to be hazardous and harmful',[quack,harmful],[]).
+icd10('Z65','problems related to other psychosocial circumstances',[],[]).
+icd10('Z650','conviction in civil and criminal proceedings without imprisonment',[prison,imprisonment,convict,legal],[]).
+icd10('Z651','imprisonment and other incarceration',[prison,imprisonment,convict,felon],[]).
+icd10('Z652','problems related to release from prison',[legal,prison],[]).
+icd10('Z653','problems related to other legal circumstances',[legal],[]).
+icd10('Z654','victim of crime and terrorism',[crime,victim,terrorism],[]).
+icd10('Z655','exposure to disaster, war and other hostilities',[war,disaster],[]).
+icd10('Z658','other specified problems related to psychosocial circumstances',[psychosocial],[]).
+icd10('Z659','problem related to unspecified psychosocial circumstances',[psychosocial],[]).
+icd10('Z70','counselling related to sexual attitude, behaviour and orientation',[sex,orientation],[]).
+icd10('Z700','counselling related to sexual attitude',[sex,sexual,attitude],[]).
+icd10('Z701','counselling related to patient\'s sexual behaviour and orientation',[sexual,sex,orientation],[]).
+icd10('Z702','counselling related to sexual behaviour and orientation of third party',[sexual,sex,orientation],[]).
+icd10('Z703','counselling related to combined concerns regarding sexual attitude, behaviour and orientation',[sex,sexulality,orientation],[]).
+icd10('Z708','other sex counselling',[sex],[]).
+icd10('Z709','sex counselling, unspecified',[sex],[]).
+icd10('Z71','persons encountering health services for other counselling and medical advice, not elsewhere classified',[],[]).
+icd10('Z710','person consulting on behalf of another person',[behalf,other],[]).
+icd10('Z711','person with feared complaint in whom no diagnosis is made',[feared,hypochrondriac,diagnosis],[]).
+icd10('Z712','person consulting for explanation of investigation findings',[test,result],[]).
+icd10('Z713','dietary counselling and surveillance',[dietary,counselling],[]).
+icd10('Z714','counselling and surveillance for alcohol use disorder',[],[]).
+icd10('Z715','counselling and surveillance for drug use disorder',[],[]).
+icd10('Z716','counselling for tobacco use disorder',[tobacco,smoking,cigarette,counselling],[]).
+icd10('Z717','human immunodeficiency virus [hiv] counselling',[counselling,hiv],[]).
+icd10('Z718','other specified counselling',[counselling],[]).
+icd10('Z719','counselling, unspecified',[counselling],[]).
+icd10('Z72','problems related to lifestyle',[],[]).
+icd10('Z720','tobacco use, current',[tobacco,cigarette,smoker],[]).
+icd10('Z721','alcohol use',[alcohol],[]).
+icd10('Z722','drug use',[drug,abuse,addiction,heroin,speed,ice],[]).
+icd10('Z723','lack of physical exercise',[excerise,slob,lazy,physical],[]).
+icd10('Z724','inappropriate diet and eating habits',[diet],[]).
+icd10('Z725','high-risk sexual behaviour',[sex],[]).
+icd10('Z726','gambling and betting',[gambling,betting],[]).
+icd10('Z728','other problems related to lifestyle',[lifestyle],[]).
+icd10('Z729','problem related to lifestyle, unspecified',[life],[]).
+icd10('Z73','problems related to life-management difficulty',[life,difficulty],[]).
+icd10('Z730','burn-out',[burn,out,burnout],[]).
+icd10('Z731','accentuation of personality traits',[personality,pd],[]).
+icd10('Z732','lack of relaxation and leisure',[leisure,holiday,stress],[]).
+icd10('Z733','stress, not elsewhere classified',[stress],[]).
+icd10('Z734','inadequate social skills, not elsewhere classified',[social,skills],[]).
+icd10('Z735','social role conflict, not elsewhere classified',[social,role,conflict,pd],[]).
 icd10('Z736','limitation of activities due to disability').
 icd10('Z738','other problems related to life-management difficulty').
 icd10('Z739','problem related to life-management difficulty, unspecified').
 icd10('Z74','problems related to care-provider dependency').
-icd10('Z740','reduced mobility').
-icd10('Z741','need for assistance with personal care').
-icd10('Z742','need for assistance at home and no other household member able to render care').
-icd10('Z743','need for continuous supervision').
-icd10('Z748','other problems related to care-provider dependency').
-icd10('Z749','problem related to care-provider dependency, unspecified').
-icd10('Z75','problems related to medical facilities and other health care').
-icd10('Z750','medical services not available in home').
-icd10('Z751','person awaiting admission to adequate facility elsewhere').
-icd10('Z752','other waiting period for investigation and treatment').
-icd10('Z753','unavailability and inaccessibility of health-care facilities').
-icd10('Z754','unavailability and inaccessibility of other helping agencies').
-icd10('Z755','holiday relief care').
-icd10('Z758','other problems related to medical facilities and other health care').
-icd10('Z759','unspecified problem related to medical facilities and other health care').
-icd10('Z76','persons encountering health services in other circumstances').
-icd10('Z760','issue of repeat prescription').
-icd10('Z761','health supervision and care of foundling').
-icd10('Z762','health supervision and care of other healthy infant and child').
-icd10('Z763','healthy person accompanying sick person').
-icd10('Z764','other boarder in health-care facility').
-icd10('Z765','malingerer [conscious simulation]').
-icd10('Z768','persons encountering health services in other specified circumstances').
-icd10('Z769','person encountering health services in unspecified circumstances').
-icd10('Z80','family history of malignant neoplasm').
-icd10('Z800','family history of malignant neoplasm of digestive organs').
-icd10('Z801','family history of malignant neoplasm of trachea, bronchus and lung').
-icd10('Z802','family history of malignant neoplasm of other respiratory and intrathoracic organs').
-icd10('Z803','family history of malignant neoplasm of breast').
-icd10('Z804','family history of malignant neoplasm of genital organs').
-icd10('Z805','family history of malignant neoplasm of urinary tract').
-icd10('Z807','family history of other malignant neoplasms of lymphoid, haematopoietic and related tissues').
-icd10('Z808','family history of malignant neoplasm of other organs or systems').
-icd10('Z809','family history of malignant neoplasm, unspecified').
-icd10('Z81','family history of mental and behavioural disorders').
-icd10('Z810','family history of mental retardation').
-icd10('Z811','family history of alcohol use disorder').
-icd10('Z812','family history of tobacco use disorder').
-icd10('Z813','family history of other psychoactive substance use disorder').
-icd10('Z814','family history of other substance use disorder').
-icd10('Z818','family history of other mental and behavioural disorders').
-icd10('Z82','family history of certain disabilities and chronic diseases leading to disablement').
-icd10('Z820','family history of epilepsy and other diseases of the nervous system').
-icd10('Z821','family history of blindness and visual loss').
-icd10('Z822','family history of deafness and hearing loss').
-icd10('Z823','family history of stroke').
-icd10('Z824','family history of ischaemic heart disease and other diseases of the circulatory system').
-icd10('Z825','family history of asthma and other chronic lower respiratory diseases').
-icd10('Z826','family history of arthritis and other diseases of the musculoskeletal system and connective tissue').
-icd10('Z827','family history of congenital malformations, deformations and chromosomal abnormalities').
-icd10('Z828','family history of other disabilities and chronic diseases leading to disablement, not elsewhere classified').
-icd10('Z83','family history of other specific disorders').
-icd10('Z830','family history of human immunodeficiency virus [hiv] disease').
-icd10('Z831','family history of other infectious and parasitic diseases').
-icd10('Z832','family history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism').
-icd10('Z833','family history of diabetes mellitus').
-icd10('Z834','family history of other endocrine, nutritional and metabolic diseases').
-icd10('Z835','family history of eye and ear disorders').
-icd10('Z836','family history of diseases of the respiratory system').
-icd10('Z837','family history of diseases of the digestive system').
-icd10('Z84','family history of other conditions').
-icd10('Z840','family history of diseases of the skin and subcutaneous tissue').
-icd10('Z841','family history of disorders of kidney and ureter').
-icd10('Z842','family history of other diseases of the genitourinary system').
-icd10('Z843','family history of consanguinity').
-icd10('Z848','family history of other specified conditions').
-icd10('Z85','personal history of malignant neoplasm').
-icd10('Z850','personal history of malignant neoplasm of digestive organs').
-icd10('Z851','personal history of malignant neoplasm of trachea, bronchus and lung').
-icd10('Z852','personal history of malignant neoplasm of other respiratory and intrathoracic organs').
-icd10('Z853','personal history of malignant neoplasm of breast').
-icd10('Z854','personal history of malignant neoplasm of genital organs').
-icd10('Z855','personal history of malignant neoplasm of urinary tract').
-icd10('Z856','personal history of leukaemia').
-icd10('Z857','personal history of other malignant neoplasms of lymphoid, haematopoietic and related tissues').
-icd10('Z858','personal history of malignant neoplasms of other organs and systems').
-icd10('Z859','personal history of malignant neoplasm, unspecified').
-icd10('Z86','personal history of certain other diseases').
-icd10('Z860','personal history of other neoplasms').
-icd10('Z861','personal history of infectious and parasitic diseases').
-icd10('Z8610','personal history of unspecified infectious and parasitic disease').
-icd10('Z8611','personal history of tuberculosis').
-icd10('Z8612','personal history of poliomyelitis').
-icd10('Z8613','personal history of malaria').
-icd10('Z8618','personal history of other infectious and parasitic disease').
-icd10('Z862','personal history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism').
-icd10('Z863','personal history of endocrine, nutritional and metabolic diseases').
-icd10('Z864','personal history of psychoactive substance use disorder').
-icd10('Z8641','personal history of alcohol use disorder').
-icd10('Z8642','personal history of drug use disorder').
-icd10('Z8643','personal history of tobacco use disorder').
-icd10('Z865','personal history of other mental and behavioural disorders').
-icd10('Z866','personal history of diseases of the nervous system and sense organs').
-icd10('Z867','personal history of diseases of the circulatory system').
-icd10('Z87','personal history of other diseases and conditions').
-icd10('Z870','personal history of diseases of the respiratory system').
-icd10('Z871','personal history of diseases of the digestive system').
-icd10('Z8710','personal history of unspecified digestive disease').
-icd10('Z8711','personal history of peptic ulcer disease').
-icd10('Z8712','personal history of colonic polyps').
-icd10('Z8718','personal history of other digestive system disease').
-icd10('Z872','personal history of diseases of the skin and subcutaneous tissue').
-icd10('Z873','personal history of diseases of the musculoskeletal system and connective tissue').
-icd10('Z874','personal history of diseases of the genitourinary system').
-icd10('Z875','personal history of complications of pregnancy, childbirth and the puerperium').
-icd10('Z876','personal history of certain conditions arising in the perinatal period').
-icd10('Z877','personal history of congenital malformations, deformations and chromosomal abnormalities').
-icd10('Z878','personal history of other specified conditions').
-icd10('Z88','personal history of allergy to drugs, medicaments and biological substances').
-icd10('Z880','personal history of allergy to penicillin').
-icd10('Z881','personal history of allergy to other antibiotic agents').
-icd10('Z882','personal history of allergy to sulfonamides').
-icd10('Z883','personal history of allergy to other anti-infective agents').
-icd10('Z884','personal history of allergy to anaesthetic agent').
-icd10('Z885','personal history of allergy to narcotic agent').
-icd10('Z886','personal history of allergy to analgesic agent').
-icd10('Z887','personal history of allergy to serum and vaccine').
-icd10('Z888','personal history of allergy to other drugs, medicaments and biological substances').
-icd10('Z889','personal history of allergy to unspecified drugs, medicaments and biological substances').
-icd10('Z89','acquired absence of limb').
-icd10('Z890','acquired absence of finger(s) [including thumb], unilateral').
-icd10('Z891','acquired absence of hand and wrist').
-icd10('Z892','acquired absence of upper limb above wrist').
-icd10('Z893','acquired absence of both upper limbs [any level]').
-icd10('Z894','acquired absence of foot and ankle').
-icd10('Z895','acquired absence of leg at or below knee').
-icd10('Z896','acquired absence of leg above knee').
-icd10('Z897','acquired absence of both lower limbs [any level, except toes alone]').
-icd10('Z898','acquired absence of upper and lower limbs [any level]').
-icd10('Z899','acquired absence of limb, unspecified').
-icd10('Z90','acquired absence of organs, not elsewhere classified').
-icd10('Z900','acquired absence of part of head and neck').
-icd10('Z901','acquired absence of breast(s)').
-icd10('Z902','acquired absence of lung [part of]').
-icd10('Z903','acquired absence of part of stomach').
-icd10('Z904','acquired absence of other parts of digestive tract').
-icd10('Z905','acquired absence of kidney').
-icd10('Z906','acquired absence of other organs of urinary tract').
-icd10('Z907','acquired absence of genital organ(s)').
-icd10('Z908','acquired absence of other organs').
-icd10('Z91','personal history of risk-factors, not elsewhere classified').
-icd10('Z910','personal history of allergy, other than to drugs and biological substances').
-icd10('Z911','personal history of noncompliance with medical treatment and regimen').
-icd10('Z912','personal history of poor personal hygiene').
-icd10('Z913','personal history of unhealthy sleep-wake schedule').
-icd10('Z914','personal history of psychological trauma, not elsewhere classified').
-icd10('Z915','personal history of self-harm').
-icd10('Z916','personal history of other physical trauma').
-icd10('Z918','personal history of other specified risk-factors, not elsewhere classified').
-icd10('Z92','personal history of medical treatment').
-icd10('Z920','personal history of contraception').
-icd10('Z921','personal history of long-term (current) use of anticoagulants').
-icd10('Z922','personal history of long-term (current) use of other medicaments').
-icd10('Z923','personal history of irradiation').
-icd10('Z924','personal history of major surgery, not elsewhere classified').
-icd10('Z925','personal history of rehabilitation measures').
-icd10('Z928','personal history of other medical treatment').
+icd10('Z740','reduced mobility',[reduced,mobility],[]).
+icd10('Z741','need for assistance with personal care',[personal,care],[]).
+icd10('Z742','need for assistance at home and no other household member able to render care',[social,granny,dump],[]).
+icd10('Z743','need for continuous supervision',[],[]).
+icd10('Z748','other problems related to care-provider dependency',[],[]).
+icd10('Z749','problem related to care-provider dependency, unspecified',[carer,exhaustion,granny,dump],[]).
+icd10('Z75','problems related to medical facilities and other health care',[],[]).
+icd10('Z750','medical services not available in home',[],[]).
+icd10('Z751','person awaiting admission to adequate facility elsewhere',[],[]).
+icd10('Z752','other waiting period for investigation and treatment',[],[]).
+icd10('Z753','unavailability and inaccessibility of health-care facilities',[],[]).
+icd10('Z754','unavailability and inaccessibility of other helping agencies',[],[]).
+icd10('Z755','holiday relief care',[holiday,vacation],[]).
+icd10('Z758','other problems related to medical facilities and other health care',[],[]).
+icd10('Z759','unspecified problem related to medical facilities and other health care',[],[]).
+icd10('Z76','persons encountering health services in other circumstances',[],[]).
+icd10('Z760','issue of repeat prescription',[repeat,script],[]).
+icd10('Z761','health supervision and care of foundling',[],[]).
+icd10('Z762','health supervision and care of other healthy infant and child',[],[]).
+icd10('Z763','healthy person accompanying sick person',[],[]).
+icd10('Z764','other boarder in health-care facility',[],[]).
+icd10('Z765','malingerer [conscious simulation]',[malingerer,fake],[]).
+icd10('Z768','persons encountering health services in other specified circumstances',[],[]).
+icd10('Z769','person encountering health services in unspecified circumstances',[],[]).
+icd10('Z80','family history of malignant neoplasm',[family,history,cancer],[]).
+icd10('Z800','family history of malignant neoplasm of digestive organs',[family,history,cancer],[]).
+icd10('Z801','family history of malignant neoplasm of trachea, bronchus and lung',[family,history,lung,cancer],[]).
+icd10('Z802','family history of malignant neoplasm of other respiratory and intrathoracic organs',[family,history,lung,cancer],[]).
+icd10('Z803','family history of malignant neoplasm of breast',[family,history,breast,cancer],[]).
+icd10('Z804','family history of malignant neoplasm of genital organs',[family,history,cancer],[]).
+icd10('Z805','family history of malignant neoplasm of urinary tract',[family,history,neoplasm,cancer],[]).
+icd10('Z807','family history of other malignant neoplasms of lymphoid, haematopoietic and related tissues',[family,history,neoplasm],[]).
+icd10('Z808','family history of malignant neoplasm of other organs or systems',[family,history,cancer,neoplasm],[]).
+icd10('Z809','family history of malignant neoplasm, unspecified',[],[]).
+icd10('Z81','family history of mental and behavioural disorders',[],[]).
+icd10('Z810','family history of mental retardation',[],[]).
+icd10('Z811','family history of alcohol use disorder',[family,history,alcohol],[]).
+icd10('Z812','family history of tobacco use disorder',[],[]).
+icd10('Z813','family history of other psychoactive substance use disorder',[],[]).
+icd10('Z814','family history of other substance use disorder',[],[]).
+icd10('Z818','family history of other mental and behavioural disorders',[],[]).
+icd10('Z82','family history of certain disabilities and chronic diseases leading to disablement',[],[]).
+icd10('Z820','family history of epilepsy and other diseases of the nervous system',[family,history,epilepsy],[]).
+icd10('Z821','family history of blindness and visual loss',[],[]).
+icd10('Z822','family history of deafness and hearing loss',[],[]).
+icd10('Z823','family history of stroke',[family,history,stroke],[]).
+icd10('Z824','family history of ischaemic heart disease and other diseases of the circulatory system',[],[]).
+icd10('Z825','family history of asthma and other chronic lower respiratory diseases',[],[]).
+icd10('Z826','family history of arthritis and other diseases of the musculoskeletal system and connective tissue',[],[]).
+icd10('Z827','family history of congenital malformations, deformations and chromosomal abnormalities',[],[]).
+icd10('Z828','family history of other disabilities and chronic diseases leading to disablement, not elsewhere classified',[],[]).
+icd10('Z83','family history of other specific disorders',[],[]).
+icd10('Z830','family history of human immunodeficiency virus [hiv] disease',[],[]).
+icd10('Z831','family history of other infectious and parasitic diseases',[],[]).
+icd10('Z832','family history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism',[],[]).
+icd10('Z833','family history of diabetes mellitus',[family,history,diabetes],[]).
+icd10('Z834','family history of other endocrine, nutritional and metabolic diseases',[],[]).
+icd10('Z835','family history of eye and ear disorders',[],[]).
+icd10('Z836','family history of diseases of the respiratory system',[],[]).
+icd10('Z837','family history of diseases of the digestive system',[],[]).
+icd10('Z84','family history of other conditions',[],[]).
+icd10('Z840','family history of diseases of the skin and subcutaneous tissue',[],[]).
+icd10('Z841','family history of disorders of kidney and ureter',[],[]).
+icd10('Z842','family history of other diseases of the genitourinary system',[],[]).
+icd10('Z843','family history of consanguinity',[consangunity,inbred],[]).
+icd10('Z848','family history of other specified conditions',[],[]).
+icd10('Z85','personal history of malignant neoplasm',[],[]).
+icd10('Z850','personal history of malignant neoplasm of digestive organs',[],[]).
+icd10('Z851','personal history of malignant neoplasm of trachea, bronchus and lung',[],[]).
+icd10('Z852','personal history of malignant neoplasm of other respiratory and intrathoracic organs',[],[]).
+icd10('Z853','personal history of malignant neoplasm of breast',[],[]).
+icd10('Z854','personal history of malignant neoplasm of genital organs',[],[]).
+icd10('Z855','personal history of malignant neoplasm of urinary tract',[],[]).
+icd10('Z856','personal history of leukaemia',[],[]).
+icd10('Z857','personal history of other malignant neoplasms of lymphoid, haematopoietic and related tissues',[],[]).
+icd10('Z858','personal history of malignant neoplasms of other organs and systems',[],[]).
+icd10('Z859','personal history of malignant neoplasm, unspecified',[],[]).
+icd10('Z86','personal history of certain other diseases',[],[]).
+icd10('Z860','personal history of other neoplasms',[],[]).
+icd10('Z861','personal history of infectious and parasitic diseases',[],[]).
+icd10('Z8610','personal history of unspecified infectious and parasitic disease',[],[]).
+icd10('Z8611','personal history of tuberculosis',[],[]).
+icd10('Z8612','personal history of poliomyelitis',[],[]).
+icd10('Z8613','personal history of malaria',[],[]).
+icd10('Z8618','personal history of other infectious and parasitic disease',[],[]).
+icd10('Z862','personal history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism',[],[]).
+icd10('Z863','personal history of endocrine, nutritional and metabolic diseases',[],[]).
+icd10('Z864','personal history of psychoactive substance use disorder',[],[]).
+icd10('Z8641','personal history of alcohol use disorder',[],[]).
+icd10('Z8642','personal history of drug use disorder',[],[]).
+icd10('Z8643','personal history of tobacco use disorder',[],[]).
+icd10('Z865','personal history of other mental and behavioural disorders',[],[]).
+icd10('Z866','personal history of diseases of the nervous system and sense organs',[],[]).
+icd10('Z867','personal history of diseases of the circulatory system',[],[]).
+icd10('Z87','personal history of other diseases and conditions',[],[]).
+icd10('Z870','personal history of diseases of the respiratory system',[],[]).
+icd10('Z871','personal history of diseases of the digestive system',[],[]).
+icd10('Z8710','personal history of unspecified digestive disease',[],[]).
+icd10('Z8711','personal history of peptic ulcer disease',[],[]).
+icd10('Z8712','personal history of colonic polyps',[],[]).
+icd10('Z8718','personal history of other digestive system disease',[],[]).
+icd10('Z872','personal history of diseases of the skin and subcutaneous tissue',[],[]).
+icd10('Z873','personal history of diseases of the musculoskeletal system and connective tissue',[],[]).
+icd10('Z874','personal history of diseases of the genitourinary system',[],[]).
+icd10('Z875','personal history of complications of pregnancy, childbirth and the puerperium',[],[]).
+icd10('Z876','personal history of certain conditions arising in the perinatal period',[],[]).
+icd10('Z877','personal history of congenital malformations, deformations and chromosomal abnormalities',[],[]).
+icd10('Z878','personal history of other specified conditions',[],[]).
+icd10('Z88','personal history of allergy to drugs, medicaments and biological substances',[],[]).
+icd10('Z880','personal history of allergy to penicillin',[],[]).
+icd10('Z881','personal history of allergy to other antibiotic agents',[],[]).
+icd10('Z882','personal history of allergy to sulfonamides',[],[]).
+icd10('Z883','personal history of allergy to other anti-infective agents',[],[]).
+icd10('Z884','personal history of allergy to anaesthetic agent',[],[]).
+icd10('Z885','personal history of allergy to narcotic agent',[],[]).
+icd10('Z886','personal history of allergy to analgesic agent',[],[]).
+icd10('Z887','personal history of allergy to serum and vaccine',[],[]).
+icd10('Z888','personal history of allergy to other drugs, medicaments and biological substances',[],[]).
+icd10('Z889','personal history of allergy to unspecified drugs, medicaments and biological substances',[],[]).
+icd10('Z89','acquired absence of limb',[absence,limb,amputation],[]).
+icd10('Z890','acquired absence of finger(s) [including thumb], unilateral',[absence,finger,amputation],[]).
+icd10('Z891','acquired absence of hand and wrist',[absence,hand,wrist,amputation],[]).
+icd10('Z892','acquired absence of upper limb above wrist',[absence,wrist,arm,amputation],[]).
+icd10('Z893','acquired absence of both upper limbs [any level]',[absence,upper,limb,amputation],[]).
+icd10('Z894','acquired absence of foot and ankle',[ansence,foot,ankle,amputation],[]).
+icd10('Z895','acquired absence of leg at or below knee',[absence,leg,knee,amputation],[]).
+icd10('Z896','acquired absence of leg above knee',[absence,leg,knee,amputation],[]).
+icd10('Z897','acquired absence of both lower limbs [any level, except toes alone]',[lower,limb,absence,amputation],[]).
+icd10('Z898','acquired absence of upper and lower limbs [any level]',[upper,lower,absence,amputation],[]).
+icd10('Z899','acquired absence of limb, unspecified',[absence,amputation],[]).
+icd10('Z90','acquired absence of organs, not elsewhere classified',[amputation],[]).
+icd10('Z900','acquired absence of part of head and neck',[absence,head,neck],[]).
+icd10('Z901','acquired absence of breast(s)',[breast,absence,amastia],[]).
+icd10('Z902','acquired absence of lung [part of]',[lung,absence],[]).
+icd10('Z903','acquired absence of part of stomach',[stomach,absence],[]).
+icd10('Z904','acquired absence of other parts of digestive tract',[absence],[]).
+icd10('Z905','acquired absence of kidney',[absence,kidney,arenia],[]).
+icd10('Z906','acquired absence of other organs of urinary tract',[absence,amputation],[]).
+icd10('Z907','acquired absence of genital organ(s)',[absence,amputation,genital],[]).
+icd10('Z908','acquired absence of other organs',[ansence,amputation],[]).
+icd10('Z91','personal history of risk-factors, not elsewhere classified',[],[]).
+icd10('Z910','personal history of allergy, other than to drugs and biological substances',[],[]).
+icd10('Z911','personal history of noncompliance with medical treatment and regimen',[noncompliance,poor,compliance,adherence,nnadherence],[]).
+icd10('Z912','personal history of poor personal hygiene',[hygiene],[]).
+icd10('Z913','personal history of unhealthy sleep-wake schedule',[sleep,wake,insomnia],[]).
+icd10('Z914','personal history of psychological trauma, not elsewhere classified',[trauma],[]).
+icd10('Z915','personal history of self-harm',['self-harm','harm','cutt','borderline'],[]).
+icd10('Z916','personal history of other physical trauma',[trauma],[]).
+icd10('Z918','personal history of other specified risk-factors, not elsewhere classified',[],[]).
+icd10('Z92','personal history of medical treatment',[],[]).
+icd10('Z920','personal history of contraception',[contraception],[]).
+icd10('Z921','personal history of long-term (current) use of anticoagulants',[],[]).
+icd10('Z922','personal history of long-term (current) use of other medicaments',[],[]).
+icd10('Z923','personal history of irradiation',[radiation,irradiation],[]).
+icd10('Z924','personal history of major surgery, not elsewhere classified',[],[]).
+icd10('Z925','personal history of rehabilitation measures',[rehabilitation,kur],[]).
+icd10('Z928','personal history of other medical treatment',[],[]).
 icd10('Z929','personal history of medical treatment, unspecified').
-icd10('Z93','artificial opening status').
-icd10('Z930','tracheostomy status').
-icd10('Z931','gastrostomy status').
-icd10('Z932','ileostomy status').
-icd10('Z933','colostomy status').
-icd10('Z934','other artificial openings of gastrointestinal tract status').
-icd10('Z935','cystostomy status').
-icd10('Z936','other artificial openings of urinary tract status').
-icd10('Z938','other artificial opening status').
-icd10('Z939','artificial opening status, unspecified').
-icd10('Z94','transplanted organ and tissue status').
-icd10('Z940','kidney transplant status').
-icd10('Z941','heart transplant status').
-icd10('Z942','lung transplant status').
-icd10('Z943','heart and lungs transplant status').
-icd10('Z944','liver transplant status').
-icd10('Z945','skin transplant status').
-icd10('Z946','bone transplant status').
-icd10('Z947','corneal transplant status').
-icd10('Z948','other transplanted organ and tissue status').
-icd10('Z949','transplanted organ and tissue status, unspecified').
-icd10('Z95','presence of cardiac and vascular implants and grafts').
-icd10('Z950','presence of cardiac device').
-icd10('Z951','presence of aortocoronary bypass graft').
-icd10('Z952','presence of prosthetic heart valve').
-icd10('Z953','presence of xenogenic heart valve').
-icd10('Z954','presence of other heart-valve replacement').
-icd10('Z955','presence of coronary angioplasty implant and graft').
-icd10('Z958','presence of other cardiac and vascular implants and grafts').
-icd10('Z959','presence of cardiac and vascular implant and graft, unspecified').
-icd10('Z96','presence of other functional implants').
-icd10('Z960','presence of urogenital implants').
-icd10('Z961','presence of intraocular lens').
+icd10('Z93','artificial opening status',[],[]).
+icd10('Z930','tracheostomy status',[tracheostomy],[]).
+icd10('Z931','gastrostomy status',[gastrostomy],[peg]).
+icd10('Z932','ileostomy status',[ileostomy],[]).
+icd10('Z933','colostomy status',[colostomy],[]).
+icd10('Z934','other artificial openings of gastrointestinal tract status',[],[]).
+icd10('Z935','cystostomy status',[cystostomy],[]).
+icd10('Z936','other artificial openings of urinary tract status',[],[]).
+icd10('Z938','other artificial opening status',[],[]).
+icd10('Z939','artificial opening status, unspecified',[],[]).
+icd10('Z94','transplanted organ and tissue status',[],[]).
+icd10('Z940','kidney transplant status',[kidney,renal,transplant],[]).
+icd10('Z941','heart transplant status',[heart,transplant,cardiac],[]).
+icd10('Z942','lung transplant status',[lung,transplant],[]).
+icd10('Z943','heart and lungs transplant status',[lung,heart,cardiac,transplant],[]).
+icd10('Z944','liver transplant status',[liver,hepatic,transplant],[]).
+icd10('Z945','skin transplant status',[skin,transplant],[]).
+icd10('Z946','bone transplant status',[bone,transplant],[]).
+icd10('Z947','corneal transplant status',[corneal,transplant,graft],[]).
+icd10('Z948','other transplanted organ and tissue status',[transplant],[]).
+icd10('Z949','transplanted organ and tissue status, unspecified',[transplant],[]).
+icd10('Z95','presence of cardiac and vascular implants and grafts',[],[]).
+icd10('Z950','presence of cardiac device',[cardiac],[]).
+icd10('Z951','presence of aortocoronary bypass graft',[aorto,cardiac,graft],[]).
+icd10('Z952','presence of prosthetic heart valve',[prosthetic,valve],[]).
+icd10('Z953','presence of xenogenic heart valve',[xenogenic,valve,graft,pig,porcine,bovine],[]).
+icd10('Z954','presence of other heart-valve replacement',[valve,heart],[]).
+icd10('Z955','presence of coronary angioplasty implant and graft',[stent,angioplasty],[]).
+icd10('Z958','presence of other cardiac and vascular implants and grafts',[graft,vascular,cardiac],[]).
+icd10('Z959','presence of cardiac and vascular implant and graft, unspecified',[graft,cardiac,vascular],[]).
+icd10('Z96','presence of other functional implants',[implant],[]).
+icd10('Z960','presence of urogenital implants',[implant],[]).
+icd10('Z961','presence of intraocular lens',[lens,cataract],[]).
 icd10('Z962','presence of otological and audiological implants').
-icd10('Z963','presence of artificial larynx').
-icd10('Z964','presence of endocrine implants').
-icd10('Z965','presence of tooth-root and mandibular implants').
-icd10('Z966','presence of orthopaedic joint implants').
-icd10('Z9660','presence of unspecified joint implant').
-icd10('Z9661','presence of shoulder implant').
-icd10('Z9662','presence of elbow implant').
-icd10('Z9663','presence of wrist implant').
-icd10('Z9664','presence of hip implant').
-icd10('Z9665','presence of knee implant').
-icd10('Z9666','presence of ankle implant').
-icd10('Z9668','presence of other orthopaedic joint implant').
-icd10('Z967','presence of other bone and tendon implants').
-icd10('Z968','presence of other specified functional implants').
-icd10('Z969','presence of functional implant, unspecified').
-icd10('Z97','presence of other devices').
-icd10('Z970','presence of artificial eye').
-icd10('Z971','presence of artificial limb (complete)(partial)').
-icd10('Z972','presence of dental prosthetic device (complete)(partial)').
-icd10('Z973','presence of spectacles and contact lenses').
-icd10('Z974','presence of external hearing-aid').
-icd10('Z975','presence of (intrauterine) contraceptive device').
-icd10('Z978','presence of other specified devices').
-icd10('Z98','other postprocedural states').
-icd10('Z980','intestinal bypass and anastomosis status').
-icd10('Z981','arthrodesis status').
-icd10('Z982','presence of cerebrospinal fluid drainage device').
-icd10('Z988','other specified posprocedural states').
+icd10('Z963','presence of artificial larynx',[larynx,artifical],[]).
+icd10('Z964','presence of endocrine implants',[implant]).
+icd10('Z965','presence of tooth-root and mandibular implants',[implant,crown],[]).
+icd10('Z966','presence of orthopaedic joint implants',[implant],[]).
+icd10('Z9660','presence of unspecified joint implant',implant],[]).
+icd10('Z9661','presence of shoulder implant',[shoulder,implant],[]).
+icd10('Z9662','presence of elbow implant',[elbow,implant],[]).
+icd10('Z9663','presence of wrist implant',[wrist,implant]).
+icd10('Z9664','presence of hip implant',[hip,replacement,implant],[thr]).
+icd10('Z9665','presence of knee implant',[knee,replacement,implant],[tkr]).
+icd10('Z9666','presence of ankle implant',[ankle,implant],[]).
+icd10('Z9668','presence of other orthopaedic joint implant',[joint,metal,implant],[]).
+icd10('Z967','presence of other bone and tendon implants',[implant],[]).
+icd10('Z968','presence of other specified functional implants',[implant],[]).
+icd10('Z969','presence of functional implant, unspecified',[implant],[]).
+icd10('Z97','presence of other devices',[],[]).
+icd10('Z970','presence of artificial eye',[glass,eye,artifical],[]).
+icd10('Z971','presence of artificial limb (complete)(partial)',[cork,artifical,limb],[]).
+icd10('Z972','presence of dental prosthetic device (complete)(partial)',[denture,false,teeth],[]).
+icd10('Z973','presence of spectacles and contact lenses',[spectacles,glasses,contact],[]).
+icd10('Z974','presence of external hearing-aid',[hearing,aid],[]).
+icd10('Z975','presence of (intrauterine) contraceptive device',[],[iud]).
+icd10('Z978','presence of other specified devices',[],[]).
+icd10('Z98','other postprocedural states',[],[]).
+icd10('Z980','intestinal bypass and anastomosis status',[anastomosis,stoma],[]).
+icd10('Z981','arthrodesis status',[],[]).
+icd10('Z982','presence of cerebrospinal fluid drainage device',[shunt,csf],[]).
+icd10('Z988','other specified postprocedural states',[],[]).
 icd10('Z99','dependence on enabling machines and devices, not elsewhere classified').
-icd10('Z990','dependence on aspirator').
-icd10('Z991','dependence on respirator').
-icd10('Z992','dependence on renal dialysis').
-icd10('Z993','dependence on wheelchair').
-icd10('Z998','dependence on other enabling machines and devices').
-icd10('Z999','dependence on unspecified enabling machine and device').
+icd10('Z990','dependence on aspirator',[aspirator],[]).
+icd10('Z991','dependence on respirator',[respirator,ventilator],[]).
+icd10('Z992','dependence on renal dialysis',[dialysis],[]).
+icd10('Z993','dependence on wheelchair',[wheelchair],[]).
+icd10('Z998','dependence on other enabling machines and devices',[],[]).
+icd10('Z999','dependence on unspecified enabling machine and device',[],[]).
