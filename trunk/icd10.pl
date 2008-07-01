@@ -208,484 +208,484 @@ icd10('A241','acute and fulminating melioidosis',[melioidosis],[]).
 icd10('A242','subacute and chronic melioidosis',[melioidosis],[]).
 icd10('A243','other melioidosis',[melioidosis],[]).
 icd10('A244','melioidosis, unspecified',[meliodosis],[]).
-icd10('A25','rat-bite fevers').
-icd10('A250','spirillosis').
-icd10('A251','streptobacillosis').
-icd10('A259','rat-bite fever, unspecified').
-icd10('A26','erysipeloid').
-icd10('A260','cutaneous erysipeloid').
-icd10('A267','erysipelothrix septicaemia').
-icd10('A268','other forms of erysipeloid').
-icd10('A269','erysipeloid, unspecified').
-icd10('A27','leptospirosis').
-icd10('A270','leptospirosis icterohaemorrhagica').
-icd10('A278','other forms of leptospirosis').
-icd10('A279','leptospirosis, unspecified').
-icd10('A28','other zoonotic bacterial diseases, not elsewhere classified').
-icd10('A280','pasteurellosis').
-icd10('A281','cat-scratch disease').
-icd10('A282','extraintestinal yersiniosis').
-icd10('A288','other specified zoonotic bacterial diseases, not elsewhere classified').
-icd10('A289','zoonotic bacterial disease, unspecified').
-icd10('A30','leprosy [hansen\'s disease]').
-icd10('A300','indeterminate leprosy').
-icd10('A301','tuberculoid leprosy').
-icd10('A302','borderline tuberculoid leprosy').
-icd10('A303','borderline leprosy').
-icd10('A304','borderline lepromatous leprosy').
-icd10('A305','lepromatous leprosy').
-icd10('A308','other forms of leprosy').
-icd10('A309','leprosy, unspecified').
-icd10('A31','infection due to other mycobacteria').
-icd10('A310','pulmonary mycobacterial infection').
-icd10('A311','cutaneous mycobacterial infection').
-icd10('A318','other mycobacterial infections').
-icd10('A319','mycobacterial infection, unspecified').
-icd10('A32','listeriosis').
-icd10('A320','cutaneous listeriosis').
-icd10('A321','listerial meningitis and meningoencephalitis').
-icd10('A327','listerial septicaemia').
-icd10('A328','other forms of listeriosis').
-icd10('A329','listeriosis, unspecified').
-icd10('A33','tetanus neonatorum').
-icd10('A34','obstetrical tetanus').
-icd10('A35','other tetanus').
-icd10('A36','diphtheria').
-icd10('A360','pharyngeal diphtheria').
-icd10('A361','nasopharyngeal diphtheria').
-icd10('A362','laryngeal diphtheria').
-icd10('A363','cutaneous diphtheria').
-icd10('A368','other diphtheria').
-icd10('A369','diphtheria, unspecified').
-icd10('A37','whooping cough').
-icd10('A370','whooping cough due to bordetella pertussis').
-icd10('A371','whooping cough due to bordetella parapertussis').
-icd10('A378','whooping cough due to other bordetella species').
-icd10('A379','whooping cough, unspecified').
-icd10('A38','scarlet fever').
-icd10('A39','meningococcal infection').
-icd10('A390','meningococcal meningitis (g01*)').
-icd10('A391','waterhouse-friderichsen syndrome (e35.1*)').
-icd10('A392','acute meningococcaemia').
-icd10('A393','chronic meningococcaemia').
-icd10('A394','meningococcaemia, unspecified').
-icd10('A395','meningococcal heart disease').
-icd10('A398','other meningococcal infections').
-icd10('A399','meningococcal infection, unspecified').
-icd10('A40','streptococcal septicaemia').
-icd10('A400','septicaemia due to streptococcus, group a').
-icd10('A401','septicaemia due to streptococcus, group b').
-icd10('A402','septicaemia due to streptococcus, group d').
-icd10('A403','septicaemia due to streptococcus pneumoniae').
-icd10('A408','other streptococcal septicaemia').
-icd10('A409','streptococcal septicaemia, unspecified').
-icd10('A41','other septicaemia').
-icd10('A410','septicaemia due to staphylococcus aureus').
-icd10('A411','septicaemia due to other specified staphylococcus').
-icd10('A412','septicaemia due to unspecified staphylococcus').
-icd10('A413','septicaemia due to haemophilus influenzae').
-icd10('A414','septicaemia due to anaerobes').
-icd10('A415','septicaemia due to other gram-negative organisms').
-icd10('A4150','septicaemia due to unspecified gram-negative organisms').
-icd10('A4151','septicaemia due to escherichia coli [e. coli]').
-icd10('A4152','septicaemia due to pseudomonas').
-icd10('A4158','septicaemia due to other gram-negative organisms').
-icd10('A418','other specified septicaemia').
-icd10('A419','septicaemia, unspecified').
-icd10('A42','actinomycosis').
-icd10('A420','pulmonary actinomycosis').
-icd10('A421','abdominal actinomycosis').
-icd10('A427','actinomycotic septicaemia').
-icd10('A428','other forms of actinomycosis').
-icd10('A429','actinomycosis, unspecified').
-icd10('A43','nocardiosis').
-icd10('A430','pulmonary nocardiosis').
-icd10('A431','cutaneous nocardiosis').
-icd10('A438','other forms of nocardiosis').
-icd10('A439','nocardiosis, unspecified').
-icd10('A44','bartonellosis').
-icd10('A440','systemic bartonellosis').
-icd10('A441','cutaneous and mucocutaneous bartonellosis').
-icd10('A448','other forms of bartonellosis').
-icd10('A449','bartonellosis, unspecified').
-icd10('A46','erysipelas').
-icd10('A48','other bacterial diseases, not elsewhere classified').
-icd10('A480','gas gangrene').
-icd10('A481','legionnaires\' disease').
-icd10('A482','nonpneumonic legionnaires\' disease [pontiac fever]').
-icd10('A483','toxic shock syndrome').
-icd10('A484','brazilian purpuric fever').
-icd10('A488','other specified bacterial diseases').
-icd10('A49','bacterial infection of unspecified site').
-icd10('A490','staphylococcal infection, unspecified').
-icd10('A491','streptococcal infection, unspecified').
-icd10('A492','haemophilus influenzae infection, unspecified').
-icd10('A493','mycoplasma infection, unspecified').
-icd10('A498','other bacterial infections of unspecified site').
-icd10('A499','bacterial infection, unspecified').
-icd10('A50','congenital syphilis').
-icd10('A500','early congenital syphilis, symptomatic').
-icd10('A501','early congenital syphilis, latent').
-icd10('A502','early congenital syphilis, unspecified').
-icd10('A503','late congenital syphilitic oculopathy').
-icd10('A504','late congenital neurosyphilis [juvenile neurosyphilis]').
-icd10('A505','other late congenital syphilis, symptomatic').
-icd10('A506','late congenital syphilis, latent').
-icd10('A507','late congenital syphilis, unspecified').
-icd10('A509','congenital syphilis, unspecified').
-icd10('A51','early syphilis').
-icd10('A510','primary genital syphilis').
-icd10('A511','primary anal syphilis').
-icd10('A512','primary syphilis of other sites').
-icd10('A513','secondary syphilis of skin and mucous membranes').
-icd10('A514','other secondary syphilis').
-icd10('A515','early syphilis, latent').
-icd10('A519','early syphilis, unspecified').
-icd10('A52','late syphilis').
-icd10('A520','cardiovascular syphilis (i98.0*)').
-icd10('A521','symptomatic neurosyphilis').
-icd10('A522','asymptomatic neurosyphilis').
-icd10('A523','neurosyphilis, unspecified').
-icd10('A527','other symptomatic late syphilis').
-icd10('A528','late syphilis, latent').
-icd10('A529','late syphilis, unspecified').
-icd10('A53','other and unspecified syphilis').
-icd10('A530','latent syphilis, unspecified as early or late').
-icd10('A539','syphilis, unspecified').
-icd10('A54','gonococcal infection').
-icd10('A540','gonococcal infection of lower genitourinary tract without periurethral or accessory gland abscess').
-icd10('A541','gonococcal infection of lower genitourinary tract with periurethral and accessory gland abscess').
-icd10('A542','gonococcal pelviperitonitis and other gonococcal genitourinary infections').
-icd10('A543','gonococcal infection of eye').
-icd10('A544','gonococcal infection of musculoskeletal system').
-icd10('A545','gonococcal pharyngitis').
-icd10('A546','gonococcal infection of anus and rectum').
-icd10('A548','other gonococcal infections').
-icd10('A549','gonococcal infection, unspecified').
-icd10('A55','chlamydial lymphogranuloma (venereum)').
-icd10('A56','other sexually transmitted chlamydial diseases').
-icd10('A560','chlamydial infection of lower genitourinary tract').
-icd10('A561','chlamydial infection of pelviperitoneum and other genitourinary organs').
-icd10('A562','chlamydial infection of genitourinary tract, unspecified').
-icd10('A563','chlamydial infection of anus and rectum').
-icd10('A564','chlamydial infection of pharynx').
-icd10('A568','sexually transmitted chlamydial infection of other sites').
-icd10('A57','chancroid').
-icd10('A58','granuloma inguinale').
-icd10('A59','trichomoniasis').
-icd10('A590','urogenital trichomoniasis').
-icd10('A598','trichomoniasis of other sites').
-icd10('A599','trichomoniasis, unspecified').
-icd10('A60','anogenital herpesviral [herpes simplex] infection').
-icd10('A600','herpesviral infection of genitalia and urogenital tract').
-icd10('A601','herpesviral infection of perianal skin and rectum').
-icd10('A609','anogenital herpesviral infection, unspecified').
-icd10('A63','other predominantly sexually transmitted diseases, not elsewhere classified').
-icd10('A630','anogenital (venereal) warts').
+icd10('A25','rat-bite fevers',[],[]).
+icd10('A250','spirillosis',[spirillosis],[]).
+icd10('A251','streptobacillosis',[streptobacillosis],[]).
+icd10('A259','rat-bite fever, unspecified',[rat,bite,fever]).
+icd10('A26','erysipeloid',[erysipeloid],[]).
+icd10('A260','cutaneous erysipeloid',[erysipeloid,skin,cutaneous],[]).
+icd10('A267','erysipelothrix septicaemia',[erysipelothrix,septicaemia],[]).
+icd10('A268','other forms of erysipeloid',[erysipeloid],[]).
+icd10('A269','erysipeloid, unspecified',[erysipeloid,[]).
+icd10('A27','leptospirosis',[leptospirosis],[]).
+icd10('A270','leptospirosis icterohaemorrhagica',[leptospirosis,icterohaemorrhagica],[]).
+icd10('A278','other forms of leptospirosis',[leptospirosis],[]).
+icd10('A279','leptospirosis, unspecified',[leptospirosis],[]).
+icd10('A28','other zoonotic bacterial diseases, not elsewhere classified',[zoonosis],[]).
+icd10('A280','pasteurellosis',[pasteurellosis],[]).
+icd10('A281','cat-scratch disease',[cat,scratch],[]).
+icd10('A282','extraintestinal yersiniosis',[yersiniosis],[]).
+icd10('A288','other specified zoonotic bacterial diseases, not elsewhere classified',[zoonosis],[]).
+icd10('A289','zoonotic bacterial disease, unspecified',[zoonosis],[]).
+icd10('A30','leprosy [hansen\'s disease]',[leprosy,hansen],[]).
+icd10('A300','indeterminate leprosy',[leprosy],[]).
+icd10('A301','tuberculoid leprosy',[tuberculoid,leprosy],[]).
+icd10('A302','borderline tuberculoid leprosy',[tuberculoid,leprosy],[]).
+icd10('A303','borderline leprosy',[borderline,leprosy],[]).
+icd10('A304','borderline lepromatous leprosy',[borderline,leprosy],[]).
+icd10('A305','lepromatous leprosy',[leprosy],[]).
+icd10('A308','other forms of leprosy',[leprosy],[]).
+icd10('A309','leprosy, unspecified',[leprosy],[]).
+icd10('A31','infection due to other mycobacteria',[],[]).
+icd10('A310','pulmonary mycobacterial infection',[lung,pulmonary,mycobacterial],[]).
+icd10('A311','cutaneous mycobacterial infection',[mycobacterial,skin,cutaneous],[]).
+icd10('A318','other mycobacterial infections',[mycobacterial],[]).
+icd10('A319','mycobacterial infection, unspecified',[mycobacterial],[]).
+icd10('A32','listeriosis',[],[]).
+icd10('A320','cutaneous listeriosis',[skin,cutaneous,listeriosis],[]).
+icd10('A321','listerial meningitis and meningoencephalitis',[listeriosis,meningitis],[]).
+icd10('A327','listerial septicaemia',[listerial,septicaemia],[]).
+icd10('A328','other forms of listeriosis',[listerosis],[]).
+icd10('A329','listeriosis, unspecified',[listeriosis],[]).
+icd10('A33','tetanus neonatorum',[tetanus,neonatorum],[]).
+icd10('A34','obstetrical tetanus',[tetanus],[]).
+icd10('A35','other tetanus',[tetanus],[]).
+icd10('A36','diphtheria',[],[]).
+icd10('A360','pharyngeal diphtheria',[pharyngeal,diphtheria],[]).
+icd10('A361','nasopharyngeal diphtheria',[nasopharyngeal,diphtheria],[]).
+icd10('A362','laryngeal diphtheria',[laryngeal,diphtheria],[]).
+icd10('A363','cutaneous diphtheria',[skin,cutaneous,diphtheria],[]).
+icd10('A368','other diphtheria',[diphtheria],[]).
+icd10('A369','diphtheria, unspecified',[diphtheria],[]).
+icd10('A37','whooping cough',[],[]).
+icd10('A370','whooping cough due to bordetella pertussis',[whooping,pertussis],[]).
+icd10('A371','whooping cough due to bordetella parapertussis',[whooping,pertussis,parapertussis],[]).
+icd10('A378','whooping cough due to other bordetella species',[whooping,pertussis],[]).
+icd10('A379','whooping cough, unspecified',[whooping,pertussis],[]).
+icd10('A38','scarlet fever',[scarlet],[]).
+icd10('A39','meningococcal infection',[meningococcal],[]).
+icd10('A390','meningococcal meningitis (g01*)',[meningococcal,meningitis],[]).
+icd10('A391','waterhouse-friderichsen syndrome (e35.1*)',[waterhouse,friderichsen,meningococcal],[]).
+icd10('A392','acute meningococcaemia',[meningococcaemia,septicaemia],[]).
+icd10('A393','chronic meningococcaemia',[meningococcaemia],[]).
+icd10('A394','meningococcaemia, unspecified',[meningococcaemia,septicaemia],[]).
+icd10('A395','meningococcal heart disease',[meningococcal,heart,cardiac],[]).
+icd10('A398','other meningococcal infections',[meningococcal],[]).
+icd10('A399','meningococcal infection, unspecified',[meningococcal],[]).
+icd10('A40','streptococcal septicaemia',[],[]).
+icd10('A400','septicaemia due to streptococcus, group a',[septicaemia,streptococcus],[]).
+icd10('A401','septicaemia due to streptococcus, group b',[septicaemia,streptococcus],[]).
+icd10('A402','septicaemia due to streptococcus, group d',[septicaemia,streptococcus],[]).
+icd10('A403','septicaemia due to streptococcus pneumoniae',[septicaemia,streptococcus],[]).
+icd10('A408','other streptococcal septicaemia',[septicaemia,streptococcus],[]).
+icd10('A409','streptococcal septicaemia, unspecified',[septicaemia,streptococcus],[]).
+icd10('A41','other septicaemia',[],[]).
+icd10('A410','septicaemia due to staphylococcus aureus',[septicaemia,staphylococcus,aureus],[]).
+icd10('A411','septicaemia due to other specified staphylococcus',[septicaemia,staphylococcus],[]).
+icd10('A412','septicaemia due to unspecified staphylococcus',[septicaemia,staphylococcus],[]).
+icd10('A413','septicaemia due to haemophilus influenzae',[septicaemia,haemophilus,influenzae],[]).
+icd10('A414','septicaemia due to anaerobes',[septicaemia,anaerobes],[]).
+icd10('A415','septicaemia due to other gram-negative organisms',[],[]).
+icd10('A4150','septicaemia due to unspecified gram-negative organisms',[septicaemia,negative],[]).
+icd10('A4151','septicaemia due to escherichia coli [e. coli]',[septicaemia,coli],[]).
+icd10('A4152','septicaemia due to pseudomonas',[pseudomonas,septicaemia],[]).
+icd10('A4158','septicaemia due to other gram-negative organisms',[septicaemia,negative],[]).
+icd10('A418','other specified septicaemia',[septicaemia],[]).
+icd10('A419','septicaemia, unspecified',[septicaemia],[]).
+icd10('A42','actinomycosis',[],[]).
+icd10('A420','pulmonary actinomycosis',[actinomycosis,pulmonary,lung],[]).
+icd10('A421','abdominal actinomycosis',[actinomycosis,abdominal],[]).
+icd10('A427','actinomycotic septicaemia',[septicaemia,actinomycotic],[]).
+icd10('A428','other forms of actinomycosis',[actinomycosis],[]).
+icd10('A429','actinomycosis, unspecified',[actinomycosis],[]).
+icd10('A43','nocardiosis',[],[]).
+icd10('A430','pulmonary nocardiosis',[nocardiosis,lung,pulmonary],[]).
+icd10('A431','cutaneous nocardiosis',[nocardiosis,skin,cutaneous],[]).
+icd10('A438','other forms of nocardiosis',[nocardiosis],[]).
+icd10('A439','nocardiosis, unspecified',[nocardiosis],[]).
+icd10('A44','bartonellosis',[],[]).
+icd10('A440','systemic bartonellosis',[bartonellosis],[]).
+icd10('A441','cutaneous and mucocutaneous bartonellosis',[skin.bartonellosis],[]).
+icd10('A448','other forms of bartonellosis',[bartonellosis],[]).
+icd10('A449','bartonellosis, unspecified',[bartonellosis],[]).
+icd10('A46','erysipelas',[erysipelas],[]).
+icd10('A48','other bacterial diseases, not elsewhere classified',[bacterial],[]).
+icd10('A480','gas gangrene',[gas,gangrene],[]).
+icd10('A481','legionnaires\' disease',[legionnaires],[]).
+icd10('A482','nonpneumonic legionnaires\' disease [pontiac fever]',[pontiac,legionnaires],[]).
+icd10('A483','toxic shock syndrome',[toxic,shock],[]).
+icd10('A484','brazilian purpuric fever',[brazilian],[]).
+icd10('A488','other specified bacterial diseases',[],[]).
+icd10('A49','bacterial infection of unspecified site',[bacterial],[]).
+icd10('A490','staphylococcal infection, unspecified',[staphylococcal],[]).
+icd10('A491','streptococcal infection, unspecified',[streptococcal],[]).
+icd10('A492','haemophilus influenzae infection, unspecified',[haemophilus],[]).
+icd10('A493','mycoplasma infection, unspecified',[mycoplasma],[]).
+icd10('A498','other bacterial infections of unspecified site',[],[]).
+icd10('A499','bacterial infection, unspecified',[bacterial],[]).
+icd10('A50','congenital syphilis',[],[]).
+icd10('A500','early congenital syphilis, symptomatic',[syphilis,congenital],[]).
+icd10('A501','early congenital syphilis, latent',[syphilis,congenital],[]).
+icd10('A502','early congenital syphilis, unspecified',[syphilis,congenital],[]).
+icd10('A503','late congenital syphilitic oculopathy',[syphilis,eye,oculopathy,congenital],[]).
+icd10('A504','late congenital neurosyphilis [juvenile neurosyphilis]',[neurosyphilis,congential,syphilis],[]).
+icd10('A505','other late congenital syphilis, symptomatic',[syphilis.congenital],[]).
+icd10('A506','late congenital syphilis, latent',[syphilis,congenital,latent],[]).
+icd10('A507','late congenital syphilis, unspecified',[syphilis,congenital],[]).
+icd10('A509','congenital syphilis, unspecified',[syphilis,congenital],[]).
+icd10('A51','early syphilis',[syphilis,early],[]).
+icd10('A510','primary genital syphilis',[syphilis,genital],[]).
+icd10('A511','primary anal syphilis',[syphilis,anal],[]).
+icd10('A512','primary syphilis of other sites',[primary,syphilis],[]).
+icd10('A513','secondary syphilis of skin and mucous membranes',[skin,syphilis],[]).
+icd10('A514','other secondary syphilis',[syphilis,secondary],[]).
+icd10('A515','early syphilis, latent',[early,syphilis],[]).
+icd10('A519','early syphilis, unspecified',early,syphilis],[]).
+icd10('A52','late syphilis',[late,syphilis],[]).
+icd10('A520','cardiovascular syphilis (i98.0*)',[cardiovascular,heart,syphilis],[]).
+icd10('A521','symptomatic neurosyphilis',[neurosyphilis,syphilis],[]).
+icd10('A522','asymptomatic neurosyphilis',[neurosyphilis,syphilis],[]).
+icd10('A523','neurosyphilis, unspecified',[neurosyphilis,syphilis],[]).
+icd10('A527','other symptomatic late syphilis',[late,syphilis],[]).
+icd10('A528','late syphilis, latent',[syphilis,late,latent],[]).
+icd10('A529','late syphilis, unspecified',[syphilis,late],[]).
+icd10('A53','other and unspecified syphilis',[],[]).
+icd10('A530','latent syphilis, unspecified as early or late',[syphilis,latent],[]).
+icd10('A539','syphilis, unspecified',[syphilis],[]).
+icd10('A54','gonococcal infection',[],[]).
+icd10('A540','gonococcal infection of lower genitourinary tract without periurethral or accessory gland abscess',[gonorrhoea],[]).
+icd10('A541','gonococcal infection of lower genitourinary tract with periurethral and accessory gland abscess',[gonorrhoea,abscess],[]).
+icd10('A542','gonococcal pelviperitonitis and other gonococcal genitourinary infections',[gonorrhoea,pud],[]).
+icd10('A543','gonococcal infection of eye',[gonorrhoea,eye],[]).
+icd10('A544','gonococcal infection of musculoskeletal system',[gonorrhoea,muscle],[]).
+icd10('A545','gonococcal pharyngitis',[gonorrhoea,pharynx],[]).
+icd10('A546','gonococcal infection of anus and rectum',[gonorrhoea,anus,rectum,rectal,anal],[]).
+icd10('A548','other gonococcal infections',[gonorrhoea],[]).
+icd10('A549','gonococcal infection, unspecified',[gonorrhoea],[]).
+icd10('A55','chlamydial lymphogranuloma (venereum)',[chlamydial,lymphogranuloma,venereum],[]).
+icd10('A56','other sexually transmitted chlamydial diseases',[chlamydial],[]).
+icd10('A560','chlamydial infection of lower genitourinary tract',[chlamydia],[]).
+icd10('A561','chlamydial infection of pelviperitoneum and other genitourinary organs',[chlamydial],[]).
+icd10('A562','chlamydial infection of genitourinary tract, unspecified',[chlamdyia],[]).
+icd10('A563','chlamydial infection of anus and rectum',[chlamdyia,anus,anal,rectal,rectum],[]).
+icd10('A564','chlamydial infection of pharynx',[chlamydial,pharynx],[]).
+icd10('A568','sexually transmitted chlamydial infection of other sites',[chlamydia],[]).
+icd10('A57','chancroid',[chancroid],[]).
+icd10('A58','granuloma inguinale',[granuloma,inguinale],[]).
+icd10('A59','trichomoniasis',[],[]).
+icd10('A590','urogenital trichomoniasis',[trichomonasis,vaginal],[]).
+icd10('A598','trichomoniasis of other sites',[trichomonasis],[]).
+icd10('A599','trichomoniasis, unspecified',[trichomoniasis],[]).
+icd10('A60','anogenital herpesviral [herpes simplex] infection',[],[]).
+icd10('A600','herpesviral infection of genitalia and urogenital tract',[herpes,genital,urinary,urethera],[]).
+icd10('A601','herpesviral infection of perianal skin and rectum',[herpes,anus,perianal],[]).
+icd10('A609','anogenital herpesviral infection, unspecified',[herpes,anus,genital],[]).
+icd10('A63','other predominantly sexually transmitted diseases, not elsewhere classified',[],[]).
+icd10('A630','anogenital (venereal) warts',[warts,veneral,anal,genital],[]).
 icd10('A638','other specified predominantly sexually transmitted diseases').
-icd10('A64','unspecified sexually transmitted disease').
-icd10('A65','nonvenereal syphilis').
+icd10('A64','unspecified sexually transmitted disease',[sexual,transmitted,disease],[]).
+icd10('A65','nonvenereal syphilis',[syphilis],[]).
 icd10('A66','yaws').
-icd10('A660','initial lesions of yaws').
-icd10('A661','multiple papillomata and wet crab yaws').
-icd10('A662','other early skin lesions of yaws').
-icd10('A663','hyperkeratosis of yaws').
-icd10('A664','gummata and ulcers of yaws').
-icd10('A665','gangosa').
-icd10('A666','bone and joint lesions of yaws').
-icd10('A667','other manifestations of yaws').
-icd10('A668','latent yaws').
-icd10('A669','yaws, unspecified').
-icd10('A67','pinta [carate]').
-icd10('A670','primary lesions of pinta').
-icd10('A671','intermediate lesions of pinta').
-icd10('A672','late lesions of pinta').
-icd10('A673','mixed lesions of pinta').
-icd10('A679','pinta, unspecified').
-icd10('A68','relapsing fevers').
-icd10('A680','louse-borne relapsing fever').
-icd10('A681','tick-borne relapsing fever').
-icd10('A689','relapsing fever, unspecified').
+icd10('A660','initial lesions of yaws',[yaws,initial],[]).
+icd10('A661','multiple papillomata and wet crab yaws',[yaws,wet,crab,papilloma],[]).
+icd10('A662','other early skin lesions of yaws',[yaws,skin],[]).
+icd10('A663','hyperkeratosis of yaws',[yaws,hyperkeratosis],[]).
+icd10('A664','gummata and ulcers of yaws',[yaws,gumma,ulcer],[]).
+icd10('A665','gangosa',[yaws,gangosa],[]).
+icd10('A666','bone and joint lesions of yaws',[yaws,bone,joint],[]).
+icd10('A667','other manifestations of yaws',[yaws],[]).
+icd10('A668','latent yaws',[yaws,latent],[]).
+icd10('A669','yaws, unspecified',[yaws],[]).
+icd10('A67','pinta [carate]',[],[]).
+icd10('A670','primary lesions of pinta',[pinta,carate,primary],[]).
+icd10('A671','intermediate lesions of pinta',[pinta,carate,intermediate],[]).
+icd10('A672','late lesions of pinta',[pinta,carate,late],[]).
+icd10('A673','mixed lesions of pinta',[pinta,carate,mixed],[]).
+icd10('A679','pinta, unspecified',[pinta,carate],[]).
+icd10('A68','relapsing fevers',[],[]).
+icd10('A680','louse-borne relapsing fever',[louse,relapsing,fever],[]).
+icd10('A681','tick-borne relapsing fever',[tick,relapsing,fever],[]).
+icd10('A689','relapsing fever, unspecified',[relapsing,fever],[]).
 icd10('A69','other spirochaetal infections').
-icd10('A690','necrotising ulcerative stomatitis').
-icd10('A691','other vincent\'s infections').
-icd10('A692','lyme disease').
-icd10('A698','other specified spirochaetal infections').
-icd10('A699','spirochaetal infection, unspecified').
-icd10('A70','chlamydia psittaci infection').
+icd10('A690','necrotising ulcerative stomatitis',[necrotising,ulcerative,stomatitis,spriochaete],[]).
+icd10('A691','other vincent\'s infections',[vincent,spirochaete],[]).
+icd10('A692','lyme disease',[lyme,spirochaete],[]).
+icd10('A698','other specified spirochaetal infections',[spirochaete],[]).
+icd10('A699','spirochaetal infection, unspecified',[spirochaete],[]).
+icd10('A70','chlamydia psittaci infection',[chlamydia,psittaci,bird,fancier],[]).
 icd10('A71','trachoma').
-icd10('A710','initial stage of trachoma').
-icd10('A711','active stage of trachoma').
-icd10('A719','trachoma, unspecified').
-icd10('A74','other diseases caused by chlamydiae').
-icd10('A740','chlamydial conjunctivitis (h13.1*)').
+icd10('A710','initial stage of trachoma',[trachoma,chlamydia],[]).
+icd10('A711','active stage of trachoma',[trachoma,active,chlamydia],[]).
+icd10('A719','trachoma, unspecified',[trachoma,chlamydia],[]).
+icd10('A74','other diseases caused by chlamydiae',[],[]).
+icd10('A740','chlamydial conjunctivitis (h13.1*)',,[chlamydia,conjunctivitis,eye],[]).
 icd10('A748','other chlamydial diseases').
-icd10('A749','chlamydial infection, unspecified').
+icd10('A749','chlamydial infection, unspecified',[chlamydia],[]).
 icd10('A75','typhus fever').
-icd10('A750','epidemic louse-borne typhus fever due to rickettsia prowazekii').
-icd10('A751','recrudescent typhus [brill\'s disease]').
-icd10('A752','typhus fever due to rickettsia typhi').
-icd10('A753','typhus fever due to rickettsia tsutsugamushi').
-icd10('A759','typhus fever, unspecified').
-icd10('A77','spotted fever [tick-borne rickettsioses]').
-icd10('A770','spotted fever due to rickettsia rickettsii').
-icd10('A771','spotted fever due to rickettsia conorii').
-icd10('A772','spotted fever due to rickettsia siberica').
-icd10('A773','spotted fever due to rickettsia australis').
+icd10('A750','epidemic louse-borne typhus fever due to rickettsia prowazekii',[typhus,rickettsia,prowazekii],[]).
+icd10('A751','recrudescent typhus [brill\'s disease]',[typhus,brill],[]).
+icd10('A752','typhus fever due to rickettsia typhi',[typhus,rickettsia,typhi],[]).
+icd10('A753','typhus fever due to rickettsia tsutsugamushi',[typhus,rickettsia,tsutsugamushi],[]).
+icd10('A759','typhus fever, unspecified',[typhus],[]).
+icd10('A77','spotted fever [tick-borne rickettsioses]',[],[]).
+icd10('A770','spotted fever due to rickettsia rickettsii',[spotted,rickettsia,rickettsii],[]).
+icd10('A771','spotted fever due to rickettsia conorii',[spotted,rickettsia,conorii],[]).
+icd10('A772','spotted fever due to rickettsia siberica',[spotted,rickettsia,siberica],[]).
+icd10('A773','spotted fever due to rickettsia australis',[spotted,rickettsia,australis],[]).
 icd10('A778','other spotted fevers').
-icd10('A779','spotted fever, unspecified').
-icd10('A78','q fever').
+icd10('A779','spotted fever, unspecified',[spotted,fever],[]).
+icd10('A78','q fever',[q,fever,coxiella,burnetti],[]).
 icd10('A79','other rickettsioses').
-icd10('A790','trench fever').
-icd10('A791','rickettsialpox due to rickettsia akari').
+icd10('A790','trench fever',[trench],[]).
+icd10('A791','rickettsialpox due to rickettsia akari',[rickettsial,pox,akari],[]).
 icd10('A798','other specified rickettsioses').
-icd10('A799','rickettsiosis, unspecified').
+icd10('A799','rickettsiosis, unspecified',[rickettsiosis],[]).
 icd10('A80','acute poliomyelitis').
-icd10('A800','acute paralytic poliomyelitis, vaccine-associated').
-icd10('A801','acute paralytic poliomyelitis, wild virus, imported').
-icd10('A802','acute paralytic poliomyelitis, wild virus, indigenous').
-icd10('A803','acute paralytic poliomyelitis, other and unspecified').
-icd10('A804','acute nonparalytic poliomyelitis').
-icd10('A809','acute poliomyelitis, unspecified').
+icd10('A800','acute paralytic poliomyelitis, vaccine-associated',[polio,vaccine],[]).
+icd10('A801','acute paralytic poliomyelitis, wild virus, imported',[polio],[]).
+icd10('A802','acute paralytic poliomyelitis, wild virus, indigenous',[polio],[]).
+icd10('A803','acute paralytic poliomyelitis, other and unspecified',[polio],[]).
+icd10('A804','acute nonparalytic poliomyelitis',[polio],[]).
+icd10('A809','acute poliomyelitis, unspecified',[polio],[]).
 icd10('A81','atypical virus infections of central nervous system').
-icd10('A810','creutzfeldt-jakob disease').
-icd10('A811','subacute sclerosing panencephalitis').
-icd10('A812','progressive multifocal leukoencephalopathy').
-icd10('A818','other atypical virus infections of central nervous system').
-icd10('A819','atypical virus infection of central nervous system, unspecified').
-icd10('A82','rabies').
-icd10('A820','sylvatic rabies').
-icd10('A821','urban rabies').
-icd10('A829','rabies, unspecified').
-icd10('A83','mosquito-borne viral encephalitis').
-icd10('A830','japanese encephalitis').
-icd10('A831','western equine encephalitis').
-icd10('A832','eastern equine encephalitis').
-icd10('A833','st louis encephalitis').
-icd10('A834','australian encephalitis').
-icd10('A835','california encephalitis').
-icd10('A836','rocio virus disease').
-icd10('A838','other mosquito-borne viral encephalitis').
-icd10('A839','mosquito-borne viral encephalitis, unspecified').
-icd10('A84','tick-borne viral encephalitis').
-icd10('A840','far eastern tick-borne encephalitis [russian spring-summer encephalitis]').
-icd10('A841','central european tick-borne encephalitis').
-icd10('A848','other tick-borne viral encephalitis').
-icd10('A849','tick-borne viral encephalitis, unspecified').
-icd10('A85','other viral encephalitis, not elsewhere classified').
-icd10('A850','enteroviral encephalitis (g05.1*)').
-icd10('A851','adenoviral encephalitis (g05.1*)').
-icd10('A852','arthropod-borne viral encephalitis, unspecified').
-icd10('A858','other specified viral encephalitis').
-icd10('A86','unspecified viral encephalitis').
-icd10('A87','viral meningitis').
-icd10('A870','enteroviral meningitis (g02.0*)').
-icd10('A871','adenoviral meningitis (g02.0*)').
-icd10('A872','lymphocytic choriomeningitis').
-icd10('A878','other viral meningitis').
-icd10('A879','viral meningitis, unspecified').
-icd10('A88','other viral infections of central nervous system, not elsewhere classified').
-icd10('A880','enteroviral exanthematous fever [boston exanthem]').
-icd10('A881','epidemic vertigo').
-icd10('A888','other specified viral infections of central nervous system').
-icd10('A89','unspecified viral infection of central nervous system').
-icd10('A90','dengue fever [classical dengue]').
-icd10('A91','dengue haemorrhagic fever').
-icd10('A92','other mosquito-borne viral fevers').
-icd10('A920','chikungunya virus disease').
-icd10('A921','o\'nyong-nyong fever').
-icd10('A922','venezuelan equine fever').
-icd10('A923','west nile fever').
-icd10('A924','rift valley fever').
-icd10('A928','other specified mosquito-borne viral fevers').
-icd10('A929','mosquito-borne viral fever, unspecified').
-icd10('A93','other arthropod-borne viral fevers, not elsewhere classified').
-icd10('A930','oropouche virus disease').
-icd10('A931','sandfly fever').
-icd10('A932','colorado tick fever').
-icd10('A938','other specified arthropod-borne viral fevers').
-icd10('A94','unspecified arthropod-borne viral fever').
-icd10('A95','yellow fever').
-icd10('A950','sylvatic yellow fever').
-icd10('A951','urban yellow fever').
-icd10('A959','yellow fever, unspecified').
-icd10('A96','arenaviral haemorrhagic fever').
-icd10('A960','junin haemorrhagic fever').
-icd10('A961','machupo haemorrhagic fever').
-icd10('A962','lassa fever').
-icd10('A968','other arenaviral haemorrhagic fevers').
-icd10('A969','arenaviral haemorrhagic fever, unspecified').
-icd10('A98','other viral haemorrhagic fevers, not elsewhere classified').
-icd10('A980','crimean-congo haemorrhagic fever').
-icd10('A981','omsk haemorrhagic fever').
-icd10('A982','kyasanur forest disease').
-icd10('A983','marburg virus disease').
-icd10('A984','ebola virus disease').
-icd10('A985','haemorrhagic fever with renal syndrome').
-icd10('A988','other specified viral haemorrhagic fevers').
-icd10('A99','unspecified viral haemorrhagic fever').
-icd10('B00','herpesviral [herpes simplex] infections').
-icd10('B000','eczema herpeticum').
-icd10('B001','herpesviral vesicular dermatitis').
-icd10('B002','herpesviral gingivostomatitis and pharyngotonsillitis').
-icd10('B003','herpesviral meningitis (g02.0*)').
-icd10('B004','herpesviral encephalitis (g05.1*)').
-icd10('B005','herpesviral ocular disease').
-icd10('B007','disseminated herpesviral disease').
-icd10('B008','other forms of herpesviral infection').
-icd10('B009','herpesviral infection, unspecified').
-icd10('B01','varicella [chickenpox]').
-icd10('B010','varicella meningitis (g02.0*)').
-icd10('B011','varicella encephalitis (g05.1*)').
-icd10('B012','varicella pneumonia (j17.1*)').
-icd10('B018','varicella with other complications').
-icd10('B019','varicella without complication').
-icd10('B02','zoster [herpes zoster]').
-icd10('B020','zoster encephalitis (g05.1*)').
-icd10('B021','zoster meningitis (g02.0*)').
-icd10('B022','zoster with other nervous system involvement').
-icd10('B023','zoster ocular disease').
-icd10('B027','disseminated zoster').
-icd10('B028','zoster with other complications').
-icd10('B029','zoster without complication').
-icd10('B03','smallpox').
-icd10('B04','monkeypox').
-icd10('B05','measles').
-icd10('B050','measles complicated by encephalitis (g05.1*)').
-icd10('B051','measles complicated by meningitis (g02.0*)').
-icd10('B052','measles complicated by pneumonia (j17.1*)').
-icd10('B053','measles complicated by otitis media (h67.1*)').
-icd10('B054','measles with intestinal complications').
-icd10('B058','measles with other complications').
-icd10('B059','measles without complication').
-icd10('B06','rubella [german measles]').
-icd10('B060','rubella with neurological complications').
-icd10('B068','rubella with other complications').
-icd10('B069','rubella without complication').
-icd10('B07','viral warts').
-icd10('B08','other viral infections characterised by skin and mucous membrane lesions, not elsewhere classified').
-icd10('B080','other orthopoxvirus infections').
-icd10('B081','molluscum contagiosum').
-icd10('B082','exanthema subitum [sixth disease]').
-icd10('B083','erythema infectiosum [fifth disease]').
-icd10('B084','enteroviral vesicular stomatitis with exanthem').
-icd10('B085','enteroviral vesicular pharyngitis').
-icd10('B088','other specified viral infections characterised by skin and mucous membrane lesions').
-icd10('B09','unspecified viral infection characterised by skin and mucous membrane lesions').
-icd10('B150','hepatitis a with hepatic coma').
-icd10('B159','hepatitis a without hepatic coma').
-icd10('B16','acute hepatitis b').
-icd10('B160','acute hepatitis b with delta-agent (coinfection) with hepatic coma').
-icd10('B161','acute hepatitis b with delta-agent (coinfection) without hepatic coma').
-icd10('B162','acute hepatitis b without delta-agent with hepatic coma').
-icd10('B169','acute hepatitis b without delta-agent and without hepatic coma').
+icd10('A810','creutzfeldt-jakob disease',[creutzfeldt,jakob,mad,cow],[cjd,vcjd]).
+icd10('A811','subacute sclerosing panencephalitis',[subacute,sclerosing,panencephalitis,measles],[sspe]).
+icd10('A812','progressive multifocal leukoencephalopathy',[leukoencephalopathy],[]).
+icd10('A818','other atypical virus infections of central nervous system',[virus,slow,central,nervous,system,cns,familial,insomnia,kuru],[]).
+icd10('A819','atypical virus infection of central nervous system, unspecified',[virus,slow,central,nervous,system,cns],[]).
+icd10('A82','rabies',[],[]).
+icd10('A820','sylvatic rabies',[rabies],[]).
+icd10('A821','urban rabies',[rabies],[]).
+icd10('A829','rabies, unspecified',[rabies,lyssavirus],[]).
+icd10('A83','mosquito-borne viral encephalitis',[],[]).
+icd10('A830','japanese encephalitis',[japanese,encephalitis],[je]).
+icd10('A831','western equine encephalitis',[western,equine,encephalitis],[]).
+icd10('A832','eastern equine encephalitis',[eastern,equine,encephalitis],[]).
+icd10('A833','st louis encephalitis',[louis,encephalitis],[]).
+icd10('A834','australian encephalitis',[australian,murray,valley,encephalitis],[mve]).
+icd10('A835','california encephalitis',[california,encephalitis],[]).
+icd10('A836','rocio virus disease',[rocio],[]).
+icd10('A838','other mosquito-borne viral encephalitis',[viral,encephalitis,mosquito],[]).
+icd10('A839','mosquito-borne viral encephalitis, unspecified',[mosquito,viral,encephalitis],[]).
+icd10('A84','tick-borne viral encephalitis',[],[]).
+icd10('A840','far eastern tick-borne encephalitis [russian spring-summer encephalitis]',[russian,summer,spring,eastern,tick,encephalitis],[]).
+icd10('A841','central european tick-borne encephalitis',[european,tick,encephalitis],[]).
+icd10('A848','other tick-borne viral encephalitis',[tick,viral,encephalitis],[]).
+icd10('A849','tick-borne viral encephalitis, unspecified',[tick,viral,encephalitis],[]).
+icd10('A85','other viral encephalitis, not elsewhere classified',[viral,encephalitis],[]).
+icd10('A850','enteroviral encephalitis (g05.1*)',[enteroviral,encephalitis],[]).
+icd10('A851','adenoviral encephalitis (g05.1*)',[adenoviral,encephalitis,[]).
+icd10('A852','arthropod-borne viral encephalitis, unspecified',[arthropod,viral,encephalitis],[]).
+icd10('A858','other specified viral encephalitis',[viral,encephalitis],[]).
+icd10('A86','unspecified viral encephalitis',[viral,encephalitis],[]).
+icd10('A87','viral meningitis',[],[]).
+icd10('A870','enteroviral meningitis (g02.0*)',[enteroviral,viral,meningitis],[]).
+icd10('A871','adenoviral meningitis (g02.0*)',[adenoviral,viral,meningitis],[]).
+icd10('A872','lymphocytic choriomeningitis',[lymphocytic,choriomeningitis,viral,meningitis],[]).
+icd10('A878','other viral meningitis',[viral,meningitis],[]).
+icd10('A879','viral meningitis, unspecified',[viral,meningitis],[]).
+icd10('A88','other viral infections of central nervous system, not elsewhere classified',[],[]).
+icd10('A880','enteroviral exanthematous fever [boston exanthem]',[boston,exanthem,entroviral],[]).
+icd10('A881','epidemic vertigo',[vertigo],[]).
+icd10('A888','other specified viral infections of central nervous system',[viral,cns],[]).
+icd10('A89','unspecified viral infection of central nervous system',[viral,cns],[]).
+icd10('A90','dengue fever [classical dengue]',[dengue],[]).
+icd10('A91','dengue haemorrhagic fever',[dengue],[]).
+icd10('A92','other mosquito-borne viral fevers',[],[]).
+icd10('A920','chikungunya virus disease',[chikungunya],[]).
+icd10('A921','o\'nyong-nyong fever',['o\'nyong',nyong],[]).
+icd10('A922','venezuelan equine fever',[venezuelan,equine],[]).
+icd10('A923','west nile fever',[west,nile],[]).
+icd10('A924','rift valley fever',[rift,valley],[]).
+icd10('A928','other specified mosquito-borne viral fevers',[mosquito,viral],[]).
+icd10('A929','mosquito-borne viral fever, unspecified',[mosquito,viral],[]).
+icd10('A93','other arthropod-borne viral fevers, not elsewhere classified',[],[]).
+icd10('A930','oropouche virus disease',[oropouche],[]).
+icd10('A931','sandfly fever',[sandfly],[]).
+icd10('A932','colorado tick fever',[colorado,tick],[]).
+icd10('A938','other specified arthropod-borne viral fevers',[arthropod,insect,viral],[]).
+icd10('A94','unspecified arthropod-borne viral fever',[arthropod,insect],[]).
+icd10('A95','yellow fever',[]).
+icd10('A950','sylvatic yellow fever',[yellow,sylvatic,forest,rural],[]).
+icd10('A951','urban yellow fever',[yellow,urban,city],[]).
+icd10('A959','yellow fever, unspecified',[yellow],[]).
+icd10('A96','arenaviral haemorrhagic fever',[arenaviral],[]).
+icd10('A960','junin haemorrhagic fever',[junin],[]).
+icd10('A961','machupo haemorrhagic fever',[machupo],[]).
+icd10('A962','lassa fever',[lassa],[]).
+icd10('A968','other arenaviral haemorrhagic fevers',[arenaviral],[]).
+icd10('A969','arenaviral haemorrhagic fever, unspecified',[arenaviral],[]).
+icd10('A98','other viral haemorrhagic fevers, not elsewhere classified',[arenaviral],[]).
+icd10('A980','crimean-congo haemorrhagic fever',[crimean,congo],[]).
+icd10('A981','omsk haemorrhagic fever',[omsk],[]).
+icd10('A982','kyasanur forest disease',[kysasanur],[]).
+icd10('A983','marburg virus disease',[marburg],[]).
+icd10('A984','ebola virus disease',[ebola],[]).
+icd10('A985','haemorrhagic fever with renal syndrome',[haemorrhagic,virus,renal,kidney],[]).
+icd10('A988','other specified viral haemorrhagic fevers',[haemorrhagic,virus],[]).
+icd10('A99','unspecified viral haemorrhagic fever',[viral,haemorrhagic],[]).
+icd10('B00','herpesviral [herpes simplex] infections',[],[]).
+icd10('B000','eczema herpeticum',[eczema,herpeticum],[]).
+icd10('B001','herpesviral vesicular dermatitis',[herpes,vesicular,dermatitis],[]).
+icd10('B002','herpesviral gingivostomatitis and pharyngotonsillitis',[herpes,gingivostomatitis,pharyngotonsillitis,tonsillitis,stoma],[]).
+icd10('B003','herpesviral meningitis (g02.0*)',[herpes,meningitis],[]).
+icd10('B004','herpesviral encephalitis (g05.1*)',[herpes,encephalitis,brain],[]).
+icd10('B005','herpesviral ocular disease',[herpes,ocular,eye],[]).
+icd10('B007','disseminated herpesviral disease',[herpes,disseminated],[]).
+icd10('B008','other forms of herpesviral infection',[herpes],[]).
+icd10('B009','herpesviral infection, unspecified',[herpes],[]).
+icd10('B01','varicella [chickenpox]',[varicella,chickenpox],[]).
+icd10('B010','varicella meningitis (g02.0*)',[varicella,chickenpox,meningitis],[]).
+icd10('B011','varicella encephalitis (g05.1*)',[varicella,chickenpox,encephalitis],[]).
+icd10('B012','varicella pneumonia (j17.1*)',[varicella,chickenpox,pneumonia,lung],[]).
+icd10('B018','varicella with other complications',[varicella,chickenpox],[]).
+icd10('B019','varicella without complication',[varicella,chickenpox],[]).
+icd10('B02','zoster [herpes zoster]',[],[]).
+icd10('B020','zoster encephalitis (g05.1*)',[zoster,encephalitis],[]).
+icd10('B021','zoster meningitis (g02.0*)',[zoster,meningitis],[]).
+icd10('B022','zoster with other nervous system involvement',[zoster],[]).
+icd10('B023','zoster ocular disease',[zoster,eye,ocular],[]).
+icd10('B027','disseminated zoster',[zoster,disseminated],[]).
+icd10('B028','zoster with other complications',[zoster],[]).
+icd10('B029','zoster without complication',[zoster],[]).
+icd10('B03','smallpox',[smallpox],[]).
+icd10('B04','monkeypox',[monkeypox],[]).
+icd10('B05','measles',[],[]).
+icd10('B050','measles complicated by encephalitis (g05.1*)',[measles,encephalitis],[]).
+icd10('B051','measles complicated by meningitis (g02.0*)',[measles,meningitis],[]).
+icd10('B052','measles complicated by pneumonia (j17.1*)',[measles,pneumonia,lung],[]).
+icd10('B053','measles complicated by otitis media (h67.1*)',[measles,ear,otitis],[]).
+icd10('B054','measles with intestinal complications',[measles,intestinal],[]).
+icd10('B058','measles with other complications',[measles],[]).
+icd10('B059','measles without complication'[measles],[]).
+icd10('B06','rubella [german measles]',[],[]).
+icd10('B060','rubella with neurological complications',[rubella,german],[]).
+icd10('B068','rubella with other complications',[rubella,german],[]).
+icd10('B069','rubella without complication',[rubella,german],[]).
+icd10('B07','viral warts',[warts,viral],[]).
+icd10('B08','other viral infections characterised by skin and mucous membrane lesions, not elsewhere classified',[],[]).
+icd10('B080','other orthopoxvirus infections',[orthopoxvirus,poxvirus],[]).
+icd10('B081','molluscum contagiosum',[molluscum,contagiosum],[]).
+icd10('B082','exanthema subitum [sixth disease]',[subitum,sixth],[]).
+icd10('B083','erythema infectiosum [fifth disease]',[infectiosum,fifth],[]).
+icd10('B084','enteroviral vesicular stomatitis with exanthem',[vesicular,stomatitis,enteroviral],[]).
+icd10('B085','enteroviral vesicular pharyngitis',[pharyngitis,enteroviral,vesicular],[]).
+icd10('B088','other specified viral infections characterised by skin and mucous membrane lesions',[],[]).
+icd10('B09','unspecified viral infection characterised by skin and mucous membrane lesions',[viral,infection,skin,mouth,stomatitis],[]).
+icd10('B150','hepatitis a with hepatic coma',[a,hepatitis,coma],[]).
+icd10('B159','hepatitis a without hepatic coma',[a,hepatitis],[hav]).
+icd10('B16','acute hepatitis b',[b,hepatitis,acute],[hbv]).
+icd10('B160','acute hepatitis b with delta-agent (coinfection) with hepatic coma',[b,hepatitis,acute,delta,coma],[]).
+icd10('B161','acute hepatitis b with delta-agent (coinfection) without hepatic coma',[hepatitis,b,acute,delta],[]).
+icd10('B162','acute hepatitis b without delta-agent with hepatic coma',[b,hepatitis,acute,coma],[]).
+icd10('B169','acute hepatitis b without delta-agent and without hepatic coma',[b,hepatits,acute],[]).
 icd10('B17','other acute viral hepatitis').
-icd10('B170','acute delta-(super)infection of hepatitis b carrier').
-icd10('B171','acute hepatitis c').
-icd10('B172','acute hepatitis e').
-icd10('B178','other specified acute viral hepatitis').
-icd10('B18','chronic viral hepatitis').
-icd10('B180','chronic viral hepatitis b with delta-agent').
-icd10('B181','chronic viral hepatitis b without delta-agent').
-icd10('B182','chronic viral hepatitis c').
-icd10('B188','other chronic viral hepatitis').
-icd10('B189','chronic viral hepatitis, unspecified').
-icd10('B19','unspecified viral hepatitis').
-icd10('B190','unspecified viral hepatitis hepatic with coma').
-icd10('B199','unspecified viral hepatitis without hepatic coma').
-icd10('B20','human immunodeficiency virus [hiv] disease resulting in infectious and parasitic diseases').
-icd10('B21','human immunodeficiency virus [hiv] disease resulting in malignant neoplasms').
-icd10('B22','human immunodeficiency virus [hiv] disease resulting in other specified diseases').
-icd10('B23','human immunodeficiency virus [hiv] disease resulting in other conditions').
-icd10('B230','acute hiv infection syndrome').
-icd10('B238','hiv disease resulting in other specified conditions').
-icd10('B24','unspecified human immunodeficiency virus [hiv] disease').
-icd10('B25','cytomegaloviral disease').
-icd10('B250','cytomegaloviral pneumonitis (j17.1*)').
-icd10('B251','cytomegaloviral hepatitis (k77.0*)').
-icd10('B252','cytomegaloviral pancreatitis (k87.1*)').
-icd10('B258','other cytomegaloviral diseases').
-icd10('B259','cytomegaloviral disease, unspecified').
-icd10('B26','mumps').
-icd10('B260','mumps orchitis (n51.1*)').
-icd10('B261','mumps meningitis (g02.0*)').
-icd10('B262','mumps encephalitis (g05.1*)').
-icd10('B263','mumps pancreatitis (k87.1*)').
-icd10('B268','mumps with other complications').
-icd10('B269','mumps without complication').
-icd10('B27','infectious mononucleosis').
-icd10('B270','gammaherpesviral mononucleosis').
-icd10('B271','cytomegaloviral mononucleosis').
-icd10('B278','other infectious mononucleosis').
-icd10('B279','infectious mononucleosis, unspecified').
-icd10('B30','viral conjunctivitis').
-icd10('B300','keratoconjunctivitis due to adenovirus (h19.2*)').
-icd10('B301','conjunctivitis due to adenovirus (h13.1*)').
-icd10('B302','viral pharyngoconjunctivitis').
-icd10('B303','acute epidemic haemorrhagic conjunctivitis (enteroviral) (h13.1*)').
-icd10('B308','other viral conjunctivitis (h13.1*)').
-icd10('B309','viral conjunctivitis, unspecified').
-icd10('B33','other viral diseases, not elsewhere classified').
-icd10('B330','epidemic myalgia').
-icd10('B331','ross river disease').
-icd10('B332','viral carditis').
-icd10('B333','retrovirus infections, not elsewhere classified').
-icd10('B338','other specified viral diseases').
-icd10('B34','viral infection of unspecified site').
-icd10('B340','adenovirus infection, unspecified').
-icd10('B341','enterovirus infection, unspecified').
-icd10('B342','coronavirus infection, unspecified').
-icd10('B343','parvovirus infection, unspecified').
-icd10('B344','papovavirus infection, unspecified').
-icd10('B348','other viral infections of unspecified site').
-icd10('B349','viral infection, unspecified').
-icd10('B35','dermatophytosis').
-icd10('B350','tinea barbae and tinea capitis').
-icd10('B351','tinea unguium').
-icd10('B352','tinea manuum').
-icd10('B353','tinea pedis').
-icd10('B354','tinea corporis').
-icd10('B355','tinea imbricata').
-icd10('B356','tinea cruris').
-icd10('B358','other dermatophytoses').
-icd10('B359','dermatophytosis, unspecified').
-icd10('B36','other superficial mycoses').
-icd10('B360','pityriasis versicolor').
-icd10('B361','tinea nigra').
-icd10('B362','white piedra').
-icd10('B363','black piedra').
-icd10('B369','superficial mycosis, unspecified').
-icd10('B37','candidiasis').
-icd10('B370','candidal stomatitis').
-icd10('B371','pulmonary candidiasis').
-icd10('B372','candidiasis of skin and nail').
-icd10('B373','candidiasis of vulva and vagina (n77.1*)').
-icd10('B374','candidiasis of other urogenital sites').
-icd10('B375','candidal meningitis (g02.1*)').
-icd10('B376','candidal endocarditis (i39.8*)').
-icd10('B377','candidal septicaemia').
-icd10('B378','candidiasis of other sites').
-icd10('B3781','candidal oesophagitis').
-icd10('B3788','candidiasis of other sites').
-icd10('B379','candidiasis, unspecified').
-icd10('B38','coccidioidomycosis').
-icd10('B380','acute pulmonary coccidioidomycosis').
-icd10('B381','chronic pulmonary coccidioidomycosis').
-icd10('B382','pulmonary coccidioidomycosis, unspecified').
-icd10('B383','cutaneous coccidioidomycosis').
-icd10('B384','coccidioidomycosis meningitis (g02.1*)').
-icd10('B387','disseminated coccidioidomycosis').
-icd10('B388','other forms of coccidioidomycosis').
-icd10('B389','coccidioidomycosis, unspecified').
-icd10('B39','histoplasmosis').
-icd10('B390','acute pulmonary histoplasmosis capsulati').
-icd10('B391','chronic pulmonary histoplasmosis capsulati').
-icd10('B392','pulmonary histoplasmosis capsulati, unspecified').
-icd10('B393','disseminated histoplasmosis capsulati').
-icd10('B394','histoplasmosis capsulati, unspecified').
-icd10('B395','histoplasmosis duboisii').
-icd10('B399','histoplasmosis, unspecified').
-icd10('B40','blastomycosis').
+icd10('B170','acute delta-(super)infection of hepatitis b carrier',[delta,d,b,hepatitis],[]).
+icd10('B171','acute hepatitis c',[c,hepatitis,acute],[hcv]).
+icd10('B172','acute hepatitis e',[e,hepatitis],[]).
+icd10('B178','other specified acute viral hepatitis',[hepatitis,viral],[]).
+icd10('B18','chronic viral hepatitis',[],[]).
+icd10('B180','chronic viral hepatitis b with delta-agent',[b,hepatitis,delta,chronic],[]).
+icd10('B181','chronic viral hepatitis b without delta-agent',[b,hepatitis,chronic],[]).
+icd10('B182','chronic viral hepatitis c',[c,hepatitis],[hcv]).
+icd10('B188','other chronic viral hepatitis',[hepatitis,chronic,viral],[]).
+icd10('B189','chronic viral hepatitis, unspecified',[hepatitis,chronic,viral],[]).
+icd10('B19','unspecified viral hepatitis',[],[]).
+icd10('B190','unspecified viral hepatitis hepatic with coma',[hepatitis,viral,coma],[]).
+icd10('B199','unspecified viral hepatitis without hepatic coma',[hepatitis,viral],[]).
+icd10('B20','human immunodeficiency virus [hiv] disease resulting in infectious and parasitic diseases',[hiv,aids,inectious],[]).
+icd10('B21','human immunodeficiency virus [hiv] disease resulting in malignant neoplasms',[hiv,aids,cancer],[]).
+icd10('B22','human immunodeficiency virus [hiv] disease resulting in other specified diseases',[hiv,aids,cancer],[]).
+icd10('B23','human immunodeficiency virus [hiv] disease resulting in other conditions',[hiv,aids],[]).
+icd10('B230','acute hiv infection syndrome',[hiv],[]).
+icd10('B238','hiv disease resulting in other specified conditions',[hiv,aids],[]).
+icd10('B24','unspecified human immunodeficiency virus [hiv] disease',[hiv,aids],[]).
+icd10('B25','cytomegaloviral disease',[],[]).
+icd10('B250','cytomegaloviral pneumonitis (j17.1*)',[cmv,cytomegalovirus,pneumonia,lung],[]).
+icd10('B251','cytomegaloviral hepatitis (k77.0*)',[cmv,cytomegalovirus,hepatitis,liver],[]).
+icd10('B252','cytomegaloviral pancreatitis (k87.1*)',[cmv,cytomegalovirus,pancreatitis],[]).
+icd10('B258','other cytomegaloviral diseases',[cmv,cytomegalovirus],[]).
+icd10('B259','cytomegaloviral disease, unspecified',[cmv,cytomegalovirus],[]).
+icd10('B26','mumps',[],[]).
+icd10('B260','mumps orchitis (n51.1*)',[mumps,orchitis,testicle,testis],[]).
+icd10('B261','mumps meningitis (g02.0*)',[mumps,meningitis],[]).
+icd10('B262','mumps encephalitis (g05.1*)',[mumps,encephalitis,brain],[]).
+icd10('B263','mumps pancreatitis (k87.1*)',[mumps,pancreatitis],[]).
+icd10('B268','mumps with other complications',[mumps],[]).
+icd10('B269','mumps without complcation',[mumps],[]).
+icd10('B27','infectious mononucleosis',[],[]).
+icd10('B270','gammaherpesviral mononucleosis',[gammaherpesviral,mononucleosis,epstein,barr,kissing,glandular],[]).
+icd10('B271','cytomegaloviral mononucleosis',[cytomegaloviral,mononucleosis,cmv],[]).
+icd10('B278','other infectious mononucleosis',[mononucleosis],[]).
+icd10('B279','infectious mononucleosis, unspecified',[mononucleosis,glandular,kissing],[]).
+icd10('B30','viral conjunctivitis',[],[]).
+icd10('B300','keratoconjunctivitis due to adenovirus (h19.2*)',[adenovirus,keratoconjunctivitis],[]).
+icd10('B301','conjunctivitis due to adenovirus (h13.1*)',[conjunctivitis,adenovirus],[]).
+icd10('B302','viral pharyngoconjunctivitis',[viral,pharyngoconjunctivitis,conjunctivitis],[]).
+icd10('B303','acute epidemic haemorrhagic conjunctivitis (enteroviral) (h13.1*)',[haemorrhagic,conjunctivitis,enteroviral],[]).
+icd10('B308','other viral conjunctivitis (h13.1*)',[viral,conjunctivitis],[]).
+icd10('B309','viral conjunctivitis, unspecified',[viral,conjunctivitis],[]).
+icd10('B33','other viral diseases, not elsewhere classified',[],[]).
+icd10('B330','epidemic myalgia',[myalgia],[]).
+icd10('B331','ross river disease',[ross,river],[]).
+icd10('B332','viral carditis',[carditis,myocarditis,viral],[]).
+icd10('B333','retrovirus infections, not elsewhere classified',[retrovirus],[]).
+icd10('B338','other specified viral diseases',[],[]).
+icd10('B34','viral infection of unspecified site',[],[]).
+icd10('B340','adenovirus infection, unspecified',[adenovirus],[]).
+icd10('B341','enterovirus infection, unspecified',[enterovirus],[]).
+icd10('B342','coronavirus infection, unspecified',[coronavirus],[]).
+icd10('B343','parvovirus infection, unspecified',[parvovirus],[]).
+icd10('B344','papovavirus infection, unspecified',[papovavirus],[]).
+icd10('B348','other viral infections of unspecified site',[viral,virus],[]).
+icd10('B349','viral infection, unspecified',[viral,virus],[]).
+icd10('B35','dermatophytosis',[],[]).
+icd10('B350','tinea barbae and tinea capitis',[barbae,captium,tinea],[]).
+icd10('B351','tinea unguium',[unguiummtinea],[]).
+icd10('B352','tinea manuum',[manuum,tinea],[]).
+icd10('B353','tinea pedis',[pedis,tinea],[]).
+icd10('B354','tinea corporis',[corporis,tinea],[]).
+icd10('B355','tinea imbricata',[imbricata,tinea],[]).
+icd10('B356','tinea cruris',[cruris,tinea],[]).
+icd10('B358','other dermatophytoses',[],[]).
+icd10('B359','dermatophytosis, unspecified',[tinea,dermatophytosis],[]).
+icd10('B36','other superficial mycoses',[],[]).
+icd10('B360','pityriasis versicolor',[pityriasis,versicolor],[]).
+icd10('B361','tinea nigra',[nigra,tinea],[]).
+icd10('B362','white piedra',[piedra,white],[]).
+icd10('B363','black piedra',[piedra,black],[]).
+icd10('B369','superficial mycosis, unspecified',[mycosis,skin,superficial],[]).
+icd10('B37','candidiasis',[],[]).
+icd10('B370','candidal stomatitis',[candida,mouth,stomatitis],[]).
+icd10('B371','pulmonary candidiasis',[candidiasis,lung,pulmonary],[]).
+icd10('B372','candidiasis of skin and nail',[candidiasis,skin,nail],[]).
+icd10('B373','candidiasis of vulva and vagina (n77.1*)',[candidiasis,vulva,vagina],[]).
+icd10('B374','candidiasis of other urogenital sites',[candidiasis,urogenital,genital],[]).
+icd10('B375','candidal meningitis (g02.1*)',[candidal,meningitis],[]).
+icd10('B376','candidal endocarditis (i39.8*)',[candidal,endocarditis],[]).
+icd10('B377','candidal septicaemia',[candidal,septicaemia],[]).
+icd10('B378','candidiasis of other sites',[],[]).
+icd10('B3781','candidal oesophagitis',[candidal,oesophagitis],[]).
+icd10('B3788','candidiasis of other sites',[candidiasis],[]).
+icd10('B379','candidiasis, unspecified',[candidiasis],[]).
+icd10('B38','coccidioidomycosis',[],[]).
+icd10('B380','acute pulmonary coccidioidomycosis',[coccidomycosis,pulmonary],[]).
+icd10('B381','chronic pulmonary coccidioidomycosis',[coccidomycosis,pulmonary],[]).
+icd10('B382','pulmonary coccidioidomycosis, unspecified',[coccidiomycosis,pulmonary],[]).
+icd10('B383','cutaneous coccidioidomycosis',[coccidiomycosis,cutaneous],[]).
+icd10('B384','coccidioidomycosis meningitis (g02.1*)',[coccidiomycosis,meningitis],[]).
+icd10('B387','disseminated coccidioidomycosis',[coccidiomycosis],[]).
+icd10('B388','other forms of coccidioidomycosis',[coccidomycosis,meningitis],[]).
+icd10('B389','coccidioidomycosis, unspecified',coccidomycosis],[]).
+icd10('B39','histoplasmosis',[]).
+icd10('B390','acute pulmonary histoplasmosis capsulati',[histoplasmosis,pulmonary],[]).
+icd10('B391','chronic pulmonary histoplasmosis capsulati',[histoplasmosis,pulmonary],[]).
+icd10('B392','pulmonary histoplasmosis capsulati, unspecified',[histoplasmosis,pulmonary],[]).
+icd10('B393','disseminated histoplasmosis capsulati',[histoplasmosis],[]).
+icd10('B394','histoplasmosis capsulati, unspecified',[histoplasmosis],[]).
+icd10('B395','histoplasmosis duboisii',[duboisi,histoplasmosis],[]).
+icd10('B399','histoplasmosis, unspecified',[histoplasmosis],[]).
+icd10('B40','blastomycosis',[],[]).
 icd10('B400','acute pulmonary blastomycosis').
 icd10('B401','chronic pulmonary blastomycosis').
 icd10('B402','pulmonary blastomycosis, unspecified').
@@ -2644,285 +2644,285 @@ icd10('E896','postprocedural adrenocortical(-medullary) hypofunction').
 icd10('E898','other postprocedural endocrine and metabolic disorders').
 icd10('E899','postprocedural endocrine and metabolic disorder, unspecified').
 icd10('E90','nutritional and metabolic disorders in diseases classified elsewhere').
-icd10('F00','dementia in alzheimer\'s disease (g30.-+)').
-icd10('F000','dementia in alzheimer\'s disease with early onset (g30.0+)').
-icd10('F001','dementia in alzheimer\'s disease with late onset (g30.1+)').
-icd10('F002','dementia in alzheimer\'s disease, atypical or mixed type (g30.8+)').
-icd10('F009','dementia in alzheimer\'s disease, unspecified (g30.9+)').
-icd10('F01','vascular dementia').
-icd10('F010','vascular dementia of acute onset').
-icd10('F011','multi-infarct dementia').
-icd10('F012','subcortical vascular dementia').
-icd10('F013','mixed cortical and subcortical vascular dementia').
-icd10('F018','other vascular dementia').
-icd10('F019','vascular dementia, unspecified').
-icd10('F02','dementia in other diseases classified elsewhere').
-icd10('F020','dementia in pick\'s disease (g31.0+)').
-icd10('F021','dementia in creutzfeldt-jakob disease (a81.0+)').
-icd10('F022','dementia in huntington\'s disease (g10+)').
-icd10('F023','dementia in parkinson\'s disease (g20+)').
-icd10('F024','dementia in human immunodeficiency virus [hiv] disease (b22.0+)').
-icd10('F028','dementia in other specified diseases classified elsewhere').
-icd10('F03','unspecified dementia').
-icd10('F04','organic amnesic syndrome, not induced by alcohol and other psychoactive substances').
-icd10('F040','post traumatic amnesia').
-icd10('F0400','post traumatic amnesia, unspecified').
-icd10('F0401','post traumatic amnesia, duration < 24 hours').
-icd10('F0402','post traumatic amnesia, duration >= 24 hours and <14 days').
-icd10('F0403','post traumatic amnesia, duration >=14 days').
-icd10('F049','amnesic sydnrome, unspecified').
-icd10('F05','delirium, not induced by alcohol and other psychoactive substances').
-icd10('F050','delirium not superimposed on dementia, so described').
-icd10('F051','delirium superimposed on dementia').
-icd10('F058','other delirium').
-icd10('F059','delirium, unspecified').
-icd10('F06','other mental disorders due to brain damage and dysfunction and to physical disease').
-icd10('F060','organic hallucinosis').
-icd10('F061','organic catatonic disorder').
-icd10('F062','organic delusional [schizophrenia-like] disorder').
-icd10('F063','organic mood [affective] disorders').
-icd10('F064','organic anxiety disorder').
-icd10('F065','organic dissociative disorder').
-icd10('F066','organic emotionally labile [asthenic] disorder').
-icd10('F067','mild cognitive disorder').
-icd10('F068','other specified mental disorders due to brain damage and dysfunction and to physical disease').
-icd10('F069','unspecified mental disorder due to brain damage and dysfunction and to physical disease').
-icd10('F07','personality and behavioural disorders due to brain disease, damage and dysfunction').
-icd10('F070','organic personality disorder').
-icd10('F071','postencephalitic syndrome').
-icd10('F072','postconcussional syndrome').
+icd10('F00','dementia in alzheimer\'s disease (g30.-+)',[],[]).
+icd10('F000','dementia in alzheimer\'s disease with early onset (g30.0+)',[alzheimer,dementia],[]).
+icd10('F001','dementia in alzheimer\'s disease with late onset (g30.1+)',[alzheimer,dementia],[]).
+icd10('F002','dementia in alzheimer\'s disease, atypical or mixed type (g30.8+)',[alzheimer,dementia],[]).
+icd10('F009','dementia in alzheimer\'s disease, unspecified (g30.9+)',[alzheimer,dementia],[]).
+icd10('F01','vascular dementia',[vascular,dementia],[]).
+icd10('F010','vascular dementia of acute onset',[vascular,dementia],[]).
+icd10('F011','multi-infarct dementia',[dementia,infarct],[]).
+icd10('F012','subcortical vascular dementia',[dementia,subcortical],[]).
+icd10('F013','mixed cortical and subcortical vascular dementia',[dementia,cortical,subcortical],[]).
+icd10('F018','other vascular dementia',[vascular,dementia],[]).
+icd10('F019','vascular dementia, unspecified',[vascular,dementia],[]).
+icd10('F02','dementia in other diseases classified elsewhere',[],[]).
+icd10('F020','dementia in pick\'s disease (g31.0+)',[pick,dementia],[]).
+icd10('F021','dementia in creutzfeldt-jakob disease (a81.0+)',[creutzfeldt,jakob,dementia],[]).
+icd10('F022','dementia in huntington\'s disease (g10+)',[huntington,dementia],[]).
+icd10('F023','dementia in parkinson\'s disease (g20+)',[parkinson,dementia],[]).
+icd10('F024','dementia in human immunodeficiency virus [hiv] disease (b22.0+)',[hiv,aids,dementia],[]).
+icd10('F028','dementia in other specified diseases classified elsewhere',[dementia],[]).
+icd10('F03','unspecified dementia',[dementia],[]).
+icd10('F04','organic amnesic syndrome, not induced by alcohol and other psychoactive substances',[],[]).
+icd10('F040','post traumatic amnesia',[amnesia,traumatic,posttraumatic],[]).
+icd10('F0400','post traumatic amnesia, unspecified',[amnesia,traumatic,posttraumatic],[]).
+icd10('F0401','post traumatic amnesia, duration < 24 hours',[amnesia,traumatic,posttraumatic],[]).
+icd10('F0402','post traumatic amnesia, duration >= 24 hours and <14 days',[amnesia,traumatic,posttraumatic],[]).
+icd10('F0403','post traumatic amnesia, duration >=14 days',[amnesia,traumatic,posttraumatic],[]).
+icd10('F049','amnesic sydnrome, unspecified',[amnesic],[]).
+icd10('F05','delirium, not induced by alcohol and other psychoactive substances',[delirium,acute,brain],[]).
+icd10('F050','delirium not superimposed on dementia, so described',[delirium,acute,brain],[]).
+icd10('F051','delirium superimposed on dementia',[delirium,dementia,acute,brain],[]).
+icd10('F058','other delirium',[delirium,acute,brain],[]).
+icd10('F059','delirium, unspecified',[delirium,acute,brain],[]).
+icd10('F06','other mental disorders due to brain damage and dysfunction and to physical disease',[],[]).
+icd10('F060','organic hallucinosis',[hallucinosis],[]).
+icd10('F061','organic catatonic disorder',[catatonic],[]).
+icd10('F062','organic delusional [schizophrenia-like] disorder',[delusion,organic],[]).
+icd10('F063','organic mood [affective] disorders',[mood,affect,organic],[]).
+icd10('F064','organic anxiety disorder',[anxiety,organic],[]).
+icd10('F065','organic dissociative disorder',[dissociative,organic],[]).
+icd10('F066','organic emotionally labile [asthenic] disorder',[labile,emotion,asthenic,organic],[]).
+icd10('F067','mild cognitive disorder',[cognitive,impairment],[]).
+icd10('F068','other specified mental disorders due to brain damage and dysfunction and to physical disease',[],[]).
+icd10('F069','unspecified mental disorder due to brain damage and dysfunction and to physical disease',[],[]).
+icd10('F07','personality and behavioural disorders due to brain disease, damage and dysfunction',[],[]).
+icd10('F070','organic personality disorder',[organic,personality],[]).
+icd10('F071','postencephalitic syndrome',[post,encephalalitic],[]).
+icd10('F072','postconcussional syndrome',[concussion],[]).
 icd10('F078','other organic personality and behavioural disorders due to brain disease, damage and dysfunction').
-icd10('F079','unspecified organic personality and behavioural disorder due to brain disease, damage and dysfunction').
-icd10('F09','unspecified organic or symptomatic mental disorder').
-icd10('F10','mental and behavioural disorders due to use of alcohol').
-icd10('F100','mental and behavioural disorders due to use of alcohol, acute intoxication').
-icd10('F101','mental and behavioural disorders due to use of alcohol, harmful use').
-icd10('F102','mental and behavioural disorders due to use of alcohol, dependence syndrome').
-icd10('F103','mental and behavioural disorders due to use of alcohol, withdrawal state').
-icd10('F104','mental and behavioural disorders due to use of alcohol, withdrawal state with delirium').
-icd10('F105','mental and behavioural disorders due to use of alcohol, psychotic disorder').
-icd10('F106','mental and behavioural disorders due to use of alcohol, amnesic syndrome').
-icd10('F107','mental and behavioural disorders due to use of alcohol, residual and late-onset psychotic disorder').
-icd10('F108','mental and behavioural disorders due to use of alcohol, other mental and behavioural disorders').
-icd10('F109','mental and behavioural disorders due to use of alcohol, unspecified mental and behavioural disorder').
-icd10('F11','mental and behavioural disorders due to use of opioids').
-icd10('F110','mental and behavioural disorders due to use of opioids, acute intoxication').
-icd10('F111','mental and behavioural disorders due to use of opioids, harmful use').
-icd10('F112','mental and behavioural disorders due to use of opioids, dependence syndrome').
-icd10('F113','mental and behavioural disorders due to use of opioids, withdrawal state').
-icd10('F114','mental and behavioural disorders due to use of opioids, withdrawal state with delirium').
-icd10('F115','mental and behavioural disorders due to use of opioids, psychotic disorder').
-icd10('F116','mental and behavioural disorders due to use of opioids, amnesic syndrome').
-icd10('F117','mental and behavioural disorders due to use of opioids, residual and late-onset psychotic disorder').
-icd10('F118','mental and behavioural disorders due to use of opioids, other mental and behavioural disorders').
-icd10('F119','mental and behavioural disorders due to use of opioids, unspecified mental and behavioural disorder').
-icd10('F12','mental and behavioural disorders due to use of cannabinoids').
-icd10('F120','mental and behavioural disorders due to use of cannabinoids, acute intoxication').
-icd10('F121','mental and behavioural disorders due to use of cannabinoids, harmful use').
-icd10('F122','mental and behavioural disorders due to use of cannabinoids, dependence syndrome').
-icd10('F123','mental and behavioural disorders due to use of cannabinoids, withdrawal state').
-icd10('F124','mental and behavioural disorders due to use of cannabinoids, withdrawal state with delirium').
-icd10('F125','mental and behavioural disorders due to use of cannabinoids, psychotic disorder').
-icd10('F126','mental and behavioural disorders due to use of cannabionoids, amnesic syndrome').
-icd10('F127','mental and behavioural disorders due to use of cannabinoids, residual and late-onset psychotic disorder').
-icd10('F128','mental and behavioural disorders due to use of cannabinoids, other mental and behavioural disorders').
-icd10('F129','mental and behavioural disorders due to use of cannabinoids, unspecified mental and behavioural disorder').
-icd10('F13','mental and behavioural disorders due to use of sedatives or hypnotics').
-icd10('F130','mental and behavioural disorders due to use of sedatives or hypnotics, acute intoxication').
-icd10('F131','mental and behavioural disorders due to use of sedatives or hypnotics, harmful use').
-icd10('F132','mental and behavioural disorders due to use of sedatives or hypnotics, dependence syndrome').
-icd10('F133','mental and behavioural disorders due to use of sedatives or hypnotics, withdrawal state').
-icd10('F134','mental and behavioural disorders due to use of sedatives or hypnotics, withdrawal state with delirium').
-icd10('F135','mental and behavioural disorders due to use of sedatives or hypnotics, psychotic disorder').
-icd10('F136','mental and behavioural disorders due to use of sedatives or hypnotics, amnesic syndrome').
-icd10('F137','mental and behavioural disorders due to use of sedatives or hypnotics, residual and late-onset psychotic disorder').
-icd10('F138','mental and behavioural disorders due to use of sedatives or hypnotics, other mental and behavioural disorders').
-icd10('F139','mental and behavioural disorders due to use of sedatives or hypnotics, unspecified mental and behavioural disorder').
-icd10('F14','mental and behavioural disorders due to use of cocaine').
-icd10('F140','mental and behavioural disorders due to use of cocaine, acute intoxication').
-icd10('F141','mental and behavioural disorders due to use of cocaine, harmful use').
-icd10('F142','mental and behavioural disorders due to use of cocaine, dependence syndrome').
-icd10('F143','mental and behavioural disorders due to use of cocaine, withdrawal state').
-icd10('F144','mental and behavioural disorders due to use of cocaine, withdrawal state with delirium').
-icd10('F145','mental and behavioural disorders due to use of cocaine, psychotic disorder').
-icd10('F146','mental and behavioural disorders due to use of cocaine, amnesic syndrome').
-icd10('F147','mental and behavioural disorders due to use of cocaine, residual and late-onset psychotic disorder').
-icd10('F148','mental and behavioural disorders due to use of cocaine, other mental and behavioural disorders').
-icd10('F149','mental and behavioural disorders due to use of cocaine, unspecified mental and behavioural disorder').
-icd10('F15','mental and behavioural disorders due to use of other stimulants, including caffeine').
-icd10('F150','mental and behavioural disorders due to use of other stimulants including caffeine, acute intoxication').
-icd10('F151','mental and behavioural disorders due to use of other stimulants including caffeine, harmful use').
-icd10('F152','mental and behavioural disorders due to use of other stimulants including caffeine, dependence syndrome').
-icd10('F153','mental and behavioural disorders due to use of other stimulants including caffeine, withdrawal state').
-icd10('F154','mental and behavioural disorders due to use of other stimulants including caffeine, withdrawal state with delirium').
-icd10('F155','mental and behavioural disorders due to use of other stimulants including caffeine, psychotic disorder').
-icd10('F156','mental and behavioural disorders due to use of other stimulants including caffeine, amnesic syndrome').
-icd10('F157','mental and behavioural disorders due to use of other stimulants including caffeine, residual and late-onset psychotic disorder').
-icd10('F158','mental and behavioural disorders due to use of other stimulants including caffeine, other mental and behavioural disorders').
-icd10('F159','mental and behavioural disorders due to use of other stimulants including caffeine, unspecified mental and behavioural disorder').
-icd10('F16','mental and behavioural disorders due to use of hallucinogens').
-icd10('F160','mental and behavioural disorders due to use of hallucinogens, acute intoxication').
-icd10('F161','mental and behavioural disorders due to use of hallucinogens, harmful use').
-icd10('F162','mental and behavioural disorders due to use of hallucinogens, dependence syndrome').
-icd10('F163','mental and behavioural disorders due to use of hallucinogens, withdrawal state').
-icd10('F250','schizoaffective disorder, manic type').
-icd10('F164','mental and behavioural disorders due to use of hallucinogens, withdrawal state with delirium').
-icd10('F165','mental and behavioural disorders due to use of hallucinogens, psychotic disorder').
-icd10('F166','mental and behavioural disorders due to use of hallucinogens, amnesic syndrome').
-icd10('F167','mental and behavioural disorders due to use of hallucinogens, residual and late-onset psychotic disorder').
-icd10('F168','mental and behavioural disorders due to use of hallucinogens, other mental and behavioural disorders').
-icd10('F169','mental and behavioural disorders due to use of hallucinogens, unspecified mental and behavioural disorder').
+icd10('F079','unspecified organic personality and behavioural disorder due to brain disease, damage and dysfunction',[],[]).
+icd10('F09','unspecified organic or symptomatic mental disorder',[],[]).
+icd10('F10','mental and behavioural disorders due to use of alcohol',[],[]).
+icd10('F100','alcohol, acute intoxication',[alcohol,intoxication,drunk,etoh],[]).
+icd10('F101','harmful use of alcohol',[alcohol,abuse,harmful,etoh,alocholic],[]).
+icd10('F102','alcohol dependence',[alcohol,dependence,etoh,addiction,alcoholic],[]).
+icd10('F103','alcohol withdrawal',[alcohol,withdrawal,etoh],[]).
+icd10('F104','alcohol, withdrawal state with delirium',[tremens,alcohol,withdrawal,delirium],[dt]).
+icd10('F105','alcohol, psychotic disorder',[alcohol,mania,potu,psychosis,etoh],[]).
+icd10('F106','alcohol amnesic syndrome (korsakoff\'s psychosis)',[alcohol,etoh,korsakoff],[]).
+icd10('F107','alcohol, residual and late-onset psychotic disorder',[alcohol,etoh,psychosis],[]).
+icd10('F108','alcohol, other mental and behavioural disorders',[alcohol,etoh],[]).
+icd10('F109','alcohol, unspecified mental and behavioural disorder',[alcohol,etoh],[]).
+icd10('F11','mental and behavioural disorders due to use of opioids',[],[]).
+icd10('F110','opioids, acute intoxication',[opiate,opioid,heroin,intoxication,nod],[]).
+icd10('F111','opioids, harmful use',[opiate,opioid,heroin,harmful],[]).
+icd10('F112','opioids, dependence syndrome',[opiate,opioid,heroin,dependence,addiction],[]).
+icd10('F113','opioids, withdrawal state',[opiate,opioid,heroin,withdrawal],[]).
+icd10('F114','opioids, withdrawal state with delirium',[opiate,opioid,heroin,withdrawal],[]).
+icd10('F115','opioids, psychotic disorder',[opiate,opioid,heroin,psychosis],[]).
+icd10('F116','opioids, amnesic syndrome',[],[]).
+icd10('F117','opioids, residual and late-onset psychotic disorder',[],[]).
+icd10('F118','opioids, other mental and behavioural disorders',[],[]).
+icd10('F119','opioids, unspecified mental and behavioural disorder',[opioid,opiate,heroin],[]).
+icd10('F12','mental and behavioural disorders due to use of cannabinoids',[],[]).
+icd10('F120','cannabinoids, acute intoxication',[cannabis,marijuara],[]).
+icd10('F121','cannabinoids, harmful use',[cannabis,marijuara,harmful,abuse],[]).
+icd10('F122','cannabinoids, dependence syndrome',[cannabis,dependence,marijuara,addiction],[]).
+icd10('F123','cannabinoids, withdrawal state',[cannabis,withdrawal,marijuara],[]).
+icd10('F124','mental and behavioural disorders due to use of cannabinoids, withdrawal state with delirium',[],[]).
+icd10('F125','cannabinoids, psychotic disorder',[cannabis,psychosis,marijuara],[]).
+icd10('F126','mental and behavioural disorders due to use of cannabionoids, amnesic syndrome',[],[]).
+icd10('F127','mental and behavioural disorders due to use of cannabinoids, residual and late-onset psychotic disorder',[],[]).
+icd10('F128','mental and behavioural disorders due to use of cannabinoids, other mental and behavioural disorders',[],[]).
+icd10('F129','mental and behavioural disorders due to use of cannabinoids, unspecified mental and behavioural disorder',[],[]).
+icd10('F13','mental and behavioural disorders due to use of sedatives or hypnotics',[],[]).
+icd10('F130','sedatives or hypnotics, acute intoxication',[sedative,hypnotic,benzo,intoxication],[]).
+icd10('F131','sedatives or hypnotics, harmful use',[sedative,hypnotic,benzo,harmful,abuse],[]).
+icd10('F132','sedatives or hypnotics, dependence syndrome',[sedative,hypnotic,benzo,dependence,addiction],[]).
+icd10('F133','sedatives or hypnotics, withdrawal state',[sedative,hypnotic,benzo,withdrawal],[]).
+icd10('F134','sedatives or hypnotics, withdrawal state with delirium',[sedative,hypnotic,benzo,withdrawal,delirium],[]).
+icd10('F135','sedatives or hypnotics, psychotic disorder',[],[]).
+icd10('F136','sedatives or hypnotics, amnesic syndrome',[sedative,hypnotic,benzo,amnesic],[]).
+icd10('F137','mental and behavioural disorders due to use of sedatives or hypnotics, residual and late-onset psychotic disorder',[],[]).
+icd10('F138','mental and behavioural disorders due to use of sedatives or hypnotics, other mental and behavioural disorders',[],[]).
+icd10('F139','mental and behavioural disorders due to use of sedatives or hypnotics, unspecified mental and behavioural disorder',[],[]).
+icd10('F14','mental and behavioural disorders due to use of cocaine',[],[]).
+icd10('F140','cocaine, acute intoxication',[cocaine,intoxication],[]).
+icd10('F141','cocaine, harmful use',[cocaine,harmful,abuse],[]).
+icd10('F142','cocaine dependence',[cocaine,dependence,addiction],[]).
+icd10('F143','cocaine, withdrawal state',[cocaine,withdrawal],[]).
+icd10('F144','cocaine, withdrawal state with delirium',[cocaine,withdrawal,delirium],[]).
+icd10('F145','cocaine, psychotic disorder',[cocaine,psychosis],[]).
+icd10('F146','mental and behavioural disorders due to use of cocaine, amnesic syndrome',[],[]).
+icd10('F147','mental and behavioural disorders due to use of cocaine, residual and late-onset psychotic disorder',[],[]).
+icd10('F148','mental and behavioural disorders due to use of cocaine, other mental and behavioural disorders',[],[]).
+icd10('F149','mental and behavioural disorders due to use of cocaine, unspecified mental and behavioural disorder',[],[]).
+icd10('F15','mental and behavioural disorders due to use of other stimulants, including caffeine',[],[]).
+icd10('F150','stimulants including caffeine, acute intoxication',[stimulant,ice,amphetamine,meth,ectasy,intoxication],[]).
+icd10('F151','stimulants including caffeine, harmful use',[stimulant,ice,amphetamine,meth,ectasy,harmful,abuse,caffeine],[]).
+icd10('F152','stimulants including caffeine, dependence syndrome',[stimulant,ice,amphetamine,meth,ectasy,dependence,addiction],[]).
+icd10('F153','stimulants including caffeine, withdrawal state',[stimulant,ice,amphetamine,meth,ectasy,withdrawal,caffeine],[]).
+icd10('F154','stimulants including caffeine, withdrawal state with delirium',[stimulant,ice,amphetamine,meth,ectasy,withdrawal,delirium],[]).
+icd10('F155','stimulants including caffeine, psychotic disorder',[stimulant,ice,amphetamine,meth,ectasy,psychosis],[]).
+icd10('F156','stimulants including caffeine, amnesic syndrome',[stimulant,ice,amphetamine,meth,ectasy,amnesic],[]).
+icd10('F157','stimulants including caffeine, residual and late-onset psychotic disorder',,[stimulant,ice,amphetamine,meth,ectasy,psychosis],[]).
+icd10('F158','stimulants including caffeine, other mental and behavioural disorders',,[stimulant,ice,amphetamine,meth,ectasy],[]).
+icd10('F159','stimulants including caffeine, unspecified mental and behavioural disorder',[stimulant,ice,amphetamine,meth,ectasy],[]).
+icd10('F16','mental and behavioural disorders due to use of hallucinogens',[],[]).
+icd10('F160','hallucinogens, acute intoxication',[hallucinogen,lsd,mushroom,intoxication],[]).
+icd10('F161','hallucinogens, harmful use',[hallucinogen,lsd,mushroom,harmful,abuse],[]).
+icd10('F162','hallucinogens dependence syndrome',[hallucinogen,lsd,mushroom,dependence,addiction],[]).
+icd10('F163','hallucinogens, withdrawal state',[hallucinogen,lsd,mushroom,withdrawal],[]).
+icd10('F250','schizoaffective disorder, manic type',[schizoaffective,cycloid],[szad]).
+icd10('F164','hallucinogens, withdrawal state with delirium',[hallucinogen,lsd,mushroom,delirium],[]).
+icd10('F165','hallucinogens, psychotic disorder',[hallucnogen,mushroom,lsd,psychosis],[]).
+icd10('F166','hallucinogens, amnesic syndrome',[hallucinogen,mushroom,lsd,amnesic],[]).
+icd10('F167','hallucinogens, residual and late-onset psychotic disorder',[hallucinogen,mushroom,lsd,psychosis],[]).
+icd10('F168','hallucinogens, other mental and behavioural disorders',[hallucinogen,lsd,mushroom],[]).
+icd10('F169','hallucinogens, unspecified mental and behavioural disorder',[hallucination,lsd,mushroom],[]).
 icd10('F17','mental and behavioural disorders due to use of tobacco').
-icd10('F170','mental and behavioural disorders due to use of tobacco, acute intoxication').
-icd10('F171','mental and behavioural disorders due to use of tobacco, harmful use').
-icd10('F172','mental and behavioural disorders due to use of tobacco, dependence syndrome').
-icd10('F173','mental and behavioural disorders due to use of tobacco, withdrawal state').
-icd10('F174','mental and behavioural disorders due to use of tobacco, withdrawal state with delirium').
-icd10('F175','mental and behavioural disorders due to use of tobacco, psychotic disorder').
-icd10('F176','mental and behavioural disorders due to use of tobacco, amnesic syndrome').
-icd10('F177','mental and behavioural disorders due to use of tobacco, residual and late-onset psychotic disorder').
-icd10('F178','mental and behavioural disorders due to use of tobacco, other mental and behavioural disorders').
-icd10('F179','mental and behavioural disorders due to use of tobacco, unspecified mental and behavioural disorder').
-icd10('F18','mental and behavioural disorders due to use of volatile solvents').
-icd10('F180','mental and behavioural disorders due to use of volatile solvents, acute intoxication').
-icd10('F181','mental and behavioural disorders due to use of volatile solvents, harmful use').
-icd10('F182','mental and behavioural disorders due to use of volatile solvents, dependence syndrome').
-icd10('F183','mental and behavioural disorders due to use of volatile solvents, withdrawal state').
-icd10('F184','mental and behavioural disorders due to use of volatile solvents, withdrawal state with delirium').
-icd10('F185','mental and behavioural disorders due to use of volatile solvents, psychotic disorder').
-icd10('F186','mental and behavioural disorders due to use of volatile solvents, amnesic syndrome').
-icd10('F187','mental and behavioural disorders due to use of volatile solvents, residual and late-onset psychotic disorder').
-icd10('F188','mental and behavioural disorders due to use of volatile solvents, other mental and behavioural disorders').
-icd10('F189','mental and behavioural disorders due to use of volatile solvents, unspecified mental and behavioural disorder').
-icd10('F19','mental and behavioural disorders due to multiple drug use and use of other psychoactive substances').
-icd10('F190','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, acute intoxication').
-icd10('F191','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, harmful use').
-icd10('F192','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, dependence syndrome').
-icd10('F193','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, withdrawal state').
-icd10('F194','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, withdrawal state with delirium').
-icd10('F195','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, psychotic disorder').
-icd10('F196','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, amnesic syndrome').
-icd10('F197','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, residual and late-onset psychotic disorder').
-icd10('F198','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, other mental and behavioural disorders').
-icd10('F199','mental and behavioural disorders due to multiple drug use and use of psychoactive substances, unspecified mental and behavioural disorder').
-icd10('F20','schizophrenia').
-icd10('F200','paranoid schizophrenia').
-icd10('F201','hebephrenic schizophrenia').
-icd10('F202','catatonic schizophrenia').
-icd10('F203','undifferentiated schizophrenia').
-icd10('F204','post-schizophrenic depression').
-icd10('F205','residual schizophrenia').
-icd10('F206','simple schizophrenia').
-icd10('F208','other schizophrenia').
-icd10('F209','schizophrenia, unspecified').
-icd10('F21','schizotypal disorder').
-icd10('F22','persistent delusional disorders').
-icd10('F220','delusional disorder').
-icd10('F228','other persistent delusional disorders').
-icd10('F229','persistent delusional disorder, unspecified').
-icd10('F23','acute and transient psychotic disorders').
-icd10('F230','acute polymorphic psychotic disorder without symptoms of schizophrenia').
-icd10('F231','acute polymorphic psychotic disorder with symptoms of schizophrenia').
-icd10('F232','acute schizophrenia-like psychotic disorder').
-icd10('F233','other acute predominantly delusional psychotic disorders').
-icd10('F238','other acute and transient psychotic disorders').
-icd10('F239','acute and transient psychotic disorder, unspecified').
-icd10('F24','induced delusional disorder').
-icd10('F25','schizoaffective disorders').
-icd10('F251','schizoaffective disorder, depressive type').
-icd10('F252','schizoaffective disorder, mixed type').
-icd10('F258','other schizoaffective disorders').
-icd10('F259','schizoaffective disorder, unspecified').
-icd10('F28','other nonorganic psychotic disorders').
-icd10('F29','unspecified nonorganic psychosis').
-icd10('F30','manic episode').
-icd10('F300','hypomania').
-icd10('F301','mania without psychotic symptoms').
-icd10('F302','mania with psychotic symptoms').
-icd10('F308','other manic episodes').
-icd10('F309','manic episode, unspecified').
-icd10('F31','bipolar affective disorder').
-icd10('F310','bipolar affective disorder, current episode hypomanic').
-icd10('F311','bipolar affective disorder, current episode manic without psychotic symptoms').
-icd10('F312','bipolar affective disorder, current episode manic with psychotic symptoms').
-icd10('F313','bipolar affective disorder, current episode mild or moderate depression').
-icd10('F314','bipolar affective disorder, current episode severe depression without psychotic symptoms').
-icd10('F315','bipolar affective disorder, current episode severe depression with psychotic symptoms').
-icd10('F316','bipolar affective disorder, current episode mixed').
-icd10('F317','bipolar affective disorder, currently in remission').
-icd10('F318','other bipolar affective disorders').
-icd10('F319','bipolar affective disorder, unspecified').
-icd10('F32','depressive episode').
-icd10('F320','mild depressive episode').
-icd10('F321','moderate depressive episode').
-icd10('F322','severe depressive episode without psychotic symptoms').
-icd10('F323','severe depressive episode with psychotic symptoms').
-icd10('F328','other depressive episodes').
-icd10('F329','depressive episode, unspecified').
-icd10('F33','recurrent depressive disorder').
-icd10('F330','recurrent depressive disorder, current episode mild').
-icd10('F331','recurrent depressive disorder, current episode moderate').
-icd10('F332','recurrent depressive disorder, current episode severe without psychotic symptoms').
-icd10('F333','recurrent depressive disorder, current episode severe with psychotic symptoms').
-icd10('F334','recurrent depressive disorder, currently in remission').
-icd10('F338','other recurrent depressive disorders').
-icd10('F339','recurrent depressive disorder, unspecified').
-icd10('F34','persistent mood [affective] disorders').
-icd10('F340','cyclothymia').
-icd10('F341','dysthymia').
-icd10('F348','other persistent mood [affective] disorders').
-icd10('F349','persistent mood [affective] disorder, unspecified').
-icd10('F38','other mood [affective] disorders').
-icd10('F380','other single mood [affective] disorders').
-icd10('F381','other recurrent mood [affective] disorders').
-icd10('F388','other specified mood [affective] disorders').
-icd10('F39','unspecified mood [affective] disorder').
-icd10('F40','phobic anxiety disorders').
-icd10('F400','agoraphobia').
-icd10('F4000','agoraphobia without mention of panic disorder').
-icd10('F4001','agoraphobia with panic disorder').
-icd10('F401','social phobias').
-icd10('F402','specific (isolated) phobias').
-icd10('F408','other phobic anxiety disorders').
-icd10('F409','phobic anxiety disorder, unspecified').
-icd10('F41','other anxiety disorders').
-icd10('F410','panic disorder [episodic paroxysmal anxiety]').
-icd10('F411','generalised anxiety disorder').
-icd10('F412','mixed anxiety and depressive disorder').
-icd10('F413','other mixed anxiety disorders').
-icd10('F418','other specified anxiety disorders').
-icd10('F419','anxiety disorder, unspecified').
-icd10('F42','obsessive-compulsive disorder').
-icd10('F420','predominantly obsessional thoughts or ruminations').
-icd10('F421','predominantly compulsive acts [obsessional rituals]').
-icd10('F422','mixed obsessional thoughts and acts').
-icd10('F428','other obsessive-compulsive disorders').
-icd10('F429','obsessive-compulsive disorder, unspecified').
-icd10('F43','reaction to severe stress, and adjustment disorders').
-icd10('F430','acute stress reaction').
-icd10('F431','post-traumatic stress disorder').
-icd10('F432','adjustment disorders').
-icd10('F438','other reactions to severe stress').
-icd10('F439','reaction to severe stress, unspecified').
-icd10('F44','dissociative [conversion] disorders').
-icd10('F440','dissociative amnesia').
-icd10('F441','dissociative fugue').
-icd10('F442','dissociative stupor').
-icd10('F443','trance and possession disorders').
-icd10('F444','dissociative motor disorders').
-icd10('F445','dissociative convulsions').
-icd10('F446','dissociative anaesthesia and sensory loss').
-icd10('F447','mixed dissociative [conversion] disorders').
-icd10('F448','other dissociative [conversion] disorders').
-icd10('F4480','ganser\'s syndrome').
-icd10('F4481','multiple personality disorder').
-icd10('F4482','transient dissociate [conversion] disorders occurring in childhood and adolescence').
-icd10('F4488','other specified dissociative [conversion] disorders').
-icd10('F449','dissociative [conversion] disorder, unspecified').
-icd10('F45','somatoform disorders').
-icd10('F450','somatisation disorder').
-icd10('F451','undifferentiated somatoform disorder').
-icd10('F452','hypochondriacal disorder').
+icd10('F170','mental and behavioural disorders due to use of tobacco, acute intoxication',[],[]).
+icd10('F171','tobacco, harmful use',[tobacco,cigarette,smoker,harmful,abuse],[]).
+icd10('F172','tobacco, dependence syndrome',[tobacco,cigarette,smoker,dependence,addiction],[]).
+icd10('F173','mental and behavioural disorders due to use of tobacco, withdrawal state',[],[]).
+icd10('F174','mental and behavioural disorders due to use of tobacco, withdrawal state with delirium',[],[]).
+icd10('F175','mental and behavioural disorders due to use of tobacco, psychotic disorder',[],[]).
+icd10('F176','mental and behavioural disorders due to use of tobacco, amnesic syndrome',[],[]).
+icd10('F177','mental and behavioural disorders due to use of tobacco, residual and late-onset psychotic disorder',[],[]).
+icd10('F178','mental and behavioural disorders due to use of tobacco, other mental and behavioural disorders',[],[]).
+icd10('F179','mental and behavioural disorders due to use of tobacco, unspecified mental and behavioural disorder',[],[]).
+icd10('F18','mental and behavioural disorders due to use of volatile solvents',[],[]).
+icd10('F180','volatile solvents, acute intoxication',[solvent,glue,petrol,intoxication],[]).
+icd10('F181','volatile solvents, harmful use',[solvent,glue,petrol,harmful,abuse],[]).
+icd10('F182','volatile solvents, dependence syndrome',[solvent,glue,petrol,dependence,addiction],[]).
+icd10('F183','volatile solvents, withdrawal state',[solvent,glue,petrol,withdrawal],[]).
+icd10('F184','volatile solvents, withdrawal state with delirium',[solvent,glue,petrol,withdrawal],[]).
+icd10('F185','volatile solvents, psychotic disorder',[solvent,glue,petrol,psychosis],[]).
+icd10('F186','volatile solvents, amnesic syndrome',[solvent,glue,petrol,amnesic],[]).
+icd10('F187','volatile solvents, residual and late-onset psychotic disorder',[solvent,glue,petrol,psychosis],[]).
+icd10('F188','volatile solvents, other mental and behavioural disorders',[solvent,glue,petrol],[]).
+icd10('F189','volatile solvents, unspecified mental and behavioural disorder',[solvent,glue,petrol],[]).
+icd10('F19','multiple drug use and use of other psychoactive substances').
+icd10('F190','multiple drug use, acute intoxication',[polydrug,multiple,intoxication],[]).
+icd10('F191','multiple drug use, harmful use',[polydrug,multiple,harmful,abuse],[]).
+icd10('F192','multiple drug use, dependence',[polydrug,multiple,dependence,addiction],[]).
+icd10('F193','multiple drug use, withdrawal state',[polydrug,multiple,withdrawal],[]).
+icd10('F194','ultiple drug use, withdrawal state with delirium',[polydrug,multiple,withdrawal,delirium],[]).
+icd10('F195','multiple drug use and use, psychotic disorder',[polydrug,multiple,psychosis],[]).
+icd10('F196','ultiple drug use, amnesic syndrome',[polydrug,multiple,amnesic],[]).
+icd10('F197','multiple drug use, residual and late-onset psychotic disorder',[polydrug,multiple,psychosis],[]).
+icd10('F198','multiple drug use, other mental and behavioural disorders',[polydrug,multiple,drug],[]).
+icd10('F199','multiple drug use, unspecified mental and behavioural disorder',[polydrug,multiple,drug],[]).
+icd10('F20','schizophrenia',[],[]).
+icd10('F200','paranoid schizophrenia',[schizophrenia,paranoid],[scz]).
+icd10('F201','hebephrenic schizophrenia',[schizophrenia,hebephrenia],[]).
+icd10('F202','catatonic schizophrenia',[schizophrenia,catatonia],[]).
+icd10('F203','undifferentiated schizophrenia',[schizophrenia,undifferentiated],[]).
+icd10('F204','post-schizophrenic depression',[schizophrenia,depression],[]).
+icd10('F205','residual schizophrenia',[schizophrenia,residual,chronic],[]).
+icd10('F206','simple schizophrenia',[schizophrenia,simple],[]).
+icd10('F208','other schizophrenia',[],[]).
+icd10('F209','schizophrenia, unspecified',[schizophrenia],[]).
+icd10('F21','schizotypal disorder',[schizotypal],[]).
+icd10('F22','persistent delusional disorders',[],[]).
+icd10('F220','delusional disorder',[delusional],[]).
+icd10('F228','other persistent delusional disorders',[],[]).
+icd10('F229','persistent delusional disorder, unspecified',[],[]).
+icd10('F23','acute and transient psychotic disorders',[],[]).
+icd10('F230','acute polymorphic psychotic disorder without symptoms of schizophrenia',[polymorphic,psychotic,bouffe,delirante],[]).
+icd10('F231','acute polymorphic psychotic disorder with symptoms of schizophrenia',[polymorphic,psychosis,schiophrenia],[]).
+icd10('F232','acute schizophrenia-like psychotic disorder',[schizophreniform,psychosis],[]).
+icd10('F233','other acute predominantly delusional psychotic disorders',[delusional,psychosis],[]).
+icd10('F238','other acute and transient psychotic disorders',[acute,transient,psychosis],[]).
+icd10('F239','acute and transient psychotic disorder, unspecified',[acute,transient,psychosis],[]).
+icd10('F24','induced delusional disorder',[delusional],[]).
+icd10('F25','schizoaffective disorders',[],[]).
+icd10('F251','schizoaffective disorder, depressive type',[schizoaffective,depressive],[szad]).
+icd10('F252','schizoaffective disorder, mixed type',[schizoaffective,mixed],[szad]).
+icd10('F258','other schizoaffective disorders',[schzioaffective,other],[]).
+icd10('F259','schizoaffective disorder, unspecified',[schizoaffective],[szad]).
+icd10('F28','other nonorganic psychotic disorders',[psychosis,other],[]).
+icd10('F29','unspecified nonorganic psychosis',[psychosis,functional],[]).
+icd10('F30','manic episode',[],[]).
+icd10('F300','hypomania',[hypomania],[]).
+icd10('F301','mania without psychotic symptoms',[mania],[]).
+icd10('F302','mania with psychotic symptoms',[mania],[]).
+icd10('F308','other manic episodes',[mania],[]).
+icd10('F309','manic episode, unspecified',[mania],[]).
+icd10('F31','bipolar affective disorder',[],[]).
+icd10('F310','bipolar affective disorder, current episode hypomanic',[bipolar,hypomania],[]).
+icd10('F311','bipolar affective disorder, current episode manic without psychotic symptoms',[bipolar,mania],[]).
+icd10('F312','bipolar affective disorder, current episode manic with psychotic symptoms',[bipolar,mania,psychotic],[]).
+icd10('F313','bipolar affective disorder, current episode mild or moderate depression',[bipolar,depression],[]).
+icd10('F314','bipolar affective disorder, current episode severe depression without psychotic symptoms',[bipolar,depression],[]).
+icd10('F315','bipolar affective disorder, current episode severe depression with psychotic symptoms',[bipolar,depression,psychosis],[]).
+icd10('F316','bipolar affective disorder, current episode mixed',[bipolar,mixed],[]).
+icd10('F317','bipolar affective disorder, currently in remission',[bipolar,stable,remission],[bpad]).
+icd10('F318','other bipolar affective disorders',[bipolar,other],[]).
+icd10('F319','bipolar affective disorder, unspecified',[bipolar],[bpad]).
+icd10('F32','depressive episode',[],[mde]).
+icd10('F320','mild depressive episode',[depression],[]).
+icd10('F321','moderate depressive episode',[depression],[]).
+icd10('F322','severe depressive episode without psychotic symptoms',[depression],[]).
+icd10('F323','severe depressive episode with psychotic symptoms',[depression,psychotic],[]).
+icd10('F328','other depressive episodes',[depression,other],[]).
+icd10('F329','depressive episode, unspecified',[depression],[]).
+icd10('F33','recurrent depressive disorder',[depression],[]).
+icd10('F330','recurrent depressive disorder, current episode mild',[depression],[]).
+icd10('F331','recurrent depressive disorder, current episode moderate',[depression],[]).
+icd10('F332','recurrent depressive disorder, current episode severe without psychotic symptoms',[depression],[]).
+icd10('F333','recurrent depressive disorder, current episode severe with psychotic symptoms',[depression,psychosis],[]).
+icd10('F334','recurrent depressive disorder, currently in remission',[depression,remission],[]).
+icd10('F338','other recurrent depressive disorders',[depression,other],[]).
+icd10('F339','recurrent depressive disorder, unspecified',[depression],[]).
+icd10('F34','persistent mood [affective] disorders',[],[]).
+icd10('F340','cyclothymia',[cyclothymia],[]).
+icd10('F341','dysthymia',[dysthymia],[]).
+icd10('F348','other persistent mood [affective] disorders',[],[]).
+icd10('F349','persistent mood [affective] disorder, unspecified',[],[]).
+icd10('F38','other mood [affective] disorders',[],[]).
+icd10('F380','other single mood [affective] disorders',[],[]).
+icd10('F381','other recurrent mood [affective] disorders',[],[]).
+icd10('F388','other specified mood [affective] disorders',[],[]).
+icd10('F39','unspecified mood [affective] disorder',[mood,affect],[]).
+icd10('F40','phobic anxiety disorders',[],[]).
+icd10('F400','agoraphobia',[agorapobia],[]).
+icd10('F4000','agoraphobia without mention of panic disorder',[agorapobia],[]).
+icd10('F4001','agoraphobia with panic disorder',[panic,agoraphobia],[]).
+icd10('F401','social phobias',[social,anxiety,phobia],[]).
+icd10('F402','specific (isolated) phobias',[specific,phobia],[]).
+icd10('F408','other phobic anxiety disorders',[anxiety,neurotic],[]).
+icd10('F409','phobic anxiety disorder, unspecified',[anxiety,neurotic,phobic],[]).
+icd10('F41','other anxiety disorders',[],[]).
+icd10('F410','panic disorder [episodic paroxysmal anxiety]',[panic],[]).
+icd10('F411','generalised anxiety disorder',[generalised,anxiety,neurotic],[]).
+icd10('F412','mixed anxiety and depressive disorder',[mixed,anxiety,depression,cothymia],[]).
+icd10('F413','other mixed anxiety disorders',[mixed,anxiety],[]).
+icd10('F418','other specified anxiety disorders',[anxiety],[]).
+icd10('F419','anxiety disorder, unspecified',[anxiety,neurotic,neurosis],[]).
+icd10('F42','obsessive-compulsive disorder',[],[]).
+icd10('F420','predominantly obsessional thoughts or ruminations',[obsessive,compulsive,folie,doute],[ocd]).
+icd10('F421','predominantly compulsive acts [obsessional rituals]',[obsessive,compulsive,folie,doute],[ocd]).
+icd10('F422','mixed obsessional thoughts and acts',[obsessive,compulsive,folie,doute],[ocd]).
+icd10('F428','other obsessive-compulsive disorders',[obsessive,compulsive,folie,doute],[ocd]).
+icd10('F429','obsessive-compulsive disorder, unspecified',[obsessive,compulsive,folie,doute],[ocd]).
+icd10('F43','reaction to severe stress, and adjustment disorders',[],[]).
+icd10('F430','acute stress reaction',[stress],[asd]).
+icd10('F431','post-traumatic stress disorder',[stress,traumatic],[ptsd]).
+icd10('F432','adjustment disorders',[adjustment],[]).
+icd10('F438','other reactions to severe stress',[stress],[]).
+icd10('F439','reaction to severe stress, unspecified',[stress],[]).
+icd10('F44','dissociative [conversion] disorders',[],[]).
+icd10('F440','dissociative amnesia',[amnesia,dissociative],[]).
+icd10('F441','dissociative fugue',fugue,dissociative],[]).
+icd10('F442','dissociative stupor',[stupor,dissociative],[]).
+icd10('F443','trance and possession disorders',[trance,possession],[]).
+icd10('F444','dissociative motor disorders',[dissociative,hysterical,paralysis,conversion],[]).
+icd10('F445','dissociative convulsions',[convulsion,pseudoseizure],[]).
+icd10('F446','dissociative anaesthesia and sensory loss',[dissociative,hysterical,conversion],[]).
+icd10('F447','mixed dissociative [conversion] disorders',[dissociative,conversion],[]).
+icd10('F448','other dissociative [conversion] disorders',[dissociative,conversion],[]).
+icd10('F4480','ganser\'s syndrome',[ganser],[]).
+icd10('F4481','multiple personality disorder',[personality,multiple],[mpd]).
+icd10('F4482','transient dissociate [conversion] disorders occurring in childhood and adolescence',[dissociative,transient,conversion],[]).
+icd10('F4488','other specified dissociative [conversion] disorders',[dissociative,conversion],[]).
+icd10('F449','dissociative [conversion] disorder, unspecified',[dissociation,conversion],[]).
+icd10('F45','somatoform disorders',[],[]).
+icd10('F450','somatisation disorder',[somatisation,briquet],[]).
+icd10('F451','undifferentiated somatoform disorder',[somatoform],[]).
+icd10('F452','hypochondriacal disorder',[hypochondriacal],[]).
 icd10('F453','somatoform autonomic dysfunction').
 icd10('F4530','somatoform autonomic dysfunction, unspecified organ or system').
 icd10('F4531','somatoform autonomic dysfunction, heart and cardiovascular system').
@@ -15068,322 +15068,322 @@ icd10('X71','intentional self-harm by drowning and submersion').
 icd10('X72','intentional self-harm by handgun discharge').
 icd10('X74','intentional self-harm by other and unspecified firearm discharge').
 icd10('X741','intentional self-harm by air rifle discharge').
-icd10('X742','intentional self-harm by shotgun discharge').
-icd10('X743','intentional self-harm by small calibre rifle discharge').
-icd10('X744','intentional self-harm by large calibre rifle').
-icd10('X749','intentional self-harm by other and unspecified firearm discharge').
-icd10('X75','intentional self-harm by explosive material').
-icd10('X76','intentional self-harm by smoke, fire and flames').
-icd10('X77','intentional self-harm by steam, hot vapours and hot objects').
-icd10('X78','intentional self-harm by sharp object').
-icd10('X79','intentional self-harm by blunt object').
-icd10('X80','intentional self-harm by jumping from a high place').
-icd10('X81','intentional self-harm by jumping or lying before moving object').
-icd10('X82','intentional self-harm by crashing of motor vehicle').
-icd10('X83','intentional self-harm by other specified means').
-icd10('X84','intentional self-harm by unspecified means').
-icd10('X85','assault by drugs, medicaments and biological substances').
-icd10('X86','assault by corrosive substance').
-icd10('X87','assault by pesticides').
-icd10('X88','assault by gases and vapours').
-icd10('X89','assault by other specified chemicals and noxious substances').
-icd10('X90','assault by unspecified chemical or noxious substance').
-icd10('X91','assault by hanging, strangulation and suffocation').
-icd10('X92','assault by drowning and submersion').
-icd10('X93','assault by handgun discharge').
-icd10('X95','assault by other and unspecified firearm discharge').
-icd10('X951','assault by air rifle discharge').
-icd10('X952','assault by shotgun discharge').
-icd10('X953','assault by small calibre rifle discharge').
-icd10('X954','assault by large calibre rifle discharge').
-icd10('X959','assault by other and unspecified firearms').
-icd10('X96','assault by explosive material').
-icd10('X97','assault by smoke, fire and flames').
-icd10('X98','assault by steam, hot vapours and hot objects').
-icd10('X99','assault by sharp object').
-icd10('Y00','assault by blunt object').
-icd10('Y01','assault by pushing from high place').
-icd10('Y02','assault by pushing or placing victim before moving object').
-icd10('Y03','assault by crashing of motor vehicle').
-icd10('Y04','assault by bodily force').
-icd10('Y05','sexual assault by bodily force').
-icd10('Y06','neglect and abandonment').
-icd10('Y060','neglect and abandonment, by spouse or partner').
-icd10('Y061','neglect and abandonment, by parent').
-icd10('Y062','neglect and abandonment, by acquaintance or friend').
-icd10('Y068','neglect and abandonment, by other specified persons').
-icd10('Y069','neglect and abandonment, by unspecified person').
-icd10('Y07','other maltreatment syndromes').
-icd10('Y071','other maltreatment syndromes, by parent').
-icd10('Y072','other maltreatment syndromes, by acquaintance or friend').
-icd10('Y073','other maltreatment syndromes, by official authorities').
-icd10('Y078','other maltreatment syndromes, by other specified persons').
-icd10('Y079','other maltreatment syndromes, by unspecified person').
-icd10('Y08','assault by other specified means').
-icd10('Y09','assault by unspecified means').
-icd10('Y10','poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics, undetermined intent').
-icd10('Y11','poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified, undetermined intent').
-icd10('Y12','poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified, undetermined intent').
-icd10('Y13','poisoning by and exposure to other drugs acting on the autonomic nervous system, undetermined intent').
-icd10('Y14','poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined intent').
-icd10('Y15','poisoning by and exposure to alcohol, undetermined intent').
-icd10('Y16','poisoning by and exposure to organic solvents and halogenated hydrocarbons and their vapours, undetermined intent').
-icd10('Y17','poisoning by and exposure to other gases and vapours, undetermined intent').
-icd10('Y18','poisoning by and exposure to pesticides, undetermined intent').
-icd10('Y19','poisoning by and exposure to other and unspecified chemicals and noxious substances, undetermined intent').
-icd10('Y20','hanging, strangulation and suffocation, undetermined intent').
-icd10('Y21','drowning and submersion, undetermined intent').
-icd10('Y22','handgun discharge, undetermined intent').
-icd10('Y24','other and unspecified firearm discharge, undetermined intent').
-icd10('Y241','air rifle discharge, undetermined intent').
-icd10('Y242','shotgun discharge, undetermined intent').
-icd10('Y243','small calibre rifle discharge, undetermined intent').
-icd10('Y244','large calibre rifle discharge, undetermined intent').
-icd10('Y249','discharge from other and unspecified firearms, undetermined intent').
-icd10('Y25','contact with explosive material, undetermined intent').
-icd10('Y26','exposure to smoke, fire and flames, undetermined intent').
-icd10('Y27','contact with steam, hot vapours and hot objects, undetermined intent').
-icd10('Y28','contact with sharp object, undetermined intent').
-icd10('Y29','contact with blunt object, undetermined intent').
-icd10('Y30','falling, jumping or pushed from a high place, undetermined intent').
-icd10('Y31','falling, lying or running before or into moving object, undetermined intent').
-icd10('Y32','crashing of motor vehicle, undetermined intent').
-icd10('Y33','other specified events, undetermined intent').
-icd10('Y34','unspecified event, undetermined intent').
-icd10('Y35','legal intervention').
-icd10('Y350','legal intervention involving firearm discharge').
-icd10('Y3501','legal intervention involving handgun discharge').
-icd10('Y3502','legal intervention involving air rifle discharge').
-icd10('Y3503','legal intervention involving shotgun discharge').
-icd10('Y3504','legal intervention involving small calibre rifle discharge').
-icd10('Y3505','legal intervention involving large calibre rifle discharge').
-icd10('Y3509','legal intervention involving discharge from other and unspecified firearms').
-icd10('Y351','legal intervention involving explosives').
-icd10('Y352','legal intervention involving gas').
-icd10('Y353','legal intervention involving blunt objects').
-icd10('Y354','legal intervention involving sharp objects').
-icd10('Y355','legal execution').
-icd10('Y356','legal intervention involving other specified means').
-icd10('Y357','legal intervention, means unspecified').
-icd10('Y36','operations of war').
-icd10('Y360','war operations involving explosion of marine weapons').
-icd10('Y361','war operations involving destruction of aircraft').
-icd10('Y362','war operations involving other explosions and fragments').
-icd10('Y363','war operations involving fires, conflagrations and hot substances').
-icd10('Y364','war operations involving firearm discharge and other forms of conventional warfare').
-icd10('Y3641','war operations involving handgun discharge').
-icd10('Y3642','war operations involving air rifle discharge').
-icd10('Y3643','war operations involving shotgun discharge').
-icd10('Y3644','war operations involving small calibre rifle discharge').
-icd10('Y3645','war operations involving large calibre rifle discharge').
-icd10('Y3649','war operations involving discharge from other and unspecified firearms and other forms of conventional warfare').
-icd10('Y365','war operations involving nuclear weapons').
-icd10('Y366','war operations involving biological weapons').
-icd10('Y367','war operations involving chemical weapons and other forms of unconventional warfare').
-icd10('Y368','war operations occurring after cessation of hostilities').
-icd10('Y369','war operations, unspecified').
-icd10('Y40','systemic antibiotics causing adverse effects in therapeutic use').
-icd10('Y400','penicillins causing adverse effects in therapeutic use').
-icd10('Y461','oxazolidinediones causing adverse effects in therapeutic use').
-icd10('Y401','cefalosporins and other -lactam antibiotics causing adverse effects in therapeutic use').
-icd10('Y402','chloramphenicol group drugs causing adverse effects in therapeutic use').
-icd10('Y403','macrolides causing adverse effects in therapeutic use').
-icd10('Y404','tetracyclines causing adverse effects in therapeutic use').
-icd10('Y405','aminoglycosides causing adverse effects in therapeutic use').
-icd10('Y406','rifamycins causing adverse effects in therapeutic use').
-icd10('Y407','antifungal antibiotics, systemically used causing adverse effects in therapeutic use').
-icd10('Y408','other systemic antibiotics causing adverse effects in therapeutic use').
-icd10('Y409','systemic antibiotic, unspecified causing adverse effects in therapeutic use').
-icd10('Y41','other systemic anti-infectives and antiparasitics causing adverse effects in therapeutic use').
-icd10('Y410','sulfonamides causing adverse effects in therapeutic use').
-icd10('Y411','antimycobacterial drugs causing adverse effects in therapeutic use').
-icd10('Y412','antimalarials and drugs acting on other blood protozoa causing adverse effects in therapeutic use').
-icd10('Y413','other antiprotozoal drugs causing adverse effects in therapeutic use').
-icd10('Y414','anthelminthics causing adverse effects in therapeutic use').
-icd10('Y415','antiviral drugs causing adverse effects in therapeutic use').
-icd10('Y418','other specified systemic anti-infectives and antiparasitics causing adverse effects in therapeutic use').
-icd10('Y419','systemic anti-infective and antiparasitic, unspecified causing adverse effects in therapeutic use').
-icd10('Y42','hormones and their synthetic substitutes and antagonists, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y420','glucocorticoids and synthetic analogues causing adverse effects in therapeutic use').
-icd10('Y421','thyroid hormones and substitutes causing adverse effects in therapeutic use').
-icd10('Y422','antithyroid drugs causing adverse effects in therapeutic use').
-icd10('Y423','insulin and oral hypoglycaemic [antidiabetic] drugs causing adverse effects in therapeutic use').
-icd10('Y424','oral contraceptives causing adverse effects in therapeutic use').
-icd10('Y425','other oestrogens and progestogens causing adverse effects in therapeutic use').
-icd10('Y426','antigonadotrophins, anti-oestrogens, antiandrogens, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y427','androgens and anabolic congeners causing adverse effects in therapeutic use').
-icd10('Y428','other and unspecified hormones and their synthetic substitutes causing adverse effects in therapeutic use').
-icd10('Y429','other and unspecified hormone antagonists causing adverse effects in therapeutic use').
-icd10('Y43','primarily systemic agents causing adverse effects in therapeutic use').
-icd10('Y430','antiallergic and antiemetic drugs causing adverse effects in therapeutic use').
-icd10('Y431','antineoplastic antimetabolites causing adverse effects in therapeutic use').
-icd10('Y432','antineoplastic natural products causing adverse effects in therapeutic use').
-icd10('Y433','other antineoplastic drugs causing adverse effects in therapeutic use').
-icd10('Y434','immunosuppressive agents causing adverse effects in therapeutic use').
-icd10('Y435','acidifying and alkalising agents causing adverse effects in therapeutic use').
-icd10('Y436','enzymes, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y438','other primarily systemic agents, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y439','primarily systemic agent, unspecified causing adverse effects in therapeutic use').
-icd10('Y44','agents primarily affecting blood constituents causing adverse effects in therapeutic use').
-icd10('Y440','iron preparations and other anti-hypochromic-anaemia preparations causing adverse effects in therapeutic use').
-icd10('Y441','vitamin b12, folic acid and other anti-megaloblastic-anaemia preparations causing adverse effects in therapeutic use').
-icd10('Y442','anticoagulants causing adverse effects in therapeutic use').
-icd10('Y443','anticoagulant antagonists, vitamin k and other coagulants causing adverse effects in therapeutic use').
-icd10('Y444','antithrombotic drugs [platelet-aggregation inhibitors] causing adverse effects in therapeutic use').
-icd10('Y445','thrombolytic drugs causing adverse effects in therapeutic use').
-icd10('Y446','natural blood and blood products causing adverse effects in therapeutic use').
-icd10('Y447','plasma substitutes causing adverse effects in therapeutic use').
-icd10('Y449','other and unspecified agents affecting blood constituents causing adverse effects in therapeutic use').
-icd10('Y45','analgesics, antipyretics and anti-inflammatory drugs causing adverse effects in therapeutic use').
-icd10('Y450','opioids and related analgesics causing adverse effects in therapeutic use').
-icd10('Y451','salicylates causing adverse effects in therapeutic use').
-icd10('Y452','propionic acid derivatives causing adverse effects in therapeutic use').
-icd10('Y453','other nonsteroidal anti-inflammatory drugs [nsaid] causing adverse effects in therapeutic use').
-icd10('Y454','antirheumatics causing adverse effects in therapeutic use').
-icd10('Y455','4-aminophenol derivatives causing adverse effects in therapeutic use').
-icd10('Y458','other analgesics and antipyretics causing adverse effects in therapeutic use').
-icd10('Y459','analgesic, antipyretic and anti-inflammatory drug, unspecified causing adverse effects in therapeutic use').
-icd10('Y46','antiepileptics and antiparkinsonism drugs causing adverse effects in therapeutic use').
-icd10('Y460','succinimides causing adverse effects in therapeutic use').
-icd10('Y462','hydantoin derivatives causing adverse effects in therapeutic use').
-icd10('Y463','deoxybarbiturates causing adverse effects in therapeutic use').
-icd10('Y464','iminostilbenes causing adverse effects in therapeutic use').
-icd10('Y465','valproic acid causing adverse effects in therapeutic use').
-icd10('Y466','other and unspecified antiepileptics causing adverse effects in therapeutic use').
-icd10('Y467','antiparkinsonism drugs causing adverse effects in therapeutic use').
-icd10('Y468','antispasticity drugs causing adverse effects in therapeutic use').
-icd10('Y47','sedatives, hypnotics and antianxiety drugs causing adverse effects in therapeutic use').
-icd10('Y470','barbiturates, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y471','benzodiazepines causing adverse effects in therapeutic use').
-icd10('Y472','cloral derivatives causing adverse effects in therapeutic use').
-icd10('Y473','paraldehyde causing adverse effects in therapeutic use').
-icd10('Y474','bromine compounds causing adverse effects in therapeutic use').
-icd10('Y475','mixed sedatives and hypnotics, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y478','other sedatives, hypnotics and antianxiety drugs causing adverse effects in therapeutic use').
-icd10('Y479','sedative, hypnotic and antianxiety drug, unspecified causing adverse effects in therapeutic use').
-icd10('Y48','anaesthetics and therapeutic gases causing adverse effects in therapeutic use').
-icd10('Y480','inhaled anaesthetics causing adverse effects in therapeutic use').
-icd10('Y481','parenteral anaesthetics causing adverse effects in therapeutic use').
-icd10('Y482','other and unspecified general anaesthetics causing adverse effects in therapeutic use').
-icd10('Y483','local anaesthetics causing adverse effects in therapeutic use').
-icd10('Y484','anaesthetic, unspecified causing adverse effects in therapeutic use').
-icd10('Y485','therapeutic gases causing adverse effects in therapeutic use').
-icd10('Y49','psychotropic drugs, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y490','tricyclic and tetracyclic antidepressants causing adverse effects in therapeutic use').
-icd10('Y491','monoamine-oxidase-inhibitor antidepressants causing adverse effects in therapeutic use').
-icd10('Y492','other and unspecified antidepressants causing adverse effects in therapeutic use').
-icd10('Y493','phenothiazine antipsychotics and neuroleptics causing adverse effects in therapeutic use').
-icd10('Y494','butyrophenone and thioxanthene neuroleptics causing adverse effects in therapeutic use').
-icd10('Y495','other antipsychotics and neuroleptics causing adverse effects in therapeutic use').
-icd10('Y496','psychodysleptics [hallucinogens] causing adverse effects in therapeutic use').
-icd10('Y497','psychostimulants with potential for use disorder causing adverse effects in therapeutic use').
-icd10('Y498','other psychotropic drugs, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y499','psychotropic drug, unspecified causing adverse effects in therapeutic use').
-icd10('Y50','central nervous system stimulants, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y500','analeptics causing adverse effects in therapeutic use').
-icd10('Y501','opioid receptor antagonists causing adverse effects in therapeutic use').
-icd10('Y502','methylxanthines, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y508','other central nervous system stimulants causing adverse effects in therapeutic use').
-icd10('Y509','central nervous system stimulant, unspecified causing adverse effects in therapeutic use').
-icd10('Y51','drugs primarily affecting the autonomic nervous system causing adverse effects in therapeutic use').
-icd10('Y510','anticholinesterase agents causing adverse effects in therapeutic use').
-icd10('Y511','other parasympathomimetics [cholinergics] causing adverse effects in therapeutic use').
-icd10('Y512','ganglionic blocking drugs, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y513','other parasympatholytics [anticholinergics and antimuscarinics] and spasmolytics, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y514','predominantly �-adrenoreceptor agonists, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y515','predominantly �-adrenoreceptor agonists, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y516','�-adrenoreceptor antagonists, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y517','� -adrenoreceptor antagonists, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y518','centrally acting and adrenergic-neuron-blocking agents, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y519','other and unspecified drugs primarily affecting the autonomic nervous system causing adverse effects in therapeutic use').
-icd10('Y52','agents primarily affecting the cardiovascular system causing adverse effects in therapeutic use').
-icd10('Y575','x-ray contrast media causing adverse effects in therapeutic use').
-icd10('Y520','cardiac-stimulant glycosides and drugs of similar action causing adverse effects in therapeutic use').
-icd10('Y521','calcium-channel blockers causing adverse effects in therapeutic use').
-icd10('Y522','other antidysrhythmic drugs, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y523','coronary vasodilators, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y524','angiotensin-converting-enzyme inhibitors causing adverse effects in therapeutic use').
-icd10('Y525','other antihypertensive drugs, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y526','antihyperlipidaemic and antiarteriosclerotic drugs causing adverse effects in therapeutic use').
-icd10('Y527','peripheral vasodilators causing adverse effects in therapeutic use').
-icd10('Y528','antivaricose drugs, including sclerosing agents causing adverse effects in therapeutic use').
-icd10('Y529','other and unspecified agents primarily affecting the cardiovascular system causing adverse effects in therapeutic use').
-icd10('Y53','agents primarily affecting the gastrointestinal system causing adverse effects in therapeutic use').
-icd10('Y530','histamine h2-receptor antagonists causing adverse effects in therapeutic use').
-icd10('Y531','other antacids and anti-gastric-secretion drugs causing adverse effects in therapeutic use').
-icd10('Y532','stimulant laxatives causing adverse effects in therapeutic use').
-icd10('Y533','saline and osmotic laxatives causing adverse effects in therapeutic use').
-icd10('Y534','other laxatives causing adverse effects in therapeutic use').
-icd10('Y535','digestants causing adverse effects in therapeutic use').
-icd10('Y536','antidiarrhoeal drugs causing adverse effects in therapeutic use').
-icd10('Y537','emetics causing adverse effects in therapeutic use').
-icd10('Y538','other agents primarily affecting the gastrointestinal system causing adverse effects in therapeutic use').
-icd10('Y539','agent primarily affecting the gastrointestinal system, unspecified causing adverse effects in therapeutic use').
-icd10('Y54','agents primarily affecting water-balance and mineral and uric acid metabolism causing adverse effects in therapeutic use').
-icd10('Y540','mineralocorticoids causing adverse effects in therapeutic use').
-icd10('Y541','mineralocorticoid antagonists [aldosterone antagonists] causing adverse effects in therapeutic use').
-icd10('Y542','carbonic-anhydrase inhibitors causing adverse effects in therapeutic use').
-icd10('Y543','benzothiadiazine derivatives causing adverse effects in therapeutic use').
-icd10('Y544','loop [high-ceiling] diuretics causing adverse effects in therapeutic use').
-icd10('Y545','other diuretics causing adverse effects in therapeutic use').
-icd10('Y546','electrolytic, caloric and water-balance agents causing adverse effects in therapeutic use').
-icd10('Y547','agents affecting calcification causing adverse effects in therapeutic use').
-icd10('Y548','agents affecting uric acid metabolism causing adverse effects in therapeutic use').
-icd10('Y549','mineral salts, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y55','agents primarily acting on smooth and skeletal muscles and the respiratory system causing adverse effects in therapeutic use').
+icd10('X742','intentional self-harm by shotgun discharge',[self.harm,parasuicide,shotgun],[]).
+icd10('X743','intentional self-harm by small calibre rifle discharge',[self.harm,parasuicide,rifle],[]).
+icd10('X744','intentional self-harm by large calibre rifle',[self.harm,parasuicide,rifle],[]).
+icd10('X749','intentional self-harm by other and unspecified firearm discharge',[self,harm,parasuicide,gun,firearm],[]).
+icd10('X75','intentional self-harm by explosive material',[self.harm],[]).
+icd10('X76','intentional self-harm by smoke, fire and flames',[self.harm,smoke,fire,flame,parasuicide],[]).
+icd10('X77','intentional self-harm by steam, hot vapours and hot objects',[steam,hot,self.harm,parasuicide],[]).
+icd10('X78','intentional self-harm by sharp object',[self.harm,sharp,knife,parasuicide],[]).
+icd10('X79','intentional self-harm by blunt object',[self.harm,blunt,parasuicide],[]).
+icd10('X80','intentional self-harm by jumping from a high place',[self.harm,jump,parasuicide],[]).
+icd10('X81','intentional self-harm by jumping or lying before moving object',[self.harm,lying,jump,parasuicide],[]).
+icd10('X82','intentional self-harm by crashing of motor vehicle',[self,harm,car,parasuicide]).
+icd10('X83','intentional self-harm by other specified means',[self,harm,parasuicide]).
+icd10('X84','intentional self-harm by unspecified means',[self,harm,parasuicide]).
+icd10('X85','assault by drugs, medicaments and biological substances',[assault,drug],[]).
+icd10('X86','assault by corrosive substance',[assault,acid,corrosive],[]).
+icd10('X87','assault by pesticides',[assault,pesticide],[]).
+icd10('X88','assault by gases and vapours',[assault,gas,vapour],[]).
+icd10('X89','assault by other specified chemicals and noxious substances',[assault,chemical,poison],[]).
+icd10('X90','assault by unspecified chemical or noxious substance',[assault,chemical,poison],[]).
+icd10('X91','assault by hanging, strangulation and suffocation',[assault,hanging,strangle,suffocation],[]).
+icd10('X92','assault by drowning and submersion',[assault,drowning],[]).
+icd10('X93','assault by handgun discharge',[assault,handgun.pistol,revolver],[]).
+icd10('X95','assault by other and unspecified firearm discharge',[assault,gun],[]).
+icd10('X951','assault by air rifle discharge',[assault,air,rifle],[]).
+icd10('X952','assault by shotgun discharge',[assault,shotgun],[]).
+icd10('X953','assault by small calibre rifle discharge',[assault,rifle],[]).
+icd10('X954','assault by large calibre rifle discharge',[assault,rifle],[]).
+icd10('X959','assault by other and unspecified firearms',[assault,gun,firearm],[]).
+icd10('X96','assault by explosive material',[assault,explosive],[]).
+icd10('X97','assault by smoke, fire and flames',[assault,fire,flame],[]).
+icd10('X98','assault by steam, hot vapours and hot objects',[assault],[]).
+icd10('X99','assault by sharp object',[assault,knife,blade,sword,sharp],[]).
+icd10('Y00','assault by blunt object',[assault,blunt,club],[]).
+icd10('Y01','assault by pushing from high place',[assault,push],[]).
+icd10('Y02','assault by pushing or placing victim before moving object',[assault],[]).
+icd10('Y03','assault by crashing of motor vehicle',[assault,car],[]).
+icd10('Y04','assault by bodily force',[assault],[]).
+icd10('Y05','sexual assault by bodily force',[sexual,assault],[]).
+icd10('Y06','neglect and abandonment',[],[]).
+icd10('Y060','neglect and abandonment, by spouse or partner',[wife,husband,partner,spouse,abuse,abandonment,neglect],[]).
+icd10('Y061','neglect and abandonment, by parent',[parent,neglect,abuse,abandonment],[]).
+icd10('Y062','neglect and abandonment, by acquaintance or friend',[neglect,abuse,abandonment],[]).
+icd10('Y068','neglect and abandonment, by other specified persons',[neglect,abuse,abandonment],[]).
+icd10('Y069','neglect and abandonment, by unspecified person',[neglect,abuse,abandonment],[]).
+icd10('Y07','other maltreatment syndromes',[],[]).
+icd10('Y071','other maltreatment syndromes, by parent',[assault,abuse,maltreatment,parent],[]).
+icd10('Y072','other maltreatment syndromes, by acquaintance or friend',[assault,abuse,maltreatment],[]).
+icd10('Y073','other maltreatment syndromes, by official authorities',[assault,abuse,maltreatment,police],[]).
+icd10('Y078','other maltreatment syndromes, by other specified persons',[assault,abuse,maltreatment],[]).
+icd10('Y079','other maltreatment syndromes, by unspecified person',[assault,abuse,maltreatment],[]).
+icd10('Y08','assault by other specified means',[assault],[]).
+icd10('Y09','assault by unspecified means',[assault],[]).
+icd10('Y10','poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics, undetermined intent',[poisoning,drug],[]).
+icd10('Y11','poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified, undetermined intent',[poisoning,drug,sedative],[]).
+icd10('Y12','poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified, undetermined intent',[poisoning,narcotic],[]).
+icd10('Y13','poisoning by and exposure to other drugs acting on the autonomic nervous system, undetermined intent',[poisoning.drug],[]).
+icd10('Y14','poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined intent',[poisoning,drug],[]).
+icd10('Y15','poisoning by and exposure to alcohol, undetermined intent',[alcohol,poisoning],[]).
+icd10('Y16','poisoning by and exposure to organic solvents and halogenated hydrocarbons and their vapours, undetermined intent',[poisoning,solvent,hydrocarbon,petrol,diesel],[]).
+icd10('Y17','poisoning by and exposure to other gases and vapours, undetermined intent',[poisoning.gas],[]).
+icd10('Y18','poisoning by and exposure to pesticides, undetermined intent',[poisoning,pesticides],[]).
+icd10('Y19','poisoning by and exposure to other and unspecified chemicals and noxious substances, undetermined intent',[poisoning],[]).
+icd10('Y20','hanging, strangulation and suffocation, undetermined intent',[hanging,strangle,suffocation],[]).
+icd10('Y21','drowning and submersion, undetermined intent',[drowning],[]).
+icd10('Y22','handgun discharge, undetermined intent',[handgun,pistol],[]).
+icd10('Y24','other and unspecified firearm discharge, undetermined intent',[firearm,gun],[]).
+icd10('Y241','air rifle discharge, undetermined intent',[air,rifle],[]).
+icd10('Y242','shotgun discharge, undetermined intent',[shotgun],[]).
+icd10('Y243','small calibre rifle discharge, undetermined intent',[rifle],[]).
+icd10('Y244','large calibre rifle discharge, undetermined intent',[rifle],[]).
+icd10('Y249','discharge from other and unspecified firearms, undetermined intent',[gun,firearm],[]).
+icd10('Y25','contact with explosive material, undetermined intent',[explosive],[]).
+icd10('Y26','exposure to smoke, fire and flames, undetermined intent',[smoke,fire,flame],[]).
+icd10('Y27','contact with steam, hot vapours and hot objects, undetermined intent',[steam,hot],[]).
+icd10('Y28','contact with sharp object, undetermined intent',[sharp],[]).
+icd10('Y29','contact with blunt object, undetermined intent',[blunt],[]).
+icd10('Y30','falling, jumping or pushed from a high place, undetermined intent',[accident,fall],[]).
+icd10('Y31','falling, lying or running before or into moving object, undetermined intent',[accident,fall],[]).
+icd10('Y32','crashing of motor vehicle, undetermined intent',[motor,vehicle,accident],[]).
+icd10('Y33','other specified events, undetermined intent',[],[]).
+icd10('Y34','unspecified event, undetermined intent',[],[]).
+icd10('Y35','legal intervention',[],[]).
+icd10('Y350','legal intervention involving firearm discharge',[],[]).
+icd10('Y3501','legal intervention involving handgun discharge',[],[]).
+icd10('Y3502','legal intervention involving air rifle discharge',[],[]).
+icd10('Y3503','legal intervention involving shotgun discharge',[],[]).
+icd10('Y3504','legal intervention involving small calibre rifle discharge',[],[]).
+icd10('Y3505','legal intervention involving large calibre rifle discharge',[],[]).
+icd10('Y3509','legal intervention involving discharge from other and unspecified firearms',[],[]).
+icd10('Y351','legal intervention involving explosives',[],[]).
+icd10('Y352','legal intervention involving gas',[],[]).
+icd10('Y353','legal intervention involving blunt objects',[],[]).
+icd10('Y354','legal intervention involving sharp objects',[],[]).
+icd10('Y355','legal execution',[],[]).
+icd10('Y356','legal intervention involving other specified means',[],[]).
+icd10('Y357','legal intervention, means unspecified',[],[]).
+icd10('Y36','operations of war',[],[]).
+icd10('Y360','war operations involving explosion of marine weapons',[],[]).
+icd10('Y361','war operations involving destruction of aircraft',[],[]).
+icd10('Y362','war operations involving other explosions and fragments',[],[]).
+icd10('Y363','war operations involving fires, conflagrations and hot substances',[],[]).
+icd10('Y364','war operations involving firearm discharge and other forms of conventional warfare',[],[]).
+icd10('Y3641','war operations involving handgun discharge',[],[]).
+icd10('Y3642','war operations involving air rifle discharge',[],[]).
+icd10('Y3643','war operations involving shotgun discharge',[],[]).
+icd10('Y3644','war operations involving small calibre rifle discharge',[],[]).
+icd10('Y3645','war operations involving large calibre rifle discharge',[],[]).
+icd10('Y3649','war operations involving discharge from other and unspecified firearms and other forms of conventional warfare',[],[]).
+icd10('Y365','war operations involving nuclear weapons',[],[]).
+icd10('Y366','war operations involving biological weapons',[],[]).
+icd10('Y367','war operations involving chemical weapons and other forms of unconventional warfare',[],[]).
+icd10('Y368','war operations occurring after cessation of hostilities',[],[]).
+icd10('Y369','war operations, unspecified',[],[]).
+icd10('Y40','systemic antibiotics causing adverse effects in therapeutic use',[],[]).
+icd10('Y400','penicillins causing adverse effects in therapeutic use',[],[]).
+icd10('Y461','oxazolidinediones causing adverse effects in therapeutic use',[],[]).
+icd10('Y401','cefalosporins and other -lactam antibiotics causing adverse effects in therapeutic use',[],[]).
+icd10('Y402','chloramphenicol group drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y403','macrolides causing adverse effects in therapeutic use',[],[]).
+icd10('Y404','tetracyclines causing adverse effects in therapeutic use',[],[]).
+icd10('Y405','aminoglycosides causing adverse effects in therapeutic use',[],[]).
+icd10('Y406','rifamycins causing adverse effects in therapeutic use',[],[]).
+icd10('Y407','antifungal antibiotics, systemically used causing adverse effects in therapeutic use',[],[]).
+icd10('Y408','other systemic antibiotics causing adverse effects in therapeutic use',[],[]).
+icd10('Y409','systemic antibiotic, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y41','other systemic anti-infectives and antiparasitics causing adverse effects in therapeutic use',[],[]).
+icd10('Y410','sulfonamides causing adverse effects in therapeutic use',[],[]).
+icd10('Y411','antimycobacterial drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y412','antimalarials and drugs acting on other blood protozoa causing adverse effects in therapeutic use',[],[]).
+icd10('Y413','other antiprotozoal drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y414','anthelminthics causing adverse effects in therapeutic use',[],[]).
+icd10('Y415','antiviral drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y418','other specified systemic anti-infectives and antiparasitics causing adverse effects in therapeutic use',[],[]).
+icd10('Y419','systemic anti-infective and antiparasitic, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y42','hormones and their synthetic substitutes and antagonists, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y420','glucocorticoids and synthetic analogues causing adverse effects in therapeutic use',[],[]).
+icd10('Y421','thyroid hormones and substitutes causing adverse effects in therapeutic use',[],[]).
+icd10('Y422','antithyroid drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y423','insulin and oral hypoglycaemic [antidiabetic] drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y424','oral contraceptives causing adverse effects in therapeutic use',[],[]).
+icd10('Y425','other oestrogens and progestogens causing adverse effects in therapeutic use',[],[]).
+icd10('Y426','antigonadotrophins, anti-oestrogens, antiandrogens, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y427','androgens and anabolic congeners causing adverse effects in therapeutic use',[],[]).
+icd10('Y428','other and unspecified hormones and their synthetic substitutes causing adverse effects in therapeutic use',[],[]).
+icd10('Y429','other and unspecified hormone antagonists causing adverse effects in therapeutic use',[],[]).
+icd10('Y43','primarily systemic agents causing adverse effects in therapeutic use',[],[]).
+icd10('Y430','antiallergic and antiemetic drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y431','antineoplastic antimetabolites causing adverse effects in therapeutic use',[],[]).
+icd10('Y432','antineoplastic natural products causing adverse effects in therapeutic use',[],[]).
+icd10('Y433','other antineoplastic drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y434','immunosuppressive agents causing adverse effects in therapeutic use',[],[]).
+icd10('Y435','acidifying and alkalising agents causing adverse effects in therapeutic use',[],[]).
+icd10('Y436','enzymes, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y438','other primarily systemic agents, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y439','primarily systemic agent, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y44','agents primarily affecting blood constituents causing adverse effects in therapeutic use',[],[]).
+icd10('Y440','iron preparations and other anti-hypochromic-anaemia preparations causing adverse effects in therapeutic use',[],[]).
+icd10('Y441','vitamin b12, folic acid and other anti-megaloblastic-anaemia preparations causing adverse effects in therapeutic use',[],[]).
+icd10('Y442','anticoagulants causing adverse effects in therapeutic use',[],[]).
+icd10('Y443','anticoagulant antagonists, vitamin k and other coagulants causing adverse effects in therapeutic use',[],[]).
+icd10('Y444','antithrombotic drugs [platelet-aggregation inhibitors] causing adverse effects in therapeutic use',[],[]).
+icd10('Y445','thrombolytic drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y446','natural blood and blood products causing adverse effects in therapeutic use',[],[]).
+icd10('Y447','plasma substitutes causing adverse effects in therapeutic use',[],[]).
+icd10('Y449','other and unspecified agents affecting blood constituents causing adverse effects in therapeutic use',[],[]).
+icd10('Y45','analgesics, antipyretics and anti-inflammatory drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y450','opioids and related analgesics causing adverse effects in therapeutic use',[],[]).
+icd10('Y451','salicylates causing adverse effects in therapeutic use',[],[]).
+icd10('Y452','propionic acid derivatives causing adverse effects in therapeutic use',[],[]).
+icd10('Y453','other nonsteroidal anti-inflammatory drugs [nsaid] causing adverse effects in therapeutic use',[],[]).
+icd10('Y454','antirheumatics causing adverse effects in therapeutic use',[],[]).
+icd10('Y455','4-aminophenol derivatives causing adverse effects in therapeutic use',[],[]).
+icd10('Y458','other analgesics and antipyretics causing adverse effects in therapeutic use',[],[]).
+icd10('Y459','analgesic, antipyretic and anti-inflammatory drug, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y46','antiepileptics and antiparkinsonism drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y460','succinimides causing adverse effects in therapeutic use',[],[]).
+icd10('Y462','hydantoin derivatives causing adverse effects in therapeutic use',[],[]).
+icd10('Y463','deoxybarbiturates causing adverse effects in therapeutic use',[],[]).
+icd10('Y464','iminostilbenes causing adverse effects in therapeutic use',[],[]).
+icd10('Y465','valproic acid causing adverse effects in therapeutic use',[],[]).
+icd10('Y466','other and unspecified antiepileptics causing adverse effects in therapeutic use',[],[]).
+icd10('Y467','antiparkinsonism drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y468','antispasticity drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y47','sedatives, hypnotics and antianxiety drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y470','barbiturates, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y471','benzodiazepines causing adverse effects in therapeutic use',[],[]).
+icd10('Y472','cloral derivatives causing adverse effects in therapeutic use',[],[]).
+icd10('Y473','paraldehyde causing adverse effects in therapeutic use',[],[]).
+icd10('Y474','bromine compounds causing adverse effects in therapeutic use',[],[]).
+icd10('Y475','mixed sedatives and hypnotics, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y478','other sedatives, hypnotics and antianxiety drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y479','sedative, hypnotic and antianxiety drug, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y48','anaesthetics and therapeutic gases causing adverse effects in therapeutic use',[],[]).
+icd10('Y480','inhaled anaesthetics causing adverse effects in therapeutic use',[],[]).
+icd10('Y481','parenteral anaesthetics causing adverse effects in therapeutic use',[],[]).
+icd10('Y482','other and unspecified general anaesthetics causing adverse effects in therapeutic use',[],[]).
+icd10('Y483','local anaesthetics causing adverse effects in therapeutic use',[],[]).
+icd10('Y484','anaesthetic, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y485','therapeutic gases causing adverse effects in therapeutic use',[],[]).
+icd10('Y49','psychotropic drugs, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y490','tricyclic and tetracyclic antidepressants causing adverse effects in therapeutic use',[],[]).
+icd10('Y491','monoamine-oxidase-inhibitor antidepressants causing adverse effects in therapeutic use',[],[]).
+icd10('Y492','other and unspecified antidepressants causing adverse effects in therapeutic use',[],[]).
+icd10('Y493','phenothiazine antipsychotics and neuroleptics causing adverse effects in therapeutic use',[],[]).
+icd10('Y494','butyrophenone and thioxanthene neuroleptics causing adverse effects in therapeutic use',[],[]).
+icd10('Y495','other antipsychotics and neuroleptics causing adverse effects in therapeutic use',[],[]).
+icd10('Y496','psychodysleptics [hallucinogens] causing adverse effects in therapeutic use',[],[]).
+icd10('Y497','psychostimulants with potential for use disorder causing adverse effects in therapeutic use',[],[]).
+icd10('Y498','other psychotropic drugs, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y499','psychotropic drug, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y50','central nervous system stimulants, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y500','analeptics causing adverse effects in therapeutic use',[],[]).
+icd10('Y501','opioid receptor antagonists causing adverse effects in therapeutic use',[],[]).
+icd10('Y502','methylxanthines, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y508','other central nervous system stimulants causing adverse effects in therapeutic use',[],[]).
+icd10('Y509','central nervous system stimulant, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y51','drugs primarily affecting the autonomic nervous system causing adverse effects in therapeutic use',[],[]).
+icd10('Y510','anticholinesterase agents causing adverse effects in therapeutic use',[],[]).
+icd10('Y511','other parasympathomimetics [cholinergics] causing adverse effects in therapeutic use',[],[]).
+icd10('Y512','ganglionic blocking drugs, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y513','other parasympatholytics [anticholinergics and antimuscarinics] and spasmolytics, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y514','predominantly �-adrenoreceptor agonists, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y515','predominantly �-adrenoreceptor agonists, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y516','�-adrenoreceptor antagonists, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y517','� -adrenoreceptor antagonists, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y518','centrally acting and adrenergic-neuron-blocking agents, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y519','other and unspecified drugs primarily affecting the autonomic nervous system causing adverse effects in therapeutic use',[],[]).
+icd10('Y52','agents primarily affecting the cardiovascular system causing adverse effects in therapeutic use',[],[]).
+icd10('Y575','x-ray contrast media causing adverse effects in therapeutic use',[],[]).
+icd10('Y520','cardiac-stimulant glycosides and drugs of similar action causing adverse effects in therapeutic use',[],[]).
+icd10('Y521','calcium-channel blockers causing adverse effects in therapeutic use',[],[]).
+icd10('Y522','other antidysrhythmic drugs, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y523','coronary vasodilators, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y524','angiotensin-converting-enzyme inhibitors causing adverse effects in therapeutic use',[],[]).
+icd10('Y525','other antihypertensive drugs, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y526','antihyperlipidaemic and antiarteriosclerotic drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y527','peripheral vasodilators causing adverse effects in therapeutic use',[],[]).
+icd10('Y528','antivaricose drugs, including sclerosing agents causing adverse effects in therapeutic use',[],[]).
+icd10('Y529','other and unspecified agents primarily affecting the cardiovascular system causing adverse effects in therapeutic use',[],[]).
+icd10('Y53','agents primarily affecting the gastrointestinal system causing adverse effects in therapeutic use',[],[]).
+icd10('Y530','histamine h2-receptor antagonists causing adverse effects in therapeutic use',[],[]).
+icd10('Y531','other antacids and anti-gastric-secretion drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y532','stimulant laxatives causing adverse effects in therapeutic use',[],[]).
+icd10('Y533','saline and osmotic laxatives causing adverse effects in therapeutic use',[],[]).
+icd10('Y534','other laxatives causing adverse effects in therapeutic use',[],[]).
+icd10('Y535','digestants causing adverse effects in therapeutic use',[],[]).
+icd10('Y536','antidiarrhoeal drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y537','emetics causing adverse effects in therapeutic use',[],[]).
+icd10('Y538','other agents primarily affecting the gastrointestinal system causing adverse effects in therapeutic use',[],[]).
+icd10('Y539','agent primarily affecting the gastrointestinal system, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y54','agents primarily affecting water-balance and mineral and uric acid metabolism causing adverse effects in therapeutic use',[],[]).
+icd10('Y540','mineralocorticoids causing adverse effects in therapeutic use',[],[]).
+icd10('Y541','mineralocorticoid antagonists [aldosterone antagonists] causing adverse effects in therapeutic use',[],[]).
+icd10('Y542','carbonic-anhydrase inhibitors causing adverse effects in therapeutic use',[],[]).
+icd10('Y543','benzothiadiazine derivatives causing adverse effects in therapeutic use',[],[]).
+icd10('Y544','loop [high-ceiling] diuretics causing adverse effects in therapeutic use',[],[]).
+icd10('Y545','other diuretics causing adverse effects in therapeutic use',[],[]).
+icd10('Y546','electrolytic, caloric and water-balance agents causing adverse effects in therapeutic use',[],[]).
+icd10('Y547','agents affecting calcification causing adverse effects in therapeutic use',[],[]).
+icd10('Y548','agents affecting uric acid metabolism causing adverse effects in therapeutic use',[],[]).
+icd10('Y549','mineral salts, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y55','agents primarily acting on smooth and skeletal muscles and the respiratory system causing adverse effects in therapeutic use',[],[]).
 icd10('Y550','oxytocic drugs causing adverse effects in therapeutic use').
-icd10('Y551','skeletal muscle relaxants [neuromuscular blocking agents] causing adverse effects in therapeutic use').
-icd10('Y552','other and unspecified agents primarily acting on muscles causing adverse effects in therapeutic use').
-icd10('Y553','antitussives causing adverse effects in therapeutic use').
-icd10('Y554','expectorants causing adverse effects in therapeutic use').
-icd10('Y555','anti-common-cold drugs causing adverse effects in therapeutic use').
-icd10('Y556','antiasthmatics, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y557','other and unspecified agents primarily acting on the respiratory system causing adverse effects in therapeutic use').
-icd10('Y56','topical agents primarily affecting skin and mucous membrane and ophthalmological, otorhinolaryngological and dental drugs causing adverse effects in therapeutic use').
-icd10('Y560','local antifungal, anti-infective and anti-inflammatory drugs, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y561','antipruritics causing adverse effects in therapeutic use').
-icd10('Y562','local astringents and local detergents causing adverse effects in therapeutic use').
-icd10('Y563','emollients, demulcents and protectants causing adverse effects in therapeutic use').
-icd10('Y564','keratolytics, keratoplastics and other hair treatment drugs and preparations causing adverse effects in therapeutic use').
-icd10('Y565','ophthalmological drugs and preparations causing adverse effects in therapeutic use').
-icd10('Y566','otorhinolaryngological drugs and preparations causing adverse effects in therapeutic use').
-icd10('Y567','dental drugs, topically applied causing adverse effects in therapeutic use').
-icd10('Y568','other topical agents causing adverse effects in therapeutic use').
-icd10('Y569','topical agent, unspecified causing adverse effects in therapeutic use').
-icd10('Y57','other and unspecified drugs and medicaments causing adverse effects in therapeutic use').
-icd10('Y570','appetite depressants [anorectics] causing adverse effects in therapeutic use').
-icd10('Y571','lipotropic drugs causing adverse effects in therapeutic use').
-icd10('Y572','antidotes and chelating agents, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y573','alcohol deterrents causing adverse effects in therapeutic use').
-icd10('Y574','pharmaceutical excipients causing adverse effects in therapeutic use').
-icd10('Y576','other diagnostic agents causing adverse effects in therapeutic use').
-icd10('Y577','vitamins, not elsewhere classified causing adverse effects in therapeutic use').
-icd10('Y578','other drugs and medicaments causing adverse effects in therapeutic use').
-icd10('Y579','drug or medicament, unspecified causing adverse effects in therapeutic use').
-icd10('Y58','bacterial vaccines causing adverse effects in therapeutic use').
-icd10('Y580','bcg vaccine causing adverse effects in therapeutic use').
-icd10('Y581','typhoid and paratyphoid vaccine causing adverse effects in therapeutic use').
-icd10('Y582','cholera vaccine causing adverse effects in therapeutic use').
-icd10('Y583','plague vaccine causing adverse effects in therapeutic use').
-icd10('Y584','tetanus vaccine causing adverse effects in therapeutic use').
-icd10('Y585','diphtheria vaccine causing adverse effects in therapeutic use').
-icd10('Y586','pertussis vaccine, including combinations with a pertussis component causing adverse effects in therapeutic use').
-icd10('Y588','mixed bacterial vaccines, except combinations with a pertussis component causing adverse effects in therapeutic use').
-icd10('Y589','other and unspecified bacterial vaccines causing adverse effects in therapeutic use').
-icd10('Y59','other and unspecified vaccines and biological substances causing adverse effects in therapeutic use').
-icd10('Y590','viral vaccines causing adverse effects in therapeutic use').
-icd10('Y591','rickettsial vaccines causing adverse effects in therapeutic use').
-icd10('Y592','protozoal vaccines causing adverse effects in therapeutic use').
-icd10('Y593','immunoglobulin causing adverse effects in therapeutic use').
-icd10('Y598','other specified vaccines and biological substances causing adverse effects in therapeutic use').
-icd10('Y599','vaccine or biological substance, unspecified causing adverse effects in therapeutic use').
-icd10('Y60','unintentional cut, puncture, perforation or haemorrhage during surgical and medical care').
-icd10('Y600','unintentional cut, puncture, perforation or haemorrhage during surgical operation').
-icd10('Y601','unintentional cut, puncture, perforation or haemorrhage during infusion or transfusion').
-icd10('Y602','unintentional cut, puncture, perforation or haemorrhage during kidney dialysis or other perfusion').
-icd10('Y603','unintentional cut, puncture, perforation or haemorrhage during injection or immunisation').
-icd10('Y604','unintentional cut, puncture, perforation or haemorrhage during endoscopic examination').
-icd10('Y605','unintentional cut, puncture, perforation or haemorrhage during heart catheterisation').
+icd10('Y551','skeletal muscle relaxants [neuromuscular blocking agents] causing adverse effects in therapeutic use',[],[]).
+icd10('Y552','other and unspecified agents primarily acting on muscles causing adverse effects in therapeutic use',[],[]).
+icd10('Y553','antitussives causing adverse effects in therapeutic use',[],[]).
+icd10('Y554','expectorants causing adverse effects in therapeutic use',[],[]).
+icd10('Y555','anti-common-cold drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y556','antiasthmatics, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y557','other and unspecified agents primarily acting on the respiratory system causing adverse effects in therapeutic use',[],[]).
+icd10('Y56','topical agents primarily affecting skin and mucous membrane and ophthalmological, otorhinolaryngological and dental drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y560','local antifungal, anti-infective and anti-inflammatory drugs, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y561','antipruritics causing adverse effects in therapeutic use',[],[]).
+icd10('Y562','local astringents and local detergents causing adverse effects in therapeutic use',[],[]).
+icd10('Y563','emollients, demulcents and protectants causing adverse effects in therapeutic use',[],[]).
+icd10('Y564','keratolytics, keratoplastics and other hair treatment drugs and preparations causing adverse effects in therapeutic use'.[],[]).
+icd10('Y565','ophthalmological drugs and preparations causing adverse effects in therapeutic use',[]).
+icd10('Y566','otorhinolaryngological drugs and preparations causing adverse effects in therapeutic use',[]).
+icd10('Y567','dental drugs, topically applied causing adverse effects in therapeutic use',[]).
+icd10('Y568','other topical agents causing adverse effects in therapeutic use',[],[]).
+icd10('Y569','topical agent, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y57','other and unspecified drugs and medicaments causing adverse effects in therapeutic use',[],[]).
+icd10('Y570','appetite depressants [anorectics] causing adverse effects in therapeutic use',[],[]).
+icd10('Y571','lipotropic drugs causing adverse effects in therapeutic use',[],[]).
+icd10('Y572','antidotes and chelating agents, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y573','alcohol deterrents causing adverse effects in therapeutic use',[],[]).
+icd10('Y574','pharmaceutical excipients causing adverse effects in therapeutic use',[],[]).
+icd10('Y576','other diagnostic agents causing adverse effects in therapeutic use',[],[]).
+icd10('Y577','vitamins, not elsewhere classified causing adverse effects in therapeutic use',[],[]).
+icd10('Y578','other drugs and medicaments causing adverse effects in therapeutic use',[],[]).
+icd10('Y579','drug or medicament, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y58','bacterial vaccines causing adverse effects in therapeutic use',[],[]).
+icd10('Y580','bcg vaccine causing adverse effects in therapeutic use',[],[]).
+icd10('Y581','typhoid and paratyphoid vaccine causing adverse effects in therapeutic use',[],[]).
+icd10('Y582','cholera vaccine causing adverse effects in therapeutic use',[],[]).
+icd10('Y583','plague vaccine causing adverse effects in therapeutic use',[],[]).
+icd10('Y584','tetanus vaccine causing adverse effects in therapeutic use',[],[]).
+icd10('Y585','diphtheria vaccine causing adverse effects in therapeutic use',[],[]).
+icd10('Y586','pertussis vaccine, including combinations with a pertussis component causing adverse effects in therapeutic use',[],[]).
+icd10('Y588','mixed bacterial vaccines, except combinations with a pertussis component causing adverse effects in therapeutic use',[],[]).
+icd10('Y589','other and unspecified bacterial vaccines causing adverse effects in therapeutic use',[],[]).
+icd10('Y59','other and unspecified vaccines and biological substances causing adverse effects in therapeutic use',[],[]).
+icd10('Y590','viral vaccines causing adverse effects in therapeutic use',[],[]).
+icd10('Y591','rickettsial vaccines causing adverse effects in therapeutic use',[],[]).
+icd10('Y592','protozoal vaccines causing adverse effects in therapeutic use',[],[]).
+icd10('Y593','immunoglobulin causing adverse effects in therapeutic use',[],[]).
+icd10('Y598','other specified vaccines and biological substances causing adverse effects in therapeutic use',[],[]).
+icd10('Y599','vaccine or biological substance, unspecified causing adverse effects in therapeutic use',[],[]).
+icd10('Y60','unintentional cut, puncture, perforation or haemorrhage during surgical and medical care',[],[]).
+icd10('Y600','unintentional cut, puncture, perforation or haemorrhage during surgical operation',[],[]).
+icd10('Y601','unintentional cut, puncture, perforation or haemorrhage during infusion or transfusion',[],[]).
+icd10('Y602','unintentional cut, puncture, perforation or haemorrhage during kidney dialysis or other perfusion',[],[]).
+icd10('Y603','unintentional cut, puncture, perforation or haemorrhage during injection or immunisation',,[],[]).
+icd10('Y604','unintentional cut, puncture, perforation or haemorrhage during endoscopic examination',[],[]).
+icd10('Y605','unintentional cut, puncture, perforation or haemorrhage during heart catheterisation',[],[]).
 icd10('Y606','unintentional cut, puncture, perforation or haemorrhage during aspiration, puncture and other catheterisation',[],[]).
 icd10('Y607','unintentional cut, puncture, perforation or haemorrhage during administration of enema',[],[]).
 icd10('Y608','unintentional cut, puncture, perforation or haemorrhage during other surgical and medical care',[],[]).
