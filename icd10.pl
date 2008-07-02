@@ -2920,228 +2920,235 @@ icd10('F4482','transient dissociate [conversion] disorders occurring in childhoo
 icd10('F4488','other specified dissociative [conversion] disorders',[dissociative,conversion],[]).
 icd10('F449','dissociative [conversion] disorder, unspecified',[dissociation,conversion],[]).
 icd10('F45','somatoform disorders',[],[]).
-icd10('F450','somatisation disorder',[somatisation,briquet],[]).
+icd10('F450','somatisation disorder',[somatisation],[]).
+icd10('F450','briquet\'s syndromw',[briquet],[]).
 icd10('F451','undifferentiated somatoform disorder',[somatoform],[]).
 icd10('F452','hypochondriacal disorder',[hypochondriacal],[]).
-icd10('F453','somatoform autonomic dysfunction').
-icd10('F4530','somatoform autonomic dysfunction, unspecified organ or system').
-icd10('F4531','somatoform autonomic dysfunction, heart and cardiovascular system').
-icd10('F4532','somatoform autonomic dysfunction, upper gastrointestinal tract').
-icd10('F4533','somatoform autonomic dysfunction, lower gastrointestinal tract').
-icd10('F4534','somatoform autonomic dysfunction, respiratory system').
-icd10('F4535','somatoform autonomic dysfunction, genitourinary system').
-icd10('F4538','somatoform autonomic dysfunction, other organ or system').
-icd10('F4539','somatoform autonomic dysfunction, multiple organs or systems').
-icd10('F454','persistent somatoform pain disorder').
-icd10('F458','other somatoform disorders').
-icd10('F459','somatoform disorder, unspecified').
-icd10('F48','other neurotic disorders').
-icd10('F480','neurasthenia').
-icd10('F481','depersonalisation-derealisation syndrome').
-icd10('F488','other specified neurotic disorders').
-icd10('F489','neurotic disorder, unspecified').
-icd10('F50','eating disorders').
-icd10('F500','anorexia nervosa').
-icd10('F501','atypical anorexia nervosa').
-icd10('F502','bulimia nervosa').
-icd10('F503','atypical bulimia nervosa').
-icd10('F504','overeating associated with other psychological disturbances').
-icd10('F505','vomiting associated with other psychological disturbances').
-icd10('F508','other eating disorders').
-icd10('F509','eating disorder, unspecified').
-icd10('F51','nonorganic sleep disorders').
-icd10('F510','nonorganic insomnia').
-icd10('F511','nonorganic hypersomnia').
-icd10('F512','nonorganic disorder of the sleep-wake schedule').
-icd10('F513','sleepwalking [somnambulism]').
-icd10('F514','sleep terrors [night terrors]').
-icd10('F515','nightmares').
-icd10('F518','other nonorganic sleep disorders').
-icd10('F519','nonorganic sleep disorder, unspecified').
-icd10('F52','sexual dysfunction, not caused by organic disorder or disease').
-icd10('F520','lack or loss of sexual desire').
-icd10('F521','sexual aversion and lack of sexual enjoyment').
-icd10('F522','failure of genital response').
-icd10('F523','orgasmic dysfunction').
-icd10('F524','premature ejaculation').
-icd10('F525','nonorganic vaginismus').
-icd10('F526','nonorganic dyspareunia').
-icd10('F527','excessive sexual drive').
-icd10('F528','other sexual dysfunction, not caused by organic disorder or disease').
-icd10('F529','unspecified sexual dysfunction, not caused by organic disorder or disease').
-icd10('F53','mental and behavioural disorders associated with the puerperium, not elsewhere classified').
-icd10('F530','mild mental and behavioural disorders associated with the puerperium, not elsewhere classified').
-icd10('F531','severe mental and behavioural disorders associated with the puerperium, not elsewhere classified').
-icd10('F538','other mental and behavioural disorders associated with the puerperium, not elsewhere classified').
-icd10('F539','puerperal mental disorder, unspecified').
-icd10('F54','psychological and behavioural factors associated with disorders or diseases classified elsewhere').
-icd10('F55','harmful use of non-dependence-producing substances').
-icd10('F550','harmful use of non-dependence-producing substance, antidepressants').
-icd10('F551','harmful use of non-dependence-producing substance, laxatives').
-icd10('F552','harmful use of non-dependence-producing substance, analgesics').
-icd10('F553','harmful use of non-dependence-producing substance, antacids').
-icd10('F554','harmful use of non-dependence-producing substance, vitamins').
-icd10('F555','harmful use of non-dependence-producing substance, steroids or hormones').
-icd10('F556','harmful use of non-dependence-producing substance, specific herbal or folk remedies').
-icd10('F558','other substances that do not produce dependence').
-icd10('F559','unspecified harmful use of non-dependence producing substance').
-icd10('F59','unspecified behavioural syndromes associated with physiological disturbances and physical factors').
-icd10('F60','specific personality disorders').
-icd10('F600','paranoid personality disorder').
-icd10('F601','schizoid personality disorder').
-icd10('F602','dissocial personality disorder').
-icd10('F603','emotionally unstable personality disorder').
-icd10('F6030','emotionally unstable personality disorder, impulsive type').
-icd10('F6031','emotionally unstable personality disorder, borderline type').
-icd10('F604','histrionic personality disorder').
-icd10('F605','anankastic personality disorder').
-icd10('F606','anxious [avoidant] personality disorder').
-icd10('F607','dependent personality disorder').
-icd10('F608','other specific personality disorders').
-icd10('F609','personality disorder, unspecified').
-icd10('F61','mixed and other personality disorders').
-icd10('F62','enduring personality changes, not attributable to brain damage and disease').
-icd10('F620','enduring personality change after catastrophic experience').
-icd10('F621','enduring personality change after psychiatric illness').
-icd10('F628','other enduring personality changes').
-icd10('F629','enduring personality change, unspecified').
-icd10('F63','habit and impulse disorders').
-icd10('F630','pathological gambling').
-icd10('F631','pathological fire-setting [pyromania]').
-icd10('F632','pathological stealing [kleptomania]').
-icd10('F633','trichotillomania').
-icd10('F638','other habit and impulse disorders').
-icd10('F639','habit and impulse disorder, unspecified').
-icd10('F64','gender identity disorders').
-icd10('F640','transsexualism').
-icd10('F641','dual-role transvestism').
-icd10('F642','gender identity disorder of childhood').
-icd10('F648','other gender identity disorders').
-icd10('F649','gender identity disorder, unspecified').
-icd10('F65','disorders of sexual preference').
-icd10('F650','fetishism').
-icd10('F651','fetishistic transvestism').
-icd10('F652','exhibitionism').
-icd10('F653','voyeurism').
-icd10('F654','paedophilia').
-icd10('F655','sadomasochism').
-icd10('F656','multiple disorders of sexual preference').
-icd10('F658','other disorders of sexual preference').
-icd10('F659','disorder of sexual preference, unspecified').
-icd10('F66','psychological and behavioural disorders associated with sexual development and orientation').
-icd10('F660','sexual maturation disorder').
-icd10('F661','egodystonic sexual orientation').
-icd10('F662','sexual relationship disorder').
-icd10('F668','other psychosexual development disorders').
-icd10('F669','psychosexual development disorder, unspecified').
-icd10('F68','other disorders of adult personality and behaviour').
-icd10('F680','elaboration of physical symptoms for psychological reasons').
-icd10('F681','intentional production or feigning of symptoms or disabilities, either physical or psychological [factitious disorder]').
-icd10('F688','other specified disorders of adult personality and behaviour').
-icd10('F69','unspecified disorder of adult personality and behaviour').
-icd10('F70','mild mental retardation').
-icd10('F700','mild mental retardation with the statement of no, or minimal, impairment of behaviour').
-icd10('F701','mild mental retardation, significant impairment of behaviour requiring attention or treatment').
-icd10('F708','mild mental retardation, other impairments of behaviour').
-icd10('F709','mild mental retardation without mention of impairment of behaviour').
-icd10('F71','moderate mental retardation').
-icd10('F710','moderate mental retardation with the statement of no, or minimal, impairment of behaviour').
-icd10('F711','moderate mental retardation, significant impairment of behaviour requiring attention or treatment').
-icd10('F718','moderate mental retardation, other impairments of behaviour').
-icd10('F719','moderate mental retardation without mention of impairment of behaviour').
-icd10('F72','severe mental retardation').
-icd10('F720','severe mental retardation with the statement of no, or minimal, impairment of behaviour').
-icd10('F721','severe mental retardation, significant impairment of behaviour requiring attention or treatment').
-icd10('F728','severe mental retardation, other impairments of behaviour').
-icd10('F729','severe mental retardation without mention of impairment of behaviour').
+icd10('F453','somatoform autonomic dysfunction',[],[]).
+icd10('F4530','somatoform autonomic dysfunction, unspecified organ or system',[somatoform,autonomic],[]).
+icd10('F4531','somatoform autonomic dysfunction, heart and cardiovascular system',[somatoform,autonomic,heart,cardiovascular],[]).
+icd10('F4532','somatoform autonomic dysfunction, upper gastrointestinal tract',[somatoform,autonomic,gastrointestinal,intestinal],[]).
+icd10('F4533','somatoform autonomic dysfunction, lower gastrointestinal tract',[somatoform,autonomic,intestinal,colon],[]).
+icd10('F4534','somatoform autonomic dysfunction, respiratory system',[somatoform,autonomic,respiratory,lung],[]).
+icd10('F4535','somatoform autonomic dysfunction, genitourinary system',[somatoform,autonomic,genitourinary,urinary],[]).
+icd10('F4538','somatoform autonomic dysfunction, other organ or system',[somatoform,autonomic],[]).
+icd10('F4539','somatoform autonomic dysfunction, multiple organs or systems',[somatoform,autonomic,multiple).
+icd10('F454','persistent somatoform pain disorder',[somatoform,hysterical,pain],[]).
+icd10('F458','other somatoform disorders',[somatoform],[]).
+icd10('F459','somatoform disorder, unspecified',[somatoform],[]).
+icd10('F48','other neurotic disorders',[],[]).
+icd10('F480','neurasthenia',[neurasthenia,chroic,fatigue],[]).
+icd10('F481','depersonalisation-derealisation syndrome',[depersonalisation,derealisation],[]).
+icd10('F488','other specified neurotic disorders',[neurosis],[]).
+icd10('F489','neurotic disorder, unspecified',[neurosis],[]).
+icd10('F50','eating disorders',[],[]).
+icd10('F500','anorexia nervosa',[anorexia,nervosa],[an]).
+icd10('F501','atypical anorexia nervosa',[anorexia,nervosa,ednos],[]).
+icd10('F502','bulimia nervosa',[bulimia,nervosa],[]).
+icd10('F503','atypical bulimia nervosa',[bulimia,nervosa],[]).
+icd10('F504','overeating associated with other psychological disturbances',[overeating,obese],[]).
+icd10('F505','vomiting associated with other psychological disturbances',[bulimia],[]).
+icd10('F508','other eating disorders',[],[]).
+icd10('F509','eating disorder, unspecified',[ednos],[]).
+icd10('F51','nonorganic sleep disorders',[],[]).
+icd10('F510','nonorganic insomnia',[insomnia],[]).
+icd10('F511','nonorganic hypersomnia',[insomnia,sleep],[]).
+icd10('F512','nonorganic disorder of the sleep-wake schedule',[sleep,wake],[]).
+icd10('F513','sleepwalking [somnambulism]',[sleepwalking,somnambulism],[]).
+icd10('F514','sleep terrors [night terrors]',[terror,night,sleep],[]).
+icd10('F515','nightmares',[nightmare,dream],[]).
+icd10('F518','other nonorganic sleep disorders',[sleep],[]).
+icd10('F519','nonorganic sleep disorder, unspecified',sleep],[]).
+icd10('F52','sexual dysfunction, not caused by organic disorder or disease',[],[]).
+icd10('F520','lack or loss of sexual desire',[sexual,frigidity],[]).
+icd10('F521','sexual aversion and lack of sexual enjoyment',[sexual,frigidity],[]).
+icd10('F522','failure of genital response',[sexual,impotence],[]).
+icd10('F523','orgasmic dysfunction',[sexual,orgasm],[]).
+icd10('F524','premature ejaculation',[ejaculation,premature],[]).
+icd10('F525','nonorganic vaginismus',[vaginismus,sexual,female],[]).
+icd10('F526','nonorganic dyspareunia',[dyspareunia,sexual,pain],[]).
+icd10('F527','excessive sexual drive',[sexual,drive,satyrasis,nymphomania],[]).
+icd10('F528','other sexual dysfunction, not caused by organic disorder or disease',[dysfunction,sexual],[]).
+icd10('F529','unspecified sexual dysfunction, not caused by organic disorder or disease',[dysfunction,sexual],[]).
+icd10('F53','mental and behavioural disorders associated with the puerperium, not elsewhere classified',[],[]).
+icd10('F530','mild mental and behavioural disorders associated with the puerperium, not elsewhere classified',[],[]).
+idd10('F530','baby blues',[baby,blues],[]).
+icd10('F531','severe mental and behavioural disorders associated with the puerperium, not elsewhere classified',[],[]).
+icd10('F531','postnatal depression',[postnatal,depression],[]).
+icd10('F531','puerperal psychosis',[puerperal,psychosis],[]).
+icd10('F538','other mental and behavioural disorders associated with the puerperium, not elsewhere classified',[],[]).
+icd10('F539','puerperal mental disorder, unspecified',[],[]).
+icd10('F54','psychological and behavioural factors associated with disorders or diseases classified elsewhere',[],[]).
+icd10('F55','harmful use of non-dependence-producing substances',[],[]).
+icd10('F550','harmful use of non-dependence-producing substance, antidepressants',[antidepressant,harmful],[]).
+icd10('F551','harmful use of non-dependence-producing substance, laxatives',[laxative,harmful],[]).
+icd10('F552','harmful use of non-dependence-producing substance, analgesics',[analgesic,harmful],[]).
+icd10('F553','harmful use of non-dependence-producing substance, antacids',[antacids,harmful],[]).
+icd10('F554','harmful use of non-dependence-producing substance, vitamins',[vitamin,harmful],[]).
+icd10('F555','harmful use of non-dependence-producing substance, steroids or hormones',[steroid,harmful],[]).
+icd10('F556','harmful use of non-dependence-producing substance, specific herbal or folk remedies',[herbal,alternative,folk,complementary,harmful],[]).
+icd10('F558','other substances that do not produce dependence',[],[]).
+icd10('F559','unspecified harmful use of non-dependence producing substance',[harmful],[]).
+icd10('F59','unspecified behavioural syndromes associated with physiological disturbances and physical factors',[],[]).
+icd10('F60','specific personality disorders',[],[]).
+icd10('F600','paranoid personality disorder',[paranoid,personality],[]).
+icd10('F601','schizoid personality disorder',[schizoid,personality,odd],[]).
+icd10('F602','dissocial personality disorder',[dissocial,antisocial,personality,psychopathic,sociopathic],[aspd]).
+icd10('F603','emotionally unstable personality disorder',[],[]).
+icd10('F6030','emotionally unstable personality disorder, impulsive type',[impulsive,personality],[]).
+icd10('F6031','emotionally unstable personality disorder, borderline type',[borderline,personality],[bpd]).
+icd10('F604','histrionic personality disorder',[histrionic,personality],[]).
+icd10('F605','anankastic personality disorder',[anakastic,personality],[]).
+icd10('F605','obsessive-compulsive personality disorder',[obsessive,compulsive,personality],[ocpd]).
+icd10('F606','anxious [avoidant] personality disorder',[anxious,avoidant,neurotic,trait,personality],[]).
+icd10('F607','dependent personality disorder',[dependent,personality],[dpd]).
+icd10('F608','other specific personality disorders',[],[]).
+icd10('F609','personality disorder, unspecified',[personality],[]).
+icd10('F61','mixed and other personality disorders',[personality],[]).
+icd10('F62','enduring personality changes, not attributable to brain damage and disease',[],[]).
+icd10('F620','enduring personality change after catastrophic experience',[personality,change],[]).
+icd10('F621','enduring personality change after psychiatric illness',[personality,change,psychiatric],[]).
+icd10('F628','other enduring personality changes',[personality,change],[]).
+icd10('F629','enduring personality change, unspecified',[personality,change],[]).
+icd10('F63','habit and impulse disorders',[],[]).
+icd10('F630','pathological gambling',[gambling,pathological,compulsive],[]).
+icd10('F631','pathological fire-setting [pyromania]',[pyromania,fire],[]).
+icd10('F632','pathological stealing [kleptomania]',[theft,stealing,kleptomania],[]).
+icd10('F633','trichotillomania',[trichotillomania,hair,pulling],[]).
+icd10('F638','other habit and impulse disorders',[],[]).
+icd10('F639','habit and impulse disorder, unspecified',[habit],[]).
+icd10('F64','gender identity disorders',[],[]).
+icd10('F640','transsexualism',[transsexualism,gender,identity],[]).
+icd10('F641','dual-role transvestism',[transvestism,cross,dress,gender,identity],[]).
+icd10('F642','gender identity disorder of childhood',[gender,identity,transsexual,child],[]).
+icd10('F648','other gender identity disorders',[gender,identity],[]).
+icd10('F649','gender identity disorder, unspecified',[gender,identity],[]).
+icd10('F65','disorders of sexual preference',[],[]).
+icd10('F650','fetishism',[fetishism],[]).
+icd10('F651','fetishistic transvestism',[fetish,transvetism],[]).
+icd10('F652','exhibitionism',[exhibitionism,flasher,flashing],[]).
+icd10('F653','voyeurism',[voyeur,peeping,tom],[]).
+icd10('F654','paedophilia',[paedophilia,molestation],[]).
+icd10('F655','sadomasochism',[sadomasochism,sadism,masochism],[]).
+icd10('F656','multiple disorders of sexual preference',[sexual,preference],[]).
+icd10('F658','other disorders of sexual preference',[sexual,preference],[]).
+icd10('F659','disorder of sexual preference, unspecified',[sexual,preference],[]).
+icd10('F66','psychological and behavioural disorders associated with sexual development and orientation',[],[]).
+icd10('F660','sexual maturation disorder',[maturation,sexual],[]).
+icd10('F661','egodystonic sexual orientation',[egodystonic,sexual,homosexuality],[]).
+icd10('F662','sexual relationship disorder',[relationship,sexual],[]).
+icd10('F668','other psychosexual development disorders',[psychosexual,sexual],[]).
+icd10('F669','psychosexual development disorder, unspecified',[psychosexual,sexual],[]).
+icd10('F68','other disorders of adult personality and behaviour',[],[]).
+icd10('F680','elaboration of physical symptoms for psychological reasons',[elaboration,physical,primary,gain],[]).
+icd10('F681','intentional production or feigning of symptoms or disabilities, either physical or psychological [factitious disorder]',[factitious,intentional,primary],[]).
+icd10('F681','pseudologia fantastica',[pseudologia,fantastica],[]).
+icd10('F688','other specified disorders of adult personality and behaviour',[personality,behaviour],[]).
+icd10('F69','unspecified disorder of adult personality and behaviour',[personality,behavioural],[]).
+icd10('F70','mild mental retardation',[],[]).
+icd10('F700','mild mental retardation with the statement of no, or minimal, impairment of behaviour',[mental,retardation,mild,intellectual,learning,disability],[id]).
+icd10('F701','mild mental retardation, significant impairment of behaviour requiring attention or treatment',[mental,retardation,mild,intellectual,learning,disability,behaviour],[]).
+icd10('F708','mild mental retardation, other impairments of behaviour',[mental,retardation,mild,intellectual,learning,disability,behaviour],[]).
+icd10('F709','mild mental retardation without mention of impairment of behaviour',[mental,retardation,mild,intellectual,learning,disability,behaviour],[]).
+icd10('F71','moderate mental retardation',[],[]).
+icd10('F710','moderate mental retardation with the statement of no, or minimal, impairment of behaviour',[mental,retardation,moderate,intellectual,learning,disability,[]).
+icd10('F711','moderate mental retardation, significant impairment of behaviour requiring attention or treatment',[mental,retardation,moderate,intellectual,learning,disability,behaviour],[]).
+icd10('F718','moderate mental retardation, other impairments of behaviour',[mental,retardation,moderate,intellectual,learning,disability,behaviour],[]).
+icd10('F719','moderate mental retardation without mention of impairment of behaviour',[mental,retardation,moderate,intellectual,learning,disability],[]).
+icd10('F72','severe mental retardation',[],[]).
+icd10('F720','severe mental retardation with the statement of no, or minimal, impairment of behaviour',[mental,retardation,severe,intellectual,learning,disability],[]).
+icd10('F721','severe mental retardation, significant impairment of behaviour requiring attention or treatment',[mental,retardation,severe,intellectual,learning,disability,behaviour],[]).
+icd10('F728','severe mental retardation, other impairments of behaviour',[mental,retardation,severe,intellectual,learning,disability,behaviour],[]).
+icd10('F729','severe mental retardation without mention of impairment of behaviour',[mental,retardation,severe,intellectual,learning,disability],[]).
 icd10('F73','profound mental retardation').
-icd10('F730','profound mental retardation with the statement of no, or minimal, impairment of behaviour').
-icd10('F731','profound mental retardation, significant impairment of behaviour requiring attention or treatment').
-icd10('F738','profound mental retardation, other impairments of behaviour').
-icd10('F739','profound mental retardation without mention of impairment of behaviour').
-icd10('F78','other mental retardation').
-icd10('F780','other mental retardation with the statement of no, or minimal, impairment of behaviour').
-icd10('F781','other mental retardation, significant impairment of behaviour requiring attention or treatment').
-icd10('F788','other mental retardation, other impairments of behaviour').
-icd10('F789','other mental retardation without mention of impairment of behaviour').
-icd10('F79','unspecified mental retardation').
-icd10('F790','unspecified mental retardation with the statement of no, or minimal, impairment of behaviour').
-icd10('F791','unspecified mental retardation, significant impairment of behaviour requiring attention or treatment').
-icd10('F798','unspecified mental retardation, other impairments of behaviour').
-icd10('F799','unspecified mental retardation without mention of impairment of behaviour').
-icd10('F80','specific developmental disorders of speech and language').
-icd10('F800','specific speech articulation disorder').
-icd10('F801','expressive language disorder').
-icd10('F802','receptive language disorder').
-icd10('F803','acquired aphasia with epilepsy [landau-kleffner]').
-icd10('F808','other developmental disorders of speech and language').
-icd10('F809','developmental disorder of speech and language, unspecified').
-icd10('F81','specific developmental disorders of scholastic skills').
-icd10('F810','specific reading disorder').
-icd10('F811','specific spelling disorder').
-icd10('F812','specific disorder of arithmetical skills').
-icd10('F813','mixed disorder of scholastic skills').
-icd10('F818','other developmental disorders of scholastic skills').
-icd10('F819','developmental disorder of scholastic skills, unspecified').
-icd10('F82','specific developmental disorder of motor function').
-icd10('F83','mixed specific developmental disorders').
-icd10('F84','pervasive developmental disorders').
-icd10('F840','childhood autism').
-icd10('F841','atypical autism').
-icd10('F842','rett\'s syndrome').
-icd10('F843','other childhood disintegrative disorder').
-icd10('F844','overactive disorder associated with mental retardation and stereotyped movements').
-icd10('F845','asperger\'s syndrome').
-icd10('F848','other pervasive developmental disorders').
-icd10('F849','pervasive developmental disorder, unspecified').
-icd10('F88','other disorders of psychological development').
-icd10('F89','unspecified disorder of psychological development').
-icd10('F90','hyperkinetic disorders').
-icd10('F900','disturbance of activity and attention').
-icd10('F901','hyperkinetic conduct disorder').
-icd10('F908','other hyperkinetic disorders').
-icd10('F909','hyperkinetic disorder, unspecified').
+icd10('F730','profound mental retardation with the statement of no, or minimal, impairment of behaviour',[mental,retardation,profound,intellectual,learning,disability],[]).
+icd10('F731','profound mental retardation, significant impairment of behaviour requiring attention or treatment',[mental,retardation,profound,intellectual,learning,disability,behaviour],[]).
+icd10('F738','profound mental retardation, other impairments of behaviour',[mental,retardation,profound,intellectual,learning,disability,behaviour],[]).
+icd10('F739','profound mental retardation without mention of impairment of behaviour',[mental,retardation,profound,intellectual,learning,disability],[]).
+icd10('F78','other mental retardation',[],[]).
+icd10('F780','other mental retardation with the statement of no, or minimal, impairment of behaviour',[],[]).
+icd10('F781','other mental retardation, significant impairment of behaviour requiring attention or treatment',[],[]).
+icd10('F788','other mental retardation, other impairments of behaviour',[],[]).
+icd10('F789','other mental retardation without mention of impairment of behaviour',[],[]).
+icd10('F79','unspecified mental retardation',[],[]).
+icd10('F790','unspecified mental retardation with the statement of no, or minimal, impairment of behaviour',[],[]).
+icd10('F791','unspecified mental retardation, significant impairment of behaviour requiring attention or treatment',[],[]).
+icd10('F798','unspecified mental retardation, other impairments of behaviour',[],[]).
+icd10('F799','unspecified mental retardation without mention of impairment of behaviour',[],[]).
+icd10('F80','specific developmental disorders of speech and language',[],[]).
+icd10('F800','specific speech articulation disorder',[speech,articulation],[]).
+icd10('F801','expressive language disorder',[expressive,language],[]).
+icd10('F802','receptive language disorder',[recpetive,language],[]).
+icd10('F803','acquired aphasia with epilepsy [landau-kleffner]',[landau,kleffner,language,epilepsy],[]).
+icd10('F808','other developmental disorders of speech and language',[speech,language],[]).
+icd10('F809','developmental disorder of speech and language, unspecified',[speech,language],[]).
+icd10('F81','specific developmental disorders of scholastic skills',[],[]).
+icd10('F810','specific reading disorder',[reading,dyslexia],[]).
+icd10('F811','specific spelling disorder',[spelling,dyslexia],[]).
+icd10('F812','specific disorder of arithmetical skills',[mathematics,arithmetic],[]).
+icd10('F813','mixed disorder of scholastic skills',[school,scholastic],[]).
+icd10('F818','other developmental disorders of scholastic skills',[school,scholastic],[]).
+icd10('F819','developmental disorder of scholastic skills, unspecified',[school,scholastic],[]).
+icd10('F82','specific developmental disorder of motor function',[motor,disability],[]).
+icd10('F83','mixed specific developmental disorders',[developmental],[]).
+icd10('F84','pervasive developmental disorders',[],[]).
+icd10('F840','childhood autism',[autism],[]).
+icd10('F841','atypical autism',[autism],[]).
+icd10('F842','rett\'s syndrome',[rett],[]).
+icd10('F843','other childhood disintegrative disorder',[disintegrative],[]).
+icd10('F844','overactive disorder associated with mental retardation and stereotyped movements',[hyperactive,stereotyped,overactive],[]).
+icd10('F845','asperger\'s syndrome',[asperger],[]).
+icd10('F848','other pervasive developmental disorders',[pervasive,development],[]).
+icd10('F849','pervasive developmental disorder, unspecified',[pervasive,development],[]).
+icd10('F88','other disorders of psychological development',[],[]).
+icd10('F89','unspecified disorder of psychological development',[developmental],[]).
+icd10('F90','hyperkinetic disorders',[],[]).
+icd10('F900','disturbance of activity and attention',[hyperkinetic,attention,hyperactivity],[]).
+icd10('F900','attention-deficit hyperactivity disorder',[attention,deficit,hyperactivity],[adhd]).
+icd10('F901','hyperkinetic conduct disorder',[conduct,hyperkinetic,hyperactive],[]).
+icd10('F908','other hyperkinetic disorders',[hyperkinetic,hyperactive],[]).
+icd10('F909','hyperkinetic disorder, unspecified',[hyperkinetic,hyperactive],[]).
 icd10('F91','conduct disorders').
-icd10('F910','conduct disorder confined to the family context').
-icd10('F911','unsocialised conduct disorder').
-icd10('F912','socialised conduct disorder').
-icd10('F913','oppositional defiant disorder').
-icd10('F918','other conduct disorders').
-icd10('F919','conduct disorder, unspecified').
-icd10('F92','mixed disorders of conduct and emotions').
-icd10('F920','depressive conduct disorder').
-icd10('F928','other mixed disorders of conduct and emotions').
-icd10('F929','mixed disorder of conduct and emotions, unspecified').
-icd10('F93','emotional disorders with onset specific to childhood').
-icd10('F930','separation anxiety disorder of childhood').
-icd10('F931','phobic anxiety disorder of childhood').
-icd10('F932','social anxiety disorder of childhood').
-icd10('F933','sibling rivalry disorder').
-icd10('F938','other childhood emotional disorders').
-icd10('F939','childhood emotional disorder, unspecified').
-icd10('F94','disorders of social functioning with onset specific to childhood and adolescence').
-icd10('F940','elective mutism').
-icd10('F941','reactive attachment disorder of childhood').
-icd10('F942','disinhibited attachment disorder of childhood').
-icd10('F948','other childhood disorders of social functioning').
-icd10('F949','childhood disorder of social functioning, unspecified').
-icd10('F95','tic disorders').
-icd10('F950','transient tic disorder').
-icd10('F951','chronic motor or vocal tic disorder').
-icd10('F952','combined vocal and multiple motor tic disorder [de la tourette]').
-icd10('F958','other tic disorders').
-icd10('F959','tic disorder, unspecified').
-icd10('F98','other behavioural and emotional disorders with onset usually occurring in childhood and adolescence').
-icd10('F980','nonorganic enuresis').
-icd10('F981','nonorganic encopresis').
-icd10('F982','feeding disorder of infancy and childhood').
-icd10('F983','pica of infancy and childhood').
-icd10('F984','stereotyped movement disorders').
-icd10('F985','stuttering [stammering]').
-icd10('F986','cluttering').
-icd10('F988','other specified behavioural and emotional disorders with onset usually occurring in childhood and adolescence').
-icd10('F989','unspecified behavioural and emotional disorders with onset usually occurring in childhood and adolescence').
-icd10('F99','mental disorder, not otherwise specified').
+icd10('F910','conduct disorder confined to the family context',[conduct,family,context],[]).
+icd10('F911','unsocialised conduct disorder',[conduct,unsocialised],[]).
+icd10('F912','socialised conduct disorder',[conduct,socialised],[]).
+icd10('F913','oppositional defiant disorder',[oppositional defiant],[odd]).
+icd10('F918','other conduct disorders',[conduct],[]).
+icd10('F919','conduct disorder, unspecified',[conduct,disorder],[cd]).
+icd10('F92','mixed disorders of conduct and emotions',[conduct,emotion],[]).
+icd10('F920','depressive conduct disorder',[conduct,depressive],[]).
+icd10('F928','other mixed disorders of conduct and emotions',[conduct,emotion],[]).
+icd10('F929','mixed disorder of conduct and emotions, unspecified',[conduct,emotion],[]).
+icd10('F93','emotional disorders with onset specific to childhood',[],[]).
+icd10('F930','separation anxiety disorder of childhood',[separation,anxiety],[]).
+icd10('F931','phobic anxiety disorder of childhood',[anxiety,phobic,childhood],[]).
+icd10('F932','social anxiety disorder of childhood',[social,anxiety,childhood],[]).
+icd10('F933','sibling rivalry disorder',[siling,rivalry,brother,sister,jealous],[]).
+icd10('F938','other childhood emotional disorders',[emotional,child],[]).
+icd10('F939','childhood emotional disorder, unspecified',[emotional,child],[]).
+icd10('F94','disorders of social functioning with onset specific to childhood and adolescence',[],[]).
+icd10('F940','elective mutism',[mutism,elective],[]).
+icd10('F941','reactive attachment disorder of childhood',[attachment,reactive,hildhood],[]).
+icd10('F942','disinhibited attachment disorder of childhood',[attachment,disinhibited],[]).
+icd10('F948','other childhood disorders of social functioning',[attachment,social,functioning],[]).
+icd10('F949','childhood disorder of social functioning, unspecified',[attachment,social,functioning],[]).
+icd10('F95','tic disorders',[],[]).
+icd10('F950','transient tic disorder',[tic,transient,temporary],[]).
+icd10('F951','chronic motor or vocal tic disorder',[tic,vocal,motor],[]).
+icd10('F952','combined vocal and multiple motor tic disorder [de la tourette]',[tourette,tic,motor,vocal],[]).
+icd10('F958','other tic disorders',[tic],[]).
+icd10('F959','tic disorder, unspecified',[tic],[]).
+icd10('F98','other behavioural and emotional disorders with onset usually occurring in childhood and adolescence',[],[]).
+icd10('F980','nonorganic enuresis',[enuresis,bedwetting],[]).
+icd10('F981','nonorganic encopresis',[encopresis,faecal,soiling],[]).
+icd10('F982','feeding disorder of infancy and childhood',[feeding],[]).
+icd10('F983','pica of infancy and childhood',[pica,dirt,eating,eats],[]).
+icd10('F984','stereotyped movement disorders',[stereotyped],[]).
+icd10('F985','stuttering [stammering]',[stutter,stammer,speech],[]).
+icd10('F986','cluttering',[cluttering],[]).
+icd10('F988','other specified behavioural and emotional disorders with onset usually occurring in childhood and adolescence',[behavioural,emotional,childhood,adolescence,teenage],[]).
+icd10('F989','unspecified behavioural and emotional disorders with onset usually occurring in childhood and adolescence',[behavioural,emotional,childhood,adolescence,teenage],[]).
+icd10('F99','mental disorder, not otherwise specified',[mental,psychiatric,psychological],[]).
 icd10('G00','bacterial meningitis, not elsewhere classified').
 icd10('G000','haemophilus meningitis').
 icd10('G001','pneumococcal meningitis').
